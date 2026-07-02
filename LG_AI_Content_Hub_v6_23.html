@@ -6750,7 +6750,7 @@ window.addEventListener('load',()=>{
 // ═══════════════════════════════════════════
 // EBAY LIVE BUILDER (v6.22)
 // ═══════════════════════════════════════════
-const EBB = { generatedHTML: '', amzHTML: '', editMode: false, apiBase: 'http://localhost:3001', currentPid: null, crawledData: null, previewTab: 'ebay' };
+const EBB = { generatedHTML: '', amzHTML: '', editMode: false, apiBase: location.hostname === 'localhost' ? 'http://localhost:3001' : location.origin, currentPid: null, crawledData: null, previewTab: 'ebay' };
 
 function openMakeWithUrl(pid) {
   const p = (typeof P !== 'undefined') ? P.find(x => x.id === pid) : null;
@@ -6778,7 +6778,7 @@ function ebbCheckServer(showFeedback) {
   const warn  = document.getElementById('ebbServerWarn');
   if (dot)   { dot.style.background = '#FFA500'; }
   if (label) { label.textContent = '확인 중...'; }
-  fetch('http://localhost:3001/api/health', { signal: AbortSignal.timeout(2500) })
+  fetch(EBB.apiBase + '/api/health', { signal: AbortSignal.timeout(2500) })
     .then(r => r.ok ? r.json() : Promise.reject())
     .then(() => {
       if (dot)   { dot.style.background = '#22c55e'; }
