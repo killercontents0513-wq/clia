@@ -626,7 +626,7 @@ app.post('/api/crawl-product', async (req, res) => {
 });
 
 // ─── Static files ─────────────────────────────────────────────────
-app.get('/', (req, res) => res.sendFile(__dirname + '/LG_AI_Content_Hub_v6_23.html'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/LG_AI_Content_Hub_v6_24.html'));
 app.use(express.static(__dirname));
 
 // ─── Start ────────────────────────────────────────────────────────
