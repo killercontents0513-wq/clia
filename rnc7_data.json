@@ -1,0 +1,348 @@
+{
+  "code": "RNC7",
+  "url": "https://www.lg.com/sa_en/speakers/party-speakers/rnc7/",
+  "name": "Video 1: LG LG XBOOM RNC7",
+  "price": "",
+  "gal": [
+    {
+      "a": "View 1",
+      "p": "home-theaters/gallery/D-01.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 2",
+      "p": "home-theaters/gallery/D-02.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 3",
+      "p": "home-theaters/gallery/D-03.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 4",
+      "p": "home-theaters/gallery/D-04.jpg",
+      "w": 1100,
+      "h": 730
+    },
+    {
+      "a": "View 5",
+      "p": "home-theaters/gallery/D-05.jpg",
+      "w": 1100,
+      "h": 730
+    },
+    {
+      "a": "View 6",
+      "p": "home-theaters/gallery/D-06.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 7",
+      "p": "home-theaters/gallery/D-07.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 8",
+      "p": "home-theaters/gallery/D-08.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 9",
+      "p": "home-theaters/gallery/D-09.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 10",
+      "p": "home-theaters/gallery/D-10.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 11",
+      "p": "home-theaters/gallery/S-01.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 12",
+      "p": "home-theaters/gallery/S-02.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 13",
+      "p": "home-theaters/gallery/S-03.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 14",
+      "p": "home-theaters/gallery/S-04.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 15",
+      "p": "home-theaters/gallery/S-05.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 16",
+      "p": "home-theaters/gallery/S-06.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 17",
+      "p": "home-theaters/gallery/S-07.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 18",
+      "p": "home-theaters/gallery/S-08.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 19",
+      "p": "home-theaters/gallery/S-09.jpg",
+      "w": 0,
+      "h": 0
+    },
+    {
+      "a": "View 20",
+      "p": "home-theaters/gallery/S-10.jpg",
+      "w": 0,
+      "h": 0
+    }
+  ],
+  "feat": [
+    {
+      "a": "AV-XBOOM-RNC7-01-Identity-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-01-Identity-Desktop.jpg",
+      "t": "Av Xboom Rnc7 01 Identity Desktop",
+      "d": "Feature: Av Xboom Rnc7 01 Identity Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-01-Identity-Mobile",
+      "p": "/images/av/features/AV-XBOOM-RNC7-01-Identity-Mobile.jpg",
+      "t": "Av Xboom Rnc7 01 Identity Mobile",
+      "d": "Feature: Av Xboom Rnc7 01 Identity Mobile",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-02-DoubleSuperBassBoost-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-02-DoubleSuperBassBoost-Desktop.jpg",
+      "t": "Av Xboom Rnc7 02 Doublesuperbassboost Desktop",
+      "d": "Feature: Av Xboom Rnc7 02 Doublesuperbassboost Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-02-DoubleSuperBassBoost-Mobile",
+      "p": "/images/av/features/AV-XBOOM-RNC7-02-DoubleSuperBassBoost-Mobile.jpg",
+      "t": "Av Xboom Rnc7 02 Doublesuperbassboost Mobile",
+      "d": "Feature: Av Xboom Rnc7 02 Doublesuperbassboost Mobile",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-03-MultiColorLighting-Thumbnail-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-03-MultiColorLighting-Thumbnail-Desktop.jpg",
+      "t": "Av Xboom Rnc7 03 Multicolorlighting Thumbnail Desktop",
+      "d": "Feature: Av Xboom Rnc7 03 Multicolorlighting Thumbnail Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-03-MultiColorLighting-Thumbnail-Mobile",
+      "p": "/images/av/features/AV-XBOOM-RNC7-03-MultiColorLighting-Thumbnail-Mobile.jpg",
+      "t": "Av Xboom Rnc7 03 Multicolorlighting Thumbnail Mobile",
+      "d": "Feature: Av Xboom Rnc7 03 Multicolorlighting Thumbnail Mobile",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-04-PartyStrobe-Desktop-001",
+      "p": "/images/av/features/AV-XBOOM-RNC7-04-PartyStrobe-Desktop-001.jpg",
+      "t": "Av Xboom Rnc7 04 Partystrobe Desktop 001",
+      "d": "Feature: Av Xboom Rnc7 04 Partystrobe Desktop 001",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-04-PartyStrobe-MOB-00100",
+      "p": "/images/av/features/AV-XBOOM-RNC7-04-PartyStrobe-MOB-00100.jpg",
+      "t": "Av Xboom Rnc7 04 Partystrobe Mob 00100",
+      "d": "Feature: Av Xboom Rnc7 04 Partystrobe Mob 00100",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-05-DJapp-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-05-DJapp-Desktop.jpg",
+      "t": "Av Xboom Rnc7 05 Djapp Desktop",
+      "d": "Feature: Av Xboom Rnc7 05 Djapp Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-05-DJapp-Mobile",
+      "p": "/images/av/features/AV-XBOOM-RNC7-05-DJapp-Mobile.jpg",
+      "t": "Av Xboom Rnc7 05 Djapp Mobile",
+      "d": "Feature: Av Xboom Rnc7 05 Djapp Mobile",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-06-Karaokestar-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-06-Karaokestar-Desktop.jpg",
+      "t": "Av Xboom Rnc7 06 Karaokestar Desktop",
+      "d": "Feature: Av Xboom Rnc7 06 Karaokestar Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-06-Karaokestar-Mobile",
+      "p": "/images/av/features/AV-XBOOM-RNC7-06-Karaokestar-Mobile.jpg",
+      "t": "Av Xboom Rnc7 06 Karaokestar Mobile",
+      "d": "Feature: Av Xboom Rnc7 06 Karaokestar Mobile",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-07-WirelessPartyLink-DesktopV001",
+      "p": "/images/av/features/AV-XBOOM-RNC7-07-WirelessPartyLink-DesktopV001.jpg",
+      "t": "Av Xboom Rnc7 07 Wirelesspartylink Desktopv001",
+      "d": "Feature: Av Xboom Rnc7 07 Wirelesspartylink Desktopv001",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-07-WirelessPartyLink-MOBV00100",
+      "p": "/images/av/features/AV-XBOOM-RNC7-07-WirelessPartyLink-MOBV00100.jpg",
+      "t": "Av Xboom Rnc7 07 Wirelesspartylink Mobv00100",
+      "d": "Feature: Av Xboom Rnc7 07 Wirelesspartylink Mobv00100",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-08-Connectivity-Desktop-001",
+      "p": "/images/av/features/AV-XBOOM-RNC7-08-Connectivity-Desktop-001.jpg",
+      "t": "Av Xboom Rnc7 08 Connectivity Desktop 001",
+      "d": "Feature: Av Xboom Rnc7 08 Connectivity Desktop 001",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-08-Connectivity-Mobile00100",
+      "p": "/images/av/features/AV-XBOOM-RNC7-08-Connectivity-Mobile00100.jpg",
+      "t": "Av Xboom Rnc7 08 Connectivity Mobile00100",
+      "d": "Feature: Av Xboom Rnc7 08 Connectivity Mobile00100",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-08-PartySaver-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-08-PartySaver-Desktop.jpg",
+      "t": "Av Xboom Rnc7 08 Partysaver Desktop",
+      "d": "Feature: Av Xboom Rnc7 08 Partysaver Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-08-PartySaver-Mobile",
+      "p": "/images/av/features/AV-XBOOM-RNC7-08-PartySaver-Mobile.jpg",
+      "t": "Av Xboom Rnc7 08 Partysaver Mobile",
+      "d": "Feature: Av Xboom Rnc7 08 Partysaver Mobile",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-10-Multi-Bluetooth-XBOOM-App-DesktopV",
+      "p": "/images/av/features/AV-XBOOM-RNC7-10-Multi-Bluetooth-XBOOM-App-DesktopV.jpg",
+      "t": "Av Xboom Rnc7 10 Multi Bluetooth Xboom App Desktopv",
+      "d": "Feature: Av Xboom Rnc7 10 Multi Bluetooth Xboom App Desktopv",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-10-Multi-Bluetooth-XBOOM-App-MobileV",
+      "p": "/images/av/features/AV-XBOOM-RNC7-10-Multi-Bluetooth-XBOOM-App-MobileV.jpg",
+      "t": "Av Xboom Rnc7 10 Multi Bluetooth Xboom App Mobilev",
+      "d": "Feature: Av Xboom Rnc7 10 Multi Bluetooth Xboom App Mobilev",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-11-TV-Sound-Sync-Desktop",
+      "p": "/images/av/features/AV-XBOOM-RNC7-11-TV-Sound-Sync-Desktop.jpg",
+      "t": "Av Xboom Rnc7 11 Tv Sound Sync Desktop",
+      "d": "Feature: Av Xboom Rnc7 11 Tv Sound Sync Desktop",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "AV-XBOOM-RNC7-11-TV-Sound-Sync-Mobile00",
+      "p": "/images/av/features/AV-XBOOM-RNC7-11-TV-Sound-Sync-Mobile00.jpg",
+      "t": "Av Xboom Rnc7 11 Tv Sound Sync Mobile00",
+      "d": "Feature: Av Xboom Rnc7 11 Tv Sound Sync Mobile00",
+      "w": 1600,
+      "h": 900
+    }
+  ],
+  "sp": [
+    {
+      "n": "Special EQ",
+      "v": "(Dangdut, Arabic, Afro Hip-hop, India, Rugueton, Merengue, Salsa, Samba, Axe, Forro, Funk, Sertanejo)"
+    },
+    {
+      "n": "Convenience",
+      "v": "Repeat 1/All Juke Box Suffle Skip/Scan - Fwd/Rev USB Copy/direct recording Bluetooth Remote app (Android/iOS) Bluetooth Auto Function Change Bluetooth Power on (Stand by) Multi Bluetooth (Android/iOS)"
+    },
+    {
+      "n": "Functions",
+      "v": "DJ Effects/Loop/Scratcher/Sampler Creator(App)Multi Juke box / DJ Pad / Auto DJVocal effects, Voice canceller, Key changerSound Sync"
+    },
+    {
+      "n": "File Format",
+      "v": "(MP3/WMA) ID3 Tag DisplayBluetooth AAC/SBC Codec"
+    },
+    {
+      "n": "Speaker",
+      "v": "System - 3Way 5SpeakerTweeter Unit - 2\"x2Mid Unit - 3\"x2Woofer Unit - 8\"Impedance (TW/Mid/Woofer) - 8Ω / 4Ω / 6Ω"
+    },
+    {
+      "n": "Connections",
+      "v": "USB (2 input)Optical inputGuitar input - 1EA (Φ6.3)Mic input - 1EA (Φ6.3)Bluetooth (4.0)"
+    },
+    {
+      "n": "Power Supply",
+      "v": "Narrow: 200-240V 50/60HzWide: 110-240V 50/60Hz"
+    },
+    {
+      "n": "Dimension:(W x H x D) mm",
+      "v": "Main: 330 x 785 x 344mm"
+    },
+    {
+      "n": "Net Weight: (Kg)",
+      "v": "Net: 16Kg"
+    },
+    {
+      "n": "Gross Weight: (Kg)",
+      "v": "Gross: 19Kg"
+    }
+  ]
+}

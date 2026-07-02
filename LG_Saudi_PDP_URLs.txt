@@ -1,0 +1,159 @@
+================================================================================
+LG SAUDI ARABIA - 35 PRODUCT PDP URLs
+Generated: 2026-05-08
+================================================================================
+
+
+ALL-DRYERS (1 models)
+================================================================================
+
+WTV15BNDA
+https://www.lg.com/sa_en/dryers/all-dryers/wtv15bnda/
+
+
+COMPACT (1 models)
+================================================================================
+
+LT13CBBMIV
+https://www.lg.com/sa_en/refrigerators/compact/lt13cbbmiv/
+
+
+FRONT-LOAD (2 models)
+================================================================================
+
+WF1510WHT
+https://www.lg.com/sa_en/washing-machines/front-load/wf1510wht/
+
+WF1510XMT
+https://www.lg.com/sa_en/washing-machines/front-load/wf1510xmt/
+
+
+GAMING-MONITORS (7 models)
+================================================================================
+
+27GR83Q-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/27gr83q-b/
+
+27GS60F-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/27gs60f-b/
+
+32G600A-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/32g600a-b/
+
+32GR93U-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/32gr93u-b/
+
+34G600A-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/34g600a-b/
+
+34GX90SA-W
+https://www.lg.com/sa_en/monitors/gaming-monitors/34gx90sa-w/
+
+45GR75DC-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/45gr75dc-b/
+
+
+LINEAR-INVERTER (1 models)
+================================================================================
+
+LREL6323S
+https://www.lg.com/sa_en/refrigerators/linear-inverter/lrel6323s/
+
+
+PARTY-SPEAKERS (4 models)
+================================================================================
+
+GRAB
+https://www.lg.com/sa_en/speakers/party-speakers/grab/
+
+XL5T
+https://www.lg.com/sa_en/speakers/party-speakers/xl5t/
+
+XL7T
+https://www.lg.com/sa_en/speakers/party-speakers/xl7t/
+
+XL9T
+https://www.lg.com/sa_en/speakers/party-speakers/xl9t/
+
+
+QNED (6 models)
+================================================================================
+
+55QNED82A6A
+https://www.lg.com/sa_en/tvs/qned/55qned82a6a/
+
+65QNED82A6A
+https://www.lg.com/sa_en/tvs/qned/65qned82a6a/
+
+65QNED91A6A
+https://www.lg.com/sa_en/tvs/qned/65qned91a6a/
+
+65QNED9MA6A
+https://www.lg.com/sa_en/tvs/qned/65qned9ma6a/
+
+75QNED82A6A
+https://www.lg.com/sa_en/tvs/qned/75qned82a6a/
+
+85QNED93A6A
+https://www.lg.com/sa_en/tvs/qned/85qned93a6a/
+
+
+SEMI-AUTOMATIC (1 models)
+================================================================================
+
+WS1508XMT
+https://www.lg.com/sa_en/washing-machines/semi-automatic/ws1508xmt/
+
+
+SIDE-BY-SIDE (2 models)
+================================================================================
+
+LS32NBDSLV
+https://www.lg.com/sa_en/refrigerators/side-by-side/ls32nbdslv/
+
+LT17CBBWIN
+https://www.lg.com/sa_en/refrigerators/side-by-side/lt17cbbwin/
+
+
+SOUNDBARS (3 models)
+================================================================================
+
+RNC5
+https://www.lg.com/sa_en/speakers/soundbars/rnc5/
+
+SC9S
+https://www.lg.com/sa_en/speakers/soundbars/sc9s/
+
+SH5A
+https://www.lg.com/sa_en/speakers/soundbars/sh5a/
+
+
+STANDARD-MONITORS (4 models)
+================================================================================
+
+24U421A-B
+https://www.lg.com/sa_en/monitors/standard-monitors/24u421a-b/
+
+27U421A-B
+https://www.lg.com/sa_en/monitors/standard-monitors/27u421a-b/
+
+27U511SA-W
+https://www.lg.com/sa_en/monitors/standard-monitors/27u511sa-w/
+
+32MR50C-B
+https://www.lg.com/sa_en/monitors/standard-monitors/32mr50c-b/
+
+
+TOP-LOAD (1 models)
+================================================================================
+
+WS1912XMT
+https://www.lg.com/sa_en/washing-machines/top-load/ws1912xmt/
+
+
+ULTRAWIDE-MONITORS (1 models)
+================================================================================
+
+29U531A-W
+https://www.lg.com/sa_en/monitors/ultrawide-monitors/29u531a-w/
+

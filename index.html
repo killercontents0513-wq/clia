@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Content Hub — LGE AX Hackathon 2026</title>
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --nav-width: 220px;
+      --nav-bg: #0d0d0d;
+      --nav-border: #2a2a2a;
+      --accent: var(--lg-red);
+      --section-gap: 80px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      display: flex;
+      font-family: 'LGEIText', sans-serif;
+      background: var(--lg-white);
+      color: var(--lg-black);
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--nav-width);
+      height: 100vh;
+      background: var(--nav-bg);
+      border-right: 1px solid var(--nav-border);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      padding: 28px 20px 20px;
+      border-bottom: 1px solid var(--nav-border);
+    }
+
+    .nav-logo .lg-mark {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .nav-logo .doc-title {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 12px 0;
+      flex: 1;
+    }
+
+    .nav-list li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 9px 20px;
+      text-decoration: none;
+      color: #999;
+      font-size: 12px;
+      font-family: 'LGEIText', sans-serif;
+      font-weight: 400;
+      line-height: 1.45;
+      transition: color 0.18s, background 0.18s;
+      border-left: 2px solid transparent;
+    }
+
+    .nav-list li a:hover,
+    .nav-list li a.active {
+      color: #fff;
+      background: rgba(255,255,255,0.05);
+      border-left-color: var(--accent);
+    }
+
+    .nav-list li a .num {
+      font-size: 10px;
+      color: #555;
+      min-width: 18px;
+      margin-top: 1px;
+      font-family: 'LGEIText', sans-serif;
+      font-weight: 300;
+    }
+
+    .nav-list li a:hover .num,
+    .nav-list li a.active .num {
+      color: var(--accent);
+    }
+
+    .nav-divider {
+      height: 1px;
+      background: var(--nav-border);
+      margin: 6px 20px;
+    }
+
+    /* ── MAIN ── */
+    main {
+      margin-left: var(--nav-width);
+      flex: 1;
+      min-height: 100vh;
+    }
+
+    /* ── SECTIONS ── */
+    .slide-section {
+      padding: 72px 64px var(--section-gap);
+      border-bottom: 1px solid var(--lg-gray-2);
+      scroll-margin-top: 0;
+    }
+
+    .slide-section:nth-child(even) {
+      background: var(--lg-gray-1);
+    }
+
+    .slide-section:last-child {
+      border-bottom: none;
+    }
+
+    /* Section labels */
+    .slide-label {
+      font-family: 'LGEIText', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    /* ── SLIDE 1: TITLE ── */
+    #s1 {
+      background: #0d0d0d;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 80px 64px;
+    }
+
+    .title-inner { max-width: 680px; }
+
+    .title-event {
+      font-family: 'LGEIText', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #888;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+    }
+
+    .title-main {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .title-main span { color: var(--accent); }
+
+    .title-sub {
+      font-family: 'LGEIText', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: #bbb;
+      margin-bottom: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    .title-authors {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .title-authors span {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .title-authors strong {
+      color: #aaa;
+      font-weight: 400;
+    }
+
+    /* ── SECTION HEADINGS ── */
+    .section-title {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: clamp(22px, 2.5vw, 32px);
+      font-weight: 700;
+      color: var(--lg-black);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      font-size: 14px;
+      color: var(--lg-gray-3);
+      font-weight: 300;
+      margin-bottom: 40px;
+      max-width: 780px;
+      line-height: 1.7;
+    }
+
+    .section-highlight {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+
+    /* ── OVERVIEW: s2 ── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .overview-card {
+      background: #fff;
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      padding: 24px;
+    }
+
+    .overview-card h3 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--lg-black);
+    }
+
+    .overview-card p {
+      font-size: 13px;
+      color: var(--lg-gray-4);
+      line-height: 1.7;
+    }
+
+    .hub-arrow-flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin: 32px 0;
+    }
+
+    .hub-arrow-flow .hub-box {
+      background: var(--lg-black);
+      color: #fff;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 14px 20px;
+      border-radius: 3px;
+      white-space: nowrap;
+    }
+
+    .hub-arrow-flow .hub-box.accent {
+      background: var(--accent);
+    }
+
+    .hub-arrow-flow .arrow {
+      font-size: 18px;
+      color: var(--lg-gray-3);
+      padding: 0 10px;
+    }
+
+    .hub-channels {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .channel-tag {
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      color: var(--lg-gray-4);
+      font-weight: 400;
+    }
+
+    .core-goal-box {
+      background: var(--lg-black);
+      color: #fff;
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin-top: 28px;
+    }
+
+    .core-goal-box .label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .core-goal-box p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .core-goal-box ul {
+      list-style: none;
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .core-goal-box ul li {
+      font-size: 13px;
+      color: #aaa;
+      padding-left: 14px;
+      position: relative;
+    }
+
+    .core-goal-box ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── TABLE STYLES ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .data-table th {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--lg-gray-2);
+      color: var(--lg-gray-4);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+
+    .data-table tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+
+    .data-table td:first-child {
+      font-weight: 600;
+      color: var(--lg-black);
+      white-space: nowrap;
+    }
+
+    .data-table td.problem {
+      color: #c0392b;
+      font-size: 12px;
+    }
+
+    /* ── COMPARE TABLE ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .compare-table th {
+      padding: 12px 16px;
+      text-align: center;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .compare-table th:first-child { text-align: left; }
+
+    .compare-table th.col-dam {
+      background: #f0f0f0;
+      color: #666;
+    }
+
+    .compare-table th.col-hub {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .compare-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--lg-gray-2);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    .compare-table td:first-child {
+      font-weight: 600;
+      font-size: 12px;
+      color: var(--lg-gray-3);
+      white-space: nowrap;
+    }
+
+    .compare-table td.col-dam { background: #fafafa; color: #888; font-size: 12px; }
+    .compare-table td.col-hub { background: #fff8f8; color: var(--lg-black); font-size: 13px; font-weight: 600; }
+
+    /* ── ARCHITECTURE ── */
+    .arch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--lg-gray-2);
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    .arch-col {
+      background: #fff;
+      padding: 24px 20px;
+    }
+
+    .arch-col.source { background: var(--lg-black); }
+    .arch-col.hub { background: var(--accent); }
+    .arch-col.channels { background: var(--lg-gray-1); }
+
+    .arch-col-label {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .arch-col.source .arch-col-label { color: #888; }
+    .arch-col.hub .arch-col-label { color: rgba(255,255,255,0.8); }
+    .arch-col.channels .arch-col-label { color: var(--lg-gray-3); }
+
+    .arch-item {
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      line-height: 1.5;
+    }
+
+    .arch-col.source .arch-item { color: #ccc; border-color: rgba(255,255,255,0.06); }
+    .arch-col.hub .arch-item { color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.15); font-weight: 600; }
+    .arch-col.channels .arch-item { color: var(--lg-gray-4); border-color: var(--lg-gray-2); }
+
+    .arch-item:last-child { border-bottom: none; }
+
+    /* ── PHASE CARDS ── */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .phase-card {
+      background: #fff;
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .phase-card-header {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 14px 18px;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .phase-card-header .phase-tag {
+      background: var(--accent);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+    }
+
+    .phase-card-body {
+      padding: 16px 18px;
+    }
+
+    .phase-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--lg-gray-2);
+      font-size: 12px;
+      color: var(--lg-gray-4);
+      line-height: 1.55;
+    }
+
+    .phase-item:last-child { border-bottom: none; }
+
+    .phase-item-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--lg-gray-1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .phase-item-icon svg {
+      width: 10px; height: 10px;
+    }
+
+    .ai-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 2px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* ── PIPELINE STEPS ── */
+    .pipeline-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      position: relative;
+      gap: 0;
+    }
+
+    .pipeline-step {
+      position: relative;
+      padding: 28px 24px;
+      background: #fff;
+      border: 1px solid var(--lg-gray-2);
+      border-right: none;
+    }
+
+    .pipeline-step:last-child { border-right: 1px solid var(--lg-gray-2); }
+
+    .pipeline-step::after {
+      content: '→';
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: var(--accent);
+      z-index: 2;
+      background: #fff;
+      padding: 2px 4px;
+    }
+
+    .pipeline-step:last-child::after { display: none; }
+
+    .step-num {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--lg-gray-2);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    .step-title {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--lg-black);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .step-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .step-list li {
+      font-size: 11.5px;
+      color: var(--lg-gray-4);
+      padding-left: 12px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .step-list li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .pipeline-key {
+      background: var(--lg-black);
+      color: #ddd;
+      font-size: 12px;
+      padding: 14px 20px;
+      border-radius: 3px;
+      margin-top: 24px;
+      line-height: 1.6;
+    }
+
+    .pipeline-key strong { color: var(--accent); }
+
+    /* ── CHANNEL COVERAGE ── */
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .coverage-card {
+      background: #fff;
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .coverage-card-head {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .coverage-card-head h3 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .coverage-badge {
+      font-size: 11px;
+      background: rgba(255,255,255,0.12);
+      padding: 3px 9px;
+      border-radius: 2px;
+      color: #ccc;
+    }
+
+    .coverage-card-body {
+      padding: 18px;
+    }
+
+    .coverage-meta {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px 12px;
+      font-size: 12px;
+      margin-bottom: 14px;
+    }
+
+    .coverage-meta .meta-key {
+      color: var(--lg-gray-3);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .coverage-meta .meta-val { color: var(--lg-gray-4); }
+
+    .coverage-effect {
+      background: var(--lg-gray-1);
+      padding: 10px 14px;
+      border-radius: 3px;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ── PLATFORM TABLE ── */
+    .platform-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .platform-table th {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .platform-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--lg-gray-2);
+      color: var(--lg-gray-4);
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    .platform-table tr:last-child td { border-bottom: none; }
+
+    .platform-table td:first-child {
+      font-weight: 700;
+      color: var(--lg-black);
+      font-size: 14px;
+    }
+
+    .platform-table tr:nth-child(even) td { background: #fafafa; }
+
+    /* ── PROCESS STEPS ── */
+    .process-flow {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--lg-gray-2);
+    }
+
+    .process-step:last-child { border-bottom: none; }
+
+    .process-step-num {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--lg-black);
+      color: #fff;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .process-step-content h4 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--lg-black);
+      margin-bottom: 4px;
+    }
+
+    .process-step-content p {
+      font-size: 13px;
+      color: var(--lg-gray-4);
+      line-height: 1.65;
+    }
+
+    /* ── ROADMAP ── */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .roadmap-card {
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .roadmap-card-head {
+      padding: 16px 18px;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .roadmap-card:nth-child(1) .roadmap-card-head { background: var(--accent); color: #fff; }
+    .roadmap-card:nth-child(2) .roadmap-card-head { background: var(--lg-black); color: #fff; }
+    .roadmap-card:nth-child(3) .roadmap-card-head { background: var(--lg-gray-4); color: #fff; }
+
+    .roadmap-card-head span {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+
+    .roadmap-card-body {
+      padding: 16px 18px;
+    }
+
+    .roadmap-item {
+      font-size: 12.5px;
+      color: var(--lg-gray-4);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--lg-gray-2);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .roadmap-item:last-child { border-bottom: none; }
+
+    .roadmap-item::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    .considerations-box {
+      background: var(--lg-gray-1);
+      border: 1px solid var(--lg-gray-2);
+      border-left: 3px solid var(--accent);
+      border-radius: 3px;
+      padding: 18px 20px;
+    }
+
+    .considerations-box h4 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--lg-black);
+      margin-bottom: 12px;
+    }
+
+    .considerations-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .consideration-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--lg-gray-4);
+      line-height: 1.5;
+    }
+
+    .consideration-item::before {
+      content: '⚠';
+      color: var(--accent);
+      font-size: 11px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── SIMULATION TABLE ── */
+    .simulation-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .simulation-table th {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 12px 14px;
+      text-align: left;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .simulation-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--lg-gray-2);
+      color: var(--lg-gray-4);
+      line-height: 1.55;
+      vertical-align: top;
+    }
+
+    .simulation-table tr:last-child td { border-bottom: none; }
+
+    .simulation-table td:first-child {
+      font-weight: 600;
+      color: var(--lg-black);
+      white-space: nowrap;
+      font-size: 12px;
+    }
+
+    .simulation-table td.col-asis { background: #fafafa; color: #888; font-size: 12px; }
+    .simulation-table td.col-tobe { font-weight: 600; color: var(--lg-black); font-size: 12px; }
+
+    .result-banner {
+      background: var(--accent);
+      color: #fff;
+      padding: 18px 24px;
+      border-radius: 4px;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* ── COST TABLE ── */
+    .cost-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-bottom: 32px;
+    }
+
+    .cost-table th {
+      padding: 12px 14px;
+      text-align: center;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .cost-table th:first-child { text-align: left; }
+    .cost-table th.asis { background: #f0f0f0; color: #666; }
+    .cost-table th.tobe { background: var(--lg-black); color: #fff; }
+    .cost-table th.save { background: var(--accent); color: #fff; }
+    .cost-table th.label-col { background: var(--lg-gray-4); color: #fff; }
+
+    .cost-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--lg-gray-2);
+      line-height: 1.5;
+    }
+
+    .cost-table tr:last-child td { border-bottom: none; }
+    .cost-table td:first-child { font-weight: 600; color: var(--lg-black); font-size: 12px; }
+    .cost-table td.asis { background: #fafafa; color: #888; font-size: 12px; }
+    .cost-table td.tobe { color: var(--lg-black); font-size: 13px; font-weight: 600; }
+    .cost-table td.save { color: var(--accent); font-weight: 700; font-size: 13px; text-align: center; }
+
+    .cost-table tr.total-row td {
+      background: var(--lg-black);
+      color: #fff;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .cost-table tr.total-row td.save { color: #ffa0a0; }
+
+    /* Global expansion table */
+    .global-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .global-table th {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 11px 14px;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .global-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--lg-gray-2);
+      color: var(--lg-gray-4);
+    }
+
+    .global-table tr:last-child td {
+      background: var(--lg-gray-1);
+      font-weight: 700;
+      color: var(--lg-black);
+    }
+
+    .global-table td.savings { color: var(--accent); font-weight: 700; }
+
+    .quote-box {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 22px 28px;
+      border-radius: 4px;
+      margin-top: 24px;
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .quote-box span { color: var(--accent); }
+
+    /* ── QUALITATIVE EFFECTS ── */
+    .effects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .effect-card {
+      background: var(--lg-black);
+      color: #fff;
+      border-radius: 4px;
+      padding: 20px;
+    }
+
+    .effect-card h4 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .effect-card p {
+      font-size: 12px;
+      color: #bbb;
+      line-height: 1.6;
+    }
+
+    /* ── CONTENT TEXT BLOCKS ── */
+    .text-block {
+      background: #fff;
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .text-block h3 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--lg-black);
+      margin-bottom: 10px;
+    }
+
+    .text-block p {
+      font-size: 13.5px;
+      color: var(--lg-gray-4);
+      line-height: 1.75;
+    }
+
+    .text-block ul {
+      list-style: none;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .text-block ul li {
+      font-size: 13px;
+      color: var(--lg-gray-4);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.55;
+    }
+
+    .text-block ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── SOCIAL / GEO ── */
+    .feature-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .feature-card {
+      background: #fff;
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .feature-card-head {
+      background: var(--lg-black);
+      color: #fff;
+      padding: 16px 20px;
+    }
+
+    .feature-card-head h3 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .feature-card-head p {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .feature-card-body {
+      padding: 20px;
+    }
+
+    .feature-card-body ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-card-body ul li {
+      font-size: 13px;
+      color: var(--lg-gray-4);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .feature-card-body ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    /* ── PRECONDITIONS ── */
+    .precondition-box {
+      background: var(--lg-gray-1);
+      border: 1px solid var(--lg-gray-2);
+      border-radius: 4px;
+      padding: 18px 20px;
+      margin-bottom: 28px;
+    }
+
+    .precondition-box h4 {
+      font-family: 'LGEIHeadline', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--lg-black);
+      margin-bottom: 8px;
+    }
+
+    .precondition-box ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+    }
+
+    .precondition-box ul li {
+      font-size: 12px;
+      color: var(--lg-gray-4);
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .precondition-box ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* ── ACTIVE NAV ── */
+    .nav-list li a.active {
+      color: #fff;
+      background: rgba(165,0,52,0.15);
+      border-left-color: var(--accent);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      :root { --nav-width: 180px; }
+      .phase-grid, .roadmap-grid, .pipeline-steps, .coverage-grid { grid-template-columns: 1fr 1fr; }
+      .arch-grid { grid-template-columns: 1fr; }
+      .effects-grid { grid-template-columns: 1fr 1fr; }
+      .feature-two-col { grid-template-columns: 1fr; }
+      .overview-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      :root { --nav-width: 0px; }
+      nav { display: none; }
+      main { margin-left: 0; }
+      .slide-section { padding: 48px 24px 56px; }
+      .pipeline-steps { grid-template-columns: 1fr; }
+      .phase-grid, .roadmap-grid { grid-template-columns: 1fr; }
+      .coverage-grid { grid-template-columns: 1fr; }
+      .considerations-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     LEFT NAVIGATION
+════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-logo">
+    <span class="lg-mark">LGE · AX Hackathon 2026</span>
+    <span class="doc-title">AI Content Hub</span>
+  </div>
+  <ul class="nav-list">
+    <li><a href="#s1"><span class="num">01</span>타이틀</a></li>
+    <li><a href="#s2"><span class="num">02</span>개요</a></li>
+    <li><a href="#s3"><span class="num">03</span>현황 분석 (AS-IS)</a></li>
+    <div class="nav-divider"></div>
+    <li><a href="#s4"><span class="num">04</span>DAM 대비 장점</a></li>
+    <li><a href="#s5"><span class="num">05</span>개념도</a></li>
+    <li><a href="#s6"><span class="num">06</span>AI 작동 방식</a></li>
+    <div class="nav-divider"></div>
+    <li><a href="#s7"><span class="num">07</span>수집·정제 파이프라인</a></li>
+    <li><a href="#s8"><span class="num">08</span>커버리지 확대</a></li>
+    <div class="nav-divider"></div>
+    <li><a href="#s9"><span class="num">09</span>3P PDP 플랫폼</a></li>
+    <li><a href="#s10"><span class="num">10</span>Amazon PDP 프로세스</a></li>
+    <li><a href="#s11"><span class="num">11</span>Social 자동 생성</a></li>
+    <li><a href="#s12"><span class="num">12</span>GEO Reverse</a></li>
+    <div class="nav-divider"></div>
+    <li><a href="#s13"><span class="num">13</span>로드맵</a></li>
+    <li><a href="#s14"><span class="num">14</span>도입 시뮬레이션</a></li>
+    <li><a href="#s15"><span class="num">15</span>비용 비교</a></li>
+  </ul>
+</nav>
+
+<!-- ════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════ -->
+<main>
+
+  <!-- ── SLIDE 1: TITLE ── -->
+  <section class="slide-section" id="s1">
+    <div class="title-inner">
+      <p class="title-event">LGE AX Hackathon 2026</p>
+      <h1 class="title-main">AI <span>Content</span> Hub</h1>
+      <p class="title-sub">For Fast Digital Commerce Execution</p>
+      <div class="title-authors">
+        <span>D2C Contents Team &nbsp;·&nbsp; <strong>Jaemoon Jung</strong> (Professional)</span>
+        <span>D2C Contents Team &nbsp;·&nbsp; <strong>Jaeyoung Kang</strong> (Specialist)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 2: OVERVIEW ── -->
+  <section class="slide-section" id="s2">
+    <p class="slide-label">Overview</p>
+    <h2 class="section-title">AI Content Hub</h2>
+    <p class="section-desc">빠르게 다변화하는 디지털 환경을 대응할 수 있는 컨텐츠를 제작하기 위해 자사의 디지털 자산을 한 곳에 모으고, AI를 활용하여 최적화된 컨텐츠 생산 시스템을 구축한다.</p>
+
+    <div class="hub-arrow-flow">
+      <div class="hub-box">LG.com 공식 콘텐츠</div>
+      <span class="arrow">→</span>
+      <div class="hub-box accent">AI Content Hub<br><small style="font-size:11px;font-weight:300;opacity:.85">· 콘텐츠 통합·정제 &nbsp; · AI 연동·웹 기반</small></div>
+      <span class="arrow">→</span>
+      <div class="hub-box">全 채널 활용</div>
+    </div>
+
+    <div class="hub-channels">
+      <span class="channel-tag">1P Retail (LG.com 직영)</span>
+      <span class="channel-tag">3P PDP (Amazon, eBay 등)</span>
+      <span class="channel-tag">Social (TikTok, Instagram 등)</span>
+      <span class="channel-tag">AI Shopping (Perplexity 등)</span>
+    </div>
+
+    <div class="core-goal-box">
+      <p class="label">핵심 목표</p>
+      <p>Content Hub를 구성하고, 이를 1P · 3P · SNS · AI 등 전 채널에서 활용 가능하게 하는 것</p>
+      <ul>
+        <li>LG.com을 메인 소스로 전사 릴리즈 콘텐츠를 수집·정제하여 단일 허브에 적재</li>
+        <li>DAM은 무겁고 AI 연동에 부적합 → 경량 웹 기반 Content Hub로 구성</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 3: AS-IS ── -->
+  <section class="slide-section" id="s3">
+    <p class="slide-label">Problem Analysis</p>
+    <h2 class="section-title">컨텐츠 운영 실태 파악을 통한<br>AI Content Hub의 필요성 검토</h2>
+    <p class="section-desc">AI Content Hub = 전사 콘텐츠의 Single Source of Truth (SSOT). 한 곳에 모으고, AI로 정제하고, 다양한 디지털 채널에서 활용하는 웹 기반 경량 플랫폼</p>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:160px">구분</th>
+          <th>현재 상황 (AS-IS)</th>
+          <th style="width:38%">현재의 구조적 문제점</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>디지털 컨텐츠 관리</td>
+          <td>제품 콘텐츠가 LG.com, 각 법인, 에이전시 등에 분산되어 통합된 콘텐츠 저장소 부재함.</td>
+          <td class="problem">동일 제품인데 채널마다 다른 정보 노출 → 브랜드 일관성 훼손<br>콘텐츠 재활용 불가 → 매번 새로 제작</td>
+        </tr>
+        <tr>
+          <td>Retail OBS PDP 제작</td>
+          <td>Amazon, eBay, Shopee 등 플랫폼별 PDP를 법인 담당자가 수작업으로 캡쳐하거나 별도 제작하지 않아 낮은 수준의 제품 상세 컨텐츠 노출.</td>
+          <td class="problem">1개 제품 × 5개 플랫폼 × 10개 국가 = 50건 수작업<br>제품당 3~5일 소요, 인력·비용 과다</td>
+        </tr>
+        <tr>
+          <td>외부 솔루션 의존도</td>
+          <td>Syndication 등 외부 서비스에 연간 높은 라이선스 비용 지출</td>
+          <td class="problem">자체 콘텐츠 통제력 상실<br>커스터마이징 한계, 비용 지속 증가</td>
+        </tr>
+        <tr>
+          <td>AI 활용 디지털 자산 생성 인프라</td>
+          <td>AI가 콘텐츠를 생성하려 해도 정제된 원본 소스(SSOT)가 없음</td>
+          <td class="problem">AI 생성 품질 불안정, 할루시네이션 위험<br>GEO/SEO 최적화 대응 체계 부재</td>
+        </tr>
+        <tr>
+          <td>DAM의 한계점</td>
+          <td>기존 DAM은 파일 저장소 중심, 보안에 예민한 자산 다수 적재</td>
+          <td class="problem">AI 파이프라인 연동 어려움<br>실시간 활용·배포 불가 구조</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── SLIDE 4: DAM vs HUB ── -->
+  <section class="slide-section" id="s4">
+    <p class="slide-label">Solution</p>
+    <h2 class="section-title">AI Content Hub의 DAM 대비 장점 및 핵심 구조</h2>
+    <p class="section-desc">앞선 DAM의 한계로 인한 문제점을 개선하기 위하여 AI Content Hub를 통해 5가지 측면에서의 관리·컨텐츠 제작 효율화 도모</p>
+
+    <table class="compare-table" style="margin-bottom:36px">
+      <thead>
+        <tr>
+          <th>측면</th>
+          <th class="col-dam">기존 DAM</th>
+          <th class="col-hub">AI Content Hub</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>구조적 측면</td>
+          <td class="col-dam">파일 저장소 중심, 무거운 클라이언트</td>
+          <td class="col-hub">웹 기반 경량 플랫폼, API 우선 설계</td>
+        </tr>
+        <tr>
+          <td>AI 연동 측면</td>
+          <td class="col-dam">AI 파이프라인 연동 어려움</td>
+          <td class="col-hub">AI 네이티브 연동 (LLM/VLM, OpenRouter)</td>
+        </tr>
+        <tr>
+          <td>협업 측면</td>
+          <td class="col-dam">다운로드 → 수정 → 업로드 반복</td>
+          <td class="col-hub">웹 어드민에서 실시간 검수·승인</td>
+        </tr>
+        <tr>
+          <td>활용 측면</td>
+          <td class="col-dam">채널별 수동 변환 필요</td>
+          <td class="col-hub">1P/3P/SNS/AI 자동 변환·배포</td>
+        </tr>
+        <tr>
+          <td>비용 측면</td>
+          <td class="col-dam">높은 라이선스, 유지보수 비용</td>
+          <td class="col-hub">자체 구축, 운영 비용 최소화</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="slide-label" style="margin-bottom:16px">AI Content Hub 핵심 구성 요소</p>
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-card-header"><span class="phase-tag">DB</span>콘텐츠 DB</div>
+        <div class="phase-card-body">
+          <div class="phase-item"><span>제품 텍스트·이미지·영상·스펙을 정규화된 표준 스키마로 중앙 저장</span></div>
+          <div class="phase-item"><span>제품 ID 기반 통합 인덱싱, 버전 관리, 이력 추적</span></div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-card-header"><span class="phase-tag">AI</span>AI 처리 엔진</div>
+        <div class="phase-card-body">
+          <div class="phase-item"><span>LLM/VLM을 활용한 콘텐츠 분석·정제·태깅·구조화</span></div>
+          <div class="phase-item"><span>OpenRouter 연동으로 최신 AI 모델 즉시 적용 가능</span></div>
+        </div>
+      </div>
+      <div class="phase-card">
+        <div class="phase-card-header"><span class="phase-tag">API</span>API Gateway</div>
+        <div class="phase-card-body">
+          <div class="phase-item"><span>외부 시스템 및 AI 파이프라인이 Hub 데이터를 API로 조회·활용</span></div>
+          <div class="phase-item"><span>3P 플랫폼 연동, AI 생성 시 원본 소스 제공</span></div>
+        </div>
+      </div>
+      <div class="phase-card" style="grid-column:span 1">
+        <div class="phase-card-header"><span class="phase-tag">WEB</span>웹 어드민</div>
+        <div class="phase-card-body">
+          <div class="phase-item"><span>콘텐츠 검색·필터·미리보기</span></div>
+          <div class="phase-item"><span>국가/플랫폼별 가이드라인 설정, 승인 워크플로우</span></div>
+          <div class="phase-item"><span>품질 관리 대시보드</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 5: ARCHITECTURE ── -->
+  <section class="slide-section" id="s5">
+    <p class="slide-label">Architecture</p>
+    <h2 class="section-title">AI Content Hub 개념도</h2>
+    <p class="section-desc">AI가 콘텐츠를 생성할 때에도 Content Hub를 원본 소스(SSOT)로 활용하고 정제된 데이터 기반으로 생성 품질·일관성 보장</p>
+
+    <div class="arch-grid">
+      <div class="arch-col source">
+        <div class="arch-col-label">LG.com 수집 소스</div>
+        <div class="arch-item">LG.com 제품 페이지<br><small style="opacity:.6;font-size:11px">스펙, 설명, USP, 키비주얼</small></div>
+        <div class="arch-item">제품 이미지·영상<br><small style="opacity:.6;font-size:11px">공식 촬영분, 라이프스타일 컷</small></div>
+        <div class="arch-item">캠페인·프로모션<br><small style="opacity:.6;font-size:11px">시즌별 에셋, 배너, 카피</small></div>
+        <div class="arch-item">마케팅 자료<br><small style="opacity:.6;font-size:11px">브로셔, 비교표, 인포그래픽</small></div>
+      </div>
+      <div class="arch-col hub">
+        <div class="arch-col-label">AI Content Hub (웹 기반 플랫폼)</div>
+        <div class="arch-item">콘텐츠 DB<br><small style="opacity:.8;font-size:11px">정규화된 텍스트·이미지·영상·스펙</small></div>
+        <div class="arch-item">AI 처리 엔진<br><small style="opacity:.8;font-size:11px">LLM/VLM 분석·태깅·구조화 (OpenRouter)</small></div>
+        <div class="arch-item">API 레이어<br><small style="opacity:.8;font-size:11px">외부 시스템·AI가 Hub 데이터 조회·활용</small></div>
+        <div class="arch-item">어드민 대시보드<br><small style="opacity:.8;font-size:11px">검색·필터·미리보기·승인 관리</small></div>
+      </div>
+      <div class="arch-col channels">
+        <div class="arch-col-label">활용 채널</div>
+        <div class="arch-item">1P Retail<br><small style="opacity:.7;font-size:11px">LG.com 직영몰, Multishop</small></div>
+        <div class="arch-item">3P PDP<br><small style="opacity:.7;font-size:11px">Amazon, eBay, Shopee, Lazada 등</small></div>
+        <div class="arch-item">SNS · 숏폼<br><small style="opacity:.7;font-size:11px">TikTok, Instagram, YouTube Shorts</small></div>
+        <div class="arch-item">AI 쇼핑 대응<br><small style="opacity:.7;font-size:11px">Perplexity, ChatGPT Shopping 등</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 6: HOW AI WORKS ── -->
+  <section class="slide-section" id="s6">
+    <p class="slide-label">AI Engine</p>
+    <h2 class="section-title">AI Content Hub 전 과정에서 AI가 작동하는 방식</h2>
+    <p class="section-desc">콘텐츠 수집·정제부터 채널별 커스터마이징, 품질 관리, 지속 학습까지 AI가 핵심 엔진으로 관여. 단순 '생성 도구'가 아니라, 수집→정제→생성→최적화→학습의 전 과정을 관통하는 핵심 엔진.</p>
+
+    <div class="phase-grid">
+      <div class="phase-card">
+        <div class="phase-card-header"><span class="phase-tag">Phase A</span>수집 정제</div>
+        <div class="phase-card-body">
+          <div class="phase-item">
+            <div>
+              <strong>LLM 텍스트 분석</strong> <span class="ai-badge">Claude</span><br>
+              <span style="font-size:12px;color:#999">제품 페이지에서 USP, 핵심 특장점, 기술 스펙을 자동 추출·구조화</span>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div>
+              <strong>VLM 이미지 분석</strong> <span class="ai-badge">Gemini</span><br>
+              <span style="font-size:12px;color:#999">제품 이미지를 분석하여 자동 분류, 태깅, 용도별 카테고리 지정</span>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div>
+              <strong>자동 메타데이터 생성</strong><br>
+              <span style="font-size:12px;color:#999">카테고리, 검색 태그, 다국어 키워드 자동 생성 및 인덱싱</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-card-header"><span class="phase-tag">Phase B</span>채널별 커스터마이징</div>
+        <div class="phase-card-body">
+          <div class="phase-item">
+            <div>
+              <strong>플랫폼별 PDP 자동 생성</strong><br>
+              <span style="font-size:12px;color:#999">Amazon, eBay, Shopee 등 각 플랫폼 업로드 가이드라인에 맞춘 PDP 자동 생성</span>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div>
+              <strong>다국어 번역 + 로컬라이징</strong><br>
+              <span style="font-size:12px;color:#999">Hub 원본 → 타겟 언어 자동 번역, 현지 표현·단위·문화 맞춤 변환</span>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div>
+              <strong>SEO/GEO 키워드 최적화</strong><br>
+              <span style="font-size:12px;color:#999">키워드 분석, Backend Keywords, 메타 태그, AI 쇼핑 플랫폼 대응 콘텐츠 생성</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-card-header"><span class="phase-tag">Phase C</span>품질·최적화·학습</div>
+        <div class="phase-card-body">
+          <div class="phase-item">
+            <div>
+              <strong>품질 자동 검증</strong><br>
+              <span style="font-size:12px;color:#999">생성 콘텐츠가 가이드라인 준수하는지 AI가 자동 체크 (글자수, 금지어, 필수 키워드)</span>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div>
+              <strong>피드백 학습 루프</strong> <span class="ai-badge">Fine-Tuning</span><br>
+              <span style="font-size:12px;color:#999">담당자 수정 이력을 AI가 학습 → 다음 생성 시 품질 자동 향상</span>
+            </div>
+          </div>
+          <div class="phase-item">
+            <div>
+              <strong>GEO 스코어링</strong><br>
+              <span style="font-size:12px;color:#999">AI 검색 엔진(Perplexity, ChatGPT)에서의 노출 가능성 점수화, 개선 포인트 자동 제안</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="core-goal-box" style="margin-top:0">
+      <p class="label">AI 인프라</p>
+      <p>OpenRouter 연동으로 최신 LLM/VLM을 유연하게 교체 적용 — 특정 모델에 종속되지 않는 구조</p>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 7: PIPELINE ── -->
+  <section class="slide-section" id="s7">
+    <p class="slide-label">Pipeline</p>
+    <h2 class="section-title">AI Content Hub 구성 : 수집·정제 파이프라인</h2>
+    <p class="section-desc">LG.com을 메인 소스로, 전사 릴리즈 콘텐츠를 자동 수집 · AI 정제 · 정규화하여 Hub에 적재</p>
+
+    <div class="pipeline-steps">
+      <div class="pipeline-step">
+        <div class="step-num">01</div>
+        <div class="step-title">데이터 크롤링 & 수집</div>
+        <ul class="step-list">
+          <li>LG.com 제품 페이지 자동 크롤링</li>
+          <li>텍스트, 이미지, 영상, 스펙 수집</li>
+          <li>캠페인·프로모션 에셋 포함</li>
+          <li>신제품 출시 시 자동 감지·수집</li>
+          <li>변경 이력 추적 (버전 관리)</li>
+        </ul>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">02</div>
+        <div class="step-title">AI 분석 & 정제</div>
+        <ul class="step-list">
+          <li>LLM: 제품 특장점·USP 자동 추출</li>
+          <li>VLM: 이미지 분석·분류·태깅</li>
+          <li>메타데이터 자동 생성 (카테고리, 태그)</li>
+          <li>다국어 번역 기반 데이터 보강</li>
+          <li>OpenRouter 연동 → 최신 모델 적용</li>
+        </ul>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">03</div>
+        <div class="step-title">정규화 & 적재</div>
+        <ul class="step-list">
+          <li>플랫폼 독립적 표준 스키마 적용</li>
+          <li>제품 ID 기반 통합 인덱싱</li>
+          <li>이미지 리사이즈·포맷 표준화</li>
+          <li>검색·필터용 인덱스 자동 생성</li>
+          <li>Content Hub DB에 적재</li>
+        </ul>
+      </div>
+      <div class="pipeline-step">
+        <div class="step-num">04</div>
+        <div class="step-title">검수 & 승인</div>
+        <ul class="step-list">
+          <li>웹 어드민에서 콘텐츠 미리 보기</li>
+          <li>가이드라인 준수 자동 체크</li>
+          <li>담당자 검토 → 승인 워크플로우</li>
+          <li>수정 이력 자동 아카이빙</li>
+          <li>승인 완료 → 활용 채널 배포 가능</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pipeline-key">
+      <strong>핵심 :</strong> LG.com이 변경되면 자동 감지 → 파이프라인 재실행 → Hub 콘텐츠 자동 갱신 → 연결된 모든 채널 콘텐츠도 자동 업데이트
+    </div>
+  </section>
+
+  <!-- ── SLIDE 11: COVERAGE ── -->
+  <section class="slide-section" id="s8">
+    <p class="slide-label">Channel Expansion</p>
+    <h2 class="section-title">AI Content Hub 활용한 컨텐츠 커버리지 확대</h2>
+    <p class="section-desc">AI Content Hub를 통해 전 채널에 최적화된 콘텐츠를 자동으로 공급하는 구조</p>
+
+    <div class="coverage-grid">
+      <div class="coverage-card">
+        <div class="coverage-card-head">
+          <h3>3P PDP 자동 생성</h3>
+          <span class="coverage-badge">AI 자동 생성</span>
+        </div>
+        <div class="coverage-card-body">
+          <div class="coverage-meta">
+            <span class="meta-key">활용 방식</span><span class="meta-val">AI 자동 생성 + SEO/GEO</span>
+            <span class="meta-key">대상 플랫폼</span><span class="meta-val">Amazon, eBay, Shopee, Lazada 등</span>
+          </div>
+          <div class="coverage-effect">제작 시간 70%↓ · 커버리지 5X↑</div>
+        </div>
+      </div>
+      <div class="coverage-card">
+        <div class="coverage-card-head">
+          <h3>1P Retail Shop</h3>
+          <span class="coverage-badge">실시간 동기화</span>
+        </div>
+        <div class="coverage-card-body">
+          <div class="coverage-meta">
+            <span class="meta-key">활용 방식</span><span class="meta-val">Hub 실시간 동기화</span>
+            <span class="meta-key">대상 플랫폼</span><span class="meta-val">1P Retailers' page, Multishop</span>
+          </div>
+          <div class="coverage-effect">Content Hub 내 제품 정보 업데이트 시 즉시 반영</div>
+        </div>
+      </div>
+      <div class="coverage-card">
+        <div class="coverage-card-head">
+          <h3>Social</h3>
+          <span class="coverage-badge">포맷 자동 변환</span>
+        </div>
+        <div class="coverage-card-body">
+          <div class="coverage-meta">
+            <span class="meta-key">활용 방식</span><span class="meta-val">포맷 자동 변환</span>
+            <span class="meta-key">대상 플랫폼</span><span class="meta-val">TikTok, Instagram, YouTube</span>
+          </div>
+          <div class="coverage-effect">정보 제공용 피드/숏폼 콘텐츠 자동 생성</div>
+        </div>
+      </div>
+      <div class="coverage-card">
+        <div class="coverage-card-head">
+          <h3>AI Shopping</h3>
+          <span class="coverage-badge">SSOT 기반 AI 생성</span>
+        </div>
+        <div class="coverage-card-body">
+          <div class="coverage-meta">
+            <span class="meta-key">활용 방식</span><span class="meta-val">SSOT 기반 AI 생성</span>
+            <span class="meta-key">대상 플랫폼</span><span class="meta-val">Perplexity, ChatGPT 등</span>
+          </div>
+          <div class="coverage-effect">AI 검색 노출 (GEO) 극대화</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="effects-grid">
+      <div class="effect-card">
+        <h4>SSOT 확보</h4>
+        <p>전사 콘텐츠의 단일 진실 소스 → 브랜드 일관성 보장</p>
+      </div>
+      <div class="effect-card">
+        <h4>AI 커머스 선점</h4>
+        <p>Perplexity, ChatGPT Shopping 등 차세대 AI 채널 즉시 대응 가능</p>
+      </div>
+      <div class="effect-card">
+        <h4>업무 패러다임 전환</h4>
+        <p>담당자가 '제작자'에서 '큐레이터'로 역할 전환, 전략 업무 집중</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 12: 3P PDP PLATFORMS ── -->
+  <section class="slide-section" id="s9">
+    <p class="slide-label">3P PDP Auto-Generation</p>
+    <h2 class="section-title">AI Content Hub 활용 1 — 3P PDP 자동 생성</h2>
+    <p class="section-desc">Hub의 정제된 콘텐츠를 기반으로, 각 이커머스 플랫폼 가이드라인에 최적화된 PDP를 AI가 자동 생성<br>1개 제품 Content Hub 적재 → 5개+ 플랫폼 × 40+ 국가의 PDP를 AI가 각 플랫폼 가이드라인에 맞춰 자동 생성</p>
+
+    <table class="platform-table">
+      <thead>
+        <tr>
+          <th>플랫폼</th>
+          <th>대상 국가</th>
+          <th>PDP 생성 범위</th>
+          <th>최적화 포인트</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Amazon</td>
+          <td>US, UK, DE, JP, IN, AE 등 15개국</td>
+          <td>Title, Bullet Points, Description, A+ Content, Backend Keywords</td>
+          <td>Amazon SEO 알고리즘 최적화<br>카테고리별 가이드라인 자동 적용</td>
+        </tr>
+        <tr>
+          <td>eBay</td>
+          <td>US, UK, DE, AU 등 12개국</td>
+          <td>Item Title, Item Specifics, Description (HTML), Gallery</td>
+          <td>Cassini 검색 엔진 최적화<br>Item Specifics 자동 매핑</td>
+        </tr>
+        <tr>
+          <td>Shopee</td>
+          <td>SG, TH, VN, PH, ID, MY, TW 등 7개국</td>
+          <td>Product Name, Description, Attributes, Image Gallery</td>
+          <td>현지 언어 자동 번역 + 로컬라이징<br>Shopee SEO 키워드 최적화</td>
+        </tr>
+        <tr>
+          <td>Lazada</td>
+          <td>SG, TH, VN, PH, ID, MY 등 6개국</td>
+          <td>Title, Short/Long Description, Specifications, Rich Content</td>
+          <td>Lazada 카테고리 트리 자동 매핑<br>동남아 시장 로컬 키워드 반영</td>
+        </tr>
+        <tr>
+          <td>Best Buy / 기타</td>
+          <td>US, CA 등 주요 리테일러</td>
+          <td>Product Page, Enhanced Content, Comparison Charts</td>
+          <td>리테일러별 Content Spec 준수<br>GEO 분석 기반 콘텐츠 최적화</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── SLIDE 13: AMAZON PROCESS ── -->
+  <section class="slide-section" id="s10">
+    <p class="slide-label">Process Detail</p>
+    <h2 class="section-title">AI Content Hub 활용 1 — Amazon 3P PDP 자동 생성</h2>
+    <p class="section-desc">Content Hub → AI 처리 → 플랫폼별 최적화 → 산출물 생성까지의 전 과정 (Amazon US PDP 생성 예시)</p>
+
+    <div class="process-flow">
+      <div class="process-step">
+        <div class="process-step-num">1</div>
+        <div class="process-step-content">
+          <h4>HUB 데이터 조회</h4>
+          <p>API로 해당 제품의 정제된 콘텐츠 호출 (텍스트 + 이미지 + 스펙)</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">2</div>
+        <div class="process-step-content">
+          <h4>플랫폼 규격 매핑</h4>
+          <p>Amazon 가이드라인 (Title 200자, Bullet 5개, A+ Content 규격 등) 적용</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">3</div>
+        <div class="process-step-content">
+          <h4>AI 콘텐츠 생성</h4>
+          <p>LLM이 플랫폼 규격에 맞는 Title, Description, Bullet Points 자동 생성</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">4</div>
+        <div class="process-step-content">
+          <h4>SEO/GEO 최적화</h4>
+          <p>타겟 국가 검색 키워드 분석 → 콘텐츠에 반영, Backend Keywords 생성</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">5</div>
+        <div class="process-step-content">
+          <h4>산출물 출력</h4>
+          <p>텍스트 + 이미지, HTML, 렌더링된 HTML 이미지 등 다양한 포맷 지원</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 14 & 15: SOCIAL + GEO ── -->
+  <section class="slide-section" id="s11">
+    <p class="slide-label">Social & GEO</p>
+    <h2 class="section-title">Social 컨텐츠 자동 생성 & GEO Reverse</h2>
+
+    <div class="feature-two-col">
+      <div class="feature-card">
+        <div class="feature-card-head">
+          <h3>Social 자동 생성</h3>
+          <p>AI Content Hub 활용 2</p>
+        </div>
+        <div class="feature-card-body">
+          <p style="font-size:13px;color:#666;margin-bottom:14px">Hub 콘텐츠를 기반으로 TikTok, Instagram, YouTube Shorts 등 SNS 포맷 자동 변환</p>
+          <ul>
+            <li>제품 하이라이트 기반 숏폼 스크립트 자동 생성 (AI가 USP 분석 → 30초 스크립트)</li>
+            <li>트렌드 해시태그 분석 및 자동 반영</li>
+            <li>플랫폼별 이미지 리사이즈·크롭 자동화 (1:1, 9:16 등)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-card" id="s12">
+        <div class="feature-card-head">
+          <h3>GEO Reverse</h3>
+          <p>AI Content Hub 활용 4</p>
+        </div>
+        <div class="feature-card-body">
+          <p style="font-size:13px;color:#666;margin-bottom:14px">Hub에서 생성된 GEO 최적화 콘텐츠를 lg.com에 역으로 적용하여 AI 검색 대응력 강화</p>
+          <ul>
+            <li>AI가 콘텐츠 생성 시 Content Hub를 원본 소스(SSOT)로 조회, 동일 형태/키워드로 반복 노출하여 GEO 탐색 정확도 향상</li>
+            <li>Content Hub에 수집된 키워드·태그를 재활용</li>
+            <li>Perplexity, ChatGPT Shopping 등 AI 쇼핑에 최적화된 콘텐츠 자동 대응</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 16: ROADMAP ── -->
+  <section class="slide-section" id="s13">
+    <p class="slide-label">Roadmap</p>
+    <h2 class="section-title">AI Contents Hub Roadmap</h2>
+
+    <div class="roadmap-grid">
+      <div class="roadmap-card">
+        <div class="roadmap-card-head">Phase 1 <span>Hub 구축 &amp; Retail OBS PDP 자동화 테스트</span></div>
+        <div class="roadmap-card-body">
+          <div class="roadmap-item">LG.com 크롤링 파이프라인 개발</div>
+          <div class="roadmap-item">Content Hub 코어 구축 (DB, API)</div>
+          <div class="roadmap-item">3P PDP 자동 생성 (Amazon, eBay)</div>
+          <div class="roadmap-item">SEO/GEO 분석 엔진 연동</div>
+        </div>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-card-head">Phase 2 <span>채널 확장</span></div>
+        <div class="roadmap-card-body">
+          <div class="roadmap-item">Shopee, Lazada 등 플랫폼 추가</div>
+          <div class="roadmap-item">1P Retail 활용 확대</div>
+          <div class="roadmap-item">SNS·숏폼 콘텐츠 생성</div>
+          <div class="roadmap-item">AI 생성 시 Hub SSOT 연동</div>
+          <div class="roadmap-item">어드민 고도화 (승인 워크플로우)</div>
+        </div>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-card-head">Phase 3 <span>Full Content Hub</span></div>
+        <div class="roadmap-card-body">
+          <div class="roadmap-item">외부 Syndication 완전 대체</div>
+          <div class="roadmap-item">AI 커머스 채널 자동 대응</div>
+          <div class="roadmap-item">글로벌 법인 확장 (40+ 국가)</div>
+          <div class="roadmap-item">PIM 연동 검토 (SSOT 강화)</div>
+          <div class="roadmap-item">GEO Reverse 기능 적용</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="considerations-box">
+      <h4>고려사항</h4>
+      <div class="considerations-grid">
+        <div class="consideration-item">보안 규정 : DAM / PIM 연동 시 미출시 제품 엠바고 콘텐츠 보안</div>
+        <div class="consideration-item">LLM 사용 제한 : 사내 보안 규정상 외부 LLM 사용 제한 가능성</div>
+        <div class="consideration-item">어드민·업로드 자동화 개발 범위에 따른 비용 변동</div>
+        <div class="consideration-item">보안팀 사전 협의, 접근 권한 관리</div>
+        <div class="consideration-item">Private Cloud Enterprise LLM 검토</div>
+        <div class="consideration-item">MVP 우선 개발 후 단계적 확장</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SLIDE 17: SIMULATION ── -->
+  <section class="slide-section" id="s14">
+    <p class="slide-label">Implementation Simulation</p>
+    <h2 class="section-title">도입 시뮬레이션 — 독일 법인 기준 시간·비용 산출</h2>
+    <p class="section-desc">독일 법인의 주력 제품 200개 기준, Content Hub 구축 및 3P PDP 생성 시 예상 소요 시간·비용 비교</p>
+
+    <div class="precondition-box">
+      <h4>시뮬레이션 전제 조건</h4>
+      <ul>
+        <li>대상: LG 독일 법인 (lg.com/de), 주력 제품 200개 (TV, 냉장고, 세탁기, 노트북 등)</li>
+        <li>타겟 3P 플랫폼: Amazon.de, eBay.de, Otto.de, MediaMarkt (4개 플랫폼)</li>
+        <li>언어: 독일어 (DE) + 영어 (EN)</li>
+      </ul>
+    </div>
+
+    <table class="simulation-table">
+      <thead>
+        <tr>
+          <th style="width:200px">항목</th>
+          <th class="col-asis">AS-IS (수작업)</th>
+          <th class="col-tobe">TO-BE (AI Content Hub)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hub 초기 구축 (1회성)</td>
+          <td class="col-asis">해당 없음 (통합 시스템 없이 개별 작업)</td>
+          <td class="col-tobe">약 3~4개월 · Content Hub 코어 + 크롤러 + AI 파이프라인 + 어드민<br>개발 인력 3~4명 × 4개월 ≒ <strong>약 2~3억 원</strong></td>
+        </tr>
+        <tr>
+          <td>LG.com 크롤링 & Hub 적재 (200개 제품)</td>
+          <td class="col-asis">수동 복사/정리: 제품당 2시간<br>200개 × 2시간 = 400시간 (약 50일)<br>인건비 <strong>약 5,000만 원</strong></td>
+          <td class="col-tobe">AI 자동 크롤링+정제: 제품당 5~10분<br>200개 × 10분 = 약 33시간 (약 4일)<br>AI API 비용 <strong>약 200만 원</strong></td>
+        </tr>
+        <tr>
+          <td>3P PDP 생성 (200개 × 4플랫폼 = 800건)</td>
+          <td class="col-asis">수작업 제작: 건당 3~5일<br>800건 × 4일 = 3,200일 (약 13년 M/M)<br>에이전시 외주 시 800건 × 40만 원 = <strong>약 3.2억 원</strong></td>
+          <td class="col-tobe">AI 자동 생성: 건당 10~30분<br>800건 × 20분 = 약 267시간 (약 33일)<br>AI API 비용: 800건 × 3,000원 = <strong>약 240만 원</strong></td>
+        </tr>
+        <tr>
+          <td>SEO/GEO 최적화 (800건)</td>
+          <td class="col-asis">SEO 전문가 별도 투입, 건당 1~2시간 분석<br>800건 × 1.5시간 = 1,200시간<br><strong>외주비 약 8,000만 원</strong></td>
+          <td class="col-tobe">AI 자동 분석·최적화 포함<br>PDP 생성 시 동시 수행<br><strong>추가 비용 없음 (Hub에 포함)</strong></td>
+        </tr>
+        <tr>
+          <td>유지보수 (월간 업데이트)</td>
+          <td class="col-asis">제품 변경 시 수동 업데이트<br>월 50건 변경 × 4플랫폼 = 200건/월<br><strong>약 1,500만 원/월</strong></td>
+          <td class="col-tobe">LG.com 변경 자동 감지 → 자동 갱신<br>월 AI API 비용 약 60만 원<br><strong>검수 담당 1명</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="result-banner">
+      독일 법인 기준 1년차 총 비용: AS-IS 약 5.8억 원 vs TO-BE 약 2.8억 원 (Hub 구축 포함)<br>
+      → 구축 포함해도 약 50% 절감, 2년차부터 80%+ 절감
+    </div>
+  </section>
+
+  <!-- ── SLIDE 18: COST SUMMARY ── -->
+  <section class="slide-section" id="s15">
+    <p class="slide-label">Cost Analysis</p>
+    <h2 class="section-title">비용 비교 요약 & 글로벌 확장 시뮬레이션</h2>
+    <p class="section-desc">독일 법인 (200개 제품 × 4개 플랫폼) — 연간 비용 비교</p>
+
+    <table class="cost-table" style="margin-bottom:40px">
+      <thead>
+        <tr>
+          <th class="label-col">비용 항목</th>
+          <th class="asis">AS-IS (수작업/외주)</th>
+          <th class="tobe">TO-BE (Content Hub)</th>
+          <th class="save">절감 효과</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>초기 구축 (1회)</td>
+          <td class="asis">—</td>
+          <td class="tobe">약 2.5억 원</td>
+          <td class="save">—</td>
+        </tr>
+        <tr>
+          <td>Hub 적재 (200개 제품)</td>
+          <td class="asis">약 5,000만 원</td>
+          <td class="tobe">약 200만 원</td>
+          <td class="save">96% ↓</td>
+        </tr>
+        <tr>
+          <td>PDP 생성 (800건)</td>
+          <td class="asis">약 3.2억 원</td>
+          <td class="tobe">약 240만 원</td>
+          <td class="save">99% ↓</td>
+        </tr>
+        <tr>
+          <td>SEO/GEO 최적화</td>
+          <td class="asis">약 8,000만 원</td>
+          <td class="tobe">Hub 포함</td>
+          <td class="save">100% ↓</td>
+        </tr>
+        <tr>
+          <td>월간 유지보수 (×12)</td>
+          <td class="asis">약 1.8억 원/년</td>
+          <td class="tobe">약 720만 원/년</td>
+          <td class="save">96% ↓</td>
+        </tr>
+        <tr class="total-row">
+          <td>1년차 합계</td>
+          <td class="asis" style="background:#1a1a1a;color:#888">약 5.8억 원</td>
+          <td class="tobe" style="background:#1a1a1a;color:#fff">약 2.8억 원</td>
+          <td class="save">약 52% ↓</td>
+        </tr>
+        <tr class="total-row">
+          <td>2년차 이후 (연간)</td>
+          <td class="asis" style="background:#1a1a1a;color:#888">약 5.3억 원</td>
+          <td class="tobe" style="background:#1a1a1a;color:#fff">약 1,200만 원</td>
+          <td class="save">약 98% ↓</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="slide-label" style="margin-bottom:16px">글로벌 확장 시뮬레이션 — Hub 구축 후 추가 법인 적용 시</p>
+    <p style="font-size:12px;color:var(--lg-gray-3);margin-bottom:16px">※ Content Hub는 1회 구축 후 추가 법인은 크롤링 설정 + 가이드라인 추가만으로 즉시 확장 가능</p>
+
+    <table class="global-table">
+      <thead>
+        <tr>
+          <th>법인 (국가)</th>
+          <th>제품 수</th>
+          <th>플랫폼 수</th>
+          <th>PDP 건수</th>
+          <th>AS-IS 예상 비용</th>
+          <th>Hub 추가 비용</th>
+          <th>절감율</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>🇩🇪 독일</td>
+          <td>200</td>
+          <td>4</td>
+          <td>800</td>
+          <td>약 5.3억 원/년</td>
+          <td>약 1,200만 원</td>
+          <td class="savings">98%</td>
+        </tr>
+        <tr>
+          <td>🇬🇧 영국</td>
+          <td>200</td>
+          <td>3</td>
+          <td>600</td>
+          <td>약 4.0억 원/년</td>
+          <td>약 900만 원</td>
+          <td class="savings">98%</td>
+        </tr>
+        <tr>
+          <td>🇫🇷 프랑스</td>
+          <td>180</td>
+          <td>3</td>
+          <td>540</td>
+          <td>약 3.6억 원/년</td>
+          <td>약 800만 원</td>
+          <td class="savings">98%</td>
+        </tr>
+        <tr>
+          <td>🇸🇬 동남아 (6개국)</td>
+          <td>150</td>
+          <td>3</td>
+          <td>2,700</td>
+          <td>약 10억 원/년</td>
+          <td>약 3,000만 원</td>
+          <td class="savings">97%</td>
+        </tr>
+        <tr>
+          <td><strong>합계 (4개 지역)</strong></td>
+          <td><strong>730</strong></td>
+          <td>—</td>
+          <td><strong>4,640</strong></td>
+          <td><strong>약 22.9억 원/년</strong></td>
+          <td><strong>약 5,900만 원</strong></td>
+          <td class="savings"><strong>97%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="quote-box">
+      Hub 1회 구축(약 2.5억) 후, 4개 지역 확장 시 연간 <span>약 22억 원 이상 절감</span><br>
+      → 구축비 <span>3개월 내 회수</span>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('.slide-section[id]');
+  const navLinks = document.querySelectorAll('.nav-list li a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>

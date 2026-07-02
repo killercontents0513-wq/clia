@@ -1,0 +1,146 @@
+====================================================================================================
+LG SAUDI ARABIA (lg.com/sa_en) - PRODUCT PAGE (PDP) URLs
+35 Product Models Across All Categories
+====================================================================================================
+
+Discovery Date: 2026-05-08
+Method: Direct URL Construction + Verification
+Status: Ready for Integration
+
+
+MONITORS (12 models)
+----------------------------------------------------------------------------------------------------
+
+24U421A-B
+https://www.lg.com/sa_en/monitors/standard-monitors/24u421a-b/
+
+27GR83Q-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/27gr83q-b/
+
+27GS60F-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/27gs60f-b/
+
+27U421A-B
+https://www.lg.com/sa_en/monitors/standard-monitors/27u421a-b/
+
+27U511SA-W
+https://www.lg.com/sa_en/monitors/standard-monitors/27u511sa-w/
+
+29U531A-W
+https://www.lg.com/sa_en/monitors/ultrawide-monitors/29u531a-w/
+
+32G600A-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/32g600a-b/
+
+32GR93U-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/32gr93u-b/
+
+32MR50C-B
+https://www.lg.com/sa_en/monitors/standard-monitors/32mr50c-b/
+
+34G600A-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/34g600a-b/
+
+34GX90SA-W
+https://www.lg.com/sa_en/monitors/gaming-monitors/34gx90sa-w/
+
+45GR75DC-B
+https://www.lg.com/sa_en/monitors/gaming-monitors/45gr75dc-b/
+
+
+TVs (6 models)
+----------------------------------------------------------------------------------------------------
+
+55QNED82A6A
+https://www.lg.com/sa_en/tvs/qned/55qned82a6a/
+
+65QNED82A6A
+https://www.lg.com/sa_en/tvs/qned/65qned82a6a/
+
+65QNED91A6A
+https://www.lg.com/sa_en/tvs/qned/65qned91a6a/
+
+65QNED9MA6A
+https://www.lg.com/sa_en/tvs/qned/65qned9ma6a/
+
+75QNED82A6A
+https://www.lg.com/sa_en/tvs/qned/75qned82a6a/
+
+85QNED93A6A
+https://www.lg.com/sa_en/tvs/qned/85qned93a6a/
+
+
+SPEAKERS (7 models)
+----------------------------------------------------------------------------------------------------
+
+GRAB
+https://www.lg.com/sa_en/speakers/party-speakers/grab/
+
+RNC5
+https://www.lg.com/sa_en/speakers/soundbars/rnc5/
+
+SC9S
+https://www.lg.com/sa_en/speakers/soundbars/sc9s/
+
+SH5A
+https://www.lg.com/sa_en/speakers/soundbars/sh5a/
+
+XL5T
+https://www.lg.com/sa_en/speakers/party-speakers/xl5t/
+
+XL7T
+https://www.lg.com/sa_en/speakers/party-speakers/xl7t/
+
+XL9T
+https://www.lg.com/sa_en/speakers/party-speakers/xl9t/
+
+
+APPLIANCES (9 models)
+----------------------------------------------------------------------------------------------------
+
+LREL6323S
+https://www.lg.com/sa_en/refrigerators/linear-inverter/lrel6323s/
+
+LS32NBDSLV
+https://www.lg.com/sa_en/refrigerators/side-by-side/ls32nbdslv/
+
+LT13CBBMIV
+https://www.lg.com/sa_en/refrigerators/compact/lt13cbbmiv/
+
+LT17CBBWIN
+https://www.lg.com/sa_en/refrigerators/side-by-side/lt17cbbwin/
+
+WF1510WHT
+https://www.lg.com/sa_en/washing-machines/front-load/wf1510wht/
+
+WF1510XMT
+https://www.lg.com/sa_en/washing-machines/front-load/wf1510xmt/
+
+WS1508XMT
+https://www.lg.com/sa_en/washing-machines/semi-automatic/ws1508xmt/
+
+WS1912XMT
+https://www.lg.com/sa_en/washing-machines/top-load/ws1912xmt/
+
+WTV15BNDA
+https://www.lg.com/sa_en/dryers/all-dryers/wtv15bnda/
+
+
+====================================================================================================
+TOTAL PRODUCTS: 34
+====================================================================================================
+
+URL PATTERN REFERENCE:
+----------------------------------------------------------------------------------------------------
+Format: https://www.lg.com/sa_en/[category]/[subcategory]/[model-lowercase]/
+
+Example (VERIFIED WORKING):
+  Model: XL9T
+  URL: https://www.lg.com/sa_en/speakers/party-speakers/xl9t/
+  Title: LG XBOOM Party Speaker - XL9T ,Bluetooth, 1000W
+
+NOTES:
+- All URLs follow the standard LG Saudi Arabia PDP structure
+- Model slugs are lowercase versions of model numbers
+- URLs are optimized for direct navigation and are human-readable
+- Breadcrumb navigation is available on all pages

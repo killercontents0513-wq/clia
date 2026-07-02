@@ -1,0 +1,67 @@
+{
+  "id": "LS19GBBDI",
+  "url": "https://www.lg.com/sa_en/refrigerators/side-by-side/ls19gbbdi/",
+  "h1": "17.9 Cu.Ft Side by Side Refrigerator with Smart Inverter Compressor (LS19GBBDI)",
+  "curPrice": "3,499",
+  "origPrice": "7,499",
+  "memberPrice": "3,359.04",
+  "gallery": [
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large01.jpg","a":"Front view of LG 17.9 Cu.Ft Side by Side Refrigerator in Silver (LS19GBBDI)","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large02.jpg","a":"Front view with both doors open","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large03.jpg","a":"15-degree left side perspective","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large04.jpg","a":"15-degree right side perspective","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large05.jpg","a":"Low perspective view","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large06.jpg","a":"Low perspective alternate view","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large07.jpg","a":"Side profile","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large08.jpg","a":"Rear view","w":1600,"h":1062},
+    {"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large09.jpg","a":"SASO energy label","w":1600,"h":1062}
+  ],
+  "modules": [
+    {
+      "eye":"Smart Inverter Compressor",
+      "head":"Energy Efficient & Durable",
+      "body":"LG's Smart Inverter Compressor adjusts cooling power continuously to match real-time demand — delivering energy savings, quieter operation and long-lasting reliability. Backed by LG's 10-year compressor warranty.",
+      "disc":"*10-year limited warranty on the Smart Inverter Compressor. Terms and conditions apply.",
+      "imgs":[{"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large07.jpg","a":"LG 17.9 Cu.Ft Side by Side Refrigerator — Smart Inverter Compressor","w":1600,"h":1062}]
+    },
+    {
+      "eye":"LINEAR Cooling™",
+      "head":"Seals in Farm Freshness Longer",
+      "body":"LINEAR Cooling™ minimises temperature fluctuations inside the cabinet, helping vegetables, dairy and proteins stay fresher longer with reduced moisture loss.",
+      "disc":"",
+      "imgs":[{"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large02.jpg","a":"Interior of LS19GBBDI keeping food fresh with LINEAR Cooling","w":1600,"h":1062}]
+    },
+    {
+      "eye":"17.9 Cu.Ft Capacity",
+      "head":"Generous Family-Sized Storage",
+      "body":"A spacious 17.9 Cu.Ft (~510L) side-by-side layout organises groceries neatly with well-planned shelves and compartments — easy access on both fresh and frozen sides for weekly family shopping.",
+      "disc":"",
+      "imgs":[{"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large01.jpg","a":"LS19GBBDI 17.9 Cu.Ft side-by-side capacity","w":1600,"h":1062}]
+    },
+    {
+      "eye":"Premium Design",
+      "head":"Sleek Silver Finish",
+      "body":"Premium Silver finish complements modern kitchens with a clean, timeless look. Ergonomic handles and a flush front make this side-by-side blend seamlessly into your space.",
+      "disc":"",
+      "imgs":[{"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large03.jpg","a":"LS19GBBDI premium Silver finish","w":1600,"h":1062}]
+    },
+    {
+      "eye":"Energy Rating",
+      "head":"SASO-Certified Efficiency",
+      "body":"Certified by SASO (Saudi Standards, Metrology and Quality Organization) for energy performance in the Kingdom of Saudi Arabia.",
+      "disc":"",
+      "imgs":[{"p":"/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large09.jpg","a":"SASO energy label for LS19GBBDI","w":1600,"h":1062}]
+    }
+  ],
+  "specs": [
+    {"k":"Product Type","v":"Side by Side Refrigerator"},
+    {"k":"Total Capacity","v":"17.9 Cu.Ft (~510L)"},
+    {"k":"Compressor","v":"Smart Inverter Compressor (BLDC)"},
+    {"k":"LINEAR Cooling","v":"Yes"},
+    {"k":"Door Finish","v":"Silver (PCM)"},
+    {"k":"Smart Diagnosis","v":"Yes"},
+    {"k":"ThinQ (Wi-Fi)","v":"No"},
+    {"k":"SASO Certified","v":"Yes (Saudi Arabia energy compliance)"},
+    {"k":"Warranty","v":"10-Year Smart Inverter Compressor Warranty"}
+  ]
+}

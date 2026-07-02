@@ -1,0 +1,27 @@
+{
+  "name": "3p",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_parse_test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://killercontents0513-wq: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@github.com/killercontents0513-wq/clia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/killercontents0513-wq/clia/issues"
+  },
+  "homepage": "https://github.com/killercontents0513-wq/clia#readme",
+  "dependencies": {
+    "axios": "^1.17.0",
+    "cheerio": "^1.2.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

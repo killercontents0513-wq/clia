@@ -1,0 +1,4255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon A+ Content Builder</title>
+<link rel="stylesheet" href="../css/fonts.css">
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'LGEIText', Arial, sans-serif;
+  background: #F6F3EB;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────── */
+.header {
+  background: #F6F3EB;
+  height: 54px;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  z-index: 100;
+  border-bottom: 1px solid #CBC8C2;
+}
+.header-logo-img {
+  height: 22px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+}
+.header-sep { width: 1px; height: 20px; background: #CBC8C2; flex-shrink: 0; }
+.header-title {
+  font-family: 'LGEIHeadline', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1A1A1A;
+  letter-spacing: 0.01em;
+}
+.header-badge {
+  margin-left: auto;
+  background: #EBE8E0;
+  border: 1px solid #CBC8C2;
+  border-radius: 100px;
+  padding: 4px 14px;
+  font-size: 11px;
+  color: #7E7C77;
+}
+.header-badge span { color: #EA1917; font-weight: 700; }
+
+/* ── Workspace ───────────────────────────── */
+.workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Left Panel : Page Preview ───────────── */
+.panel-left {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #CBC8C2;
+  background: #fff;
+}
+.panel-head {
+  height: 46px;
+  min-height: 46px;
+  max-height: 46px;
+  padding: 0 16px;
+  border-bottom: 1px solid #CBC8C2;
+  background: #F0ECE4;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.panel-head-title {
+  font-family: 'LGEIHeadline', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1A1A1A;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.panel-head-sub { display: none; }
+.btn-sm {
+  height: 28px;
+  padding: 0 12px;
+  border: 1px solid #CBC8C2;
+  border-radius: 100px;
+  font-size: 11px;
+  cursor: pointer;
+  background: #fff;
+  color: #4A4946;
+  transition: all 0.15s;
+}
+.btn-sm:hover { border-color: #EA1917; color: #EA1917; }
+.btn-sm.danger:hover { background: #EA1917; border-color: #EA1917; color: #fff; }
+
+.preview-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #fff;
+}
+.preview-page {
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transform-origin: top left;
+  /* width set by JS */
+}
+.preview-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: #CBC8C2;
+  gap: 10px;
+  background: #fff;
+  border: 2px dashed #D0CBC1;
+  border-radius: 16px;
+}
+.preview-empty-icon { font-size: 40px; }
+.preview-empty-text { font-size: 12px; line-height: 1.6; text-align: center; }
+
+.pv-module-wrap {
+  position: relative;
+  border-bottom: 1px dashed #eee;
+}
+.pv-module-wrap:last-child { border-bottom: none; }
+.pv-module-wrap:hover .pv-module-actions { opacity: 1; }
+.pv-module-actions {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  z-index: 20;
+}
+.pv-act-btn {
+  width: 26px;
+  height: 26px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.pv-act-up, .pv-act-dn { background: rgba(0,0,0,0.7); color: #fff; }
+.pv-act-del { background: rgba(234,25,23,0.9); color: #fff; }
+
+/* ── Right Panel : Module Library ───────── */
+.panel-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.input-bar {
+  padding: 14px 16px;
+  background: #fff;
+  border-bottom: 1px solid #E6E1D6;
+  flex-shrink: 0;
+}
+.input-bar-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #7E7C77;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.input-row {
+  display: flex;
+  gap: 8px;
+}
+.url-input {
+  flex: 1;
+  height: 36px;
+  border: 1.5px solid #CBC8C2;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 13px;
+  color: #262626;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 0;
+  background: #FDFCFA;
+}
+.url-input:focus { border-color: #EA1917; background: #fff; }
+.btn-primary {
+  height: 36px;
+  padding: 0 18px;
+  background: #EA1917;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.btn-primary:hover { background: #c8100e; }
+.btn-primary:disabled { background: #CBC8C2; cursor: not-allowed; }
+
+.img-loaded-row {
+  margin-top: 10px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+.img-loaded-row.show { display: flex; }
+.img-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+}
+.img-info { font-size: 11px; color: #777; line-height: 1.5; }
+.img-info strong { color: #333; font-size: 12px; }
+.img-status-ok { color: #22863a; font-weight: 700; }
+.img-status-err { color: #EA1917; font-weight: 700; }
+
+/* ── Video Panel ─────────────────────────── */
+.video-panel {
+  margin-top: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  background: #111;
+  border-radius: 6px;
+  padding: 10px;
+}
+.video-panel.show { display: flex; }
+.video-panel-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.video-badge {
+  background: #EA1917;
+  color: #fff;
+  border-radius: 100px;
+  padding: 1px 8px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.video-preview-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.video-el {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #000;
+  flex-shrink: 0;
+  display: block;
+}
+.video-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.video-time-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.video-seek {
+  flex: 1;
+  height: 4px;
+  accent-color: #EA1917;
+  cursor: pointer;
+}
+.video-time-label {
+  font-size: 10px;
+  color: #888;
+  white-space: nowrap;
+  min-width: 60px;
+  text-align: right;
+}
+.video-btn-row {
+  display: flex;
+  gap: 6px;
+}
+.btn-video {
+  height: 28px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-play-pause { background: #333; color: #fff; }
+.btn-play-pause:hover { background: #555; }
+.btn-capture { background: #EA1917; color: #fff; flex: 1; }
+.btn-capture:hover { background: #c8100e; }
+.btn-capture:disabled { background: #555; cursor: not-allowed; }
+
+.capture-preview {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: #1a1a1a;
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+.capture-preview.show { display: flex; }
+.capture-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.capture-info { font-size: 10px; color: #aaa; line-height: 1.5; }
+.capture-info strong { color: #4caf50; }
+
+/* ── Module Type Badges ──────────────────── */
+.mod-type-badge {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  z-index: 5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: #fff;
+  pointer-events: none;
+}
+.badge-single { background: rgba(60,60,60,0.82); }
+.badge-multi  { background: rgba(26,115,232,0.92); }
+.badge-text   { background: rgba(100,100,100,0.82); }
+
+.mod-card-btn.btn-multi {
+  background: #000;
+}
+.mod-card-btn.btn-multi:hover { background: #EA1917; }
+
+/* ── Slot Config Modal ───────────────────── */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.modal-overlay.open { display: flex; }
+
+.modal-box {
+  background: #fff;
+  border-radius: 24px;
+  width: 760px;
+  max-width: 95vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #E6E1D6;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.modal-title {
+  font-family: 'LGEIHeadline', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+}
+.modal-subtitle {
+  font-size: 12px;
+  color: #888;
+  margin-top: 3px;
+  line-height: 1.4;
+}
+.modal-close {
+  width: 30px; height: 30px;
+  border: none; background: none;
+  font-size: 18px; cursor: pointer;
+  color: #888; border-radius: 4px;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.modal-close:hover { background: #f0f0f0; color: #000; }
+
+.modal-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Left: layout diagram */
+.modal-diagram-col {
+  width: 260px;
+  flex-shrink: 0;
+  border-right: 1px solid #E6E1D6;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #FAF8F4;
+  overflow-y: auto;
+}
+.modal-diagram-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+/* Live layout preview in slot modal */
+.modal-preview-frame {
+  flex: 0 0 auto;
+  overflow: hidden;
+  position: relative;
+  background: #e8e8e8;
+  border-radius: 4px;
+  min-height: 80px;
+}
+.modal-preview-scaler {
+  transform-origin: top left;
+  display: block;
+  pointer-events: none;
+  /* width/height set by JS */
+}
+
+.modal-apply-all {
+  height: 30px;
+  border: 1.5px dashed #CBC8C2;
+  border-radius: 100px;
+  background: transparent;
+  font-size: 11px;
+  color: #4A4946;
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.modal-apply-all:hover:not(:disabled) { border-color: #EA1917; color: #EA1917; background: #FFF5F5; }
+.modal-apply-all:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* Right: slot inputs */
+.modal-slots-col {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.slot-input-row {
+  border: 1.5px solid #E6E1D6;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  transition: border-color 0.15s;
+  cursor: pointer;
+}
+.slot-input-row:hover, .slot-input-row.active {
+  border-color: #EA1917;
+  background: #FFF8F8;
+}
+.slot-thumb-box {
+  width: 56px;
+  height: 56px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slot-thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slot-thumb-placeholder {
+  font-size: 10px;
+  color: #bbb;
+  text-align: center;
+  line-height: 1.4;
+}
+.slot-input-body { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.slot-input-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #333;
+}
+.slot-input-dim { font-size: 10px; color: #aaa; font-weight: 400; }
+.slot-url-input {
+  width: 100%;
+  height: 32px;
+  border: 1.5px solid #CBC8C2;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #262626;
+  outline: none;
+  transition: border-color 0.15s;
+  background: #FDFCFA;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.slot-url-input:focus { border-color: #EA1917; background: #fff; }
+.slot-status { font-size: 10px; color: #aaa; }
+.slot-status.ok { color: #22863a; }
+.slot-status.err { color: #EA1917; }
+
+/* Modal footer */
+.modal-footer {
+  padding: 14px 24px;
+  border-top: 1px solid #E6E1D6;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.btn-modal-cancel {
+  height: 36px; padding: 0 18px;
+  border: 1px solid #CBC8C2; background: #fff;
+  color: #4A4946; border-radius: 100px;
+  font-size: 13px; cursor: pointer;
+  font-family: 'LGEIText', Arial, sans-serif;
+  transition: all 0.15s;
+}
+.btn-modal-cancel:hover { background: #F6F3EB; border-color: #4A4946; }
+.btn-modal-confirm {
+  height: 36px; padding: 0 22px;
+  background: #EA1917; color: #fff;
+  border: none; border-radius: 100px;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: background 0.15s;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.btn-modal-confirm:hover { background: #c8100e; }
+
+/* ── Mini Video Player (in modal slot) ───── */
+.slot-mini-video-wrap {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: #111;
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin-top: 4px;
+}
+.slot-mini-video-wrap.show { display: flex; }
+.slot-mini-video-row { display: flex; gap: 8px; align-items: center; }
+.slot-mini-vid {
+  width: 80px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: #000;
+  flex-shrink: 0;
+  display: block;
+}
+.slot-mini-controls { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.slot-mini-seek {
+  width: 100%;
+  height: 3px;
+  accent-color: #EA1917;
+  cursor: pointer;
+}
+.slot-mini-time { font-size: 9px; color: #888; text-align: right; }
+.slot-mini-btn-row { display: flex; gap: 5px; }
+.slot-mini-play {
+  height: 22px; padding: 0 8px;
+  background: #333; color: #fff;
+  border: none; border-radius: 3px;
+  font-size: 10px; cursor: pointer;
+}
+.slot-mini-play:hover { background: #555; }
+.slot-mini-capture {
+  flex: 1; height: 22px;
+  background: #EA1917; color: #fff;
+  border: none; border-radius: 100px;
+  font-size: 10px; font-weight: 700; cursor: pointer;
+  transition: background 0.15s;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.slot-mini-capture:hover { background: #c8100e; }
+
+/* Gallery section subtitle */
+.gallery-section-sub {
+  font-size: 10px;
+  color: #bbb;
+  font-weight: 400;
+  margin-left: 4px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* ── Mode Tabs ───────────────────────────── */
+.mode-tabs {
+  display: flex;
+  background: #F0ECE4;
+  flex-shrink: 0;
+  border-bottom: 1px solid #CBC8C2;
+}
+.mode-tab {
+  flex: 1;
+  height: 46px;
+  border: none;
+  background: transparent;
+  color: #4A4946;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  letter-spacing: 0.02em;
+  font-family: 'LGEIHeadline', Arial, sans-serif;
+}
+.mode-tab:hover { background: rgba(0,0,0,0.04); }
+.mode-tab.active-standard {
+  background: #EA1917;
+  color: #fff;
+}
+.mode-tab.active-premium {
+  background: #EA1917;
+  color: #fff;
+}
+.mode-tab-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+.mode-count {
+  background: rgba(0,0,0,0.08);
+  border-radius: 100px;
+  padding: 1px 7px;
+  font-size: 10px;
+  color: inherit;
+}
+.mode-tab.active-standard .mode-count,
+.mode-tab.active-premium .mode-count { background: rgba(255,255,255,0.22); }
+
+/* Premium badge */
+.badge-premium { background: #EA1917; }
+
+/* Premium card button — unified black like standard */
+.mod-card-btn.btn-premium { background: #000; }
+.mod-card-btn.btn-premium:hover { background: #EA1917; }
+.mod-card-btn.btn-multi.btn-premium { background: #000; }
+.mod-card-btn.btn-multi.btn-premium:hover { background: #EA1917; }
+
+/* Left panel mode indicator */
+.preview-mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+}
+.pill-standard { background: #E6E1D6; color: #4A4946; }
+.pill-premium  { background: #FDECEA; color: #EA1917; }
+
+/* Premium module visual accent */
+.aplus-premium-root { border-left: none; }
+
+/* ── Gallery ─────────────────────────────── */
+.gallery-wrap {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px 16px 20px;
+  background: #F0ECE4;
+}
+.gallery-hint {
+  background: #FBF8F2;
+  border: 1px solid #D0CBC1;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 11px;
+  color: #4A4946;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.gallery-section {
+  margin-bottom: 18px;
+}
+.gallery-section-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #7E7C77;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #D0CBC1;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.mod-card {
+  background: #fff;
+  border: 1.5px solid #E6E1D6;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  height: 230px;
+}
+.mod-card:hover {
+  border-color: #EA1917;
+  box-shadow: 0 4px 16px rgba(234,25,23,0.12);
+}
+.mod-thumb-box {
+  background: #f0f0f0;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.mod-thumb-scaler {
+  transform-origin: top left;
+  position: absolute;
+  top: 0; left: 0;
+}
+.mod-card-body {
+  padding: 10px 10px 6px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.mod-card-name {
+  font-size: 11px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.mod-card-spec {
+  font-size: 10px;
+  color: #aaa;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mod-card-btn {
+  display: block;
+  width: calc(100% - 16px);
+  margin: 6px 8px 10px;
+  height: 30px;
+  flex-shrink: 0;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.mod-card-btn:hover { background: #EA1917; }
+.mod-card-btn:disabled { background: #CBC8C2; cursor: not-allowed; }
+
+/* ── PDP URL Bar ─────────────────────────── */
+.pdp-url-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #F6F3EB;
+  border-bottom: 1px solid #CBC8C2;
+  flex-shrink: 0;
+}
+.pdp-url-input {
+  flex: 1;
+  height: 32px;
+  border: 1px solid #CBC8C2;
+  border-radius: 8px;
+  padding: 0 10px;
+  font-size: 11px;
+  font-family: 'LGEIText', Arial, sans-serif;
+  background: #fff;
+  color: #1A1A1A;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.pdp-url-input:focus { border-color: #EA1917; }
+.pdp-url-input::placeholder { color: #bbb; }
+.btn-generate {
+  height: 32px;
+  padding: 0 14px;
+  background: #EA1917;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'LGEIText', Arial, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, opacity 0.15s;
+}
+.btn-generate:hover { background: #A50034; }
+.btn-generate:disabled { opacity: 0.5; cursor: not-allowed; }
+.pdp-gen-status {
+  font-size: 10px;
+  color: #888;
+  font-family: 'LGEIText', Arial, sans-serif;
+  white-space: nowrap;
+  display: none;
+}
+.pdp-gen-status.visible { display: block; }
+
+/* ── Edit Mode ───────────────────────────── */
+.btn-edit-mode { transition: all 0.15s; }
+.btn-edit-mode.active {
+  background: #EA1917;
+  color: #fff;
+  border-color: #EA1917;
+}
+.edit-mode-banner {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: #FFF3CD;
+  border-bottom: 1px solid #F5C842;
+  font-size: 10px;
+  color: #7A5800;
+  font-family: 'LGEIText', Arial, sans-serif;
+  flex-shrink: 0;
+}
+.edit-mode-banner.visible { display: flex; }
+#previewPage.edit-mode [contenteditable="true"] {
+  outline: 1.5px dashed #EA1917;
+  border-radius: 3px;
+  cursor: text;
+  min-width: 4px;
+  white-space: pre-wrap;
+}
+#previewPage.edit-mode [contenteditable="true"]:focus {
+  outline: 2px solid #EA1917;
+  background: rgba(234,25,23,0.04);
+}
+#previewPage.edit-mode [contenteditable="true"]:empty::before {
+  content: attr(data-placeholder);
+  color: #bbb;
+  pointer-events: none;
+}
+
+/* ── Image Reposition Overlay (Edit Mode) ── */
+/* 오버레이 자체는 pointer-events:none → 텍스트 클릭/편집 완전 통과 */
+.img-reposition-overlay {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  z-index: 8;
+  box-sizing: border-box;
+  border: 2px dashed rgba(234, 25, 23, 0.45);
+}
+.edit-mode .img-reposition-overlay {
+  display: block;
+}
+/* 드래그 핸들 — 이미지 하단 중앙의 작은 pill 버튼만 클릭 가능 */
+.img-drag-handle {
+  pointer-events: all;
+  cursor: grab;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 500;
+  font-family: Inter, Arial, sans-serif;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.18s;
+  letter-spacing: 0.02em;
+}
+.img-drag-handle.dragging {
+  cursor: grabbing !important;
+  opacity: 1 !important;
+  background: rgba(234, 25, 23, 0.9);
+}
+/* 리셋 버튼 */
+.img-reposition-reset {
+  pointer-events: all;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 9px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.18s;
+  border: none;
+  font-family: Inter, Arial, sans-serif;
+}
+/* 모듈에 hover 시 핸들/리셋 표시 */
+.edit-mode .pv-module-wrap:hover .img-drag-handle,
+.edit-mode .pv-module-wrap:hover .img-reposition-reset {
+  opacity: 1;
+}
+
+/* ── Bottom Action Bar ───────────────────── */
+.bottom-bar {
+  padding: 10px 16px;
+  background: #fff;
+  border-top: 1px solid #E6E1D6;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.page-count { font-size: 12px; color: #666; }
+.page-count strong { color: #000; font-size: 14px; }
+.spacer { flex: 1; }
+.btn-export {
+  height: 34px;
+  padding: 0 18px;
+  background: #EA1917;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.btn-export:hover { background: #c8100e; }
+
+/* ════════════════════════════════════════════
+   A+ MODULE HTML (970px native, scaled for display)
+   ════════════════════════════════════════════ */
+
+.aplus-root {
+  width: 970px;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* ─ 1. Single Image & Sidebar ─ */
+.m-sidebar {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  align-items: flex-start;
+}
+.m-sidebar-img {
+  width: 500px;
+  height: 460px;
+  background: #f2f2f2;
+  flex-shrink: 0;
+  object-fit: cover;
+  display: block;
+}
+.m-sidebar-content {
+  flex: 1;
+  background: #fafafa;
+  padding: 20px;
+  min-height: 460px;
+}
+.m-sidebar-content h2 { font-size: 18px; font-weight: 700; margin-bottom: 15px; color: #333; }
+.m-sidebar-content p { font-size: 13px; margin-bottom: 15px; color: #333; }
+.m-sidebar-content ul { list-style: none; font-size: 12px; line-height: 2; color: #333; }
+
+/* ─ 2. Four Image & Text ─ */
+.m-four-text {
+  padding: 20px 0;
+  background: #fff;
+  width: 970px;
+  min-height: 340px;
+}
+.m-four-text h2 { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 20px; color: #333; width: 970px; }
+.m-four-text-row { display: flex; gap: 57px; justify-content: center; align-items: flex-start; }
+.m-four-item { display: flex; flex-direction: column; gap: 10px; align-items: center; width: 180px; }
+.m-four-item img { width: 180px; height: 180px; object-fit: cover; background: #f2f2f2; display: block; }
+.m-four-item-t { font-size: 13px; font-weight: 700; text-align: center; color: #333; }
+.m-four-item-d { font-size: 12px; text-align: center; color: #666; line-height: 1.4; }
+
+/* ─ 3. Three Image & Text ─ */
+.m-three {
+  padding: 20px 0;
+  background: #fff;
+  width: 970px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+.m-three h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  line-height: 1.21;
+  font-family: 'LGEIText', Inter, Arial, sans-serif;
+}
+.m-three-row {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.m-three-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 300px;
+  flex-shrink: 0;
+}
+.m-three-item img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  background: #f2f2f2;
+  display: block;
+}
+.m-three-item-t {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.21;
+  font-family: 'LGEIText', Inter, Arial, sans-serif;
+}
+.m-three-item-d {
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.21;
+  font-family: 'LGEIText', Inter, Arial, sans-serif;
+}
+
+/* ─ 4. Image & Light Text ─ */
+.m-lighttext {
+  background: #f2f2f2;
+  width: 970px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+.m-lighttext-bg {
+  width: 970px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  background: #f2f2f2;
+}
+.m-lighttext-placeholder {
+  width: 970px;
+  height: 300px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  font-family: Inter, Arial, sans-serif;
+}
+.m-lighttext-overlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 620px;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.m-lighttext-overlay h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #040404;
+  text-align: left;
+  margin: 0;
+  line-height: 1.21;
+}
+.m-lighttext-overlay p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #040404;
+  text-align: left;
+  margin: 0;
+  line-height: 1.21;
+  width: 270px;
+}
+
+/* ─ Standard Image Header With Text (node 79-2754) ─ */
+.m-image-header-text {
+  width: 970px;
+  background: #fff;
+}
+.m-image-header-text-img {
+  width: 970px;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  background: #f2f2f2;
+}
+.m-image-header-text-placeholder {
+  width: 970px;
+  height: 600px;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 14px;
+  font-family: Inter, Arial, sans-serif;
+}
+.m-image-header-text-body {
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.m-image-header-text-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-align: left;
+  margin: 0;
+  line-height: 1.21;
+  font-family: 'LGEIText', Inter, Arial, sans-serif;
+}
+.m-image-header-text-body p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  text-align: left;
+  margin: 0;
+  line-height: 1.21;
+  max-width: 870px;
+  font-family: 'LGEIText', Inter, Arial, sans-serif;
+}
+
+/* ─ 5. Comparison Table ─ */
+.m-compare { padding: 20px 0; background: #fff; width: 970px; }
+.m-compare h2 { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 20px; color: #333; }
+.m-compare-table { display: flex; gap: 15px; padding: 20px; background: #fafafa; justify-content: center; }
+.m-compare-col { width: 290px; background: #fff; padding: 15px; display: flex; flex-direction: column; gap: 12px; border: 1px solid #eee; }
+.m-compare-col img { width: 260px; height: 200px; object-fit: cover; background: #f2f2f2; display: block; }
+.m-compare-col-name { font-size: 14px; font-weight: 700; color: #333; }
+.m-compare-col-price { font-size: 18px; font-weight: 700; color: #EA1917; }
+.m-compare-col-feat { font-size: 12px; color: #666; line-height: 1.8; }
+
+/* ─ 6. Standard Text ─ */
+.m-text { padding: 30px 50px; background: #fff; width: 970px; }
+.m-text h2 { font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #333; }
+.m-text p { font-size: 14px; color: #555; line-height: 1.7; max-width: 870px; }
+
+/* ─ 7. Single Image & Highlights ─ */
+/* ─ 7. Single Image & Highlights (3-column, PDF guide spec) ─ */
+.m-highlights {
+  display: flex;
+  gap: 30px;
+  padding: 24px 20px;
+  background: #fff;
+  min-height: 360px;
+  align-items: flex-start;
+}
+.m-highlights-img {
+  width: 300px; height: 300px;
+  object-fit: cover;
+  background: #f2f2f2;
+  flex-shrink: 0;
+  display: block;
+}
+.m-highlights-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-right: 24px;
+  border-right: 1px solid #ddd;
+  min-width: 0;
+}
+.m-highlights-headline {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+.m-highlights-section { margin-bottom: 12px; }
+.m-highlights-section:last-child { margin-bottom: 0; }
+.m-highlights-subhead {
+  font-size: 13px;
+  font-weight: 400;
+  color: #888;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+.m-highlights-body {
+  font-size: 13px;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+}
+.m-highlights-body.faded { color: #aaa; }
+.m-highlights-right {
+  width: 210px;
+  flex-shrink: 0;
+  padding-left: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.m-highlights-right-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+.m-highlights-bullets {
+  list-style: disc;
+  padding-left: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.m-highlights-bullets li {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* ── Feature Count Selector ─────────────────── */
+.feat-count-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 8px 6px;
+  font-size: 10px;
+  color: #888;
+  font-family: 'LGEIText', Arial, sans-serif;
+  flex-shrink: 0;
+}
+.feat-count-row label { white-space: nowrap; }
+.feat-count-select {
+  flex: 1;
+  height: 24px;
+  border: 1px solid #CBC8C2;
+  border-radius: 6px;
+  font-size: 10px;
+  padding: 0 6px;
+  background: #FAF8F4;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  font-family: 'LGEIText', Arial, sans-serif;
+}
+.feat-count-select:focus { border-color: #EA1917; }
+
+/* ─ 8. Single Left Image ─ */
+.m-left-img {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background: #fff;
+  height: 400px;
+  align-items: center;
+}
+.m-left-img img { width: 300px; height: 300px; object-fit: cover; background: #f2f2f2; flex-shrink: 0; display: block; }
+.m-left-img-text { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.m-left-img-text h2 { font-size: 20px; font-weight: 700; color: #333; }
+.m-left-img-text p { font-size: 14px; color: #555; line-height: 1.7; }
+
+/* ─ 9. Single Right Image ─ */
+.m-right-img {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background: #fff;
+  height: 400px;
+  align-items: center;
+}
+.m-right-img-text { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.m-right-img-text h2 { font-size: 20px; font-weight: 700; color: #333; }
+.m-right-img-text p { font-size: 14px; color: #555; line-height: 1.7; }
+.m-right-img img { width: 300px; height: 300px; object-fit: cover; background: #f2f2f2; flex-shrink: 0; display: block; }
+
+/* ─ 10. Four Image Highlights ─ */
+.m-four-hl {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background: #fff;
+  height: 600px;
+}
+.m-four-hl-main { width: 400px; height: 560px; object-fit: cover; background: #f2f2f2; flex-shrink: 0; display: block; }
+.m-four-hl-right { width: 520px; display: flex; flex-direction: column; gap: 20px; }
+.m-four-hl-right h2 { font-size: 18px; font-weight: 700; color: #333; }
+.m-four-hl-right p { font-size: 13px; color: #555; line-height: 1.5; }
+.m-four-hl-smalls { display: flex; gap: 15px; height: 250px; }
+.m-four-hl-small { flex: 1; height: 230px; object-fit: cover; background: #f2f2f2; display: block; }
+
+/* ─ 11. Single Image & Specs ─ */
+.m-specs-outer { padding: 20px 0; background: #fff; width: 970px; }
+.m-specs-outer h2 { font-size: 20px; font-weight: 700; text-align: center; margin-bottom: 20px; color: #333; padding: 0 20px; }
+.m-specs-inner { display: flex; gap: 30px; height: 400px; padding: 0 20px; }
+.m-specs-inner img { width: 300px; height: 300px; object-fit: cover; background: #f2f2f2; flex-shrink: 0; display: block; align-self: center; }
+.m-specs-list { flex: 1; display: flex; flex-direction: column; gap: 15px; }
+.m-spec-row { display: flex; gap: 10px; font-size: 13px; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; }
+.m-spec-label { font-weight: 700; color: #333; width: 140px; flex-shrink: 0; }
+.m-spec-val { color: #666; }
+
+/* ─ 12. Four Images Text Quadrant ─ */
+.m-quadrant { padding: 20px; background: #fff; width: 970px; display: flex; flex-direction: column; gap: 20px; }
+.m-quad-row { display: flex; gap: 20px; height: 260px; }
+.m-quad-item { display: flex; gap: 15px; flex: 1; height: 260px; overflow: hidden; }
+.m-quad-item img { width: 160px; height: 200px; object-fit: cover; background: #f2f2f2; display: block; flex-shrink: 0; align-self: center; }
+.m-quad-item-text { display: flex; flex-direction: column; gap: 8px; padding: 8px 0; }
+.m-quad-item-text h3 { font-size: 16px; font-weight: 700; color: #333; }
+.m-quad-item-text p { font-size: 13px; color: #666; line-height: 1.5; }
+
+/* ─ 13. Image Dark Text Overlay ─ */
+.m-dark-overlay {
+  position: relative;
+  width: 970px;
+  height: 300px;
+  overflow: hidden;
+}
+.m-dark-overlay img {
+  width: 970px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0; left: 0;
+}
+.m-dark-overlay-box {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  background: rgba(51,51,51,0.85);
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.m-dark-overlay-box h3 { font-size: 16px; font-weight: 700; }
+.m-dark-overlay-box p { font-size: 12px; line-height: 1.5; opacity: 0.9; }
+
+/* ─ 14. Technical Specifications ─ */
+.m-tech-specs { padding: 40px; background: #fff; width: 970px; display: flex; flex-direction: column; gap: 30px; }
+.m-tech-specs h2 { font-size: 24px; font-weight: 700; color: #000; }
+.m-tech-table { background: #f2f2f2; padding: 20px; display: flex; flex-direction: column; gap: 10px; width: 890px; height: 400px; overflow: hidden; }
+.m-tech-row { display: flex; gap: 20px; height: 40px; align-items: center; padding: 10px 15px; background: #fff; }
+.m-tech-key { font-size: 13px; font-weight: 700; color: #333; width: 200px; flex-shrink: 0; }
+.m-tech-val { font-size: 13px; color: #666; }
+.m-tech-note { font-size: 12px; color: #808080; }
+
+/* ═══════════════════════════════════════════════
+   PREMIUM A+ MODULE CSS
+   ═══════════════════════════════════════════════ */
+
+/* p-full-image */
+.p-full-image-text { padding: 24px 40px; }
+.p-full-image-text h2 { font-size: 24px; font-weight: 700; margin-bottom: 10px; color: #000; }
+.p-full-image-text p { font-size: 14px; color: #555; line-height: 1.7; max-width: 800px; }
+
+/* p-bg-text */
+.p-bg-text-overlay {
+  position: absolute; right: 0; top: 0; width: 380px; height: 100%;
+  background: rgba(0,0,0,0.72); display: flex; flex-direction: column;
+  justify-content: center; padding: 40px 32px; gap: 16px;
+}
+.p-bg-text-cta {
+  display: inline-block; background: #fff; color: #000; font-size: 12px;
+  font-weight: 700; padding: 8px 20px; border-radius: 2px;
+  text-transform: uppercase; letter-spacing: 0.06em; width: fit-content; cursor: pointer;
+}
+
+/* Carousel */
+.p-carousel-prev, .p-carousel-next {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 40px; height: 40px; background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 22px;
+  border-radius: 50%; cursor: pointer; display: flex; align-items: center;
+  justify-content: center; transition: background 0.2s; z-index: 10;
+}
+.p-carousel-prev { left: 14px; }
+.p-carousel-next { right: 14px; }
+.p-carousel-prev:hover, .p-carousel-next:hover { background: rgba(255,255,255,0.4); }
+
+/* ── Input Type Tabs ─────────────────────────── */
+.input-type-tabs {
+  display: flex;
+  background: #F0ECE4;
+  border-radius: 12px;
+  padding: 3px;
+  margin-bottom: 14px;
+  gap: 2px;
+}
+.input-tab {
+  flex: 1; padding: 7px 10px; border: none; border-radius: 10px;
+  font-size: 12px; font-weight: 500; cursor: pointer;
+  color: #7E7C77; background: transparent;
+  display: flex; align-items: center; justify-content: center; gap: 5px;
+  transition: all 0.15s; font-family: 'LGEIText', Arial, sans-serif;
+  white-space: nowrap;
+}
+.input-tab:hover { background: #E6E1D6; color: #262626; }
+.input-tab-img.itab-active { background: #fff; color: #262626; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,0.10); }
+.input-tab-vid.itab-active { background: #fff; color: #EA1917; font-weight: 700; box-shadow: 0 1px 4px rgba(0,0,0,0.10); }
+.itab-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.itab-dot-img { background: #4caf50; }
+.itab-dot-vid { background: #f44336; }
+
+/* ── Video URL Section ───────────────────────── */
+.video-url-section { display: none; }
+.video-url-hint {
+  font-size: 11px; color: #4A4946; background: #FBF8F2;
+  border: 1px solid #D0CBC1; border-radius: 12px;
+  padding: 10px 12px; margin-bottom: 10px; line-height: 1.65;
+}
+.video-url-hint .vhint-title {
+  font-weight: 700; color: #EA1917; margin-bottom: 4px; font-size: 11.5px;
+}
+.video-url-hint .vhint-modules {
+  display: flex; gap: 4px; margin-top: 6px; flex-wrap: wrap;
+}
+.vhint-chip {
+  background: #FDECEA; border: 1px solid #F5B8B7; border-radius: 100px;
+  padding: 2px 8px; font-size: 10px; color: #EA1917; font-weight: 600;
+}
+.btn-video-load {
+  background: #EA1917; color: #fff; border: none; border-radius: 100px;
+  padding: 0 16px; height: 36px; font-size: 12px; font-weight: 700;
+  cursor: pointer; white-space: nowrap; transition: background 0.15s;
+  font-family: 'LGEIText', Arial, sans-serif; flex-shrink: 0;
+}
+.btn-video-load:hover { background: #c8100e; }
+.video-loaded-area {
+  margin-top: 8px; border-radius: 5px; overflow: hidden;
+  border: 1px solid #ddd; background: #111; display: none;
+}
+.video-loaded-area video { display: block; width: 100%; max-height: 130px; object-fit: cover; }
+.video-loaded-info {
+  padding: 7px 10px; background: #1e1e1e;
+  font-size: 11px; color: #aaa; display: flex; align-items: center; gap: 6px;
+}
+.video-loaded-ok { color: #66bb6a; font-weight: 700; }
+
+/* ── Gallery Video Badge / Button ───────────── */
+.badge-video { background: #262626; color: #fff; }
+.btn-set-video {
+  background: #000; color: #fff;
+  border: none;
+  font-weight: 600;
+}
+.btn-set-video:hover { background: #EA1917; color: #fff; }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<header class="header">
+  <img class="header-logo-img" src="./assets/lg-logo-symbol.png" alt="LG">
+  <div class="header-sep"></div>
+  <div class="header-title">Retail OBS Contents Generator</div>
+  <div class="header-badge">Figma Template: <span>Retail OBS Contents Automation</span></div>
+</header>
+
+<!-- ── Workspace ── -->
+<div class="workspace">
+
+  <!-- ── Left: Page Preview ── -->
+  <div class="panel-left">
+    <div class="panel-head">
+      <div>
+        <div class="panel-head-title">
+          A+ Page Preview
+          <span class="preview-mode-pill pill-standard" id="previewModePill">Standard</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center;">
+        <button class="btn-sm btn-edit-mode" id="btnEditMode" onclick="toggleEditMode()">✏ Edit</button>
+        <button class="btn-sm" onclick="exportPage()">Export</button>
+        <button class="btn-sm danger" onclick="clearPage()">Reset</button>
+      </div>
+    </div>
+    <!-- ── PDP URL Bar ── -->
+    <div class="pdp-url-bar">
+      <input type="url" class="pdp-url-input" id="pdpUrlInput"
+        placeholder="LG.com PDP URL을 입력하세요 (예: https://www.lg.com/sa_en/washing-machines/...)" />
+      <button class="btn-generate" id="btnGenerate" onclick="generateFromPDP()">✦ Generate Sample</button>
+      <span class="pdp-gen-status" id="pdpGenStatus"></span>
+    </div>
+    <div class="edit-mode-banner" id="editModeBanner">
+      ✏ Edit Mode — click any text in the preview to edit. Click <strong>Lock</strong> to save.
+    </div>
+    <div class="preview-scroll" id="previewScroll">
+      <div class="preview-empty" id="previewEmpty">
+        <div class="preview-empty-icon">📄</div>
+        <div class="preview-empty-text">
+          Enter an image URL on the right<br>
+          and add a module to see the preview here
+        </div>
+      </div>
+      <div class="preview-page" id="previewPage" style="display:none;"></div>
+    </div>
+    <div class="bottom-bar">
+      <div class="page-count">
+        <strong id="moduleCount">0</strong> module(s) added
+      </div>
+      <div class="spacer"></div>
+      <button class="btn-export" onclick="downloadImages()">⬇ Download Images</button>
+    </div>
+  </div>
+
+  <!-- ── Right: Library ── -->
+  <div class="panel-right">
+
+    <!-- Mode Tabs -->
+    <div class="mode-tabs">
+      <button class="mode-tab active-standard" id="tab-standard" onclick="switchMode('standard')">
+        Standard A+
+        <span class="mode-count" id="cnt-standard">0</span>
+      </button>
+      <button class="mode-tab" id="tab-premium" onclick="switchMode('premium')">
+        Premium A+
+        <span class="mode-count" id="cnt-premium">0</span>
+      </button>
+    </div>
+
+    <div class="input-bar">
+
+      <!-- ▸ 탭 스위처 -->
+      <div class="input-type-tabs">
+        <button class="input-tab input-tab-img itab-active" id="inputTabImg" onclick="switchInputTab('image')">
+          Image
+        </button>
+        <button class="input-tab input-tab-vid" id="inputTabVid" onclick="switchInputTab('video')">
+          Video
+        </button>
+      </div>
+
+      <!-- ▸ 이미지 섹션 -->
+      <div id="inputSectionImage">
+        <div class="input-bar-label">Image URL</div>
+        <div class="input-row">
+          <input
+            class="url-input"
+            id="imageUrlInput"
+            type="url"
+            placeholder="Image URL (.jpg, .png, .webp, .gif ...)"
+            onkeydown="if(event.key==='Enter') loadImage()"
+          />
+          <button class="btn-primary" id="loadBtn" onclick="loadImage()">Load</button>
+        </div>
+        <div class="img-loaded-row" id="imgLoadedRow">
+          <img class="img-thumb" id="imgThumb" src="" alt="">
+          <div class="img-info">
+            <div><strong id="imgStatusText"></strong></div>
+            <div id="imgDimText"></div>
+            <div style="margin-top:4px;font-size:10px;color:#aaa;">Applied to image modules</div>
+          </div>
+        </div>
+
+        <!-- Video Panel (이미지 탭 내 프레임 캡처) -->
+        <div class="video-panel" id="videoPanel">
+          <div class="video-panel-label">
+            <span class="video-badge">VIDEO</span>
+            Select a frame from the video to extract as a still image
+          </div>
+          <div class="video-preview-row">
+            <video class="video-el" id="videoEl" muted playsinline preload="metadata"></video>
+            <div class="video-controls">
+              <div class="video-time-row">
+                <input type="range" class="video-seek" id="videoSeek" min="0" max="100" step="0.1" value="0"
+                  oninput="seekVideo(this.value)">
+                <span class="video-time-label" id="videoTimeLabel">0:00 / 0:00</span>
+              </div>
+              <div class="video-btn-row">
+                <button class="btn-video btn-play-pause" id="btnPlayPause" onclick="togglePlay()">▶ Play</button>
+                <button class="btn-video btn-capture" id="btnCapture" onclick="captureFrame()">📷 Capture Frame</button>
+              </div>
+            </div>
+          </div>
+          <div class="capture-preview" id="capturePreview">
+            <img class="capture-thumb" id="captureThumb" src="" alt="">
+            <div class="capture-info">
+              <strong>✓ Frame Captured</strong><br>
+              <span id="captureTimeInfo"></span><br>
+              <span style="color:#777;">Applied to image modules</span>
+            </div>
+          </div>
+        </div>
+        <canvas id="captureCanvas" style="display:none;"></canvas>
+      </div>
+
+      <!-- ▸ 비디오 섹션 -->
+      <div id="inputSectionVideo" class="video-url-section">
+        <div class="video-url-hint">
+          <div class="vhint-title">▶ Video Module URL</div>
+          A real video will be embedded in these modules. Direct mp4/webm links are recommended.
+          <div class="vhint-modules">
+            <span class="vhint-chip">Premium Full Video</span>
+            <span class="vhint-chip">Video with Text</span>
+            <span class="vhint-chip">Video Carousel</span>
+          </div>
+        </div>
+        <div class="input-bar-label">Video URL</div>
+        <div class="input-row">
+          <input
+            class="url-input"
+            id="videoUrlDirectInput"
+            type="url"
+            placeholder="Video URL (.mp4, .webm, .mov ...)"
+            onkeydown="if(event.key==='Enter') loadVideoUrl()"
+          />
+          <button class="btn-video-load" onclick="loadVideoUrl()">Load</button>
+        </div>
+        <div class="video-loaded-area" id="videoLoadedArea">
+          <video id="videoLoadedPreview" controls muted playsinline></video>
+          <div class="video-loaded-info">
+            <span class="video-loaded-ok">✓ Video URL set</span>
+            <span id="videoLoadedLabel" style="color:#888;"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gallery-wrap" id="galleryWrap">
+      <div class="gallery-hint" id="galleryHint">
+        💡 <strong>How to use:</strong> Enter an image URL and click Load → click <strong>"+ Add to Page"</strong> on any module to stack it in the left preview. For videos, enter a URL and capture a specific frame as a still image.
+      </div>
+      <div id="moduleGallery"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Slot Config Modal ── -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-subtitle" id="modalSubtitle"></div>
+      </div>
+      <button class="modal-close" onclick="closeSlotModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-diagram-col">
+        <div class="modal-diagram-label">Layout Preview</div>
+        <div class="modal-preview-frame" id="modalPreviewFrame">
+          <div id="modalPreviewScaler" class="modal-preview-scaler"></div>
+        </div>
+        <button class="modal-apply-all" id="applyAllBtn" onclick="applyCurrentToAllSlots()">
+          Apply current image to all slots
+        </button>
+      </div>
+      <div class="modal-slots-col" id="modalSlotsCol"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-modal-cancel" onclick="closeSlotModal()">Cancel</button>
+      <button class="btn-modal-confirm" onclick="submitSlotModal()">+ Add to Page</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════════
+// State
+// ══════════════════════════════════════════════
+let currentImageUrl = null;
+let currentVideoUrl = null;   // Video URL for video modules
+let currentInputTab = 'image'; // 'image' | 'video'
+let pageModules = [];         // Standard A+ page
+let premiumPageModules = [];  // Premium A+ page
+
+// Video module identification
+const VIDEO_MODULE_IDS = new Set(['p-full-video', 'p-video-text', 'p-video-carousel']);
+function isVideoMod(id) { return VIDEO_MODULE_IDS.has(id); }
+
+// Render a video or image-with-play-button element
+function videoTag(url, w, h) {
+  if (!url) {
+    return `<div style="width:${w}px;height:${h}px;background:#1a1a1a;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#555;font-size:11px;">
+      <div style="width:48px;height:48px;background:#2a2a2a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:#666;">▶</div>
+      <span>${w}×${h}</span><span style="font-size:10px;color:#444;">Video URL required</span>
+    </div>`;
+  }
+  const isVidSrc = /\.(mp4|webm|mov|ogg|m4v)(\?.*)?$/i.test(url) || url.startsWith('blob:');
+  if (isVidSrc) {
+    return `<video src="${escHtml(url)}" style="width:${w}px;height:${h}px;object-fit:cover;display:block;" controls muted playsinline></video>`;
+  }
+  // Captured frame (data URL) or image fallback — show with play icon overlay
+  return `<div style="width:${w}px;height:${h}px;position:relative;overflow:hidden;background:#111;">
+    <img src="${escHtml(url)}" style="width:100%;height:100%;object-fit:cover;display:block;">
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:56px;height:56px;background:rgba(0,0,0,0.65);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;pointer-events:none;">▶</div>
+  </div>`;
+}
+let nextId = 1;
+let currentMode = 'standard'; // 'standard' | 'premium'
+
+function activeModules()    { return currentMode === 'premium' ? premiumPageModules : pageModules; }
+function setActiveModules(arr) {
+  if (currentMode === 'premium') premiumPageModules = arr;
+  else pageModules = arr;
+}
+function activeDefs()       { return currentMode === 'premium' ? PREMIUM_MODULE_DEFS : MODULE_DEFS; }
+function activeRenderers()  { return currentMode === 'premium' ? PREMIUM_RENDERERS : RENDERERS; }
+
+function switchMode(mode) {
+  currentMode = mode;
+  // Tab styles
+  document.getElementById('tab-standard').className =
+    'mode-tab' + (mode === 'standard' ? ' active-standard' : '');
+  document.getElementById('tab-premium').className =
+    'mode-tab' + (mode === 'premium' ? ' active-premium' : '');
+  // Preview pill
+  const pill = document.getElementById('previewModePill');
+  pill.textContent = mode === 'premium' ? 'Premium ✦' : 'Standard';
+  pill.className = 'preview-mode-pill ' + (mode === 'premium' ? 'pill-premium' : 'pill-standard');
+
+  // ── 입력바 레이아웃 전환 ──────────────────────
+  const tabsRow   = document.querySelector('.input-type-tabs');
+  const imgSec    = document.getElementById('inputSectionImage');
+  const vidSec    = document.getElementById('inputSectionVideo');
+  const barLabel  = document.querySelector('#inputSectionImage .input-bar-label');
+
+  if (mode === 'standard') {
+    if (tabsRow) tabsRow.style.display = 'none';
+    if (imgSec)  imgSec.style.display  = 'block';
+    if (vidSec)  vidSec.style.display  = 'none';
+    if (barLabel) barLabel.textContent = 'Image URL';
+    const imgInput = document.getElementById('imageUrlInput');
+    if (imgInput) imgInput.placeholder = 'Image or video URL (.jpg, .png, .mp4, .webm ...)';
+  } else {
+    if (tabsRow) tabsRow.style.display = 'flex';
+    if (barLabel) barLabel.textContent = 'Image URL';
+    const imgInput = document.getElementById('imageUrlInput');
+    if (imgInput) imgInput.placeholder = 'Image URL (.jpg, .png, .webp, .gif ...)';
+    switchInputTab(currentInputTab);
+  }
+
+  const hint = document.getElementById('galleryHint');
+  if (hint) {
+    if (mode === 'premium') {
+      hint.innerHTML = '💡 <strong>How to use:</strong> <strong>📷 Image</strong> tab → enter image URL and add image modules / <strong>▶ Video</strong> tab → enter video URL and add <strong>▶ VIDEO</strong> badge modules. Combine modules to build your Premium A+ page.';
+    } else {
+      hint.innerHTML = '💡 <strong>How to use:</strong> Enter an image URL and click Load → click <strong>"+ Add to Page"</strong> on any module to stack it in the preview. For videos, enter a URL and capture a frame as a still image.';
+    }
+  }
+
+  renderGallery();
+  renderPagePreview();
+}
+
+// ══════════════════════════════════════════════
+// Module Definitions (from Figma spec)
+// ══════════════════════════════════════════════
+const MODULE_DEFS = [
+  {
+    id: 'sidebar',
+    name: 'Standard Single Image & Sidebar',
+    category: 'Single Image',
+    spec: '500×460 image + sidebar text',
+    imageCount: 1,
+  },
+  {
+    id: 'left-img',
+    name: 'Standard Single Left Image',
+    category: 'Single Image',
+    spec: '300×300 image (left) + text',
+    imageCount: 1,
+  },
+  {
+    id: 'right-img',
+    name: 'Standard Single Right Image',
+    category: 'Single Image',
+    spec: 'text + 300×300 image (right)',
+    imageCount: 1,
+  },
+  {
+    id: 'highlights',
+    name: 'Standard Single Image & Highlights',
+    category: 'Single Image',
+    spec: '300×300 image + text sections + bullet list',
+    imageCount: 1,
+  },
+  {
+    id: 'lighttext',
+    name: 'Standard Image & Light Text',
+    category: 'Single Image',
+    spec: '970×300 full-width image + text overlay',
+    imageCount: 1,
+  },
+  {
+    id: 'dark-overlay',
+    name: 'Standard Image Dark Text Overlay',
+    category: 'Single Image',
+    spec: '970×300 image + dark text overlay',
+    imageCount: 1,
+  },
+  {
+    id: 'image-header-text',
+    name: 'Standard Image Header With Text',
+    category: 'Single Image',
+    spec: '970×600 full-width image + headline + body',
+    imageCount: 1,
+  },
+  {
+    id: 'three-img',
+    name: 'Standard Three Image & Text',
+    category: 'Multi Image',
+    spec: '300×300 × 3 images + text',
+    imageCount: 3,
+    slots: [
+      { id: 's1', label: 'Image 1', w: 300, h: 300 },
+      { id: 's2', label: 'Image 2', w: 300, h: 300 },
+      { id: 's3', label: 'Image 3', w: 300, h: 300 },
+    ],
+  },
+  {
+    id: 'four-text',
+    name: 'Standard Four Image & Text',
+    category: 'Multi Image',
+    spec: '180×180 × 4 images + text',
+    imageCount: 4,
+    slots: [
+      { id: 's1', label: 'Image 1', w: 180, h: 180 },
+      { id: 's2', label: 'Image 2', w: 180, h: 180 },
+      { id: 's3', label: 'Image 3', w: 180, h: 180 },
+      { id: 's4', label: 'Image 4', w: 180, h: 180 },
+    ],
+  },
+  {
+    id: 'four-hl',
+    name: 'Standard Four Image Highlights',
+    category: 'Multi Image',
+    spec: '400×560 main + 3 small images',
+    imageCount: 4,
+    slots: [
+      { id: 's1', label: 'Main Image', w: 400, h: 560 },
+      { id: 's2', label: 'Sub Image 1', w: 140, h: 230 },
+      { id: 's3', label: 'Sub Image 2', w: 140, h: 230 },
+      { id: 's4', label: 'Sub Image 3', w: 140, h: 230 },
+    ],
+  },
+  {
+    id: 'quadrant',
+    name: 'Standard Four Images Text Quadrant',
+    category: 'Multi Image',
+    spec: '2×2 grid images + text',
+    imageCount: 4,
+    slots: [
+      { id: 's1', label: 'Zone 1 (top-left)', w: 160, h: 200 },
+      { id: 's2', label: 'Zone 2 (top-right)', w: 160, h: 200 },
+      { id: 's3', label: 'Zone 3 (bottom-left)', w: 160, h: 200 },
+      { id: 's4', label: 'Zone 4 (bottom-right)', w: 160, h: 200 },
+    ],
+  },
+  {
+    id: 'compare',
+    name: 'Standard Comparison Table',
+    category: 'Text / Table',
+    spec: '3-product comparison (image + specs)',
+    imageCount: 3,
+    slots: [
+      { id: 's1', label: 'Model A image', w: 260, h: 200 },
+      { id: 's2', label: 'Model B image', w: 260, h: 200 },
+      { id: 's3', label: 'Model C image', w: 260, h: 200 },
+    ],
+  },
+  {
+    id: 'specs-detail',
+    name: 'Standard Single Image & Specs Detail',
+    category: 'Text / Table',
+    spec: 'image + detailed specs list',
+    imageCount: 1,
+  },
+  {
+    id: 'text',
+    name: 'Standard Text',
+    category: 'Text / Table',
+    spec: 'text-only module',
+    imageCount: 0,
+  },
+  {
+    id: 'tech-specs',
+    name: 'Standard Technical Specifications',
+    category: 'Text / Table',
+    spec: 'tech specs table (4–16 rows)',
+    imageCount: 0,
+  },
+];
+
+// ══════════════════════════════════════════════
+// Premium A+ Module Definitions (19 modules)
+// ══════════════════════════════════════════════
+const PREMIUM_MODULE_DEFS = [
+  // ─ Image / Video ─
+  { id: 'p-full-image', name: 'Premium Full Image', category: 'Image / Video',
+    spec: '970×600 full-width image + text', imageCount: 1 },
+  { id: 'p-bg-text', name: 'Premium Background Image with Text', category: 'Image / Video',
+    spec: '970×600 background image + right overlay text', imageCount: 1 },
+  { id: 'p-single-img-text', name: 'Premium Single Image with Text', category: 'Image / Video',
+    spec: '500×560 image + text (left: text, right: image)', imageCount: 1 },
+  { id: 'p-full-video', name: 'Premium Full Video', category: 'Image / Video',
+    spec: '970×600 full-width video + text', imageCount: 1 },
+  { id: 'p-video-text', name: 'Premium Video with Text', category: 'Image / Video',
+    spec: '570×600 video + text (left: text, right: video)', imageCount: 1 },
+  // ─ Multi Image ─
+  { id: 'p-dual-images', name: 'Premium Dual Images with Text', category: 'Multi Image',
+    spec: '475×350 × 2 images + subheadline', imageCount: 2,
+    slots: [
+      { id: 's1', label: 'Image 1', w: 475, h: 350 },
+      { id: 's2', label: 'Image 2', w: 475, h: 350 },
+    ] },
+  { id: 'p-four-images', name: 'Premium Four Images & Text', category: 'Multi Image',
+    spec: '225×225 × 4 images + feature text', imageCount: 4,
+    slots: [
+      { id: 's1', label: 'Image 1', w: 225, h: 225 },
+      { id: 's2', label: 'Image 2', w: 225, h: 225 },
+      { id: 's3', label: 'Image 3', w: 225, h: 225 },
+      { id: 's4', label: 'Image 4', w: 225, h: 225 },
+    ] },
+  { id: 'p-compare-3', name: 'Premium Comparison Table 3', category: 'Multi Image',
+    spec: 'Side-by-side 2-product comparison (350×700 / 340×700)', imageCount: 2,
+    slots: [
+      { id: 's1', label: 'Product 1 image', w: 350, h: 700 },
+      { id: 's2', label: 'Product 2 image', w: 340, h: 700 },
+    ] },
+  // ─ Carousel ─
+  { id: 'p-simple-carousel', name: 'Premium Simple Image Carousel', category: 'Carousel',
+    spec: '970×600 image carousel (3 slides, text overlay)', imageCount: 3,
+    slots: [
+      { id: 's1', label: 'Slide 1', w: 970, h: 600 },
+      { id: 's2', label: 'Slide 2', w: 970, h: 600 },
+      { id: 's3', label: 'Slide 3', w: 970, h: 600 },
+    ] },
+  { id: 'p-nav-carousel', name: 'Premium Navigation Carousel', category: 'Carousel',
+    spec: '4 pill tabs + 700×600 content image', imageCount: 4,
+    slots: [
+      { id: 's1', label: 'Tab 1 image', w: 700, h: 600 },
+      { id: 's2', label: 'Tab 2 image', w: 700, h: 600 },
+      { id: 's3', label: 'Tab 3 image', w: 700, h: 600 },
+      { id: 's4', label: 'Tab 4 image', w: 700, h: 600 },
+    ] },
+  { id: 'p-regimen-carousel', name: 'Premium Regimen Carousel', category: 'Carousel',
+    spec: '5-step how-to (670×590 image + step panel)', imageCount: 5,
+    slots: [
+      { id: 's1', label: 'Step 1 image', w: 670, h: 590 },
+      { id: 's2', label: 'Step 2 image', w: 670, h: 590 },
+      { id: 's3', label: 'Step 3 image', w: 670, h: 590 },
+      { id: 's4', label: 'Step 4 image', w: 670, h: 590 },
+      { id: 's5', label: 'Step 5 image', w: 670, h: 590 },
+    ] },
+  { id: 'p-video-carousel', name: 'Premium Video Carousel', category: 'Carousel',
+    spec: '3-slide video carousel (600×600 video + text panel)', imageCount: 3,
+    slots: [
+      { id: 's1', label: 'Video 1', w: 600, h: 600, isVideo: true },
+      { id: 's2', label: 'Video 2', w: 600, h: 600, isVideo: true },
+      { id: 's3', label: 'Video 3', w: 600, h: 600, isVideo: true },
+    ] },
+  // ─ Comparison / Specs ─
+  { id: 'p-compare-1', name: 'Premium Comparison Table 1', category: 'Comparison / Specs',
+    spec: '4-product vertical comparison (200×200 image + specs)', imageCount: 4,
+    slots: [
+      { id: 's1', label: 'Product 1 image', w: 200, h: 200 },
+      { id: 's2', label: 'Product 2 image', w: 200, h: 200 },
+      { id: 's3', label: 'Product 3 image', w: 200, h: 200 },
+      { id: 's4', label: 'Product 4 image', w: 200, h: 200 },
+    ] },
+  { id: 'p-compare-2', name: 'Premium Comparison Table 2', category: 'Comparison / Specs',
+    spec: '3-product horizontal comparison (300×300 image)', imageCount: 3,
+    slots: [
+      { id: 's1', label: 'Product 1 image', w: 300, h: 300 },
+      { id: 's2', label: 'Product 2 image', w: 300, h: 300 },
+      { id: 's3', label: 'Product 3 image', w: 300, h: 300 },
+    ] },
+  { id: 'p-hotspots-1', name: 'Premium Hotspots 1', category: 'Comparison / Specs',
+    spec: '970×600 image + 4 blue hotspot circles + tooltips', imageCount: 1 },
+  { id: 'p-hotspots-2', name: 'Premium Hotspots 2', category: 'Comparison / Specs',
+    spec: '970×600 image + 4 yellow hotspot circles', imageCount: 1 },
+  { id: 'p-qa', name: 'Premium Q&A', category: 'Comparison / Specs',
+    spec: '970×200 image + 5 Q&A items', imageCount: 1 },
+  // ─ Text Only ─
+  { id: 'p-text', name: 'Premium Text', category: 'Text Only',
+    spec: '24px headline + 16px body (text only)', imageCount: 0 },
+  { id: 'p-tech-specs', name: 'Premium Technical Specifications', category: 'Text Only',
+    spec: 'Tech specs table (8 rows, alternating bg)', imageCount: 0 },
+];
+
+// ══════════════════════════════════════════════
+// Module HTML Renderers
+// ══════════════════════════════════════════════
+function imgTag(url, w, h, alt) {
+  const src = url || '';
+  const bg = url ? '' : 'background:#f2f2f2;';
+  if (!url) {
+    return `<div style="width:${w}px;height:${h}px;background:#f2f2f2;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:12px;flex-shrink:0;">${w}×${h}</div>`;
+  }
+  return `<img src="${escHtml(src)}" width="${w}" height="${h}" style="object-fit:cover;display:block;flex-shrink:0;" alt="${escHtml(alt||'product image')}" onerror="this.style.background='#f2f2f2';this.removeAttribute('src');">`;
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+const RENDERERS = {
+  sidebar(url) {
+    return `<div class="aplus-root m-sidebar">
+      ${imgTag(url,500,460,'main')}
+      <div class="m-sidebar-content">
+        <h2>Product Name / Headline</h2>
+        <p>Product description text — showcase your key product value proposition here (120 characters recommended).</p>
+        <ul>
+          <li>• Feature 1 — Key benefit description (50 characters)</li>
+          <li>• Feature 2 — Key benefit description (50 characters)</li>
+          <li>• Feature 3 — Key benefit description (50 characters)</li>
+          <li>• Feature 4 — Key benefit description (50 characters)</li>
+        </ul>
+      </div>
+    </div>`;
+  },
+  'left-img'(url, si, fc, td) {
+    const hl   = (td && td.headline) || 'Headline (Optional)';
+    const body = (td && td.body)     || 'Body text description — explain the feature or benefit shown in the image. Keep it concise and customer-focused. Aim for 2–3 sentences.';
+    return `<div class="aplus-root m-left-img">
+      ${imgTag(url,300,300,'product')}
+      <div class="m-left-img-text">
+        <h2 data-maxchars="160">${escHtml(hl)}</h2>
+        <p data-maxchars="6000">${escHtml(body)}</p>
+      </div>
+    </div>`;
+  },
+  'right-img'(url, si, fc, td) {
+    const hl   = (td && td.headline) || 'Headline (Optional)';
+    const body = (td && td.body)     || 'Body text description — explain the feature or benefit shown in the image. Keep it concise and customer-focused. Aim for 2–3 sentences.';
+    return `<div class="aplus-root m-right-img">
+      <div class="m-right-img-text">
+        <h2 data-maxchars="160">${escHtml(hl)}</h2>
+        <p data-maxchars="6000">${escHtml(body)}</p>
+      </div>
+      ${imgTag(url,300,300,'product')}
+    </div>`;
+  },
+  highlights(url, _si, featureCount, td) {
+    const count     = featureCount || 4;
+    const hl        = (td && td.headline)    || 'Headline Text — Main (optional)';
+    const sh        = (td && td.subheads)    || [];
+    const bd        = (td && td.bodies)      || [];
+    const btitle    = (td && td.bulletTitle) || 'Headline Text — 2 (Required)';
+    const buls      = (td && td.bullets)     || [];
+    const bullets = buls.length > 0
+      ? buls.map(b => `<li>${escHtml(b)}</li>`).join('')
+      : Array.from({length: count}, (_, i) => `<li>Bullet point — key benefit or feature ${i + 1}</li>`).join('');
+    const defaultSh = ['Subheadline — Main', 'Subheadline — 2 (Required)', 'Subheadline — 3 (Required)'];
+    const defaultBd = [
+      'Body text — Main. Describe a key product story or benefit here.',
+      'Body text — 2. Provide additional product details or use-case information.',
+      'Body text — 3. Supporting copy for the third text block.'
+    ];
+    const sections = [0,1,2].map(i => `
+      <div class="m-highlights-section">
+        <p class="m-highlights-subhead" data-maxchars="80">${escHtml(sh[i] || defaultSh[i])}</p>
+        <p class="m-highlights-body" data-maxchars="300">${escHtml(bd[i] || defaultBd[i])}</p>
+      </div>`).join('');
+    const imgHtml = url
+      ? `<img src="${escHtml(url)}" width="300" height="300" class="m-highlights-img" style="object-fit:cover;" alt="product image" onerror="this.style.background='#f2f2f2';this.removeAttribute('src');">`
+      : `<div class="m-highlights-img" style="display:flex;align-items:center;justify-content:center;color:#bbb;font-size:12px;">300×300</div>`;
+    return `<div class="aplus-root m-highlights">
+      ${imgHtml}
+      <div class="m-highlights-center">
+        <h2 class="m-highlights-headline" data-maxchars="150">${escHtml(hl)}</h2>
+        ${sections}
+      </div>
+      <div class="m-highlights-right">
+        <h3 class="m-highlights-right-title" data-maxchars="80">${escHtml(btitle)}</h3>
+        <ul class="m-highlights-bullets">${buls.length > 0
+          ? buls.map(b => `<li data-maxchars="200">${escHtml(b)}</li>`).join('')
+          : Array.from({length: count}, (_, i) => `<li data-maxchars="200">Bullet point — key benefit or feature ${i + 1}</li>`).join('')
+        }</ul>
+      </div>
+    </div>`;
+  },
+  lighttext(url, si, fc, td) {
+    const hl   = (td && td.headline) || 'Heading (50 characters)';
+    const body = (td && td.body)     || 'Body text description — provide additional details about your product. This section supports up to 200 characters of descriptive text to help customers understand the value.';
+    return `<div class="aplus-root m-lighttext">
+      ${url ? `<img class="m-lighttext-bg" src="${url}" alt="">` : `<div class="m-lighttext-placeholder"></div>`}
+      <div class="m-lighttext-overlay">
+        <h3 data-maxchars="150">${escHtml(hl)}</h3>
+        <p data-maxchars="6000">${escHtml(body)}</p>
+      </div>
+    </div>`;
+  },
+  'dark-overlay'(url, si, fc, td) {
+    const hl   = (td && td.headline) || 'Black Text';
+    const body = (td && td.body)     || 'Headline & body text — optional supporting description for this full-width image module.';
+    return `<div class="aplus-root m-dark-overlay">
+      ${imgTag(url,970,300,'background')}
+      <div class="m-dark-overlay-box">
+        <h3 data-maxchars="150">${escHtml(hl)}</h3>
+        <p data-maxchars="6000">${escHtml(body)}</p>
+      </div>
+    </div>`;
+  },
+  'image-header-text'(url, si, fc, td) {
+    const hl   = (td && td.headline) || 'Headline (50 characters)';
+    const body = (td && td.body)     || 'Body paragraph text (250 characters). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.';
+    return `<div class="aplus-root m-image-header-text">
+      ${url
+        ? `<img class="m-image-header-text-img" src="${url}" alt="">`
+        : `<div class="m-image-header-text-placeholder">970 × 600</div>`}
+      <div class="m-image-header-text-body">
+        <h3 data-maxchars="50">${escHtml(hl)}</h3>
+        <p data-maxchars="250">${escHtml(body)}</p>
+      </div>
+    </div>`;
+  },
+  'three-img'(url, si, fc, td) {
+    const g = (k, i) => (td && td.items && td.items[i] && td.items[i].imageUrl) || (si && si[k]) || url;
+    const hl = (td && td.headline) || 'Module Heading (50 characters)';
+    const items = [['s1',0],['s2',1],['s3',2]].map(([k,i]) => {
+      const ti = (td && td.items && td.items[i]) || {};
+      const title = ti.title || `Heading ${i+1} (25 char)`;
+      const desc  = ti.body  || 'Description text (80 char)';
+      return `<div class="m-three-item">
+        ${imgTag(g(k,i),300,300,title)}
+        <div class="m-three-item-t" data-maxchars="25">${escHtml(title)}</div>
+        <div class="m-three-item-d" data-maxchars="80">${escHtml(desc)}</div>
+      </div>`;
+    }).join('');
+    return `<div class="aplus-root m-three">
+      <h2 data-maxchars="50">${escHtml(hl)}</h2>
+      <div class="m-three-row">${items}</div>
+    </div>`;
+  },
+  'four-text'(url, si, fc, td) {
+    const g = (k, i) => (td && td.items && td.items[i] && td.items[i].imageUrl) || (si && si[k]) || url;
+    const hl = (td && td.headline) || 'Module Heading (50 characters)';
+    const items = [['s1',0],['s2',1],['s3',2],['s4',3]].map(([k,i]) => {
+      const ti = (td && td.items && td.items[i]) || {};
+      const title = ti.title || `Item ${i+1}`;
+      const desc  = ti.body  || 'Brief feature description here.';
+      return `<div class="m-four-item">
+        ${imgTag(g(k,i),180,180,title)}
+        <div class="m-four-item-t" data-maxchars="80">${escHtml(title)}</div>
+        <div class="m-four-item-d" data-maxchars="300">${escHtml(desc)}</div>
+      </div>`;
+    }).join('');
+    return `<div class="aplus-root m-four-text">
+      <h2 data-maxchars="150">${escHtml(hl)}</h2>
+      <div class="m-four-text-row">${items}</div>
+    </div>`;
+  },
+  'four-hl'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const smalls = ['s2','s3','s4'].map(k => imgTag(g(k),140,230,'sub')).join('');
+    return `<div class="aplus-root m-four-hl">
+      ${imgTag(g('s1'),400,560,'main')}
+      <div class="m-four-hl-right">
+        <h2>Headline (Optional)</h2>
+        <p>Body text — describe the product or features shown in the image collection. Supports up to 200 characters.</p>
+        <div class="m-four-hl-smalls">${smalls}</div>
+      </div>
+    </div>`;
+  },
+  quadrant(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const cells = [['s1','Top Left'],['s2','Top Right'],['s3','Bottom Left'],['s4','Bottom Right']].map(([k,pos], i) => `
+      <div class="m-quad-item">
+        ${imgTag(g(k),160,200,pos)}
+        <div class="m-quad-item-text">
+          <h3>Feature ${i+1}</h3>
+          <p>Description for feature ${i+1}. Keep it concise and impactful.</p>
+        </div>
+      </div>`);
+    return `<div class="aplus-root m-quadrant">
+      <div class="m-quad-row">${cells[0]}${cells[1]}</div>
+      <div class="m-quad-row">${cells[2]}${cells[3]}</div>
+    </div>`;
+  },
+  compare(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const cols = [['s1','Model A'],['s2','Model B'],['s3','Model C']].map(([k,name]) => `
+      <div class="m-compare-col">
+        ${imgTag(g(k),260,200,name)}
+        <div class="m-compare-col-name">${name}</div>
+        <div class="m-compare-col-price">$0.00</div>
+        <div class="m-compare-col-feat">• Feature 1<br>• Feature 2<br>• Feature 3</div>
+      </div>`).join('');
+    return `<div class="aplus-root m-compare">
+      <h2>Comparison Table Heading (50 char)</h2>
+      <div class="m-compare-table">${cols}</div>
+    </div>`;
+  },
+  'specs-detail'(url) {
+    const specs = [
+      ['Dimensions','W×H×D mm'],['Weight','0.0 kg'],['Power','00W'],
+      ['Color','Space Black'],['Material','Premium Alloy'],['Warranty','2 Years'],
+    ];
+    const rows = specs.map(([k,v]) => `
+      <div class="m-spec-row">
+        <span class="m-spec-label">${k}</span>
+        <span class="m-spec-val">${v}</span>
+      </div>`).join('');
+    return `<div class="aplus-root m-specs-outer">
+      <h2>Module Headline (Optional)</h2>
+      <div class="m-specs-inner">
+        ${imgTag(url,300,300,'product')}
+        <div class="m-specs-list">${rows}</div>
+      </div>
+    </div>`;
+  },
+  text(url, si, fc, td) {
+    const hl   = (td && td.headline) || 'Headline (50 characters)';
+    const body = (td && td.body)     || 'Body paragraph text — up to 250 characters. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.';
+    return `<div class="aplus-root m-text">
+      <h2>${escHtml(hl)}</h2>
+      <p>${escHtml(body)}</p>
+    </div>`;
+  },
+  'tech-specs'(url, si, fc, td) {
+    const defaultRows = [
+      ['Display','27-inch 4K UHD IPS'],['Resolution','3840 × 2160 px'],
+      ['Refresh Rate','165Hz'],['Response Time','1ms (GtG)'],
+      ['HDR','DisplayHDR 600'],['Connectivity','HDMI 2.1, DP 1.4'],
+      ['USB Hub','USB-C 90W PD + 4× USB-A'],['Dimensions','611 × 420 × 220 mm'],
+    ];
+    const specRows = (td && td.specs && td.specs.length > 0)
+      ? td.specs.map(s => [s.label, s.value])
+      : defaultRows;
+    const trows = specRows.map(([k,v]) => `
+      <div class="m-tech-row">
+        <span class="m-tech-key">${escHtml(String(k))}</span>
+        <span class="m-tech-val">${escHtml(String(v))}</span>
+      </div>`).join('');
+    return `<div class="aplus-root m-tech-specs">
+      <h2>${escHtml((td && td.headline) || 'Technical Specifications')}</h2>
+      <div class="m-tech-table">${trows}</div>
+      <div class="m-tech-note">Min 4 / Max 16 specifications</div>
+    </div>`;
+  },
+};
+
+// ══════════════════════════════════════════════
+// Premium A+ Renderers
+// ══════════════════════════════════════════════
+const PREMIUM_RENDERERS = {
+  /* ── p-full-image ──────────────────────────────────────────────────── */
+  'p-full-image'(url) {
+    return `<div style="width:970px;background:#fff;font-family:Arial,sans-serif;">
+      ${imgTag(url,970,600,'product')}
+      <div style="padding:20px 0;display:flex;flex-direction:column;gap:15px;">
+        <h2 style="font-size:24px;font-weight:700;color:#333;line-height:1.3;margin:0;">Product Headline (60 characters max)</h2>
+        <p style="font-size:16px;color:#555;line-height:1.7;margin:0;">Body description — share the story behind your product. Premium A+ gives you more space and richer formatting. Use this for key differentiators and unique benefits.</p>
+      </div>
+    </div>`;
+  },
+
+  /* ── p-bg-text ─────────────────────────────────────────────────────── */
+  'p-bg-text'(url) {
+    const bg = url
+      ? `<img src="${escHtml(url)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" alt="">`
+      : `<div style="position:absolute;inset:0;background:#f2f2f2;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:12px;">970×600</div>`;
+    return `<div style="width:970px;position:relative;height:600px;overflow:hidden;font-family:Arial,sans-serif;">
+      ${bg}
+      <div style="position:absolute;left:530px;top:242px;width:400px;background:rgba(26,26,26,0.8);padding:24px;">
+        <div style="font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:8px;">SUBHEADLINE</div>
+        <h2 style="font-size:20px;font-weight:700;color:#fff;line-height:1.3;margin:0 0 10px;">Product Feature Headline</h2>
+        <p style="font-size:14px;color:rgba(255,255,255,0.9);line-height:1.6;margin:0 0 16px;">Body text overlay — highlight your key message against the full-bleed background image.</p>
+        <span class="p-bg-text-cta">LEARN MORE</span>
+      </div>
+    </div>`;
+  },
+
+  /* ── p-single-img-text ─────────────────────────────────────────────── */
+  'p-single-img-text'(url) {
+    return `<div style="width:970px;display:flex;padding:20px;gap:30px;height:600px;background:#fff;font-family:Arial,sans-serif;align-items:center;box-sizing:border-box;">
+      <div style="width:400px;flex-shrink:0;display:flex;flex-direction:column;gap:16px;">
+        <div style="font-size:12px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:0.1em;">SUBHEADLINE TEXT</div>
+        <h2 style="font-size:24px;font-weight:700;color:#333;line-height:1.3;margin:0;">Product Feature Headline</h2>
+        <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">Body description — explain the feature or benefit shown in the image. Keep it concise and customer-focused. Aim for 2–3 sentences of engaging content.</p>
+      </div>
+      ${imgTag(url,500,560,'product')}
+    </div>`;
+  },
+
+  /* ── p-full-video ──────────────────────────────────────────────────── */
+  'p-full-video'(url) {
+    return `<div style="width:970px;background:#fff;font-family:Arial,sans-serif;">
+      <div style="width:970px;height:600px;background:#111;position:relative;overflow:hidden;">
+        ${videoTag(url,970,600)}
+      </div>
+      <div style="padding:20px 0;display:flex;flex-direction:column;gap:10px;">
+        <h2 style="font-size:20px;font-weight:700;color:#333;margin:0;">Video Feature Headline</h2>
+        <p style="font-size:14px;color:#555;line-height:1.6;margin:0;">Supporting text — describe what the video demonstrates. Keep under 150 characters.</p>
+      </div>
+    </div>`;
+  },
+
+  /* ── p-video-text ──────────────────────────────────────────────────── */
+  'p-video-text'(url) {
+    return `<div style="width:970px;display:flex;padding:20px;gap:30px;height:650px;background:#fff;font-family:Arial,sans-serif;align-items:flex-start;box-sizing:border-box;">
+      <div style="width:350px;flex-shrink:0;display:flex;flex-direction:column;gap:14px;padding-top:20px;">
+        <div style="font-size:12px;font-weight:700;color:#666;text-transform:uppercase;letter-spacing:0.1em;">SUBHEADLINE</div>
+        <h2 style="font-size:20px;font-weight:700;color:#333;line-height:1.3;margin:0;">Feature Highlight Headline</h2>
+        <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">Body description explaining the feature or benefit. Keep it concise and customer-focused.</p>
+        <div style="font-size:14px;font-weight:700;color:#333;">Video Title</div>
+        <div style="font-size:12px;color:#777;line-height:1.5;">Brief video description — what the viewer will learn or see in this demonstration.</div>
+      </div>
+      <div style="width:570px;height:600px;flex-shrink:0;background:#111;position:relative;overflow:hidden;">
+        ${videoTag(url,570,600)}
+      </div>
+    </div>`;
+  },
+
+  /* ── p-dual-images ─────────────────────────────────────────────────── */
+  'p-dual-images'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const items = [['s1','Image Feature 1'],['s2','Image Feature 2']].map(([k,title]) => `
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        ${imgTag(g(k),475,350,title)}
+        <div style="font-size:14px;font-weight:600;color:#333;">${title}</div>
+      </div>`).join('');
+    return `<div style="width:970px;padding:20px 0;background:#fff;font-family:Arial,sans-serif;">
+      <h2 style="font-size:20px;font-weight:700;color:#333;margin:0 0 16px;">Dual Image Headline</h2>
+      <div style="display:flex;gap:20px;">${items}</div>
+    </div>`;
+  },
+
+  /* ── p-four-images ─────────────────────────────────────────────────── */
+  'p-four-images'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const items = ['s1','s2','s3','s4'].map((k,i) => `
+      <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
+        ${imgTag(g(k),225,225,`feature ${i+1}`)}
+        <div style="font-size:16px;font-weight:700;color:#333;">Feature ${i+1}</div>
+        <div style="font-size:13px;color:#555;line-height:1.5;">Brief description of this product feature or benefit.</div>
+      </div>`).join('');
+    return `<div style="width:970px;padding:20px 0;background:#fff;font-family:Arial,sans-serif;">
+      <div style="font-size:14px;color:#555;margin-bottom:16px;">Product Feature Subheadline — Overview of Four Key Benefits</div>
+      <div style="display:flex;gap:16px;">${items}</div>
+    </div>`;
+  },
+
+  /* ── p-compare-3 ───────────────────────────────────────────────────── */
+  'p-compare-3'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const features = [
+      'Feature 1 — Key specification or benefit',
+      'Feature 2 — Key specification or benefit',
+      'Feature 3 — Key specification or benefit',
+      'Feature 4 — Key specification or benefit',
+      'Feature 5 — Key specification or benefit',
+    ];
+    return `<div style="width:970px;height:700px;position:relative;background:#fff;font-family:Arial,sans-serif;overflow:hidden;">
+      <div style="position:absolute;left:0;top:0;width:350px;height:700px;background:#F2F2F2;">${imgTag(g('s1'),350,700,'Product 1')}</div>
+      <div style="position:absolute;left:350px;top:50px;width:280px;padding:20px;display:flex;flex-direction:column;gap:10px;align-items:center;">
+        <div style="font-size:16px;font-weight:700;color:#333;text-align:center;margin-bottom:4px;">Product Comparison</div>
+        ${features.map(f => `<div style="font-size:12px;color:#555;text-align:center;line-height:1.5;">${f}</div>`).join('')}
+      </div>
+      <div style="position:absolute;left:630px;top:0;width:340px;height:700px;background:#F2F2F2;">${imgTag(g('s2'),340,700,'Product 2')}</div>
+    </div>`;
+  },
+
+  /* ── p-simple-carousel ─────────────────────────────────────────────── */
+  'p-simple-carousel'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const uid = 'psc' + Math.random().toString(36).slice(2,7);
+    const slides = [['s1','Slide 1'],['s2','Slide 2'],['s3','Slide 3']];
+    const slidesHtml = slides.map(([k,label]) => `
+      <div style="flex-shrink:0;width:970px;height:700px;position:relative;background:#F2F2F2;">
+        <div style="width:970px;height:600px;overflow:hidden;">${imgTag(g(k),970,600,label)}</div>
+        <div style="position:absolute;left:50px;top:200px;width:350px;background:rgba(0,0,0,0.75);padding:20px;">
+          <h3 style="font-size:18px;font-weight:700;color:#fff;margin:0 0 10px;">${label} Headline</h3>
+          <p style="font-size:13px;color:rgba(255,255,255,0.9);line-height:1.6;margin:0 0 14px;">Supporting caption text for this carousel slide.</p>
+          <span style="display:inline-block;background:#fff;color:#000;font-size:11px;font-weight:700;padding:6px 16px;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;">LEARN MORE</span>
+        </div>
+      </div>`).join('');
+    const dots = slides.map((_,i) => `<button id="${uid}-dot-${i}" onclick="pSimpleCarouselGo('${uid}',${i})" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;background:${i===0?'#0080FF':'#B3B3B3'};padding:0;transition:background 0.2s;"></button>`).join('');
+    return `<div id="${uid}" data-idx="0" data-dot-active="#0080FF" data-dot-inactive="#B3B3B3" style="width:970px;background:#fff;position:relative;overflow:hidden;font-family:Arial,sans-serif;">
+      <div id="${uid}-slides" style="display:flex;transition:transform 0.4s ease;">${slidesHtml}</div>
+      <div style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10;">${dots}</div>
+      <button class="p-carousel-prev" onclick="pSimpleCarouselAdj('${uid}',-1)">‹</button>
+      <button class="p-carousel-next" onclick="pSimpleCarouselAdj('${uid}',1)">›</button>
+    </div>`;
+  },
+
+  /* ── p-nav-carousel ────────────────────────────────────────────────── */
+  'p-nav-carousel'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const uid = 'pnc' + Math.random().toString(36).slice(2,7);
+    const tabs = [['s1','Feature 1'],['s2','Feature 2'],['s3','Feature 3'],['s4','Feature 4']];
+    const tabBtns = tabs.map(([k,label],i) => `
+      <button onclick="pNavCarouselGo('${uid}',${i})" id="${uid}-tab-${i}"
+        style="height:40px;padding:0 20px;font-size:13px;font-weight:${i===0?'700':'400'};cursor:pointer;
+        color:${i===0?'#333':'#777'};border:none;border-radius:20px;
+        background:${i===0?'#ddd':'#F2F2F2'};transition:all 0.2s;white-space:nowrap;">${label}</button>`).join('');
+    const panels = tabs.map(([k,label],i) => `
+      <div id="${uid}-panel-${i}" style="display:${i===0?'block':'none'};width:970px;height:600px;background:#F2F2F2;position:relative;overflow:hidden;">
+        <div style="position:absolute;left:250px;top:0;width:700px;height:600px;">${imgTag(g(k),700,600,label)}</div>
+        <div style="position:absolute;left:10px;top:50px;width:220px;background:#333333;padding:16px;box-sizing:border-box;">
+          <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,0.7);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">SUBHEADLINE</div>
+          <h3 style="font-size:16px;font-weight:700;color:#fff;line-height:1.3;margin:0 0 10px;">${label} Headline</h3>
+          <p style="font-size:12px;color:rgba(255,255,255,0.85);line-height:1.6;margin:0;">Feature description text goes here. Explain the benefit in detail.</p>
+        </div>
+      </div>`).join('');
+    return `<div id="${uid}" style="width:970px;background:#fff;display:flex;flex-direction:column;gap:15px;font-family:Arial,sans-serif;">
+      <div style="display:flex;gap:10px;padding:0 5px;flex-wrap:wrap;">${tabBtns}</div>
+      <div>${panels}</div>
+    </div>`;
+  },
+
+  /* ── p-regimen-carousel ────────────────────────────────────────────── */
+  'p-regimen-carousel'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const uid = 'prc' + Math.random().toString(36).slice(2,7);
+    const steps = [
+      ['s1','Step 1: Prepare','Set up your workspace and gather all materials needed for optimal results.'],
+      ['s2','Step 2: Apply','Apply the product evenly following the recommended guidelines.'],
+      ['s3','Step 3: Wait','Allow the recommended contact time for best performance results.'],
+      ['s4','Step 4: Check','Verify the application and make any necessary adjustments.'],
+      ['s5','Step 5: Complete','Enjoy the final results and maintain as directed.'],
+    ];
+    const panels = steps.map(([k,title,desc],i) => `
+      <div id="${uid}-panel-${i}" style="display:${i===0?'flex':'none'};width:970px;height:590px;position:relative;overflow:hidden;">
+        <div style="width:670px;height:590px;flex-shrink:0;background:#F2F2F2;">${imgTag(g(k),670,590,title)}</div>
+        <div style="position:absolute;left:30px;top:50px;width:200px;background:#E6E6E6;padding:14px;box-sizing:border-box;">
+          <div style="font-size:11px;color:#555;line-height:1.5;">Product Detail View</div>
+        </div>
+      </div>`).join('');
+    const stepBtns = steps.map(([k,title,desc],i) => `
+      <div id="${uid}-step-${i}" onclick="pRegimenNav('${uid}',${i},5)"
+        style="display:flex;align-items:center;gap:10px;padding:10px 12px;cursor:pointer;border-bottom:1px solid #eee;background:${i===0?'#fff':'#FAFAFA'};">
+        <div id="${uid}-badge-${i}" style="width:24px;height:24px;border-radius:50%;background:${i===0?'#333':'#ddd'};display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:${i===0?'#fff':'#999'};flex-shrink:0;">${i+1}</div>
+        <div style="font-size:11px;color:#333;line-height:1.4;">${title}</div>
+      </div>`).join('');
+    return `<div id="${uid}" style="width:970px;background:#fff;font-family:Arial,sans-serif;">
+      <div style="height:60px;background:#333333;display:flex;align-items:center;padding:0 24px;">
+        <h2 style="font-size:18px;font-weight:700;color:#fff;margin:0;">How to Use This Product</h2>
+      </div>
+      <div style="display:flex;">
+        <div style="flex:1;overflow:hidden;">${panels}</div>
+        <div style="width:280px;flex-shrink:0;background:#FAFAFA;border-left:1px solid #eee;">${stepBtns}</div>
+      </div>
+    </div>`;
+  },
+
+  /* ── p-video-carousel ──────────────────────────────────────────────── */
+  'p-video-carousel'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const uid = 'pvc' + Math.random().toString(36).slice(2,7);
+    const slides = [
+      ['s1','Video 1'],
+      ['s2','Video 2'],
+      ['s3','Video 3'],
+    ];
+    const slidesHtml = slides.map(([k,label]) => `
+      <div style="flex-shrink:0;width:970px;display:flex;background:#fff;">
+        <div style="width:600px;height:600px;flex-shrink:0;background:#111;position:relative;overflow:hidden;">
+          ${videoTag(g(k),600,600)}
+        </div>
+        <div style="width:350px;flex-shrink:0;padding:24px 20px;display:flex;flex-direction:column;gap:12px;box-sizing:border-box;">
+          <h3 style="font-size:16px;font-weight:700;color:#333;margin:0;">${label} Panel Headline</h3>
+          <div style="font-size:13px;color:#555;">${label} subheadline text</div>
+          <p style="font-size:12px;color:#777;line-height:1.6;margin:0;">Body description for this slide. Explain what this video demonstrates to customers.</p>
+          <div style="font-size:12px;font-weight:700;color:#333;">Video Title</div>
+          <div style="font-size:11px;color:#999;line-height:1.5;">Additional video description details here.</div>
+        </div>
+      </div>`).join('');
+    const dots = slides.map((_,i) => `<button id="${uid}-dot-${i}" onclick="pSimpleCarouselGo('${uid}',${i})" style="width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;background:${i===0?'#FFCC00':'#B3B3B3'};padding:0;transition:background 0.2s;"></button>`).join('');
+    return `<div style="width:970px;padding:20px 0;background:#fff;font-family:Arial,sans-serif;">
+      <h2 style="font-size:20px;font-weight:700;color:#333;margin:0 0 16px;">Video &amp; Feature Carousel</h2>
+      <div id="${uid}" data-idx="0" data-dot-active="#FFCC00" data-dot-inactive="#B3B3B3" style="position:relative;overflow:hidden;">
+        <div id="${uid}-slides" style="display:flex;transition:transform 0.4s ease;">${slidesHtml}</div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:12px;">${dots}</div>
+    </div>`;
+  },
+
+  /* ── p-compare-1 ───────────────────────────────────────────────────── */
+  'p-compare-1'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const products = [
+      { k:'s1', name:'Model A' },
+      { k:'s2', name:'Model B' },
+      { k:'s3', name:'Model C' },
+      { k:'s4', name:'Model D' },
+    ];
+    const specRows = [
+      ['Display','27" 4K','27" 4K','32" 4K','24" FHD'],
+      ['Resolution','3840×2160','3840×2160','3840×2160','1920×1080'],
+      ['Refresh Rate','144Hz','165Hz','120Hz','75Hz'],
+      ['Response Time','1ms','1ms','4ms','5ms'],
+      ['HDR','Yes','Yes','Yes','No'],
+      ['Connectivity','HDMI 2.0','HDMI 2.1','HDMI 2.0','HDMI 1.4'],
+    ];
+    const heads = products.map(p => `
+      <div style="flex:1;text-align:center;display:flex;flex-direction:column;gap:8px;align-items:center;padding:16px 8px;background:#FAFAFA;border-right:1px solid #eee;">
+        ${imgTag(g(p.k),200,200,p.name)}
+        <div style="font-size:14px;font-weight:700;color:#333;">${p.name}</div>
+      </div>`).join('');
+    const rows = specRows.map(([spec,...vals],ri) => `
+      <div style="display:flex;border-top:1px solid #eee;">
+        <div style="width:130px;flex-shrink:0;padding:10px 12px;font-size:13px;font-weight:700;color:#333;background:#FAFAFA;border-right:1px solid #eee;">${spec}</div>
+        ${vals.map(v => `<div style="flex:1;padding:10px 8px;font-size:12px;color:#555;text-align:center;border-right:1px solid #eee;background:${ri%2===0?'#fff':'#FAFAFA'};">${v}</div>`).join('')}
+      </div>`).join('');
+    return `<div style="width:970px;background:#fff;font-family:Arial,sans-serif;padding:20px 0;">
+      <div style="display:flex;border:1px solid #eee;overflow:hidden;margin-left:130px;">${heads}</div>
+      <div style="border:1px solid #eee;border-top:none;">${rows}</div>
+    </div>`;
+  },
+
+  /* ── p-compare-2 ───────────────────────────────────────────────────── */
+  'p-compare-2'(url, si) {
+    const g = (k) => (si && si[k]) || url;
+    const products = [
+      { k:'s1', name:'Model A' },
+      { k:'s2', name:'Model B' },
+      { k:'s3', name:'Model C' },
+    ];
+    const featureGroups = [
+      { title:'DISPLAY', text:'27" 4K IPS Panel, 3840×2160 resolution' },
+      { title:'PERFORMANCE', text:'144Hz refresh rate, 1ms response time' },
+      { title:'CONNECTIVITY', text:'HDMI 2.1, USB-C, DisplayPort 1.4' },
+      { title:'FEATURES', text:'HDR600, FreeSync Premium Pro, G-Sync compatible' },
+    ];
+    const cards = products.map(p => `
+      <div style="flex:1;display:flex;flex-direction:column;border:1px solid #eee;overflow:hidden;">
+        <div style="padding:20px;background:#fff;display:flex;flex-direction:column;align-items:center;gap:12px;">
+          ${imgTag(g(p.k),300,300,p.name)}
+          <div style="font-size:14px;font-weight:700;color:#333;text-align:center;">${p.name}</div>
+        </div>
+        ${featureGroups.map(fg => `
+          <div style="padding:12px 16px;border-top:1px solid #eee;background:#FAFAFA;">
+            <div style="font-size:11px;font-weight:700;color:#333;margin-bottom:4px;">${fg.title}</div>
+            <div style="font-size:11px;color:#555;line-height:1.5;">${fg.text}</div>
+          </div>`).join('')}
+      </div>`).join('');
+    return `<div style="width:970px;padding:28px 20px;background:#fff;font-family:Arial,sans-serif;">
+      <h2 style="font-size:18px;font-weight:700;text-align:center;color:#333;margin:0 0 20px;">COMPARISON CHART</h2>
+      <div style="display:flex;gap:16px;">${cards}</div>
+    </div>`;
+  },
+
+  /* ── p-hotspots-1 ──────────────────────────────────────────────────── */
+  'p-hotspots-1'(url) {
+    const hotspots = [
+      { x:22, y:35, title:'Advanced Motor', desc:'Industrial-grade motor for long-lasting performance and reliability.' },
+      { x:58, y:28, title:'Smart Sensor', desc:'AI-powered sensor automatically detects and adjusts to load conditions.' },
+      { x:70, y:60, title:'Eco System', desc:'Energy-saving technology reduces power consumption by up to 30%.' },
+      { x:35, y:68, title:'Silent Drive', desc:'Noise reduction system enables whisper-quiet operation.' },
+    ];
+    const markers = hotspots.map((h,i) => `
+      <div style="position:absolute;left:${h.x}%;top:${h.y}%;transform:translate(-50%,-50%);z-index:10;">
+        <div style="width:40px;height:40px;background:rgba(0,128,255,0.8);border-radius:50%;border:3px solid #fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;cursor:default;box-shadow:0 2px 8px rgba(0,0,0,0.3);">${i+1}</div>
+        <div style="position:absolute;bottom:46px;right:0;background:#fff;padding:12px 14px;border-radius:4px;font-size:11px;line-height:1.5;width:270px;box-shadow:0 2px 10px rgba(0,0,0,0.15);pointer-events:none;">
+          <strong style="font-size:12px;display:block;margin-bottom:4px;color:#333;">${h.title}</strong>
+          <span style="color:#555;">${h.desc}</span>
+        </div>
+      </div>`).join('');
+    return `<div style="width:970px;font-family:Arial,sans-serif;">
+      <div style="position:relative;height:600px;overflow:hidden;background:#F2F2F2;">
+        ${imgTag(url,970,600,'product')}
+        ${markers}
+      </div>
+    </div>`;
+  },
+
+  /* ── p-hotspots-2 ──────────────────────────────────────────────────── */
+  'p-hotspots-2'(url) {
+    const points = [
+      { x:250, y:300, title:'Feature A', desc:'Description of this product feature.' },
+      { x:370, y:300, title:'Feature B', desc:'Description of this product feature.' },
+      { x:490, y:300, title:'Feature C', desc:'Description of this product feature.' },
+      { x:610, y:300, title:'Feature D', desc:'Description of this product feature.' },
+    ];
+    const markers = points.map((p,i) => `
+      <div style="position:absolute;left:${p.x}px;top:${p.y}px;transform:translate(-50%,-50%);z-index:10;width:35px;height:35px;background:#FFCC00;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#000;box-shadow:0 2px 8px rgba(0,0,0,0.25);">${i+1}</div>`).join('');
+    return `<div style="width:970px;padding:20px 0;background:#fff;font-family:Arial,sans-serif;">
+      <h2 style="font-size:20px;font-weight:700;text-align:center;color:#333;margin:0 0 10px;">Product Features</h2>
+      <p style="font-size:14px;text-align:center;color:#555;margin:0 0 20px;line-height:1.6;">Explore the key features of this product with our interactive hotspot view.</p>
+      <div style="position:relative;height:600px;overflow:hidden;background:#F2F2F2;">
+        ${imgTag(url,970,600,'product')}
+        ${markers}
+      </div>
+    </div>`;
+  },
+
+  /* ── p-qa ──────────────────────────────────────────────────────────── */
+  'p-qa'(url) {
+    const qas = [
+      { q:'What makes this product different from competitors?', a:'Our product features exclusive technology that delivers superior performance, backed by 3-year warranty and 24/7 customer support.' },
+      { q:'Is it compatible with smart home systems?', a:'Yes, it integrates seamlessly with major platforms including Amazon Alexa, Google Home, and Apple HomeKit.' },
+      { q:'What are the installation requirements?', a:'Installation takes less than 30 minutes. No special tools required. Detailed instructions are included in the box.' },
+      { q:'How do I maintain and clean the product?', a:'Use a soft, dry cloth for regular cleaning. Avoid harsh chemicals. Perform deep cleaning quarterly following the manual.' },
+      { q:'What warranty is included with this purchase?', a:'This product includes a 3-year manufacturer warranty covering all defects in materials and workmanship.' },
+    ];
+    const headerImg = url
+      ? `<div style="width:970px;height:200px;overflow:hidden;background:#F2F2F2;">${imgTag(url,970,200,'header')}</div>`
+      : `<div style="width:970px;height:200px;background:#F2F2F2;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:14px;">970×200</div>`;
+    const items = qas.map(qa => `
+      <div style="background:#FAFAFA;padding:16px 20px;border-bottom:1px solid #eee;">
+        <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:8px;">
+          <div style="width:30px;height:30px;flex-shrink:0;background:#4D4D4D;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;">Q</div>
+          <div style="font-size:14px;font-weight:700;color:#333;line-height:1.5;padding-top:4px;">${qa.q}</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div style="width:30px;height:30px;flex-shrink:0;background:#FFB200;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;">A</div>
+          <div style="font-size:13px;color:#555;line-height:1.6;padding-top:5px;">${qa.a}</div>
+        </div>
+      </div>`).join('');
+    return `<div style="width:970px;background:#fff;font-family:Arial,sans-serif;">
+      ${headerImg}
+      <div>${items}</div>
+    </div>`;
+  },
+
+  /* ── p-text ────────────────────────────────────────────────────────── */
+  'p-text'() {
+    return `<div style="width:970px;padding:30px 40px;background:#fff;font-family:Arial,sans-serif;">
+      <div style="max-width:890px;">
+        <h2 style="font-size:24px;font-weight:700;color:#333;margin:0 0 16px;line-height:1.2;">Premium Headline — Up to 150 Characters</h2>
+        <p style="font-size:16px;color:#555;line-height:1.8;margin:0;">Body paragraph text — Premium A+ allows richer, longer-form content with enhanced typography. Use this section for in-depth product storytelling, brand values, or detailed feature explanations. Maximum 600 characters of descriptive text.</p>
+      </div>
+    </div>`;
+  },
+
+  /* ── p-tech-specs ──────────────────────────────────────────────────── */
+  'p-tech-specs'() {
+    const specs = [
+      ['Motor Power','1800W ± 50W'],
+      ['Energy Rating','A+++'],
+      ['Capacity','11 kg Wash / 7 kg Dry'],
+      ['Spin Speed','1400 RPM'],
+      ['Noise Level (Wash)','48 dB(A)'],
+      ['Noise Level (Dry)','65 dB(A)'],
+      ['Dimensions (W×H×D)','600 × 850 × 600 mm'],
+      ['Net Weight','72 kg'],
+    ];
+    const rows = specs.map(([label,value],i) => `
+      <div style="display:flex;align-items:center;height:60px;background:${i%2===0?'#fff':'#FAFAFA'};border-bottom:1px solid #eee;">
+        <div style="width:250px;flex-shrink:0;padding:0 20px;font-size:13px;font-weight:700;color:#333;">${label}</div>
+        <div style="width:550px;padding:0 20px;font-size:13px;color:#555;">${value}</div>
+      </div>`).join('');
+    return `<div style="width:970px;padding:30px 40px;background:#fff;font-family:Arial,sans-serif;">
+      <h2 style="font-size:22px;font-weight:700;color:#333;margin:0 0 20px;">Technical Specifications</h2>
+      <div style="border:1px solid #eee;overflow:hidden;">${rows}</div>
+    </div>`;
+  },
+};
+
+// ══════════════════════════════════════════════
+// Premium Carousel Interactive Helpers
+// ══════════════════════════════════════════════
+function pSimpleCarouselGo(uid, idx) {
+  const slides = document.getElementById(uid + '-slides');
+  const root   = document.getElementById(uid);
+  if (!slides || !root) return;
+  const total = slides.children.length;
+  idx = Math.max(0, Math.min(total - 1, idx));
+  root.dataset.idx = idx;
+  slides.style.transform = `translateX(${-idx * 970}px)`;
+  const activeColor   = root.dataset.dotActive   || '#0080FF';
+  const inactiveColor = root.dataset.dotInactive || '#B3B3B3';
+  for (let i = 0; i < total; i++) {
+    const dot = document.getElementById(`${uid}-dot-${i}`);
+    if (dot) dot.style.background = i === idx ? activeColor : inactiveColor;
+  }
+}
+
+function pSimpleCarouselAdj(uid, delta) {
+  const root = document.getElementById(uid);
+  if (!root) return;
+  const slides = document.getElementById(uid + '-slides');
+  if (!slides) return;
+  const total = slides.children.length;
+  const cur = parseInt(root.dataset.idx || '0', 10);
+  pSimpleCarouselGo(uid, cur + delta);
+}
+
+function pNavCarouselGo(uid, idx) {
+  const root = document.getElementById(uid);
+  if (!root) return;
+  const panels = root.querySelectorAll('[id^="' + uid + '-panel-"]');
+  const tabs   = root.querySelectorAll('[id^="' + uid + '-tab-"]');
+  panels.forEach((p, i) => { p.style.display = i === idx ? 'block' : 'none'; });
+  tabs.forEach((t, i) => {
+    t.style.color      = i === idx ? '#333' : '#777';
+    t.style.background = i === idx ? '#ddd' : '#F2F2F2';
+    t.style.fontWeight = i === idx ? '700'  : '400';
+  });
+}
+
+function pRegimenNav(uid, idx, total) {
+  for (let i = 0; i < total; i++) {
+    const panel = document.getElementById(`${uid}-panel-${i}`);
+    const badge = document.getElementById(`${uid}-badge-${i}`);
+    const step  = document.getElementById(`${uid}-step-${i}`);
+    if (panel) panel.style.display    = i === idx ? 'flex' : 'none';
+    if (badge) {
+      badge.style.background = i === idx ? '#333' : '#ddd';
+      badge.style.color      = i === idx ? '#fff' : '#999';
+    }
+    if (step) step.style.background = i === idx ? '#fff' : '#FAFAFA';
+  }
+}
+
+// ══════════════════════════════════════════════
+// URL Type Detection
+// ══════════════════════════════════════════════
+function isVideoUrl(url) {
+  return /\.(mp4|webm|mov|m4v|ogv|avi)(\?.*)?$/i.test(url);
+}
+
+function formatTime(sec) {
+  if (!isFinite(sec)) return '0:00';
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60).toString().padStart(2, '0');
+  return `${m}:${s}`;
+}
+
+// ══════════════════════════════════════════════
+// ══════════════════════════════════════════════
+// Input Tab Switcher
+// ══════════════════════════════════════════════
+function switchInputTab(tab) {
+  currentInputTab = tab;
+  const imgTab  = document.getElementById('inputTabImg');
+  const vidTab  = document.getElementById('inputTabVid');
+  const imgSec  = document.getElementById('inputSectionImage');
+  const vidSec  = document.getElementById('inputSectionVideo');
+  const imgDot  = document.getElementById('imgTabDot');
+  const vidDot  = document.getElementById('vidTabDot');
+
+  if (tab === 'image') {
+    imgTab.classList.add('itab-active');
+    vidTab.classList.remove('itab-active');
+    imgSec.style.display = 'block';
+    vidSec.style.display = 'none';
+    if (imgDot) imgDot.style.opacity = currentImageUrl ? '1' : '0.35';
+  } else {
+    vidTab.classList.add('itab-active');
+    imgTab.classList.remove('itab-active');
+    vidSec.style.display = 'block';
+    imgSec.style.display = 'none';
+    if (vidDot) vidDot.style.opacity = currentVideoUrl ? '1' : '0.35';
+    setTimeout(() => {
+      const vi = document.getElementById('videoUrlDirectInput');
+      if (vi && !currentVideoUrl) vi.focus();
+    }, 80);
+  }
+  // Re-render gallery to apply image/video filter in Premium mode
+  if (currentMode === 'premium') renderGallery();
+}
+
+// ══════════════════════════════════════════════
+// Video URL Loading (direct embed)
+// ══════════════════════════════════════════════
+function loadVideoUrl() {
+  const input = document.getElementById('videoUrlDirectInput');
+  const url = (input.value || '').trim();
+  if (!url) { input.focus(); return; }
+
+  currentVideoUrl = url;
+
+  const area    = document.getElementById('videoLoadedArea');
+  const prevEl  = document.getElementById('videoLoadedPreview');
+  const label   = document.getElementById('videoLoadedLabel');
+
+  prevEl.src = url;
+  area.style.display = 'block';
+
+  // Shorten URL for display
+  try {
+    const u = new URL(url);
+    label.textContent = u.pathname.split('/').pop() || u.hostname;
+  } catch(e) {
+    label.textContent = url.length > 50 ? url.slice(0, 47) + '…' : url;
+  }
+
+  // Update dot indicator
+  const dot = document.getElementById('vidTabDot');
+  if (dot) dot.style.opacity = '1';
+
+  renderGallery();
+}
+
+// ══════════════════════════════════════════════
+// Image Loading (image URL)
+// ══════════════════════════════════════════════
+function loadImage() {
+  const input = document.getElementById('imageUrlInput');
+  const url = input.value.trim();
+  if (!url) { input.focus(); return; }
+
+  // Hide panels first
+  document.getElementById('imgLoadedRow').classList.remove('show');
+  document.getElementById('videoPanel').classList.remove('show');
+  document.getElementById('capturePreview').classList.remove('show');
+
+  if (isVideoUrl(url)) {
+    loadVideo(url);
+    return;
+  }
+
+  const btn = document.getElementById('loadBtn');
+  btn.disabled = true;
+  btn.textContent = 'Loading...';
+
+  const row = document.getElementById('imgLoadedRow');
+  const thumb = document.getElementById('imgThumb');
+  const statusText = document.getElementById('imgStatusText');
+  const dimText = document.getElementById('imgDimText');
+
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.onload = () => {
+    currentImageUrl = url;
+    thumb.src = url;
+    statusText.innerHTML = '<span class="img-status-ok">✓ Image loaded</span>';
+    dimText.textContent = `${img.naturalWidth} × ${img.naturalHeight}px`;
+    row.classList.add('show');
+    btn.disabled = false;
+    btn.textContent = 'Load';
+    const dot = document.getElementById('imgTabDot');
+    if (dot) dot.style.opacity = '1';
+    renderGallery();
+  };
+  img.onerror = () => {
+    currentImageUrl = url;
+    thumb.src = url;
+    statusText.innerHTML = '<span class="img-status-ok">✓ Image URL set</span>';
+    dimText.textContent = '(Dimensions unavailable due to CORS — will display)';
+    row.classList.add('show');
+    btn.disabled = false;
+    btn.textContent = 'Load';
+    renderGallery();
+  };
+  img.src = url;
+}
+
+// ══════════════════════════════════════════════
+// Video Loading & Frame Capture
+// ══════════════════════════════════════════════
+function loadVideo(url) {
+  const btn = document.getElementById('loadBtn');
+  btn.disabled = true;
+  btn.textContent = 'Loading...';
+
+  const videoEl = document.getElementById('videoEl');
+  const panel = document.getElementById('videoPanel');
+  const seek = document.getElementById('videoSeek');
+  const timeLabel = document.getElementById('videoTimeLabel');
+  const captureBtn = document.getElementById('btnCapture');
+
+  // Reset
+  captureBtn.disabled = true;
+  seek.value = 0;
+  timeLabel.textContent = '0:00 / 0:00';
+
+  videoEl.crossOrigin = 'anonymous';
+  videoEl.src = url;
+  videoEl.load();
+
+  videoEl.onloadedmetadata = () => {
+    seek.max = videoEl.duration;
+    seek.step = videoEl.duration / 1000;
+    timeLabel.textContent = `0:00 / ${formatTime(videoEl.duration)}`;
+    captureBtn.disabled = false;
+    panel.classList.add('show');
+    btn.disabled = false;
+    btn.textContent = 'Load';
+    // Seek to 1 second as default preview frame
+    videoEl.currentTime = Math.min(1, videoEl.duration * 0.1);
+  };
+
+  videoEl.ontimeupdate = () => {
+    if (!videoEl.seeking) {
+      seek.value = videoEl.currentTime;
+      timeLabel.textContent = `${formatTime(videoEl.currentTime)} / ${formatTime(videoEl.duration)}`;
+    }
+  };
+
+  videoEl.onended = () => {
+    document.getElementById('btnPlayPause').textContent = '▶ Play';
+  };
+
+  videoEl.onerror = () => {
+    // CORS blocked — try without crossOrigin attribute
+    videoEl.removeAttribute('crossorigin');
+    videoEl.src = url;
+    videoEl.load();
+    videoEl.onloadedmetadata = () => {
+      seek.max = videoEl.duration || 100;
+      captureBtn.disabled = false; // may fail on canvas but allow attempt
+      panel.classList.add('show');
+      btn.disabled = false;
+      btn.textContent = 'Load';
+      videoEl.currentTime = Math.min(1, (videoEl.duration || 10) * 0.1);
+    };
+    videoEl.onerror = () => {
+      btn.disabled = false;
+      btn.textContent = 'Load';
+      alert('Unable to load video. Please check the URL.');
+    };
+  };
+}
+
+function seekVideo(val) {
+  const videoEl = document.getElementById('videoEl');
+  if (videoEl.src) {
+    videoEl.currentTime = parseFloat(val);
+    document.getElementById('videoTimeLabel').textContent =
+      `${formatTime(parseFloat(val))} / ${formatTime(videoEl.duration)}`;
+  }
+}
+
+function togglePlay() {
+  const videoEl = document.getElementById('videoEl');
+  const btn = document.getElementById('btnPlayPause');
+  if (videoEl.paused) {
+    videoEl.play();
+    btn.textContent = '⏸ Pause';
+  } else {
+    videoEl.pause();
+    btn.textContent = '▶ Play';
+  }
+}
+
+function captureFrame() {
+  const videoEl = document.getElementById('videoEl');
+  const canvas = document.getElementById('captureCanvas');
+  const btn = document.getElementById('btnCapture');
+
+  if (!videoEl.src || videoEl.readyState < 2) {
+    alert('Video is not loaded yet.');
+    return;
+  }
+
+  // Pause for clean capture
+  videoEl.pause();
+  document.getElementById('btnPlayPause').textContent = '▶ Play';
+
+  const w = videoEl.videoWidth || 1280;
+  const h = videoEl.videoHeight || 720;
+  canvas.width = w;
+  canvas.height = h;
+
+  const ctx = canvas.getContext('2d');
+  try {
+    ctx.drawImage(videoEl, 0, 0, w, h);
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+
+    currentImageUrl = dataUrl;
+
+    // Show capture preview
+    const captureThumb = document.getElementById('captureThumb');
+    const capturePreview = document.getElementById('capturePreview');
+    const captureTimeInfo = document.getElementById('captureTimeInfo');
+    captureThumb.src = dataUrl;
+    captureTimeInfo.textContent = `Frame at ${formatTime(videoEl.currentTime)} • ${w}×${h}px`;
+    capturePreview.classList.add('show');
+
+    renderGallery();
+  } catch (e) {
+    // Canvas tainted by CORS
+    alert('Frame capture failed (CORS policy). Using the video URL as image source.');
+    // Fallback: use video URL as source (browsers can display it)
+    currentImageUrl = videoEl.src;
+    renderGallery();
+  }
+}
+
+// ══════════════════════════════════════════════
+// Gallery Render
+// ══════════════════════════════════════════════
+const CATEGORY_SUB = {
+  'Single Image':        '— completed with 1 image',
+  'Multi Image':         '— set different images per slot',
+  'Text / Table':        '— text & data, no image needed',
+  'Image / Video':       '— full-width image & video modules',
+  'Carousel':            '— interactive slider',
+  'Comparison / Specs':  '— product comparison & specs tables',
+  'Text Only':           '— text-only, no image',
+};
+
+function renderGallery() {
+  const container = document.getElementById('moduleGallery');
+  const isPremium = currentMode === 'premium';
+
+  // In Premium mode, filter by current input tab (image vs video)
+  let defs = activeDefs();
+  if (isPremium) {
+    const isVideoTab = currentInputTab === 'video';
+    defs = defs.filter(m => isVideoTab ? isVideoMod(m.id) : !isVideoMod(m.id));
+  }
+
+  const renderers = activeRenderers();
+  const categories = [...new Set(defs.map(m => m.category))];
+
+  container.innerHTML = categories.map(cat => {
+    const mods = defs.filter(m => m.category === cat);
+    const cards = mods.map(mod => {
+      const isVid   = isVideoMod(mod.id);
+      const isMulti = !isVid && mod.imageCount >= 2;
+      const isText  = !isVid && mod.imageCount === 0;
+
+      // Pass the right URL to the renderer for thumbnail preview
+      const renderUrl = isVid ? currentVideoUrl : currentImageUrl;
+      const html = renderers[mod.id] ? renderers[mod.id](renderUrl) : '';
+      const thumbId = `thumb-${mod.id}`;
+
+      let badgeClass, badgeText, btnClass, btnText, btnAction;
+
+      if (isVid) {
+        badgeClass = 'badge-video';
+        badgeText  = '▶ VIDEO';
+        if (currentVideoUrl) {
+          btnClass  = isPremium ? 'btn-premium' : '';
+          btnText   = '+ Add to Page';
+          btnAction = `addModule('${mod.id}')`;
+        } else {
+          btnClass  = 'btn-set-video';
+          btnText   = '▶ Set Video URL First';
+          btnAction = `addModule('${mod.id}')`;  // will guide to video tab
+        }
+      } else if (isMulti) {
+        const btnPremium = isPremium ? ' btn-premium' : '';
+        badgeClass = isPremium ? 'badge-multi badge-premium' : 'badge-multi';
+        badgeText  = `${mod.imageCount} IMAGES`;
+        btnClass   = `btn-multi${btnPremium}`;
+        btnText    = 'Set Images & Add →';
+        btnAction  = `openSlotModal('${mod.id}')`;
+      } else if (isText) {
+        badgeClass = 'badge-text';
+        badgeText  = 'TEXT';
+        const btnPremium = isPremium ? ' btn-premium' : '';
+        btnClass   = btnPremium.trim();
+        btnText    = '+ Add to Page';
+        btnAction  = `addModule('${mod.id}')`;
+      } else {
+        badgeClass = 'badge-single';
+        badgeText  = '1 IMAGE';
+        const btnPremium = isPremium ? ' btn-premium' : '';
+        btnClass   = btnPremium.trim();
+        btnText    = '+ Add to Page';
+        btnAction  = `addModule('${mod.id}')`;
+      }
+
+      const hasFeatCount = mod.id === 'highlights';
+      const featSelector = hasFeatCount ? `
+        <div class="feat-count-row">
+          <label>Bullet points:</label>
+          <select class="feat-count-select" id="feat-count-${mod.id}">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>` : '';
+      const finalBtnAction = hasFeatCount
+        ? `addModuleWithOpts('${mod.id}', {featureCount: +document.getElementById('feat-count-${mod.id}').value})`
+        : btnAction;
+
+      return `
+        <div class="mod-card">
+          <div class="mod-thumb-box">
+            <span class="mod-type-badge ${badgeClass}">${badgeText}</span>
+            <div class="mod-thumb-scaler" id="${thumbId}">
+              ${html}
+            </div>
+          </div>
+          <div class="mod-card-body">
+            <div class="mod-card-name">${mod.name}</div>
+            <div class="mod-card-spec">${mod.spec}</div>
+          </div>
+          ${featSelector}
+          <button class="mod-card-btn ${btnClass}" onclick="${finalBtnAction}">
+            ${btnText}
+          </button>
+        </div>`;
+    }).join('');
+
+    const sub = CATEGORY_SUB[cat] || '';
+    return `
+      <div class="gallery-section">
+        <div class="gallery-section-title">${cat} <span class="gallery-section-sub">${sub}</span></div>
+        <div class="card-grid">${cards}</div>
+      </div>`;
+  }).join('');
+
+  // Apply thumbnail scaling
+  requestAnimationFrame(() => {
+    defs.forEach(mod => {
+      const el = document.getElementById(`thumb-${mod.id}`);
+      if (!el) return;
+      const box = el.parentElement;
+      const boxW = box.offsetWidth || 200;
+      const scale = boxW / 970;
+      el.style.transform = `scale(${scale})`;
+      el.style.transformOrigin = 'top left';
+      const innerH = (el.firstElementChild && el.firstElementChild.offsetHeight) || 300;
+      box.style.height = Math.min(110, innerH * scale + 10) + 'px';
+    });
+  });
+}
+
+// ══════════════════════════════════════════════
+// Slot Config Modal
+// ══════════════════════════════════════════════
+let pendingSlotImages = {};   // { slotId: url }
+let pendingModuleType = null;
+const slotDebounceTimers = {};
+
+function openSlotModal(typeId) {
+  const def = activeDefs().find(m => m.id === typeId);
+  if (!def || !def.slots) { addModule(typeId); return; }
+
+  pendingModuleType = typeId;
+  pendingSlotImages = {};
+  const isVidModal = isVideoMod(typeId);
+  def.slots.forEach(s => {
+    // Video carousel slots default to currentVideoUrl; others to currentImageUrl
+    pendingSlotImages[s.id] = (isVidModal ? currentVideoUrl : currentImageUrl) || '';
+  });
+
+  document.getElementById('modalTitle').textContent = def.name;
+  document.getElementById('modalSubtitle').textContent = isVidModal
+    ? `Set a different video URL for each of the ${def.slots.length} slots. Leave blank to show a placeholder.`
+    : `Set a different image URL for each of the ${def.slots.length} slots. Leave blank to show a placeholder.`;
+
+  const applyAllBtn = document.getElementById('applyAllBtn');
+  applyAllBtn.disabled = isVidModal ? !currentVideoUrl : !currentImageUrl;
+  applyAllBtn.textContent = isVidModal ? 'Apply current video to all slots' : 'Apply current image to all slots';
+
+  renderModalPreview(def);
+  renderSlotInputs(def);
+
+  document.getElementById('modalOverlay').classList.add('open');
+  document.addEventListener('keydown', handleModalKey);
+}
+
+// ── Live Layout Preview in Modal ─────────────────
+function renderModalPreview(def) {
+  const frame  = document.getElementById('modalPreviewFrame');
+  const scaler = document.getElementById('modalPreviewScaler');
+  if (!frame || !scaler) return;
+
+  const renderers = activeRenderers();
+  const isVidModal = isVideoMod(def.id);
+  const previewUrl = isVidModal ? (currentVideoUrl || null) : (currentImageUrl || null);
+  const html = renderers[def.id]
+    ? renderers[def.id](previewUrl, { ...pendingSlotImages })
+    : `<div style="width:970px;height:300px;background:#f2f2f2;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:14px;">No Preview</div>`;
+
+  scaler.innerHTML = html;
+
+  requestAnimationFrame(() => {
+    const frameW = frame.offsetWidth || 228;
+    const scale  = frameW / 970;
+    scaler.style.transform = `scale(${scale})`;
+    scaler.style.width = '970px';
+    const innerH = (scaler.firstElementChild && scaler.firstElementChild.offsetHeight) || 300;
+    const scaledH = Math.round(innerH * scale);
+    frame.style.height = Math.min(240, Math.max(60, scaledH + 2)) + 'px';
+  });
+}
+
+function refreshModalPreview() {
+  const def = _currentModalDef();
+  if (def) renderModalPreview(def);
+}
+
+function renderSlotInputs(def) {
+  const container = document.getElementById('modalSlotsCol');
+  container.innerHTML = def.slots.map((slot, idx) => {
+    const url = pendingSlotImages[slot.id] || '';
+    const thumbHtml = url
+      ? `<img src="${escHtml(url)}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"
+           onerror="this.parentElement.innerHTML='<div class=slot-thumb-placeholder>${slot.w}×${slot.h}</div>'">`
+      : `<div class="slot-thumb-placeholder">${slot.w}×${slot.h}</div>`;
+    return `
+      <div class="slot-input-row" id="row-${slot.id}"
+        onmouseenter="highlightSlot('${slot.id}',true)"
+        onmouseleave="highlightSlot('${slot.id}',false)">
+        <div class="slot-thumb-box" id="sthumb-${slot.id}">${thumbHtml}</div>
+        <div class="slot-input-body">
+          <div class="slot-input-label">
+            ${idx+1}. ${slot.label}
+            <span class="slot-input-dim">${slot.w}×${slot.h}px</span>
+          </div>
+          <input type="url" class="slot-url-input" id="sinput-${slot.id}"
+            value="${escHtml(url)}"
+            placeholder="${slot.isVideo ? 'https://example.com/video.mp4 (.mp4, .webm ...)' : 'https://example.com/image.jpg (.jpg, .png ...)'}"
+            oninput="onSlotUrlChange('${slot.id}', this.value)"
+          >
+          <div class="slot-mini-video-wrap" id="svideo-${slot.id}">
+            <div class="slot-mini-video-row">
+              <video class="slot-mini-vid" id="svidel-${slot.id}" muted playsinline preload="metadata"></video>
+              <div class="slot-mini-controls">
+                <input type="range" class="slot-mini-seek" id="svseek-${slot.id}"
+                  min="0" max="100" step="0.1" value="0"
+                  oninput="slotSeekVideo('${slot.id}', this.value)">
+                <div class="slot-mini-time" id="svtime-${slot.id}">0:00 / 0:00</div>
+                <div class="slot-mini-btn-row">
+                  <button class="slot-mini-play" onclick="slotTogglePlay('${slot.id}')">▶</button>
+                  <button class="slot-mini-capture" onclick="slotCaptureFrame('${slot.id}')">📷 Capture Frame</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slot-status" id="sstatus-${slot.id}">
+            ${url ? '✓ Image set' : 'Empty — shown as placeholder'}
+          </div>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function highlightSlot(slotId, on) {
+  const rowEl = document.getElementById(`row-${slotId}`);
+  if (rowEl) rowEl.classList.toggle('active', on);
+}
+
+function onSlotUrlChange(slotId, value) {
+  const url = value.trim();
+  clearTimeout(slotDebounceTimers[slotId]);
+  slotDebounceTimers[slotId] = setTimeout(() => {
+    if (isVideoUrl(url)) {
+      setupSlotVideoPlayer(slotId, url);
+    } else {
+      // Hide video player if was shown
+      const vwrap = document.getElementById(`svideo-${slotId}`);
+      if (vwrap) vwrap.classList.remove('show');
+      pendingSlotImages[slotId] = url;
+      updateSlotPreview(slotId, url);
+    }
+  }, 400);
+}
+
+// ── Slot Mini Video Player ────────────────────
+function setupSlotVideoPlayer(slotId, url) {
+  const vwrap = document.getElementById(`svideo-${slotId}`);
+  const vidEl = document.getElementById(`svidel-${slotId}`);
+  const seekEl = document.getElementById(`svseek-${slotId}`);
+  const timeEl = document.getElementById(`svtime-${slotId}`);
+  if (!vwrap || !vidEl) return;
+
+  vidEl.crossOrigin = 'anonymous';
+  vidEl.src = url;
+  vidEl.load();
+
+  vidEl.onloadedmetadata = () => {
+    seekEl.max = vidEl.duration;
+    seekEl.step = vidEl.duration / 500;
+    timeEl.textContent = `0:00 / ${formatTime(vidEl.duration)}`;
+    vidEl.currentTime = Math.min(1, vidEl.duration * 0.1);
+    vwrap.classList.add('show');
+    // Update status
+    const statusEl = document.getElementById(`sstatus-${slotId}`);
+    if (statusEl) { statusEl.textContent = 'Video loaded — capture a frame'; statusEl.className = 'slot-status ok'; }
+  };
+
+  vidEl.ontimeupdate = () => {
+    if (!vidEl.seeking && seekEl) {
+      seekEl.value = vidEl.currentTime;
+      if (timeEl) timeEl.textContent = `${formatTime(vidEl.currentTime)} / ${formatTime(vidEl.duration)}`;
+    }
+  };
+
+  vidEl.onended = () => { /* keep as is */ };
+
+  vidEl.onerror = () => {
+    vidEl.removeAttribute('crossorigin');
+    vidEl.src = url;
+    vidEl.load();
+    vidEl.onloadedmetadata = () => {
+      seekEl.max = vidEl.duration || 100;
+      vwrap.classList.add('show');
+    };
+  };
+}
+
+function slotSeekVideo(slotId, val) {
+  const vidEl = document.getElementById(`svidel-${slotId}`);
+  const timeEl = document.getElementById(`svtime-${slotId}`);
+  if (vidEl && vidEl.src) {
+    vidEl.currentTime = parseFloat(val);
+    if (timeEl) timeEl.textContent = `${formatTime(parseFloat(val))} / ${formatTime(vidEl.duration)}`;
+  }
+}
+
+function slotTogglePlay(slotId) {
+  const vidEl = document.getElementById(`svidel-${slotId}`);
+  const btn = event.currentTarget;
+  if (!vidEl) return;
+  if (vidEl.paused) { vidEl.play(); btn.textContent = '⏸'; }
+  else { vidEl.pause(); btn.textContent = '▶'; }
+}
+
+function slotCaptureFrame(slotId) {
+  const vidEl = document.getElementById(`svidel-${slotId}`);
+  if (!vidEl || vidEl.readyState < 2) return;
+  vidEl.pause();
+
+  const canvas = document.getElementById('captureCanvas');
+  const w = vidEl.videoWidth || 1280;
+  const h = vidEl.videoHeight || 720;
+  canvas.width = w; canvas.height = h;
+
+  try {
+    canvas.getContext('2d').drawImage(vidEl, 0, 0, w, h);
+    const dataUrl = canvas.toDataURL('image/jpeg', 0.92);
+    pendingSlotImages[slotId] = dataUrl;
+
+    // Hide video wrap, update thumbnail + status
+    document.getElementById(`svideo-${slotId}`).classList.remove('show');
+    updateSlotPreviewWithDataUrl(slotId, dataUrl, `Frame @ ${formatTime(vidEl.currentTime)}`);
+  } catch (e) {
+    // CORS tainted — use video URL as fallback
+    pendingSlotImages[slotId] = vidEl.src;
+    const statusEl = document.getElementById(`sstatus-${slotId}`);
+    if (statusEl) { statusEl.textContent = 'Capture failed (CORS) — video URL used'; statusEl.className = 'slot-status ok'; }
+  }
+}
+
+function updateSlotPreviewWithDataUrl(slotId, dataUrl, label) {
+  const thumbBox = document.getElementById(`sthumb-${slotId}`);
+  const statusEl = document.getElementById(`sstatus-${slotId}`);
+  if (thumbBox) thumbBox.innerHTML = `<img src="${dataUrl}" style="width:100%;height:100%;object-fit:cover;display:block;" alt="">`;
+  if (statusEl) { statusEl.textContent = `✓ ${label} captured`; statusEl.className = 'slot-status ok'; }
+  pendingSlotImages[slotId] = dataUrl;
+  refreshModalPreview();
+}
+
+function updateSlotPreview(slotId, url) {
+  const thumbBox = document.getElementById(`sthumb-${slotId}`);
+  const statusEl = document.getElementById(`sstatus-${slotId}`);
+
+  if (!url) {
+    const slot = _currentModalDef()?.slots.find(s => s.id === slotId);
+    if (thumbBox) thumbBox.innerHTML = `<div class="slot-thumb-placeholder">${slot ? slot.w+'×'+slot.h : '—'}</div>`;
+    if (statusEl) { statusEl.textContent = 'Empty — shown as placeholder'; statusEl.className = 'slot-status'; }
+    refreshModalPreview();
+    return;
+  }
+
+  const img = new Image();
+  img.onload = () => {
+    if (thumbBox) thumbBox.innerHTML = `<img src="${escHtml(url)}" style="width:100%;height:100%;object-fit:cover;display:block;" alt="">`;
+    if (statusEl) { statusEl.textContent = '✓ Image set'; statusEl.className = 'slot-status ok'; }
+    refreshModalPreview();
+  };
+  img.onerror = () => {
+    // Still allow — may be CORS or video URL
+    if (thumbBox) thumbBox.innerHTML = `<img src="${escHtml(url)}" style="width:100%;height:100%;object-fit:cover;display:block;" alt="" onerror="this.style.opacity=0.3">`;
+    if (statusEl) { statusEl.textContent = 'URL set (preview unavailable)'; statusEl.className = 'slot-status ok'; }
+    refreshModalPreview();
+  };
+  img.src = url;
+}
+
+function _currentModalDef() { return activeDefs().find(m => m.id === pendingModuleType); }
+function _slotNum(slotId) {
+  const def = _currentModalDef();
+  if (!def) return '';
+  const idx = def.slots.findIndex(s => s.id === slotId);
+  return idx + 1;
+}
+
+function applyCurrentToAllSlots() {
+  const def = _currentModalDef();
+  if (!def) return;
+  const isVidModal = isVideoMod(pendingModuleType);
+  const applyUrl = isVidModal ? currentVideoUrl : currentImageUrl;
+  if (!applyUrl) return;
+  def.slots.forEach(s => {
+    pendingSlotImages[s.id] = applyUrl;
+    const input = document.getElementById(`sinput-${s.id}`);
+    if (input) input.value = applyUrl;
+    updateSlotPreview(s.id, applyUrl);
+  });
+}
+
+function submitSlotModal() {
+  if (!pendingModuleType) return;
+  const isVidModal = isVideoMod(pendingModuleType);
+  activeModules().push({
+    type: pendingModuleType,
+    imageUrl: isVidModal ? null : currentImageUrl,
+    videoUrl: isVidModal ? currentVideoUrl : null,
+    slotImages: { ...pendingSlotImages },
+    id: nextId++,
+  });
+  closeSlotModal();
+  renderPagePreview();
+}
+
+function closeSlotModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.removeEventListener('keydown', handleModalKey);
+  pendingModuleType = null;
+  pendingSlotImages = {};
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeSlotModal();
+}
+function handleModalKey(e) {
+  if (e.key === 'Escape') closeSlotModal();
+}
+
+// ══════════════════════════════════════════════
+// Page Builder
+// ══════════════════════════════════════════════
+function addModule(typeId) {
+  const isVid = isVideoMod(typeId);
+  if (isVid && !currentVideoUrl) {
+    // No video URL yet — guide user to video tab
+    switchInputTab('video');
+    const input = document.getElementById('videoUrlDirectInput');
+    if (input) {
+      input.style.outline = '2px solid #c62828';
+      input.focus();
+      setTimeout(() => { input.style.outline = ''; }, 1800);
+    }
+    return;
+  }
+  activeModules().push({
+    type: typeId,
+    imageUrl: isVid ? null : currentImageUrl,
+    videoUrl: isVid ? currentVideoUrl : null,
+    slotImages: null,
+    id: nextId++
+  });
+  renderPagePreview();
+}
+
+function addModuleWithOpts(typeId, opts) {
+  activeModules().push({
+    type: typeId,
+    imageUrl: currentImageUrl,
+    videoUrl: null,
+    slotImages: null,
+    featureCount: opts.featureCount || 4,
+    id: nextId++
+  });
+  renderPagePreview();
+}
+
+function removeModule(id) {
+  setActiveModules(activeModules().filter(m => m.id !== id));
+  renderPagePreview();
+}
+
+function moveModule(id, dir) {
+  const mods = activeModules();
+  const idx = mods.findIndex(m => m.id === id);
+  if (idx < 0) return;
+  const newIdx = idx + dir;
+  if (newIdx < 0 || newIdx >= mods.length) return;
+  const tmp = mods[idx];
+  mods[idx] = mods[newIdx];
+  mods[newIdx] = tmp;
+  renderPagePreview();
+}
+
+function clearPage() {
+  if (activeModules().length === 0) return;
+  if (!confirm('Remove all modules from the page?')) return;
+  setActiveModules([]);
+  renderPagePreview();
+}
+
+function renderPagePreview() {
+  // 리렌더 전 드래그 상태 초기화 + 편집 내용 저장
+  _imgDrag = null;
+  captureEdits();
+
+  const empty = document.getElementById('previewEmpty');
+  const page  = document.getElementById('previewPage');
+  const count = document.getElementById('moduleCount');
+  const mods  = activeModules();
+  const renderers = activeRenderers();
+
+  // Update tab counters
+  document.getElementById('cnt-standard').textContent = pageModules.length;
+  document.getElementById('cnt-premium').textContent  = premiumPageModules.length;
+  count.textContent = mods.length;
+
+  if (mods.length === 0) {
+    empty.style.display = 'flex';
+    page.style.display = 'none';
+    return;
+  }
+
+  empty.style.display = 'none';
+  page.style.display = 'block';
+
+  page.innerHTML = mods.map((m) => {
+    const renderer = renderers[m.type];
+    const renderUrl = isVideoMod(m.type) ? (m.videoUrl || null) : (m.imageUrl || null);
+    const html = renderer ? renderer(renderUrl, m.slotImages, m.featureCount, m.textData) : '';
+    return `
+      <div class="pv-module-wrap" data-mod-id="${m.id}">
+        ${html}
+        <div class="pv-module-actions">
+          <button class="pv-act-btn pv-act-up" onclick="moveModule(${m.id},-1)" title="Move Up">↑</button>
+          <button class="pv-act-btn pv-act-dn" onclick="moveModule(${m.id},1)" title="Move Down">↓</button>
+          <button class="pv-act-btn pv-act-del" onclick="removeModule(${m.id})" title="Remove">✕</button>
+        </div>
+      </div>`;
+  }).join('');
+
+  // Fix 1: 리렌더 후 편집 내용 복원
+  restoreEdits();
+
+  // Fix 1: 편집 모드 중이었다면 contenteditable + 이미지 드래그 재적용
+  if (editModeActive) {
+    applyEditMode(page);
+    applyImageDragMode(page);
+  }
+
+  // Scale page to fit panel width
+  scalePreviewPage();
+}
+
+function scalePreviewPage() {
+  const scroll = document.getElementById('previewScroll');
+  const page = document.getElementById('previewPage');
+  if (page.style.display === 'none') return;
+  const availW = scroll.clientWidth - 32;
+  const scale = availW / 970;
+  page.style.transform = `scale(${scale})`;
+  page.style.transformOrigin = 'top left';
+  page.style.width = '970px';
+  // transform:scale은 layout 크기는 그대로 유지 → 스케일된 시각 높이만큼
+  // 남은 여백을 negative margin으로 제거해 bottom-bar가 보이도록 함
+  requestAnimationFrame(() => {
+    const origH = page.scrollHeight;
+    const excess = Math.round(origH * (1 - scale));
+    page.style.marginBottom = `-${excess}px`;
+    // scroll 컨테이너에는 minHeight 강제 설정 안 함
+    scroll.style.minHeight = '';
+  });
+}
+
+// ══════════════════════════════════════════════
+// Export
+// ══════════════════════════════════════════════
+// ── Edit Mode ──────────────────────────────
+let editModeActive = false;
+const TEXT_SELECTORS = 'h1,h2,h3,h4,p,li,span:not(.mod-type-badge):not(.preview-mode-pill),strong,em,td,th,div.m-highlights-headline,div.m-highlights-subhead,div.m-highlights-body';
+
+// 모듈별 편집 내용 저장소 { modId: { texts: [...], imgPos: [{x,y},...] } }
+let _savedEdits = {};
+
+function captureEdits() {
+  document.querySelectorAll('#previewPage .pv-module-wrap[data-mod-id]').forEach(wrap => {
+    const modId = wrap.getAttribute('data-mod-id');
+    // 텍스트 저장
+    const texts = [];
+    wrap.querySelectorAll(TEXT_SELECTORS).forEach(el => {
+      if (el.closest('.pv-module-actions')) return;
+      texts.push(el.innerText);
+    });
+    // 이미지 위치 저장
+    const imgPos = [];
+    wrap.querySelectorAll('img').forEach(img => {
+      if (img.closest('.pv-module-actions')) return;
+      imgPos.push({
+        x: parseFloat(img.getAttribute('data-obj-x') ?? '50'),
+        y: parseFloat(img.getAttribute('data-obj-y') ?? '50')
+      });
+    });
+    if (texts.length || imgPos.length) {
+      _savedEdits[modId] = { texts, imgPos };
+    }
+  });
+}
+
+function restoreEdits() {
+  document.querySelectorAll('#previewPage .pv-module-wrap[data-mod-id]').forEach(wrap => {
+    const modId = wrap.getAttribute('data-mod-id');
+    const saved = _savedEdits[modId];
+    if (!saved) return;
+    // 텍스트 복원 (구버전 배열 형식도 허용)
+    const texts = Array.isArray(saved) ? saved : (saved.texts || []);
+    const els = [];
+    wrap.querySelectorAll(TEXT_SELECTORS).forEach(el => {
+      if (!el.closest('.pv-module-actions')) els.push(el);
+    });
+    texts.forEach((text, i) => {
+      if (els[i] && text !== undefined) els[i].innerText = text;
+    });
+    // 이미지 위치 복원
+    const imgPos = saved.imgPos || [];
+    const imgs = [];
+    wrap.querySelectorAll('img').forEach(img => {
+      if (!img.closest('.pv-module-actions')) imgs.push(img);
+    });
+    imgPos.forEach((pos, i) => {
+      if (!imgs[i]) return;
+      imgs[i].setAttribute('data-obj-x', pos.x);
+      imgs[i].setAttribute('data-obj-y', pos.y);
+      imgs[i].style.objectPosition = `${pos.x}% ${pos.y}%`;
+    });
+  });
+}
+
+// ─────────────────────────────────────────────
+// 이미지 드래그 리포지션 (Edit Mode)
+// ─────────────────────────────────────────────
+let _imgDrag = null; // 현재 드래그 중인 이미지 상태
+
+// 전역 mousemove/mouseup 리스너 (단 한 번 등록)
+document.addEventListener('mousemove', e => {
+  if (!_imgDrag) return;
+  const { img, startX, startY, startObjX, startObjY, overlay } = _imgDrag;
+  const dx = e.clientX - startX;
+  const dy = e.clientY - startY;
+
+  const cW = img.offsetWidth;
+  const cH = img.offsetHeight;
+  const natW = img.naturalWidth || cW;
+  const natH = img.naturalHeight || cH;
+
+  // cover 스케일 계산
+  const scale  = Math.max(cW / natW, cH / natH);
+  const rendW  = natW * scale;
+  const rendH  = natH * scale;
+  const overW  = Math.max(0.01, rendW - cW); // 좌우 overflow 픽셀
+  const overH  = Math.max(0.01, rendH - cH); // 상하 overflow 픽셀
+
+  // 현재 anchor 픽셀 → drag delta 반영 → 다시 %로
+  const pxX = (startObjX / 100) * overW - dx;
+  const pxY = (startObjY / 100) * overH - dy;
+  const newX = Math.max(0, Math.min(100, (pxX / overW) * 100));
+  const newY = Math.max(0, Math.min(100, (pxY / overH) * 100));
+
+  img.style.objectPosition = `${newX}% ${newY}%`;
+  img.setAttribute('data-obj-x', newX.toFixed(1));
+  img.setAttribute('data-obj-y', newY.toFixed(1));
+});
+
+document.addEventListener('mouseup', () => {
+  if (_imgDrag) {
+    _imgDrag.handle.classList.remove('dragging');
+    _imgDrag = null;
+  }
+});
+
+function applyImageDragMode(page) {
+  page.querySelectorAll('.pv-module-wrap img').forEach(img => {
+    if (img.closest('.pv-module-actions')) return;
+    if (img.hasAttribute('data-drag-init')) return;
+    img.setAttribute('data-drag-init', '1');
+
+    // object-fit: cover 보장 + 초기 위치 적용
+    img.style.objectFit = 'cover';
+    const ox = parseFloat(img.getAttribute('data-obj-x') ?? '50');
+    const oy = parseFloat(img.getAttribute('data-obj-y') ?? '50');
+    img.style.objectPosition = `${ox}% ${oy}%`;
+
+    // 오버레이를 img의 offsetParent 기준으로 정확히 배치
+    // → 텍스트 영역을 절대 덮지 않음
+    const posParent = img.offsetParent || img.parentElement;
+    if (getComputedStyle(posParent).position === 'static') {
+      posParent.style.position = 'relative';
+    }
+
+    // 드래그 오버레이 생성 — img 위치에 정확히 맞게 배치
+    // pointer-events:none이므로 텍스트 클릭/편집에 전혀 영향 없음
+    const overlay = document.createElement('div');
+    overlay.className = 'img-reposition-overlay';
+    overlay.style.top    = img.offsetTop    + 'px';
+    overlay.style.left   = img.offsetLeft   + 'px';
+    overlay.style.width  = img.offsetWidth  + 'px';
+    overlay.style.height = img.offsetHeight + 'px';
+    overlay.innerHTML = `
+      <span class="img-drag-handle">✥ Drag to reposition</span>
+      <button class="img-reposition-reset" title="Reset position">↺ Reset</button>
+    `;
+    posParent.appendChild(overlay);
+
+    // 리셋 버튼 (pointer-events:all이므로 클릭 가능)
+    overlay.querySelector('.img-reposition-reset').addEventListener('click', e => {
+      e.stopPropagation();
+      img.setAttribute('data-obj-x', '50');
+      img.setAttribute('data-obj-y', '50');
+      img.style.objectPosition = '50% 50%';
+    });
+
+    // 드래그 핸들에서만 드래그 시작 (overlay 자체는 pointer-events:none)
+    const handle = overlay.querySelector('.img-drag-handle');
+    handle.addEventListener('mousedown', e => {
+      _imgDrag = {
+        img,
+        handle,
+        startX:    e.clientX,
+        startY:    e.clientY,
+        startObjX: parseFloat(img.getAttribute('data-obj-x') ?? '50'),
+        startObjY: parseFloat(img.getAttribute('data-obj-y') ?? '50'),
+      };
+      handle.classList.add('dragging');
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
+}
+
+function removeImageDragMode(page) {
+  _imgDrag = null;
+  page.querySelectorAll('.img-reposition-overlay').forEach(o => o.remove());
+  page.querySelectorAll('img[data-drag-init]').forEach(img => {
+    img.removeAttribute('data-drag-init');
+  });
+}
+
+// ─────────────────────────────────────────────
+
+function applyEditMode(page) {
+  page.querySelectorAll(TEXT_SELECTORS).forEach(el => {
+    if (el.closest('.pv-module-actions')) return;
+    if (el.children.length > 0 && el.textContent.trim() === [...el.children].map(c => c.textContent).join('').trim()) return;
+    el.contentEditable = 'true';
+    el.dataset.placeholder = el.tagName === 'LI' ? 'Bullet point…' : 'Text…';
+    // Fix 2: 붙여넣기 시 plain-text만 삽입 (스타일 제거)
+    el.addEventListener('paste', function(e) {
+      e.preventDefault();
+      const text = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, text);
+    }, { once: false });
+    // Fix 3: 바이트 초과 시 실시간 '…' 처리
+    const maxChars = +el.getAttribute('data-maxchars') || 0;
+    if (maxChars > 0) {
+      el.addEventListener('input', function() {
+        if (this.innerText.length > maxChars) {
+          const sel = window.getSelection();
+          this.innerText = this.innerText.slice(0, maxChars - 1) + '…';
+          // 커서를 끝으로
+          const range = document.createRange();
+          range.selectNodeContents(this);
+          range.collapse(false);
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+      });
+    }
+  });
+}
+
+function toggleEditMode() {
+  editModeActive = !editModeActive;
+  const btn    = document.getElementById('btnEditMode');
+  const banner = document.getElementById('editModeBanner');
+  const page   = document.getElementById('previewPage');
+
+  if (editModeActive) {
+    btn.textContent = '🔒 Lock';
+    btn.classList.add('active');
+    banner.classList.add('visible');
+    page.classList.add('edit-mode');
+    applyEditMode(page);
+    applyImageDragMode(page);
+  } else {
+    btn.textContent = '✏ Edit';
+    btn.classList.remove('active');
+    banner.classList.remove('visible');
+    page.classList.remove('edit-mode');
+    page.querySelectorAll('[contenteditable]').forEach(el => {
+      el.removeAttribute('contenteditable');
+      delete el.dataset.placeholder;
+    });
+    removeImageDragMode(page);
+  }
+}
+
+// ══════════════════════════════════════════════
+// PDP Auto-Generate
+// ══════════════════════════════════════════════
+const PDP_MODULE_MAP = {
+  'standard-image-header':    'lighttext',
+  'highlights':               'highlights',
+  'standard-four-image-text': 'four-text',
+  'standard-three-image-text':'three-img',
+  'standard-single-left-image': 'left-img',
+  'standard-single-right-image':'right-img',
+  'standard-text':            'text',
+  'standard-tech-specs':      'tech-specs'
+};
+
+async function generateFromPDP() {
+  const urlInput = document.getElementById('pdpUrlInput');
+  const btn      = document.getElementById('btnGenerate');
+  const status   = document.getElementById('pdpGenStatus');
+  const url      = urlInput.value.trim();
+
+  if (!url) {
+    alert('LG.com PDP URL을 입력해주세요.');
+    return;
+  }
+  if (!url.includes('lg.com')) {
+    if (!confirm('LG.com URL이 아닌 것 같습니다. 계속 진행할까요?')) return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = '⏳ Crawling...';
+  status.textContent = '페이지 크롤링 중...';
+  status.classList.add('visible');
+
+  try {
+    // Step 1: Crawl + Generate via backend
+    status.textContent = '① LG.com 크롤링 중... (30~60초 소요)';
+    const controller = new AbortController();
+    const fetchTimer = setTimeout(() => controller.abort(), 120000); // 2분 타임아웃
+    const res = await fetch('http://localhost:3001/api/generate', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url }),
+      signal: controller.signal
+    }).finally(() => clearTimeout(fetchTimer));
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
+      throw new Error(err.error || `Server error ${res.status}`);
+    }
+
+    status.textContent = '② Claude가 모듈 생성 중...';
+    const data = await res.json();
+    const { modules } = data;
+
+    if (!modules || modules.length === 0) {
+      throw new Error('생성된 모듈이 없습니다. URL을 확인해주세요.');
+    }
+
+    // Step 2: Clear current page
+    setActiveModules([]);
+
+    // Step 3: Map and push modules
+    modules.forEach(m => {
+      const typeId = PDP_MODULE_MAP[m.moduleId];
+      if (!typeId) return; // skip unknown module types
+
+      // Build slotImages for multi-image modules
+      let slotImages = null;
+      if (m.items && m.items.length > 0) {
+        slotImages = {};
+        m.items.forEach((item, i) => {
+          slotImages[`s${i + 1}`] = item.imageUrl || m.imageUrl || null;
+        });
+      }
+
+      // Primary image URL
+      const imageUrl = m.imageUrl || (m.items && m.items[0] && m.items[0].imageUrl) || null;
+
+      // featureCount for highlights
+      const featureCount = (m.bullets && m.bullets.length) || 4;
+
+      activeModules().push({
+        type:         typeId,
+        imageUrl:     imageUrl,
+        videoUrl:     null,
+        slotImages:   slotImages,
+        featureCount: featureCount,
+        textData:     m,   // full module data as textData
+        id:           nextId++
+      });
+    });
+
+    // Step 4: Render
+    renderPagePreview();
+    status.textContent = `✓ ${modules.length}개 모듈 생성 완료`;
+    setTimeout(() => status.classList.remove('visible'), 4000);
+
+  } catch (err) {
+    console.error('generateFromPDP error:', err);
+    let msg = err.message;
+    if (msg.includes('Failed to fetch') || msg.includes('NetworkError')) {
+      msg = '서버에 연결할 수 없습니다.\n\n터미널에서 서버를 먼저 실행해주세요:\ncd "/Users/kangjaeyeong/Desktop/AI Study/lg-web-project"\nnode server.js';
+    }
+    alert('오류: ' + msg);
+    status.classList.remove('visible');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '✦ Generate Sample';
+  }
+}
+
+// ── 모듈 타입별 이미지 스펙 [w, h] ──────────────────────────────────────
+const MODULE_IMAGE_SPECS = {
+  'sidebar':       [[500, 460]],
+  'left-img':      [[300, 300]],
+  'right-img':     [[300, 300]],
+  'highlights':    [[300, 300]],
+  'lighttext':           [[970, 300]],
+  'dark-overlay':        [[970, 300]],
+  'image-header-text':   [[970, 600]],
+  'three-img':     [[300, 300], [300, 300], [300, 300]],
+  'four-text':     [[180, 180], [180, 180], [180, 180], [180, 180]],
+  'four-hl':       [[400, 560], [140, 230], [140, 230], [140, 230]],
+  'quadrant':      [[160, 200], [160, 200], [160, 200], [160, 200]],
+  'compare':       [[260, 200], [260, 200], [260, 200]],
+  'specs-detail':  [[300, 300]],
+};
+
+// 프록시를 통해 이미지 로드 + 크기 제한 (메모리/성능 최적화)
+async function loadProxiedImage(url, targetW, targetH) {
+  let blob;
+
+  if (url.startsWith('data:') || url.startsWith('blob:')) {
+    // data URL (캡처된 비디오 프레임 등) / blob URL — 이미 브라우저 메모리에 있으므로 프록시 불필요
+    const response = await fetch(url);
+    blob = await response.blob();
+  } else {
+    // 외부 URL — CORS 우회를 위해 서버 프록시 경유
+    const proxyUrl = `http://localhost:3001/api/proxy-image?url=${encodeURIComponent(url)}`;
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 20000); // 20초 타임아웃
+    const response = await fetch(proxyUrl, { signal: ctrl.signal }).finally(() => clearTimeout(t));
+    if (!response.ok) throw new Error(`Proxy failed: ${response.status}`);
+    blob = await response.blob();
+  }
+
+  // 원본 해상도 그대로 디코딩 — 크롭/스케일은 canvas에서 처리
+  const bm = await createImageBitmap(blob);
+
+  // 메모리 보호: 8K 초과 이미지만 제한 (close() 전에 크기 저장)
+  const LIMIT = 7680;
+  const { width: bmW, height: bmH } = bm;
+  if (bmW <= LIMIT && bmH <= LIMIT) return bm;
+
+  bm.close(); // 이제 bm 변수 접근 안 함 — 미리 저장한 bmW/bmH 사용
+  const s = Math.min(LIMIT / bmW, LIMIT / bmH);
+  return createImageBitmap(blob, {
+    resizeWidth:   Math.round(bmW * s),
+    resizeHeight:  Math.round(bmH * s),
+    resizeQuality: 'high',
+  });
+}
+
+// cover crop 좌표 계산 — 다운로드·프리뷰 양쪽에서 재사용
+function calcCoverCrop(srcW, srcH, dstAr, objX = 50, objY = 50) {
+  const srcAr = srcW / srcH;
+  let sx, sy, sw, sh;
+  if (srcAr > dstAr) {   // 이미지가 더 넓음 → 좌우 크롭
+    sh = srcH;
+    sw = sh * dstAr;
+    sx = (objX / 100) * (srcW - sw);
+    sy = 0;
+  } else {                // 이미지가 더 높음 → 상하 크롭
+    sw = srcW;
+    sh = sw / dstAr;
+    sx = 0;
+    sy = (objY / 100) * (srcH - sh);
+  }
+  return { sx, sy, sw: Math.round(sw), sh: Math.round(sh) };
+}
+
+// object-fit: cover 동작을 canvas에서 재현 (프리뷰용 — 지정 크기로 스케일)
+function drawCoverCrop(ctx, bm, dw, dh, objX = 50, objY = 50) {
+  const { sx, sy, sw, sh } = calcCoverCrop(
+    bm.width || bm.naturalWidth,
+    bm.height || bm.naturalHeight,
+    dw / dh, objX, objY
+  );
+  ctx.drawImage(bm, sx, sy, sw, sh, 0, 0, dw, dh);
+}
+
+// 프리뷰 DOM에서 특정 모듈의 i번째 이미지 위치(%) 읽기
+function getImgPosition(modId, slotIdx) {
+  const wrap = document.querySelector(`#previewPage .pv-module-wrap[data-mod-id="${modId}"]`);
+  if (!wrap) return { x: 50, y: 50 };
+  const imgs = [];
+  wrap.querySelectorAll('img').forEach(img => {
+    if (!img.closest('.pv-module-actions')) imgs.push(img);
+  });
+  const img = imgs[slotIdx];
+  return {
+    x: parseFloat(img?.getAttribute('data-obj-x') ?? '50'),
+    y: parseFloat(img?.getAttribute('data-obj-y') ?? '50'),
+  };
+}
+
+function canvasToBlob(canvas) {
+  return new Promise(resolve =>
+    canvas.toBlob(resolve, 'image/jpeg', 0.92)
+  );
+}
+
+async function downloadImages() {
+  const mods = activeModules();
+  if (mods.length === 0) {
+    alert('No modules to export. Please add modules first.');
+    return;
+  }
+
+  // Fix 4: 서버 상태 먼저 확인
+  try {
+    const hc = await fetch('http://localhost:3001/api/health', { signal: AbortSignal.timeout(3000) });
+    if (!hc.ok) throw new Error('not ok');
+  } catch (e) {
+    alert('⚠️ 이미지 다운로드를 위해 서버가 필요합니다.\n\n터미널에서 아래 명령어를 실행해주세요:\n\ncd "/Users/kangjaeyeong/Desktop/AI Study/lg-web-project"\nnode server.js\n\n그 후 다시 시도해주세요.');
+    return;
+  }
+
+  const btn = document.querySelector('.btn-export');
+  const origText = btn.textContent;
+  btn.disabled = true;
+
+  // 전체 이미지 수 계산
+  let total = 0;
+  for (const m of mods) {
+    const specs = MODULE_IMAGE_SPECS[m.type];
+    if (specs) total += specs.filter((_, i) => {
+      const key = `s${i+1}`;
+      return (m.slotImages && m.slotImages[key]) ||
+             (m.textData && m.textData.items && m.textData.items[i]?.imageUrl) ||
+             m.imageUrl;
+    }).length;
+  }
+
+  const zip = new JSZip();
+  let count = 0;
+
+  for (const m of mods) {
+    const specs = MODULE_IMAGE_SPECS[m.type];
+    if (!specs) continue;
+    const modIndex = String(mods.indexOf(m) + 1).padStart(2, '0');
+
+    for (let i = 0; i < specs.length; i++) {
+      const [w, h] = specs[i];
+      const slotKey = `s${i + 1}`;
+      const url =
+        (m.slotImages && m.slotImages[slotKey]) ||
+        (m.textData && m.textData.items && m.textData.items[i]?.imageUrl) ||
+        m.imageUrl;
+
+      if (!url) continue;
+
+      btn.textContent = `⏳ ${count + 1} / ${total}`;
+      // 진행률 표시를 브라우저가 반영할 시간 허용
+      await new Promise(r => setTimeout(r, 0));
+
+      try {
+        const bm = await loadProxiedImage(url, w, h);
+
+        // 프리뷰에서 조정한 포지션 반영
+        const { x: objX, y: objY } = getImgPosition(m.id, i);
+
+        // 원본 해상도로 스펙 비율(w:h) 크롭
+        const { sx, sy, sw: cw, sh: ch } = calcCoverCrop(
+          bm.width, bm.height, w / h, objX, objY
+        );
+
+        // 크롭 결과가 스펙 크기보다 작으면 스펙 크기로 업스케일
+        // (Amazon 최소 업로드 해상도 보장 — 원본이 작아도 규격 충족)
+        const upScale = Math.max(1, w / cw, h / ch);
+        const outW = Math.round(cw * upScale);
+        const outH = Math.round(ch * upScale);
+
+        const canvas = document.createElement('canvas');
+        canvas.width  = outW;
+        canvas.height = outH;
+        // upScale > 1이면 업스케일, ≤1이면 원본 해상도 그대로 (1:1 복사)
+        canvas.getContext('2d').drawImage(bm, sx, sy, cw, ch, 0, 0, outW, outH);
+        if (bm.close) bm.close();
+
+        const blob = await canvasToBlob(canvas);
+        // 파일명: 스펙크기_실제출력크기
+        const filename = `${modIndex}_${m.type}_img${i + 1}_${w}x${h}_${outW}x${outH}.jpg`;
+        zip.file(filename, blob);
+        count++;
+      } catch (e) {
+        console.warn(`이미지 처리 실패 [${m.type} #${i+1}]:`, e.message);
+      }
+    }
+  }
+
+  btn.disabled = false;
+  btn.textContent = origText;
+
+  if (count === 0) {
+    alert('이미지를 처리할 수 없습니다.\nserver.js가 실행 중인지 확인해주세요 (http://localhost:3001)');
+    return;
+  }
+
+  // ZIP 생성 — JPEG는 이미 압축되어 있으므로 STORE 사용 (CPU 절약)
+  btn.textContent = '📦 ZIP 생성 중...';
+  btn.disabled = true;
+  const zipBlob = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(zipBlob);
+  a.download = `aplus-images-${Date.now()}.zip`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  btn.disabled = false;
+  btn.textContent = origText;
+  alert(`✅ ${count}개 이미지를 ZIP으로 다운로드했습니다.\n각 이미지는 Amazon A+ 모듈 가이드 규격으로 크롭되었습니다.`);
+}
+
+function exportPage() {
+  const mods = activeModules();
+  const renderers = activeRenderers();
+  if (mods.length === 0) {
+    alert('No modules to export. Please add modules first.');
+    return;
+  }
+  const modulesHtml = mods.map(m => {
+    const renderer = renderers[m.type];
+    return renderer ? renderer(m.imageUrl, m.slotImages) : '';
+  }).join('\n');
+
+  const html = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon A+ Content Page</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #fff; display: flex; justify-content: center; }
+.aplus-page { width: 970px; background: #fff; }
+${document.querySelector('style').textContent}
+</style>
+</head>
+<body>
+<div class="aplus-page">
+${modulesHtml}
+</div>
+</body>
+</html>`;
+
+  const blob = new Blob([html], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `amazon-aplus-${Date.now()}.html`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// ══════════════════════════════════════════════
+// Init
+// ══════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', () => {
+  // Standard 모드 기본값: 탭 숨기고 단일 입력 표시
+  const tabsRow = document.querySelector('.input-type-tabs');
+  const vidSec  = document.getElementById('inputSectionVideo');
+  if (tabsRow) tabsRow.style.display = 'none';
+  if (vidSec)  vidSec.style.display  = 'none';
+  // placeholder 초기값 (Standard: 이미지+동영상 모두 허용)
+  const imgInput = document.getElementById('imageUrlInput');
+  if (imgInput) imgInput.placeholder = 'Image or video URL (.jpg, .png, .mp4, .webm ...)';
+
+  renderGallery();
+});
+
+window.addEventListener('resize', () => {
+  scalePreviewPage();
+  // Re-apply thumbnail scaling for currently visible gallery
+  activeDefs().forEach(mod => {
+    const el = document.getElementById(`thumb-${mod.id}`);
+    if (!el) return;
+    const box = el.parentElement;
+    const boxW = box.offsetWidth || 200;
+    const scale = boxW / 970;
+    el.style.transform = `scale(${scale})`;
+  });
+});
+</script>
+</body>
+</html>

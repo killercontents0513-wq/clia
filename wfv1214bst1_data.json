@@ -1,0 +1,260 @@
+{
+  "code": "WFV1214BST1",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfv1214bst1/",
+  "name": "12 kg Front load | Bigger capacity in same size | Tempered Glass Door ",
+  "price": "3649",
+  "msrp": "",
+  "gallery": [
+    {
+      "a": "View 1",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-01.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 2",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-02.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 3",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-03.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 4",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-04.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 5",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-05.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 6",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-06.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 7",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-07.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 8",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-08.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 9",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-09.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 10",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-10.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 11",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-11.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 12",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-12.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 13",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-13.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 14",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-14.jpg",
+      "w": 1600,
+      "h": 1062
+    },
+    {
+      "a": "View 15",
+      "p": "/images/washing-machines/wfv1214bst1_ablgnag_emgf_sa_en_c/Z-15.jpg",
+      "w": 1600,
+      "h": 1062
+    }
+  ],
+  "features": [
+    {
+      "a": "Wd Vivace V700 Vc3 Vcm 01",
+      "p": "/images/wm/features/WD-Vivace-V700-VC3-VCM-01-1-Vivace-Intro-Desktop.jpg",
+      "t": "Wd Vivace V700 Vc3 Vcm 01",
+      "d": "",
+      "w": 1600,
+      "h": 1100
+    },
+    {
+      "a": "Wd Vivace V700 Vc3 Vcm 05",
+      "p": "/images/wm/features/WD-Vivace-V700-VC3-VCM-05-TurboWash-Desktop.jpg",
+      "t": "What is AI DD™?",
+      "d": "TurboWash™ technology cleans your clothes in 39 minutes. Spend less time on laundry and more time living!",
+      "w": 1600,
+      "h": 1400
+    },
+    {
+      "a": "Wd Vivace V700 Vc3 Vcm 09",
+      "p": "/images/wm/features/WD-Vivace-V700-VC3-VCM-09-1-Bigger-Capacity-Desktop.gif",
+      "t": "Wd Vivace V700 Vc3 Vcm 09",
+      "d": "",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "Wd Vivace V700 Vc3 White ",
+      "p": "/images/wm/features/WD-Vivace-V700-VC3-White-12-1-Compatibility-Desktop.jpg",
+      "t": "More Visible and Elegant",
+      "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+      "w": 1600,
+      "h": 1300
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-02-1-AIDD-Desktop.gif",
+      "t": "Wd Vivace V900 Vc2 Blacks",
+      "d": "",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-03-AIDD-info-Desktop.jpg",
+      "t": "Intelligent Care with 18% More Fabric Protection",
+      "d": "Based on big data of accumulated washing experience, AI DD™ offers the most Optimized washing motion in order to care your laundry.",
+      "w": 1600,
+      "h": 800
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-05-1-TurboWash-360-Desktop.jpg",
+      "t": "Wd Vivace V900 Vc2 Blacks",
+      "d": "",
+      "w": 1600,
+      "h": 1500
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-1-Steam-Plus-Desktop.jpg",
+      "t": "Less Time, More Life",
+      "d": "TurboWash™ technology cleans your clothes in 39 minutes. Spend less time on laundry and more time living!",
+      "w": 1600,
+      "h": 460
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-2-Steam-Plus-Desktop.jpg",
+      "t": "Wd Vivace V900 Vc2 Blacks",
+      "d": "",
+      "w": 1600,
+      "h": 810
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-08-Steam-Plus-info-Desktop.jpg",
+      "t": "30% Less Wrinkles",
+      "d": "The wrinkles are formed during dehydration disappear through the steam+ during tumble motion.",
+      "w": 1600,
+      "h": 500
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-09-Steam-Plus-info-Desktop.jpg",
+      "t": "30% Less Wrinkles",
+      "d": "Get bigger drum capacity in same size!",
+      "w": 1600,
+      "h": 500
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-10-1-Bigger-Capacity-Desktop.gif",
+      "t": "Wd Vivace V900 Vc2 Blacks",
+      "d": "",
+      "w": 1600,
+      "h": 900
+    },
+    {
+      "a": "Wd Vivace V900 Vc2 Blacks",
+      "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-14-1-SmartThinQ-Desktop.jpg",
+      "t": "Wd Vivace V900 Vc2 Blacks",
+      "d": "",
+      "w": 1600,
+      "h": 1350
+    },
+    {
+      "a": "Wm Vivace V700 Vc3 Vcm 10",
+      "p": "/images/wm/features/WM-Vivace-V700-VC3-VCM-10-Design-Desktop.jpg",
+      "t": "More Durable and Hygienic",
+      "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+      "w": 1600,
+      "h": 600
+    },
+    {
+      "a": "Wm Vivace V700 Vc3 Vcm 12",
+      "p": "/images/wm/features/WM-Vivace-V700-VC3-VCM-12-1-ThinQ-Desktop.jpg",
+      "t": "Wm Vivace V700 Vc3 Vcm 12",
+      "d": "",
+      "w": 1600,
+      "h": 1350
+    },
+    {
+      "a": "Wm Vivace V700 Vc3 White ",
+      "p": "/images/wm/features/WM-Vivace-V700-VC3-White-01-2-Vivace-Intro-Desktop.jpg",
+      "t": "Intelligent Care with 18% More Fabric Protection",
+      "d": "AI DD™ Intelligent Care with 18% More Fabric Protection",
+      "w": 1600,
+      "h": 270
+    },
+    {
+      "a": "Wm Vivace V700 Vc3 White ",
+      "p": "/images/wm/features/WM-Vivace-V700-VC3-White-09-1-Druability-Desktop.jpg",
+      "t": "Wm Vivace V700 Vc3 White ",
+      "d": "",
+      "w": 1600,
+      "h": 1220
+    }
+  ],
+  "specs": {
+    "DIMENSIONS & WEIGHTS - Product Dimensions (WxHxD m": "600 x 850 x 610",
+    "FEATURES - Steam": "Steam+",
+    "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+    "Smart Diagnosis": "Yes",
+    "ThinQ(Wi-Fi)": "Yes",
+    "Add Item": "Yes",
+    "TurboWash": "Yes",
+    "Max Dry Capacity (kg)": "12",
+    "Display Type": "Touch LED",
+    "Product Dimensions (WxHxD mm)": "600 x 850 x 610",
+    "6 Motion DD": "Yes",
+    "AI DD": "Yes",
+    "Inverter DirectDrive": "Yes",
+    "Stainless Steel Drum": "Full Stainless",
+    "Steam": "Steam+",
+    "Type": "Front Loader Washer",
+    "Body Color": "Black Steel"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "WTT1108OW1",
+  "url": "https://www.lg.com/sa_en/washing-machines/twin-tub/wtt1108ow1/",
+  "h1": "LG 10.5 kg Twin Tub Washing Machine — Roller Jet Pulsator, Punch+3, 3 Wash Programs, Rat Away Technology, White (WTT1108OW1)",
+  "curPrice": "1,399",
+  "origPrice": "2,249",
+  "memberPrice": "1,343.04",
+  "gallery": [
+    {"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-01.jpg","a":"Front view of LG 10.5 kg Twin Tub Washing Machine WTT1108OW1 in White","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-06.jpg","a":"Front view with lids open","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-02.jpg","a":"Top view showing dual-tub (wash + spin) layout","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-03.jpg","a":"Side view with top opened","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-04.jpg","a":"Top open close-up of wash and spin tubs","w":1600,"h":1062}
+  ],
+  "modules": [
+    {
+      "eye":"Roller Jet Pulsator + Punch+3",
+      "head":"Powerful currents for a deeper clean",
+      "body":"LG's Roller Jet Pulsator combined with Punch+3 triple-action washing creates strong, uniform water streams that rub clothes together efficiently — for a thorough clean that's still kind to fabrics.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/Global_Omega_2017_Feature_01_Roller_Jet_Pulsator_D.jpg","a":"Roller Jet Pulsator creates powerful water currents","w":1600,"h":900}]
+    },
+    {
+      "eye":"3 Wash Programs",
+      "head":"Gentle, Normal, Strong — match every fabric",
+      "body":"Pick the right wash intensity with a simple mechanical dial: Gentle for delicates and synthetics, Normal for everyday loads, and Strong for heavily-soiled workwear and bulky items.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/Global_Omega_2017_Feature_02_3_Wash_Prog_D.jpg","a":"Three wash program dial: Gentle, Normal, Strong","w":1600,"h":900}]
+    },
+    {
+      "eye":"Rat Away Technology",
+      "head":"Practical protection for your washer's internals",
+      "body":"LG's unique Rat Away design shields internal hoses and wiring from rodent damage — a genuinely useful safeguard for outdoor laundry rooms, villas and utility spaces.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/Global_Omega_2017_Feature_04_Rat_Away_Technology_D.jpg","a":"Rat Away Technology protects internal components","w":1600,"h":900}]
+    },
+    {
+      "eye":"Wash + Spin Simultaneously",
+      "head":"Dual tubs, double productivity",
+      "body":"The twin-tub layout pairs a 10.5 kg wash tub with a separate 8 kg spin tub, so you can wash one load while spin-drying another — ideal for large families, shop overalls, and bulk laundry days.",
+      "disc":"",
+      "imgs":[{"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-02.jpg","a":"Top view: wash tub (left) and spin tub (right)","w":1600,"h":1062}]
+    },
+    {
+      "eye":"Stable, Durable Build",
+      "head":"Anti-Vibration Rubber Feet + Lint Filter",
+      "body":"Anti-Vibration Rubber feet absorb motion during high-speed spin cycles so the machine stays put. A built-in Lint Filter captures fluff and fibres for a cleaner rinse. Durable White polypropylene cabinet stands up to years of heavy household use.",
+      "disc":"",
+      "imgs":[{"p":"/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-04.jpg","a":"Durable twin-tub build with anti-vibration feet","w":1600,"h":1062}]
+    }
+  ],
+  "specs": [
+    {"k":"Type","v":"Twin Tub Washing Machine (manual dual-tub)"},
+    {"k":"Wash Capacity","v":"10.5 kg"},
+    {"k":"Spin Tub Capacity","v":"8 kg"},
+    {"k":"Pulsator","v":"Roller Jet Pulsator"},
+    {"k":"Wash Action","v":"Punch + 3 (3-stage cleaning)"},
+    {"k":"Wash Programs","v":"3 (Gentle / Normal / Strong)"},
+    {"k":"Soak","v":"Yes (up to 20 min)"},
+    {"k":"Wash Timer","v":"Up to 15 min"},
+    {"k":"Spin Timer","v":"Up to 5 min"},
+    {"k":"Water Feed","v":"Hot & Cold"},
+    {"k":"Drain Selector","v":"Yes"},
+    {"k":"Lint Filter","v":"Yes"},
+    {"k":"Rat Away Technology","v":"Yes"},
+    {"k":"Anti-Vibration Rubber Feet","v":"Yes"},
+    {"k":"Main Colour","v":"White"},
+    {"k":"Product Dimensions (W × H × D, mm)","v":"905 × 1025 × 545"},
+    {"k":"Weight","v":"32 kg"},
+    {"k":"Model","v":"WTT1108OW1"}
+  ]
+}

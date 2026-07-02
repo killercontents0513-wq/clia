@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LG 브랜드샵 고객 혜택 노출 강화 — UI/UX 기획서</title>
+<style>
+  :root {
+    --red: #a50034;
+    --red-dark: #7a0026;
+    --red-light: #fff0f4;
+    --dark: #1a1a1a;
+    --gray: #555;
+    --light: #f8f8f8;
+    --border: #e0e0e0;
+    --blue: #1a6bb5;
+    --green: #1a7a3e;
+    --orange: #d46b00;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', 'Apple SD Gothic Neo', Arial, sans-serif; background: #f4f4f4; color: var(--dark); font-size: 15px; line-height: 1.65; }
+
+  /* NAV */
+  .topnav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--dark); display: flex; align-items: center;
+    padding: 0 32px; height: 52px; gap: 4px; box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .topnav-logo { color: var(--red); font-weight: 800; font-size: 17px; margin-right: 20px; letter-spacing: -0.5px; }
+  .topnav a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 13px; padding: 6px 12px; border-radius: 4px; transition: all 0.15s; white-space: nowrap; }
+  .topnav a:hover, .topnav a.active { color: #fff; background: rgba(255,255,255,0.1); }
+  .topnav-spacer { flex: 1; }
+  .topnav-date { color: rgba(255,255,255,0.4); font-size: 12px; }
+
+  /* LAYOUT */
+  .container { max-width: 1000px; margin: 0 auto; padding: 48px 24px 80px; }
+
+  /* COVER */
+  .cover {
+    background: var(--red); color: white;
+    padding: 56px 48px 44px; border-radius: 12px; margin-bottom: 48px;
+    position: relative; overflow: hidden;
+  }
+  .cover::before {
+    content: ''; position: absolute; right: -60px; top: -60px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .cover::after {
+    content: ''; position: absolute; right: 60px; bottom: -80px;
+    width: 200px; height: 200px; border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .cover-tag { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; opacity: 0.65; text-transform: uppercase; margin-bottom: 12px; }
+  .cover h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px; }
+  .cover p { font-size: 16px; opacity: 0.82; margin-bottom: 32px; }
+  .cover-meta { display: flex; gap: 28px; flex-wrap: wrap; }
+  .cover-meta-item { }
+  .cover-meta-item .label { font-size: 10px; letter-spacing: 1px; opacity: 0.55; text-transform: uppercase; margin-bottom: 3px; }
+  .cover-meta-item .value { font-size: 13px; font-weight: 600; }
+
+  /* SECTION */
+  .section { margin-bottom: 56px; }
+  .section-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 24px;
+  }
+  .section-num {
+    background: var(--red); color: white;
+    width: 32px; height: 32px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; flex-shrink: 0;
+  }
+  .section-title { font-size: 20px; font-weight: 800; color: var(--dark); }
+  .section-sub { font-size: 13px; color: var(--gray); margin-top: 2px; }
+
+  /* CARDS */
+  .card {
+    background: white; border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .card + .card { margin-top: 16px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+
+  /* BENEFIT TABLE */
+  .benefit-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .benefit-table th {
+    background: var(--light); padding: 10px 14px; text-align: left;
+    font-weight: 700; font-size: 12px; border-bottom: 2px solid var(--border); color: #333;
+  }
+  .benefit-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .benefit-table tr:hover td { background: #fafafa; }
+  .benefit-table tr:last-child td { border-bottom: none; }
+
+  /* PROBLEM CARDS */
+  .problem-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .problem-card .p-num { font-size: 28px; font-weight: 900; color: #e8e8e8; line-height: 1; margin-bottom: 8px; }
+  .problem-card .p-title { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+  .problem-card .p-desc { font-size: 13px; color: var(--gray); line-height: 1.55; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; letter-spacing: 0.3px; }
+  .badge-red { background: var(--red); color: white; }
+  .badge-orange { background: #e67e22; color: white; }
+  .badge-green { background: var(--green); color: white; }
+  .badge-blue { background: var(--blue); color: white; }
+
+  /* AS-IS / TO-BE */
+  .asis-tobe { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px; }
+  .asis-box { background: #fafafa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; }
+  .tobe-box { background: var(--red-light); border: 1px solid #f5b8c4; border-radius: 8px; padding: 20px; }
+  .asis-box h4 { font-size: 12px; font-weight: 700; color: #888; margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  .tobe-box h4 { font-size: 12px; font-weight: 700; color: var(--red); margin-bottom: 12px; letter-spacing: 1px; text-transform: uppercase; }
+  ul.check { list-style: none; padding: 0; }
+  ul.check li { padding: 5px 0; font-size: 13px; color: #444; padding-left: 20px; position: relative; }
+  ul.check li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+  ul.x li::before { content: '✕'; color: #c0392b; }
+  ul.arrow li::before { content: '→'; color: var(--red); }
+
+  /* WIREFRAME */
+  .wireframe { border: 1px solid #ddd; border-radius: 10px; overflow: hidden; background: #f0f0f0; }
+  .wf-bar { background: #2a2a2a; padding: 10px 16px; display: flex; align-items: center; gap: 6px; }
+  .wf-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .wf-url-bar { background: #404040; flex: 1; height: 24px; border-radius: 4px; margin: 0 10px; display: flex; align-items: center; padding: 0 10px; }
+  .wf-url-bar span { font-size: 11px; color: #aaa; }
+  .wf-body { background: white; }
+
+  /* Hero section of wireframe */
+  .wf-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 0; }
+  .wf-img-area { background: #e8e8e8; min-height: 180px; display: flex; align-items: center; justify-content: center; color: #aaa; font-size: 12px; border-right: 1px solid #ddd; }
+  .wf-buy-area { padding: 20px 18px; }
+  .wf-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .wf-badge { font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 4px; }
+  .wf-badge-red { background: var(--red); color: white; }
+  .wf-badge-blue { background: var(--blue); color: white; }
+  .wf-title-placeholder { background: #ddd; height: 14px; border-radius: 3px; margin-bottom: 6px; }
+  .wf-price-old { font-size: 12px; color: #aaa; text-decoration: line-through; margin-bottom: 2px; }
+  .wf-price-new { font-size: 26px; font-weight: 900; color: var(--red); margin-bottom: 4px; }
+  .wf-member-price { font-size: 12px; color: var(--blue); font-weight: 600; margin-bottom: 12px; }
+  .wf-benefit-box { background: #fff9e6; border: 1px solid #fde68a; border-radius: 6px; padding: 10px 12px; margin-bottom: 12px; }
+  .wf-benefit-box-title { font-size: 11px; font-weight: 700; color: #d46b00; margin-bottom: 6px; }
+  .wf-benefit-box-item { font-size: 11px; color: #555; line-height: 1.6; }
+  .wf-buy-btn { background: var(--red); color: white; padding: 9px 20px; border-radius: 4px; font-size: 12px; font-weight: 700; display: inline-block; }
+
+  /* Benefit banner */
+  .wf-benefit-banner { background: #1a1a1a; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 3px solid var(--red); }
+  .wf-bb-label { background: var(--red); padding: 5px 16px; font-size: 10px; color: rgba(255,255,255,0.8); font-weight: 600; letter-spacing: 1px; grid-column: 1/-1; }
+  .wf-bb-item { padding: 14px 12px; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
+  .wf-bb-item:last-child { border-right: none; }
+  .wf-bb-icon { font-size: 18px; margin-bottom: 5px; }
+  .wf-bb-title { font-size: 11px; font-weight: 700; color: white; margin-bottom: 3px; }
+  .wf-bb-sub { font-size: 10px; color: rgba(255,255,255,0.5); }
+
+  /* Tabs */
+  .wf-tabs { display: flex; border-bottom: 1px solid #e0e0e0; background: white; overflow-x: auto; }
+  .wf-tab { padding: 11px 16px; font-size: 12px; color: #888; white-space: nowrap; border-bottom: 2px solid transparent; }
+  .wf-tab.active { color: var(--red); border-bottom-color: var(--red); font-weight: 700; }
+  .wf-tab.highlight { color: var(--red); font-weight: 700; background: #fff5f7; }
+
+  /* Deal cards in wireframe */
+  .wf-deals-area { padding: 20px; }
+  .wf-deals-title { font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+  .wf-deal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .wf-deal-card { border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px; position: relative; }
+  .wf-deal-tag { position: absolute; top: -9px; left: 12px; font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
+  .wf-deal-tag-red { background: var(--red); color: white; }
+  .wf-deal-tag-green { background: var(--green); color: white; }
+  .wf-deal-icon { font-size: 22px; margin-bottom: 6px; }
+  .wf-deal-title { font-size: 12px; font-weight: 700; margin-bottom: 5px; }
+  .wf-deal-desc { font-size: 11px; color: #666; margin-bottom: 8px; line-height: 1.45; }
+  .wf-deal-date { font-size: 10px; background: #fff0f3; color: var(--red); padding: 2px 7px; border-radius: 3px; display: inline-block; margin-bottom: 8px; font-weight: 600; }
+  .wf-deal-btn { background: var(--red); color: white; font-size: 10px; font-weight: 700; padding: 5px 12px; border-radius: 4px; display: inline-block; }
+
+  /* Spec table */
+  .spec-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .spec-table th { background: var(--light); padding: 10px 14px; text-align: left; font-size: 12px; font-weight: 700; border: 1px solid var(--border); color: #333; }
+  .spec-table td { padding: 10px 14px; border: 1px solid var(--border); vertical-align: top; line-height: 1.55; }
+  .spec-table td code { background: #f0f0f0; padding: 1px 5px; border-radius: 3px; font-size: 12px; font-family: 'Consolas', monospace; color: var(--dark); }
+  .spec-table tr:hover td { background: #fafafa; }
+
+  /* Tag new/mod */
+  .tag { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 3px; margin-left: 6px; vertical-align: middle; }
+  .tag-new { background: var(--green); color: white; }
+  .tag-mod { background: var(--orange); color: white; }
+  .tag-p1 { background: var(--red); color: white; }
+  .tag-p2 { background: var(--orange); color: white; }
+  .tag-p3 { background: var(--green); color: white; }
+
+  /* Priority */
+  .priority-item { border-radius: 8px; padding: 18px 20px; border: 1px solid; margin-bottom: 12px; }
+  .priority-item.p1 { background: #fff0f3; border-color: #f5b8c4; }
+  .priority-item.p2 { background: #fffbeb; border-color: #fde68a; }
+  .priority-item.p3 { background: #f0fdf4; border-color: #bbf7d0; }
+  .priority-item h5 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .priority-item p { font-size: 13px; color: var(--gray); }
+
+  /* KPI */
+  .kpi-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 22px; text-align: center; }
+  .kpi-val { font-size: 36px; font-weight: 900; color: var(--red); }
+  .kpi-label { font-size: 12px; color: var(--gray); margin-top: 6px; line-height: 1.4; }
+
+  /* Flow */
+  .flow { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+  .flow-step { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; font-size: 13px; text-align: center; min-width: 110px; }
+  .flow-step strong { display: block; font-size: 13px; color: var(--red); margin-bottom: 3px; }
+  .flow-step span { font-size: 11px; color: var(--gray); }
+  .flow-arrow { color: var(--red); font-size: 20px; font-weight: 700; }
+
+  /* Highlight */
+  .highlight { background: #fff9e6; border-left: 4px solid #f39c12; padding: 14px 18px; border-radius: 0 6px 6px 0; margin: 16px 0; font-size: 14px; }
+  .note-box { background: #eef6ff; border-left: 4px solid var(--blue); padding: 14px 18px; border-radius: 0 6px 6px 0; margin: 16px 0; font-size: 13px; color: #1a4a7a; }
+
+  /* Divider */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 32px; color: #aaa; font-size: 12px; }
+
+  /* Anchor offset for sticky nav */
+  .anchor { display: block; height: 70px; margin-top: -70px; visibility: hidden; }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    .asis-tobe { grid-template-columns: 1fr; }
+    .wf-hero { grid-template-columns: 1fr; }
+    .wf-benefit-banner { grid-template-columns: 1fr 1fr; }
+    .wf-deal-grid { grid-template-columns: 1fr; }
+    .cover h1 { font-size: 24px; }
+    .topnav { padding: 0 16px; }
+    .topnav a { font-size: 11px; padding: 4px 7px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="topnav">
+  <div class="topnav-logo">LG</div>
+  <a href="#overview" onclick="setActive(this)">현황 분석</a>
+  <a href="#problems" onclick="setActive(this)">문제 정의</a>
+  <a href="#wireframe" onclick="setActive(this)">개선 UI</a>
+  <a href="#spec" onclick="setActive(this)">개발 스펙</a>
+  <a href="#priority" onclick="setActive(this)">우선순위·KPI</a>
+  <div class="topnav-spacer"></div>
+  <span class="topnav-date">2026-06-11 · v1.0</span>
+</nav>
+
+<div class="container">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-tag">UI/UX 기획서 · LG.com PDP 개선</div>
+    <h1>LG 브랜드샵 고객 혜택 노출 강화</h1>
+    <p>Deals & Offers 섹션 가시성 개선 및 구매 전환율 향상 기획</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item">
+        <div class="label">대상 페이지</div>
+        <div class="value">lg.com/uk/dishwashers/df587hms/</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="label">문서 버전</div>
+        <div class="value">v1.0</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="label">작성일</div>
+        <div class="value">2026-06-11</div>
+      </div>
+      <div class="cover-meta-item">
+        <div class="label">대상 독자</div>
+        <div class="value">기획팀 · 개발팀 · 마케팅팀</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ① 현황 분석 -->
+  <a class="anchor" id="overview"></a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div>
+        <div class="section-title">현황 분석 — LG.com UK PDP (DF587HMS)</div>
+        <div class="section-sub">lg.com/uk/dishwashers/df587hms/ 직접 분석 결과</div>
+      </div>
+    </div>
+
+    <div class="asis-tobe" style="margin-bottom:24px;">
+      <div class="asis-box">
+        <h4>📋 현재 혜택 노출 현황</h4>
+        <ul class="check x">
+          <li>가격 옆 소형 배지: <strong>"10% off"</strong>, <strong>"Trade-Up for £50 off"</strong></li>
+          <li>회원 전용가 표기: <strong>Members Only £685</strong> (일반가 £699)</li>
+          <li>탭 마지막 위치의 <strong>"Deals & Offers"</strong> 탭 (캐러셀)</li>
+          <li>캐러셀 내 3개 혜택 순환 표시</li>
+          <li>상단 뱃지: "Quiet Mark" · "5 Year Warranty" (아이콘만)</li>
+        </ul>
+      </div>
+      <div class="asis-box">
+        <h4>🗂️ 탭 구성 순서 (현재)</h4>
+        <ul class="check x">
+          <li>① Features</li>
+          <li>② Specs</li>
+          <li>③ Reviews</li>
+          <li>④ FAQ</li>
+          <li>⑤ Support</li>
+          <li>⑥ Where to Buy</li>
+          <li style="color:#c0392b;">⑦ <strong>Deals &amp; Offers</strong> — 맨 끝, 도달률 낮음</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <table class="benefit-table">
+        <thead>
+          <tr>
+            <th>혜택 유형</th>
+            <th>내용</th>
+            <th>기간</th>
+            <th>현재 노출 위치</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🏷️ <strong>Summer 10% Off</strong></td>
+            <td>선택 가전제품 여름 시즌 10% 할인</td>
+            <td>29/05 ~ 16/06/2026</td>
+            <td>가격 배지, Deals 탭 3번 슬라이드</td>
+          </tr>
+          <tr>
+            <td>🔄 <strong>Trade-Up £50 Off</strong></td>
+            <td>동일 카테고리 제품 반납 시 £50 즉시 할인<br><small style="color:#888;">Only on LG.com/uk — 브랜드샵 전용</small></td>
+            <td>상시</td>
+            <td>가격 배지, Deals 탭 1번 슬라이드</td>
+          </tr>
+          <tr>
+            <td>🛡️ <strong>5년 무상 보증</strong></td>
+            <td>구매 후 제품 등록 시 5년 무상 보증 자동 적용</td>
+            <td>상시</td>
+            <td style="color:#c0392b;"><strong>Deals 탭 2번 슬라이드만</strong></td>
+          </tr>
+          <tr>
+            <td>👑 <strong>Members Only 가격</strong></td>
+            <td>£685 (일반 £699 대비 £14 절약)</td>
+            <td>상시</td>
+            <td>가격 블록 내 작은 텍스트</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ② 문제 정의 -->
+  <a class="anchor" id="problems"></a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div>
+        <div class="section-title">핵심 문제 정의</div>
+        <div class="section-sub">있지만 안 보이는 혜택 — UI 구조 문제</div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:16px;">
+      <div class="problem-card">
+        <div class="p-num">01</div>
+        <div><span class="badge badge-red">심각</span></div>
+        <div class="p-title">혜택 탭 위치 문제</div>
+        <div class="p-desc">"Deals & Offers"가 7개 탭 중 마지막 위치. 스크롤 없이는 탭 자체가 보이지 않아 대부분 사용자가 미인지.</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-num">02</div>
+        <div><span class="badge badge-red">심각</span></div>
+        <div class="p-title">5년 보증 노출 거의 없음</div>
+        <div class="p-desc">"5 Year Warranty" 아이콘 뱃지만 있고, Deals 탭을 직접 클릭해야만 내용 확인 가능. 구매 결정 요인인데도 숨겨짐.</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-num">03</div>
+        <div><span class="badge badge-orange">주의</span></div>
+        <div class="p-title">Trade-Up 혜택 미설명</div>
+        <div class="p-desc">가격 옆 배지는 있으나 클릭해도 설명 없음. "Only on LG.com/uk" 브랜드샵 전용 차별화 포인트 미전달.</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-num">04</div>
+        <div><span class="badge badge-orange">주의</span></div>
+        <div class="p-title">Members Only 가치 불명확</div>
+        <div class="p-desc">Members Only £685 표기만 있고, 가입 방법·추가 혜택 등 멤버십 가치 설명 전무. 전환 유도 기회 손실.</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-num">05</div>
+        <div><span class="badge badge-orange">주의</span></div>
+        <div class="p-title">캐러셀 = 수동 탐색 필요</div>
+        <div class="p-desc">Deals 탭 내 혜택이 캐러셀로 1개씩만 표시. 자동 회전으로 사용자가 모든 혜택을 인지하지 못할 가능성 높음.</div>
+      </div>
+      <div class="problem-card">
+        <div class="p-num">06</div>
+        <div><span class="badge badge-orange">주의</span></div>
+        <div class="p-title">구매 전 혜택 종합 요약 없음</div>
+        <div class="p-desc">구매 버튼 근처에 "지금 사면 받는 혜택 총정리"가 없음. 구매 결심 단계에서 혜택 재확인 불가.</div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <strong>핵심 인사이트:</strong> 현재 LG 브랜드샵만의 차별화된 혜택(Trade-Up, 5년 보증, Members 가격)이 모두 존재하지만, UI 구조상 사용자가 능동적으로 찾지 않으면 발견되지 않습니다. <strong>"있지만 안 보이는 혜택"</strong>이 핵심 문제입니다.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ③ 개선 UI 와이어프레임 -->
+  <a class="anchor" id="wireframe"></a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div>
+        <div class="section-title">개선 UI 와이어프레임</div>
+        <div class="section-sub">주요 변경 영역 4곳 — 개선 후 PDP 레이아웃</div>
+      </div>
+    </div>
+
+    <div class="wireframe">
+      <!-- Browser chrome -->
+      <div class="wf-bar">
+        <div class="wf-dot" style="background:#ff5f57;"></div>
+        <div class="wf-dot" style="background:#febc2e;"></div>
+        <div class="wf-dot" style="background:#28c840;"></div>
+        <div class="wf-url-bar"><span>🔒 lg.com/uk/dishwashers/df587hms/</span></div>
+      </div>
+      <div class="wf-body">
+
+        <!-- Hero -->
+        <div class="wf-hero">
+          <div class="wf-img-area">제품 이미지 갤러리</div>
+          <div class="wf-buy-area">
+            <!-- [변경①] 혜택 배지 개선 -->
+            <div class="wf-badges">
+              <span class="wf-badge wf-badge-red">🔥 여름 특가 10% OFF</span>
+              <span class="wf-badge wf-badge-blue">👑 Members 전용가 있음</span>
+            </div>
+            <div class="wf-title-placeholder" style="width:90%;"></div>
+            <div class="wf-title-placeholder" style="width:55%; margin-bottom:14px;"></div>
+            <div class="wf-price-old">£899.00</div>
+            <div class="wf-price-new">£698.98</div>
+            <div class="wf-member-price">👑 Members Only: £685.00 &nbsp;—&nbsp; <span style="text-decoration:underline; cursor:pointer;">멤버 가입하기 ›</span></div>
+            <!-- [변경②] 가격 블록 내 혜택 요약 박스 (NEW) -->
+            <div class="wf-benefit-box">
+              <div class="wf-benefit-box-title">💰 지금 구매 시 받을 수 있는 혜택</div>
+              <div class="wf-benefit-box-item">✅ Trade-Up: 기존 식기세척기 반납 시 추가 £50 할인 (LG.com 전용)</div>
+              <div class="wf-benefit-box-item">✅ 구매 후 제품 등록 시 5년 무상 보증</div>
+              <div class="wf-benefit-box-item">✅ 여름 특가 ~2026.06.16 한정</div>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <div class="wf-buy-btn">지금 구매하기</div>
+              <div style="background:#f0f0f0; color:#333; padding:9px 16px; border-radius:4px; font-size:12px; font-weight:600; display:inline-block;">장바구니 담기</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [변경③] 혜택 배너 (NEW) -->
+        <div class="wf-benefit-banner">
+          <div class="wf-bb-label">★ LG.COM 브랜드샵 전용 혜택 — 공식몰에서만 받을 수 있습니다</div>
+          <div class="wf-bb-item">
+            <div class="wf-bb-icon">🔄</div>
+            <div class="wf-bb-title">Trade-Up £50 절약</div>
+            <div class="wf-bb-sub">구형 제품 반납 시 즉시 할인</div>
+          </div>
+          <div class="wf-bb-item">
+            <div class="wf-bb-icon">🛡️</div>
+            <div class="wf-bb-title">5년 무상 보증</div>
+            <div class="wf-bb-sub">구매 후 등록으로 자동 적용</div>
+          </div>
+          <div class="wf-bb-item">
+            <div class="wf-bb-icon">🏷️</div>
+            <div class="wf-bb-title">여름 시즌 10% OFF</div>
+            <div class="wf-bb-sub">~ 2026.06.16 한정</div>
+          </div>
+          <div class="wf-bb-item">
+            <div class="wf-bb-icon">👑</div>
+            <div class="wf-bb-title">Members 전용가</div>
+            <div class="wf-bb-sub">무료 가입 후 즉시 적용</div>
+          </div>
+        </div>
+
+        <!-- [변경④] 탭 순서 + Deals 탭 위치 변경 -->
+        <div class="wf-tabs">
+          <div class="wf-tab active">Features</div>
+          <div class="wf-tab highlight">🎁 혜택 &amp; 프로모션 <span style="background:var(--red);color:white;font-size:9px;padding:1px 5px;border-radius:8px;margin-left:4px;font-weight:700;">3</span></div>
+          <div class="wf-tab">Specs</div>
+          <div class="wf-tab">Reviews</div>
+          <div class="wf-tab">FAQ</div>
+          <div class="wf-tab">Support</div>
+          <div class="wf-tab">Where to Buy</div>
+        </div>
+
+        <!-- [변경⑤] 캐러셀 → 카드 그리드 -->
+        <div class="wf-deals-area">
+          <div class="wf-deals-title">이 제품에 적용되는 혜택 (3개)</div>
+          <div class="wf-deal-grid">
+            <div class="wf-deal-card">
+              <div class="wf-deal-tag wf-deal-tag-red">한정 기간</div>
+              <div class="wf-deal-icon">🏷️</div>
+              <div class="wf-deal-title">Summer Ready — 10% OFF</div>
+              <div class="wf-deal-desc">이번 여름, 선택 가전제품을 10% 할인된 가격으로 만나보세요.</div>
+              <div class="wf-deal-date">~ 2026.06.16 까지</div><br>
+              <div class="wf-deal-btn">지금 구매하기</div>
+            </div>
+            <div class="wf-deal-card">
+              <div class="wf-deal-tag wf-deal-tag-red">LG.com 전용</div>
+              <div class="wf-deal-icon">🔄</div>
+              <div class="wf-deal-title">Trade-Up — £50 즉시 할인</div>
+              <div class="wf-deal-desc">기존 식기세척기를 반납하고 £50 즉시 할인. LG 공식몰에서만 가능합니다.</div>
+              <div class="wf-deal-btn">신청하기</div>
+            </div>
+            <div class="wf-deal-card">
+              <div class="wf-deal-tag wf-deal-tag-green">무료</div>
+              <div class="wf-deal-icon">🛡️</div>
+              <div class="wf-deal-title">5년 무상 보증 등록</div>
+              <div class="wf-deal-desc">구매 후 LG 홈페이지에 제품을 등록하면 5년 무상 보증이 자동 적용됩니다.</div>
+              <div class="wf-deal-btn">등록 안내 보기</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:16px;">
+      <strong>변경 포인트 요약 (5가지):</strong><br>
+      ① 가격 블록 내 "지금 받을 수 있는 혜택" 요약 박스 추가 &nbsp;|&nbsp;
+      ② 히어로 하단 상시 노출 혜택 배너 신설 &nbsp;|&nbsp;
+      ③ Deals 탭 위치를 2번째(Features 바로 다음)로 이동 &nbsp;|&nbsp;
+      ④ 탭 라벨에 아이콘 + 혜택 수 뱃지 추가 &nbsp;|&nbsp;
+      ⑤ 탭 내부 캐러셀 → 3열 카드 그리드 전환
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ④ 개발 스펙 -->
+  <a class="anchor" id="spec"></a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div>
+        <div class="section-title">개발 스펙 상세</div>
+        <div class="section-sub">컴포넌트별 구현 요구사항 — 개발팀 전달용</div>
+      </div>
+    </div>
+
+    <!-- Component A -->
+    <div class="card" style="margin-bottom:20px;">
+      <h3 style="font-size:15px; margin-bottom:14px; color:var(--dark);">
+        🔧 [컴포넌트 A] 가격 블록 내 혜택 요약 박스 <span class="tag tag-new">NEW</span>
+      </h3>
+      <table class="spec-table">
+        <tr><th style="width:28%;">항목</th><th>스펙</th></tr>
+        <tr><td>컴포넌트명</td><td><code>BenefitSummaryBox</code></td></tr>
+        <tr><td>위치</td><td>가격 표시 영역 하단, 구매 버튼 상단 (기존 배지 row 아래)</td></tr>
+        <tr><td>표시 조건</td><td>해당 제품에 활성 프로모션이 1개 이상 있을 때만 렌더</td></tr>
+        <tr><td>데이터 소스</td><td>기존 Deals & Offers API 응답 재사용 — <code>promotion[].title</code>, <code>promotion[].endDate</code></td></tr>
+        <tr><td>최대 표시 개수</td><td>3개 (초과 시 "외 N개 더보기" 링크 → Deals 탭 앵커 이동)</td></tr>
+        <tr><td>스타일</td><td>배경 #fff9e6, 테두리 #fde68a 1px, border-radius 6px, padding 10~12px</td></tr>
+        <tr><td>인터랙션</td><td>박스 클릭 → "혜택 & 프로모션" 탭으로 스크롤 이동</td></tr>
+      </table>
+    </div>
+
+    <!-- Component B -->
+    <div class="card" style="margin-bottom:20px;">
+      <h3 style="font-size:15px; margin-bottom:14px; color:var(--dark);">
+        🔧 [컴포넌트 B] 히어로 하단 혜택 배너 <span class="tag tag-new">NEW</span>
+      </h3>
+      <table class="spec-table">
+        <tr><th style="width:28%;">항목</th><th>스펙</th></tr>
+        <tr><td>컴포넌트명</td><td><code>BrandShopBenefitBanner</code></td></tr>
+        <tr><td>위치</td><td>Hero 섹션 하단 고정, 탭 바 상단 (항상 보임)</td></tr>
+        <tr><td>표시 조건</td><td>LG.com 브랜드샵 PDP 전체 — 제품 무관 상시 노출</td></tr>
+        <tr><td>레이아웃</td><td>4열 균등 분할 (최대 4개) | 모바일(≤768px): 2×2 그리드 | ≤480px: 좌우 스크롤 슬라이더</td></tr>
+        <tr><td>항목 구성</td><td>아이콘(SVG/이모지) + 제목(굵게, 12px) + 부제(10px, 투명도 70%)</td></tr>
+        <tr><td>배경 스타일</td><td>다크 배경 (#1a1a1a), 상단 3px 레드 테두리 (#a50034). 상단에 "LG.COM 브랜드샵 전용 혜택" 라벨 바(배경 #a50034)</td></tr>
+        <tr><td>클릭 이벤트</td><td>각 항목 클릭 → 해당 혜택 상세 페이지 또는 Deals 탭 해당 카드로 앵커 이동</td></tr>
+        <tr><td>접근성</td><td>각 항목에 <code>aria-label</code> 추가 필수 (예: "Trade-Up 혜택 — 구형 제품 반납 시 £50 할인")</td></tr>
+      </table>
+    </div>
+
+    <!-- Component C -->
+    <div class="card" style="margin-bottom:20px;">
+      <h3 style="font-size:15px; margin-bottom:14px; color:var(--dark);">
+        🔧 [컴포넌트 C] 탭 순서 변경 + Deals 탭 리디자인 <span class="tag tag-mod">수정</span>
+      </h3>
+      <table class="spec-table">
+        <tr><th style="width:28%;">항목</th><th>스펙</th></tr>
+        <tr><td>탭 순서 변경</td><td>Features → <strong>혜택&프로모션</strong> → Specs → Reviews → FAQ → Support → Where to Buy</td></tr>
+        <tr><td>탭 라벨 변경</td><td>"Deals & Offers" → "🎁 혜택 & 프로모션" (아이콘 추가, 현지화 가능)</td></tr>
+        <tr><td>탭 뱃지</td><td>활성 프로모션 존재 시 탭 라벨 옆 빨간 숫자 뱃지 표시 (예: <code>3</code>)</td></tr>
+        <tr><td>내부 레이아웃 변경</td><td>캐러셀(Carousel) <strong>제거</strong> → 3열 카드 그리드 (CSS Grid, gap 16px)</td></tr>
+        <tr><td>카드 구성</td><td>상태 태그 + 아이콘 + 제목 + 설명 + 기간(있을 경우) + CTA 버튼</td></tr>
+        <tr><td>기간 강조</td><td>종료일 3일 이내 시 빨간색 + "마감 임박" 텍스트 자동 표시 (프론트 날짜 계산)</td></tr>
+        <tr><td>빈 상태(Empty State)</td><td>"현재 진행 중인 프로모션이 없습니다. 회원가입 시 알림을 받아보세요." + 알림 신청 CTA</td></tr>
+      </table>
+    </div>
+
+    <!-- Component D -->
+    <div class="card">
+      <h3 style="font-size:15px; margin-bottom:14px; color:var(--dark);">
+        🔧 [컴포넌트 D] Members Only 가격 블록 개선 <span class="tag tag-mod">수정</span>
+      </h3>
+      <table class="spec-table">
+        <tr><th style="width:28%;">항목</th><th>스펙</th></tr>
+        <tr><td>인라인 CTA 추가</td><td>Members Only 가격 옆에 "멤버 가입하기 ›" 링크 추가 (color: #1a6bb5)</td></tr>
+        <tr><td>툴팁 추가</td><td><code>?</code> 아이콘 hover/클릭 시 멤버십 혜택 요약 팝오버 표시</td></tr>
+        <tr><td>팝오버 내용</td><td>① 멤버 전용 할인가 적용 ② 신제품 조기 알림 수신 ③ 무료 가입 안내</td></tr>
+        <tr><td>절약 금액 강조</td><td>"👑 멤버 가입 시 £14 추가 절약" 동적 계산 표시 (일반가 - 멤버가 자동 계산)</td></tr>
+      </table>
+    </div>
+
+    <!-- User Flow -->
+    <div style="margin-top:28px;">
+      <h3 style="font-size:15px; margin-bottom:16px; font-weight:700;">사용자 시나리오 플로우</h3>
+
+      <div style="font-size:13px; font-weight:700; color:var(--gray); margin-bottom:8px;">시나리오 1 — 처음 방문한 사용자</div>
+      <div class="flow">
+        <div class="flow-step"><strong>PDP 진입</strong><span>히어로 노출</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>혜택 배너 인지</strong><span>4가지 즉시 확인</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>가격 블록 확인</strong><span>요약 박스 클릭</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>혜택 탭 이동</strong><span>카드 상세 확인</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>구매 결정</strong><span>CTA 클릭</span></div>
+      </div>
+
+      <div style="font-size:13px; font-weight:700; color:var(--gray); margin-bottom:8px; margin-top:16px;">시나리오 2 — 가격 비교 후 재방문한 사용자</div>
+      <div class="flow">
+        <div class="flow-step"><strong>PDP 재방문</strong><span></span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>혜택 탭 (2번째)</strong><span>바로 접근 가능</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>Trade-Up 카드</strong><span>£50 추가 할인 확인</span></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><strong>즉시 구매</strong><span>타 채널 대비 우위 인식</span></div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ⑤ 우선순위 & KPI -->
+  <a class="anchor" id="priority"></a>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div>
+        <div class="section-title">구현 우선순위 & 성공 KPI</div>
+        <div class="section-sub">개발 공수 및 임팩트 기반 순위</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-bottom:32px;">
+      <div>
+        <div class="priority-item p1">
+          <h5><span class="tag tag-p1">P1 · 즉시</span> 탭 순서 변경 + 라벨 개선</h5>
+          <p>CSS/HTML 순서 변경 수준. 혜택 탭 도달률에 가장 직접적 영향. <strong>예상 공수: 1~2일</strong></p>
+        </div>
+        <div class="priority-item p1" style="margin-top:12px;">
+          <h5><span class="tag tag-p1">P1 · 즉시</span> 캐러셀 → 카드 그리드 전환</h5>
+          <p>동일 데이터를 그리드로 렌더링만 변경. 모든 혜택 동시 가시성 확보. <strong>예상 공수: 3~5일</strong></p>
+        </div>
+        <div class="priority-item p2" style="margin-top:12px;">
+          <h5><span class="tag tag-p2">P2 · 2주 내</span> 가격 블록 혜택 요약 박스</h5>
+          <p>Deals API 데이터 재사용, 백엔드 추가 개발 최소화. <strong>예상 공수: 5~7일</strong></p>
+        </div>
+        <div class="priority-item p2" style="margin-top:12px;">
+          <h5><span class="tag tag-p2">P2 · 2주 내</span> 히어로 하단 혜택 배너</h5>
+          <p>PDP 공통 컴포넌트로 일회성 개발, 전 제품 적용 가능. <strong>예상 공수: 1~2주</strong></p>
+        </div>
+        <div class="priority-item p3" style="margin-top:12px;">
+          <h5><span class="tag tag-p3">P3 · 1달 내</span> Members Only 툴팁 및 CTA</h5>
+          <p>가입 플로우 연계 설계 필요, 디자인 검토 후 진행 권장. <strong>예상 공수: 1~2주</strong></p>
+        </div>
+        <div class="priority-item p3" style="margin-top:12px;">
+          <h5><span class="tag tag-p3">P3 · 1달 내</span> 마감 임박 자동 알림 로직</h5>
+          <p>종료 3일 전 강조 표시. 백엔드 날짜 로직 추가 필요. <strong>예상 공수: 3~5일</strong></p>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:14px; font-weight:700; margin-bottom:14px;">성공 측정 KPI</div>
+        <div class="grid-2">
+          <div class="kpi-card">
+            <div class="kpi-val">▲ 40%</div>
+            <div class="kpi-label">Deals 탭<br>클릭률 목표</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-val">▲ 15%</div>
+            <div class="kpi-label">PDP → 장바구니<br>전환율 목표</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-val">▲ 25%</div>
+            <div class="kpi-label">Trade-Up<br>신청 완료 수</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-val">▲ 20%</div>
+            <div class="kpi-label">5년 보증<br>등록 완료 수</div>
+          </div>
+        </div>
+        <div class="note-box" style="margin-top:16px;">
+          <strong>측정 방법:</strong> 혜택 배너 및 카드 클릭에 GA4 이벤트 추가<br>
+          <code style="font-size:11px;">benefit_banner_click</code> · <code style="font-size:11px;">deal_card_click</code> · <code style="font-size:11px;">deals_tab_view</code><br><br>
+          배포 전/후 4주 데이터 비교. <strong>A/B 테스트 권장</strong> (신규 레이아웃 50% 트래픽 적용).
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  LG 브랜드샵 UI/UX 기획서 · v1.0 · 2026-06-11<br>
+  대상 URL: lg.com/uk/dishwashers/df587hms/
+</div>
+
+<script>
+  function setActive(el) {
+    document.querySelectorAll('.topnav a').forEach(a => a.classList.remove('active'));
+    el.classList.add('active');
+  }
+  // Highlight nav on scroll
+  const sections = ['overview','problems','wireframe','spec','priority'];
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el && window.scrollY >= el.offsetTop - 80) current = id;
+    });
+    document.querySelectorAll('.topnav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+</body>
+</html>

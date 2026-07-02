@@ -1,0 +1,2416 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>글로벌 콘텐츠 이미지 가이드라인 — Amazon · Shopee · Lazada · Instagram · eBay</title>
+<style>
+:root {
+  --amazon: #FF9900;
+  --amazon-dark: #e47911;
+  --amazon-light: #FFF8F0;
+  --shopee: #EE4D2D;
+  --shopee-light: #FFF0ED;
+  --lazada: #0F146B;
+  --lazada-accent: #6C63FF;
+  --lazada-light: #EEEFFE;
+  --ig: #E1306C;
+  --ig-grad: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);
+  --ig-light: #FDE8F0;
+  --ebay: #3665F3;
+  --ebay-red: #E53238;
+  --ebay-yellow: #F5AF02;
+  --ebay-green: #86B817;
+  --ebay-light: #EFF3FF;
+  --bg: #F2F4F8;
+  --card: #FFFFFF;
+  --text: #1A1A2E;
+  --muted: #7A7A9A;
+  --border: #E4E6F0;
+  --nav-h: 56px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',system-ui,sans-serif; background:var(--bg); color:var(--text); padding-top:var(--nav-h); }
+
+/* ── TOP NAV ── */
+.top-nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  height:var(--nav-h); background:#1A1A2E;
+  display:flex; align-items:center; gap:0;
+  border-bottom:2px solid #2d2d4e;
+}
+.nav-logo { padding:0 24px; color:white; font-size:13px; font-weight:800; letter-spacing:1px; white-space:nowrap; border-right:1px solid #2d2d4e; }
+.nav-tabs { display:flex; flex:1; }
+.nav-tab {
+  flex:1; height:var(--nav-h); display:flex; align-items:center; justify-content:center; gap:8px;
+  font-size:13px; font-weight:700; color:rgba(255,255,255,0.5);
+  cursor:pointer; border-bottom:3px solid transparent; transition:all .2s;
+  border-right:1px solid #2d2d4e;
+}
+.nav-tab:hover { color:rgba(255,255,255,0.8); }
+.nav-tab.active { color:white; }
+.nav-tab.amazon.active  { border-bottom-color:var(--amazon);  background:rgba(255,153,0,0.08); }
+.nav-tab.shopee.active  { border-bottom-color:var(--shopee);  background:rgba(238,77,45,0.08); }
+.nav-tab.lazada.active  { border-bottom-color:var(--lazada-accent); background:rgba(108,99,255,0.08); }
+.nav-tab.ig.active      { border-bottom-color:var(--ig);      background:rgba(225,48,108,0.08); }
+.nav-tab.ebay.active    { border-bottom-color:var(--ebay);    background:rgba(54,101,243,0.08); }
+.nav-dot { width:8px;height:8px;border-radius:50%; }
+.nav-dot.amazon  { background:var(--amazon); }
+.nav-dot.shopee  { background:var(--shopee); }
+.nav-dot.lazada  { background:var(--lazada-accent); }
+.nav-dot.ig      { background:var(--ig); }
+.nav-dot.ebay    { background:var(--ebay); }
+
+/* ── PLATFORM PAGES ── */
+.platform-page { display:none; }
+.platform-page.active { display:block; }
+
+/* ── COVER STRIP ── */
+.cover-strip {
+  padding:44px 80px 36px;
+  display:flex; align-items:flex-end; gap:32px;
+}
+.cover-strip.amazon  { background:linear-gradient(135deg,#FF9900,#e47911); color:white; }
+.cover-strip.shopee  { background:linear-gradient(135deg,#EE4D2D,#FF7250); color:white; }
+.cover-strip.lazada  { background:linear-gradient(135deg,#0F146B,#6C63FF); color:white; }
+.cover-strip.ig      { background:var(--ig-grad); color:white; }
+.cover-strip.ebay    { background:linear-gradient(135deg,#3665F3,#1a3ab8); color:white; }
+.cover-main h1 { font-size:34px; font-weight:900; line-height:1.1; }
+.cover-main p  { font-size:14px; opacity:.85; margin-top:8px; line-height:1.6; }
+.cover-stats { margin-left:auto; display:flex; gap:20px; }
+.cover-stat { text-align:center; background:rgba(255,255,255,.15); border-radius:10px; padding:12px 20px; }
+.cover-stat .num { font-size:28px; font-weight:900; }
+.cover-stat .lbl { font-size:11px; opacity:.8; margin-top:2px; }
+.cover-badge { font-size:11px; font-weight:700; letter-spacing:2px; opacity:.7; margin-bottom:8px; text-transform:uppercase; }
+
+/* ── GLOBAL SPEC BAR ── */
+.spec-bar {
+  margin:24px 80px; padding:20px 24px;
+  border-radius:10px; border-left:5px solid;
+  display:grid; grid-template-columns:repeat(6,1fr); gap:10px;
+}
+.spec-bar.amazon  { background:var(--amazon-light); border-color:var(--amazon); }
+.spec-bar.shopee  { background:var(--shopee-light); border-color:var(--shopee); }
+.spec-bar.lazada  { background:var(--lazada-light); border-color:var(--lazada-accent); }
+.spec-bar.ig      { background:var(--ig-light);     border-color:var(--ig); }
+.spec-chip { background:white; border-radius:8px; padding:10px 12px; }
+.spec-chip .lbl { font-size:10px; font-weight:700; color:var(--muted); text-transform:uppercase; margin-bottom:3px; }
+.spec-chip .val { font-size:13px; font-weight:700; }
+.spec-chip .sub { font-size:11px; color:var(--muted); margin-top:1px; }
+
+/* ── SECTION HEADER ── */
+.sec-head {
+  padding:13px 80px; font-size:11px; font-weight:800;
+  letter-spacing:2.5px; text-transform:uppercase; color:white;
+  display:flex; align-items:center; gap:10px; margin-top:8px;
+}
+.sec-head.amazon  { background:#1a1a2e; }
+.sec-head.amazon-sub  { background:#2a2a3e; }
+.sec-head.shopee  { background:var(--shopee); }
+.sec-head.shopee-sub  { background:#c73a1e; }
+.sec-head.lazada  { background:var(--lazada); }
+.sec-head.lazada-sub  { background:#0a0f52; }
+.sec-head.ig      { background:#bc1888; }
+.sec-head.ig-sub  { background:#833ab4; }
+.sec-head.ebay    { background:var(--ebay); }
+.sec-head.ebay-sub{ background:#1a3ab8; }
+.sec-pill { background:rgba(255,255,255,.2); border-radius:20px; padding:3px 12px; font-size:11px; }
+
+/* ── MODULE CARD ── */
+.mcard {
+  background:var(--card); border-radius:12px;
+  margin:18px 80px; overflow:hidden;
+  border:1px solid var(--border); box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.mcard-head {
+  background:#FAFBFF; border-bottom:1px solid var(--border);
+  padding:15px 22px; display:flex; align-items:center; gap:14px;
+}
+.mnum {
+  width:32px;height:32px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;color:white;
+}
+.mnum.amazon  { background:var(--amazon); }
+.mnum.shopee  { background:var(--shopee); }
+.mnum.lazada  { background:var(--lazada); }
+.mnum.ig      { background:var(--ig); }
+.mnum.ebay    { background:var(--ebay); }
+.mnum.green   { background:#2e7d32; }
+.mcard-title h3 { font-size:15px;font-weight:700; }
+.mcard-title p  { font-size:12px;color:var(--muted);margin-top:2px; }
+.mcard-badges { margin-left:auto;display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end; }
+.bsize { border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;white-space:nowrap; }
+.bsize.amazon { background:var(--amazon-light); border:1px solid var(--amazon); color:var(--amazon-dark); }
+.bsize.shopee { background:var(--shopee-light); border:1px solid var(--shopee); color:#c73a1e; }
+.bsize.lazada { background:var(--lazada-light); border:1px solid var(--lazada-accent); color:var(--lazada); }
+.bsize.ig     { background:var(--ig-light); border:1px solid var(--ig); color:#a0235e; }
+.bsize.ebay   { background:var(--ebay-light); border:1px solid var(--ebay); color:#1a3ab8; }
+.bsize.green  { background:#e8f5e9; border:1px solid #81c784; color:#2e7d32; }
+.blimit { background:#F0F4FF;border:1px solid #c5d0f0;color:#444;border-radius:20px;padding:4px 12px;font-size:11px;white-space:nowrap; }
+.butil { border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;white-space:nowrap; }
+.util-h  { background:#E8F5E9;border:1px solid #81C784;color:#2e7d32; }
+.util-m  { background:#FFF8E1;border:1px solid #FFD54F;color:#7a5800; }
+.util-l  { background:#F5F5F5;border:1px solid #BDBDBD;color:#555; }
+.util-req{ background:#FCE4EC;border:1px solid #EF9A9A;color:#b71c1c; }
+
+.mcard-body { padding:18px 22px; display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+.mcard-body.full { grid-template-columns:1fr; }
+
+/* ── MOCKUP ── */
+.mockup { background:#f7f8fc;border-radius:8px;padding:13px;border:1px solid var(--border); }
+.mock-lbl { font-size:10px;color:var(--muted);text-align:center;margin-bottom:8px;text-transform:uppercase;letter-spacing:1px; }
+
+/* ── INFO ── */
+.irow { margin-bottom:13px; }
+.ilbl { font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px; }
+.ival { font-size:13px;color:var(--text);line-height:1.5; }
+.ival strong.a { color:var(--amazon-dark); }
+.ival strong.s { color:var(--shopee); }
+.ival strong.l { color:var(--lazada); }
+.ival strong.i { color:var(--ig); }
+.tags { display:flex;flex-wrap:wrap;gap:5px;margin-top:5px; }
+.tag { border-radius:12px;padding:3px 9px;font-size:11px; }
+.tag.a { background:var(--amazon-light);border:1px solid #ffcc80;color:var(--amazon-dark); }
+.tag.s { background:var(--shopee-light);border:1px solid #ffb3a3;color:#c73a1e; }
+.tag.l { background:var(--lazada-light);border:1px solid #b0b8f0;color:var(--lazada); }
+.tag.i { background:var(--ig-light);border:1px solid #f48fb1;color:#a0235e; }
+.tag.g { background:#e8f5e9;border:1px solid #a5d6a7;color:#2e7d32; }
+.tip  { background:#E8F5E9;border-left:3px solid #4CAF50;padding:9px 12px;border-radius:0 6px 6px 0;margin-top:10px;font-size:12px;color:#2e7d32;line-height:1.5; }
+.tip strong { display:block;font-size:11px;margin-bottom:2px; }
+.warn { background:#FFF8E1;border-left:3px solid #FFC107;padding:9px 12px;border-radius:0 6px 6px 0;margin-top:8px;font-size:12px;color:#7a5800;line-height:1.5; }
+.warn strong { display:block;font-size:11px;margin-bottom:2px; }
+.note { background:#F3E5F5;border-left:3px solid #AB47BC;padding:9px 12px;border-radius:0 6px 6px 0;margin-top:8px;font-size:12px;color:#6a1b9a;line-height:1.5; }
+.note strong { display:block;font-size:11px;margin-bottom:2px; }
+
+/* ── MOCK ELEMENTS ── */
+.mock-ratio { border-radius:5px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px; }
+.mock-rect  { border-radius:5px; }
+.mock-grad-orange { background:linear-gradient(135deg,#ffe0b2,#ffcc80); }
+.mock-grad-red    { background:linear-gradient(135deg,#fce4dc,#f5b8ad); }
+.mock-grad-blue   { background:linear-gradient(135deg,#c8d0f0,#a8b4e8); }
+.mock-grad-ig     { background:linear-gradient(135deg,#f9d0e0,#f0a0c0); }
+.mock-dark        { background:linear-gradient(135deg,#1a1a2e,#2d2d5e); }
+.mock-lz-header   { background:linear-gradient(90deg,#0F146B,#6C63FF); }
+.mock-play { width:28px;height:28px;background:rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center; }
+.mock-play::after { content:'▶';color:white;font-size:10px;margin-left:2px; }
+.mock-text-line { background:#e8e8e8;height:7px;border-radius:4px;margin:5px 0; }
+.mock-text-line.sh { width:60%; }
+.plat { font-size:10px;font-weight:700;padding:2px 6px;border-radius:4px; }
+.plat.mo { background:#E3F2FD;color:#1565C0; }
+.plat.pc { background:#E8F5E9;color:#2E7D32; }
+
+/* ── DATA TABLES ── */
+.dtable { width:100%;border-collapse:collapse;font-size:12px;margin-top:6px; }
+.dtable th { background:#F0F4FF;padding:6px 10px;text-align:left;font-weight:700;color:#444;border:1px solid var(--border); }
+.dtable td { padding:6px 10px;border:1px solid var(--border);color:#333; }
+.dtable tr:nth-child(even) td { background:#FAFBFF; }
+
+/* ── CROSS-PLATFORM OVERVIEW ── */
+.platform-overview {
+  margin:28px 80px; background:var(--card); border-radius:12px;
+  border:1px solid var(--border); overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.overview-head { background:#1A1A2E; color:white; padding:16px 24px; font-size:13px; font-weight:800; letter-spacing:1px; }
+.overview-body { padding:20px 24px; }
+
+/* ── IG SPECIFIC ── */
+.ig-ratio-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; padding:4px; }
+.ig-ratio-card { background:white; border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+.ig-ratio-preview { background:var(--ig-grad); display:flex; align-items:center; justify-content:center; }
+.ig-ratio-preview span { color:white; font-size:11px; font-weight:700; text-align:center; text-shadow:0 1px 3px rgba(0,0,0,.3); }
+.ig-ratio-info { padding:10px 12px; }
+.ig-ratio-info .type { font-size:11px; font-weight:700; color:#333; }
+.ig-ratio-info .ratio { font-size:18px; font-weight:900; color:var(--ig); }
+.ig-ratio-info .res { font-size:11px; color:var(--muted); margin-top:2px; }
+.ig-ratio-info .note { background:transparent; border:none; padding:0; font-size:11px; color:var(--muted); margin-top:3px; }
+
+/* ── SAFE ZONE ── */
+.safe-zone-demo {
+  background:var(--ig-grad); border-radius:8px; position:relative; overflow:hidden;
+  aspect-ratio:9/16; display:flex; align-items:center; justify-content:center;
+}
+.safe-zone-overlay {
+  position:absolute; inset:0;
+  border:none;
+}
+.safe-zone-top    { position:absolute;top:0;left:0;right:0;height:14%;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center; }
+.safe-zone-bottom { position:absolute;bottom:0;left:0;right:0;height:20%;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center; }
+.safe-zone-label  { color:rgba(255,255,255,.8);font-size:9px;font-weight:700;text-align:center;letter-spacing:1px; }
+.safe-zone-mid    { flex:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:rgba(255,255,255,.7); }
+
+/* ── SECTION TRANSITION BANNER ── */
+.section-transition {
+  margin:36px 80px 0;
+  height:3px;
+  border-radius:2px;
+  background:var(--border);
+}
+
+/* ── FOOTER ── */
+footer { background:#1A1A2E;color:rgba(255,255,255,.4);text-align:center;padding:24px;font-size:12px;margin-top:40px; }
+footer strong { color:rgba(255,255,255,.7); }
+</style>
+</head>
+<body>
+
+<!-- ══════════ TOP NAV ══════════ -->
+<nav class="top-nav">
+  <div class="nav-logo">🎨 Content Image Guide</div>
+  <div class="nav-tabs">
+    <div class="nav-tab amazon active" onclick="show('amazon',this)">
+      <div class="nav-dot amazon"></div> Amazon
+    </div>
+    <div class="nav-tab shopee" onclick="show('shopee',this)">
+      <div class="nav-dot shopee"></div> Shopee
+    </div>
+    <div class="nav-tab lazada" onclick="show('lazada',this)">
+      <div class="nav-dot lazada"></div> Lazada
+    </div>
+    <div class="nav-tab ig" onclick="show('ig',this)">
+      <div class="nav-dot ig"></div> Instagram
+    </div>
+    <div class="nav-tab ebay" onclick="show('ebay',this)">
+      <div class="nav-dot ebay"></div> eBay
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- ① AMAZON PAGE -->
+<!-- ════════════════════════════════════════════════ -->
+<div id="page-amazon" class="platform-page active">
+
+  <div class="cover-strip amazon">
+    <div class="cover-main">
+      <div class="cover-badge">📦 Amazon</div>
+      <h1>Amazon 콘텐츠<br>이미지 가이드</h1>
+      <p>Basic Listing · Basic A+ Content · Premium A+ Content<br>모듈별 이미지 사이즈 · 레이아웃 구조 · 제작 가이드</p>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="num">4</div><div class="lbl">Basic Listing</div></div>
+      <div class="cover-stat"><div class="num">8</div><div class="lbl">Basic A+</div></div>
+      <div class="cover-stat"><div class="num">3</div><div class="lbl">Premium A+</div></div>
+    </div>
+  </div>
+
+  <!-- Amazon Global Specs -->
+  <div class="spec-bar amazon">
+    <div class="spec-chip"><div class="lbl">파일 형식</div><div class="val">JPG · PNG</div><div class="sub">Static GIF만 허용</div></div>
+    <div class="spec-chip"><div class="lbl">최대 용량</div><div class="val">2 MB</div><div class="sub">A+ 모듈 기준</div></div>
+    <div class="spec-chip"><div class="lbl">색상 모드</div><div class="val">RGB 전용</div><div class="sub">CMYK 업로드 오류</div></div>
+    <div class="spec-chip"><div class="lbl">최소 해상도</div><div class="val">72 DPI</div><div class="sub">권장 300 DPI</div></div>
+    <div class="spec-chip"><div class="lbl">제작 팁</div><div class="val">2× 소스 작업</div><div class="sub">970px → 1940px</div></div>
+    <div class="spec-chip"><div class="lbl">텍스트 최소</div><div class="val">30 pt 이상</div><div class="sub">모바일 가독성</div></div>
+  </div>
+
+  <!-- ─ Basic Listing ─ -->
+  <div class="sec-head amazon">🅱 BASIC LISTING <span class="sec-pill">모든 셀러 무료 사용 · 4가지 요소</span></div>
+
+  <!-- B1 Product Title -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum green">B1</div>
+      <div class="mcard-title"><h3>Product Title — 제품 타이틀</h3><p>검색 결과 및 상세페이지 최상단에 표시</p></div>
+      <div class="mcard-badges"><span class="bsize green">최대 200자</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">페이지 내 위치</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;padding:14px;">
+          <div style="font-size:12px;font-weight:700;color:#0F1111;line-height:1.5;border-bottom:1px solid #eee;padding-bottom:10px;">LG OLED evo C3 65-Inch 4K Smart TV, Alexa Built-in, 120Hz, HDMI 2.1, 2023</div>
+          <div style="margin-top:8px;display:flex;gap:6px;"><div style="background:#FF9900;color:white;font-size:10px;padding:2px 7px;border-radius:3px;">4.7 ★★★★★</div><div style="font-size:10px;color:#007185;">12,483 ratings</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">글자 수</div><div class="ival">일반적으로 <strong class="a">최대 200자</strong> (80~150자 권장)</div></div>
+        <div class="irow"><div class="ilbl">포함 요소</div><div class="tags"><span class="tag g">브랜드명</span><span class="tag g">모델명</span><span class="tag g">주요 스펙</span><span class="tag g">사이즈/색상</span><span class="tag g">출시연도</span></div></div>
+        <div class="tip"><strong>💡 팁</strong>브랜드명을 맨 앞에 — 검색 알고리즘과 신뢰도 유리. 핵심 키워드를 앞쪽 배치.</div>
+        <div class="warn"><strong>⚠️ 금지</strong>"Best", "#1", "Free shipping", 가격, 프로모션 문구 → 즉시 거절</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B2 Bullet Points -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum green">B2</div>
+      <div class="mcard-title"><h3>Bullet Points — 핵심 특징 5개</h3><p>구매 버튼 옆, 전환율에 가장 직접적 영향</p></div>
+      <div class="mcard-badges"><span class="bsize green">5개 · 개당 최대 500자</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">페이지 내 위치</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div style="background:#f7f7f7;border-radius:5px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:10px;color:#aaa;">제품 이미지</div>
+          <div>
+            <div style="height:8px;background:#ddd;border-radius:3px;width:90%;margin-bottom:8px;"></div>
+            <div style="font-size:10px;color:#0F1111;line-height:1.9;">
+              <div>• α9 AI 프로세서 Gen6 탑재</div>
+              <div>• Dolby Vision IQ + Atmos</div>
+              <div>• 120Hz HDMI 2.1 ×4</div>
+              <div>• webOS 23 + ThinQ AI</div>
+              <div>• FreeSync Premium Pro</div>
+            </div>
+            <div style="margin-top:8px;background:#FF9900;color:white;font-size:9px;text-align:center;padding:5px;border-radius:4px;">Add to Cart</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">구성</div><div class="ival">최대 <strong class="a">5개</strong> · 개당 200자 이내 권장</div></div>
+        <div class="irow"><div class="ilbl">작성 전략</div><div class="tags"><span class="tag g">1번: 가장 강한 USP</span><span class="tag g">스펙보다 혜택 중심</span><span class="tag g">키워드 자연스럽게</span></div></div>
+        <div class="tip"><strong>💡 팁</strong>"120Hz 지원"(스펙)보다 "끊김 없이 부드러운 게임 화면"(혜택)이 전환율 높음.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B3 Product Description -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum green">B3</div>
+      <div class="mcard-title"><h3>Product Description — 제품 설명</h3><p>하단 텍스트 영역 · A+ 있으면 고객에게 숨겨지지만 SEO 색인엔 반영</p></div>
+      <div class="mcard-badges"><span class="bsize green">최대 2,000자 · 텍스트만</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">페이지 내 위치</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;padding:12px;">
+          <div style="font-size:10px;color:#aaa;margin-bottom:8px;">▲ 불릿 포인트 · 구매 버튼 · 리뷰</div>
+          <div style="border-top:1px solid #eee;padding-top:10px;">
+            <div style="font-size:11px;font-weight:700;margin-bottom:6px;">Product Description</div>
+            <div class="mock-text-line"></div><div class="mock-text-line"></div><div class="mock-text-line sh"></div>
+          </div>
+          <div style="font-size:10px;color:#aaa;margin-top:8px;">▼ A+ 콘텐츠 (있으면 이 아래)</div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">글자 수</div><div class="ival">최대 <strong class="a">2,000자</strong> · 볼드·줄바꿈 HTML 허용</div></div>
+        <div class="tip"><strong>💡 팁</strong>A+가 있으면 화면에 안 보이지만 Amazon 검색 색인에 반영 → SEO 키워드 삽입 공간으로 활용.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- B4 Images -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum green">B4</div>
+      <div class="mcard-title"><h3>기본 이미지 — 메인 + 추가 최대 9장</h3><p>상품 갤러리 이미지</p></div>
+      <div class="mcard-badges"><span class="bsize green">최소 1,600 px · 최대 9장</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">갤러리 레이아웃</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;padding:10px;display:grid;grid-template-columns:auto 1fr;gap:8px;">
+          <div style="display:flex;flex-direction:column;gap:4px;">
+            <div style="width:34px;height:34px;background:#ffe0cc;border-radius:3px;border:2px solid #FF9900;"></div>
+            <div style="width:34px;height:34px;background:#fce4dc;border-radius:3px;border:1px solid #ddd;"></div>
+            <div style="width:34px;height:34px;background:#f5e0dd;border-radius:3px;border:1px solid #ddd;"></div>
+            <div style="width:34px;height:34px;background:#f0ddd8;border-radius:3px;border:1px solid #ddd;"></div>
+          </div>
+          <div style="background:#f7f7f7;border-radius:6px;aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;">
+            <div style="font-size:11px;color:#aaa;">메인 이미지</div>
+            <div style="font-size:10px;color:#FF9900;font-weight:700;">흰 배경 필수</div>
+            <div style="font-size:9px;color:#bbb;">최소 1,600 × 1,600 px</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">메인 이미지</div><div class="ival">최소 <strong class="a">1,600 × 1,600 px</strong> · 흰 배경 · 제품 85% 이상</div></div>
+        <div class="irow"><div class="ilbl">추가 이미지</div><div class="ival">최대 <strong class="a">8장 추가</strong> (합계 9장) · 다양한 배경 허용</div></div>
+        <div class="irow"><div class="ilbl">형식</div><div class="ival">JPEG(권장) / PNG / TIFF · 최대 10MB</div></div>
+        <div class="tip"><strong>💡 팁</strong>1,600px 이상이어야 Zoom 기능 활성화 → 전환율에 직결. 추가 이미지에 인포그래픽·치수·라이프스타일 활용.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bridge -->
+  <div style="margin:24px 80px;padding:18px 24px;background:linear-gradient(90deg,#e8f5e9,#fff8f0);border-radius:10px;border:1px solid #c8e6c9;display:flex;align-items:center;gap:16px;">
+    <div style="font-size:24px;">📈</div>
+    <div><div style="font-size:14px;font-weight:700;margin-bottom:4px;">Basic Listing → A+ 콘텐츠로 업그레이드</div><div style="font-size:13px;color:#555;">A+를 추가하면 Product Description이 숨겨지고 풍부한 모듈이 표시됩니다. Amazon 기준 평균 <strong>3~10% 전환율 향상</strong> 효과.</div></div>
+  </div>
+
+  <!-- ─ Basic A+ ─ -->
+  <div class="sec-head amazon">✨ BASIC A+ CONTENT <span class="sec-pill">Brand Registry 필수 · 8가지 모듈</span></div>
+
+  <!-- A+ Global specs note -->
+  <div style="margin:0 80px 4px;padding:14px 20px;background:var(--amazon-light);border-radius:8px;font-size:13px;color:#555;border:1px solid #ffe0b2;">
+    🔧 <strong>A+ 공통:</strong> JPG/PNG · RGB · 최대 2MB · 최소 72DPI · Animated GIF 금지 · 이미지는 기존 갤러리와 중복 금지 · "Buy Now"/가격/리뷰 인용 금지
+  </div>
+
+  <!-- 01 Logo -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">01</div>
+      <div class="mcard-title"><h3>Company Logo</h3><p>A+ 최상단 브랜드 로고 모듈</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">600 × 180 px</span><span class="blimit">1개</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;padding:14px;">
+          <div style="background:white;border:2px dashed #ddd;border-radius:4px;aspect-ratio:600/180;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:12px;">🏷️ BRAND LOGO (600 × 180 px)</div>
+          <div style="font-size:10px;color:#aaa;margin-top:8px;text-align:center;">▼ 다음 A+ 모듈</div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="a">600 × 180 px</strong> (가로형 로고)</div></div>
+        <div class="irow"><div class="ilbl">위치</div><div class="ival">A+ 영역 최상단 — 가장 먼저 노출</div></div>
+        <div class="tip"><strong>💡 팁</strong>흰 배경 또는 투명 PNG 권장. Amazon 흰 배경과 자연스럽게 어울림.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 Text Overlay -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">02</div>
+      <div class="mcard-title"><h3>Image with Text Overlay</h3><p>이미지 위 헤드라인 텍스트 배너</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">970 × 300 px</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div class="mock-grad-orange mock-ratio" style="aspect-ratio:970/300;border-radius:8px;position:relative;overflow:hidden;">
+          <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.1));padding:16px 20px;display:flex;flex-direction:column;justify-content:center;gap:5px;">
+            <div style="background:rgba(255,255,255,.9);height:10px;width:55%;border-radius:3px;"></div>
+            <div style="background:rgba(255,255,255,.6);height:7px;width:40%;border-radius:3px;"></div>
+          </div>
+          <div style="position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:9px;color:rgba(255,255,255,.4);">970 × 300</div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="a">970 × 300 px</strong> (와이드 배너)</div></div>
+        <div class="irow"><div class="ilbl">용도</div><div class="tags"><span class="tag a">핵심 메시지</span><span class="tag a">슬로건</span><span class="tag a">캠페인 카피</span></div></div>
+        <div class="tip"><strong>💡 팁</strong>텍스트를 이미지에 굽지 말고 Amazon 오버레이 기능 사용. 이미지 좌측 어두운 영역에 텍스트 배치.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 Image Header with Text -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">03</div>
+      <div class="mcard-title"><h3>Image Header with Text</h3><p>큰 이미지 아래 상세 텍스트 설명 — 가장 임팩트 있는 모듈</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">970 × 600 px</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="border:1px solid #eee;border-radius:8px;overflow:hidden;background:white;">
+          <div class="mock-grad-orange" style="aspect-ratio:970/600;"></div>
+          <div style="padding:10px 12px;">
+            <div class="mock-text-line" style="height:9px;background:#ccc;width:70%;"></div>
+            <div class="mock-text-line"></div><div class="mock-text-line"></div><div class="mock-text-line sh"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="a">970 × 600 px</strong> (큰 이미지 + 텍스트 하단)</div></div>
+        <div class="irow"><div class="ilbl">용도</div><div class="tags"><span class="tag a">라이프스타일 연출</span><span class="tag a">주요 기능 설명</span><span class="tag a">브랜드 스토리</span></div></div>
+        <div class="tip"><strong>💡 팁</strong>A+ 중 가장 큰 사이즈. LG 가전 라이프스타일 사진 대형 노출 후 핵심 스펙 설명을 텍스트로 보완.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 Comparison Chart -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">04</div>
+      <div class="mcard-title"><h3>Comparison Chart</h3><p>자사 제품 라인업 나란히 비교 — 경쟁사 광고 공간 방어</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">150 × 300 px × 최대 6개</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">3제품 비교 예시</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3px;padding:8px;">
+            <div style="background:#f5f5f5;border-radius:3px;height:28px;"></div>
+            <div style="background:#c5cfe8;border-radius:3px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px;aspect-ratio:1/2;"><div style="background:#a8b8d0;border-radius:2px;flex:1;width:70%;"></div><div style="font-size:8px;color:#446;">제품 A</div></div>
+            <div style="background:#c5cfe8;border-radius:3px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px;aspect-ratio:1/2;"><div style="background:#a8b8d0;border-radius:2px;flex:1;width:70%;"></div><div style="font-size:8px;color:#446;">제품 B</div></div>
+            <div style="background:#c5cfe8;border-radius:3px;display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px;aspect-ratio:1/2;"><div style="background:#a8b8d0;border-radius:2px;flex:1;width:70%;"></div><div style="font-size:8px;color:#446;">제품 C</div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2px;padding:4px 8px;background:#fafafa;"><div style="font-size:9px;color:#666;">화면 크기</div><div style="font-size:9px;text-align:center;color:#446;">55"</div><div style="font-size:9px;text-align:center;color:#446;">65"</div><div style="font-size:9px;text-align:center;color:#446;">77"</div></div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2px;padding:4px 8px;"><div style="font-size:9px;color:#666;">해상도</div><div style="font-size:9px;text-align:center;color:#446;">4K</div><div style="font-size:9px;text-align:center;color:#446;">4K</div><div style="font-size:9px;text-align:center;color:#446;">8K</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="a">150 × 300 px</strong> 제품당 (최대 6개)</div></div>
+        <div class="tip"><strong>💡 팁</strong>비교표 없으면 Amazon이 그 공간에 경쟁사 광고 노출. LG TV OLED A3/C3/G3 비교에 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05~08 Remaining Basic A+ (compact) -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">05</div>
+      <div class="mcard-title"><h3>Four Image Quadrant · Three Image Text · Image Sidebar · Image Header(배너형)</h3><p>Basic A+ 나머지 4개 모듈</p></div>
+    </div>
+    <div class="mcard-body full">
+      <table class="dtable">
+        <tr><th>모듈명</th><th>이미지 사이즈</th><th>구성</th><th>주요 용도</th></tr>
+        <tr><td><strong>Four Image Text Quadrant</strong></td><td>220 × 220 px × 4장</td><td>2×2 정사각형 격자</td><td>4가지 핵심 기능 아이콘 소개</td></tr>
+        <tr><td><strong>Three Image Text</strong></td><td>300 × 400 px × 3장</td><td>3컷 가로 배열(세로형)</td><td>3가지 색상·각도·사용 단계</td></tr>
+        <tr><td><strong>Image Sidebar</strong></td><td>메인 300×300 / 썸네일 100×100</td><td>이미지 좌·우 + 텍스트 우·좌</td><td>기술 사양 긴 텍스트 설명</td></tr>
+        <tr><td><strong>Image Header (배너형)</strong></td><td>970 × 300 px</td><td>텍스트 없는 순수 비주얼</td><td>섹션 구분 · 라이프스타일 삽입</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ─ Premium A+ ─ -->
+  <div class="sec-head amazon-sub">⭐ PREMIUM A+ CONTENT <span class="sec-pill">Brand Registry + 5회 승인 이상 · 7가지 모듈</span></div>
+
+  <!-- Premium A+ 개요 & 활성화 조건 -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon" style="background:#8B5CF6;">★</div>
+      <div class="mcard-title"><h3>Premium A+ 란? — 활성화 조건 & 일반 A+와의 차이</h3><p>동영상·핫스팟·캐러셀·대형 배너 등 인터랙티브 기능 풀 해금</p></div>
+      <div class="mcard-badges"><span class="butil util-req">조건 충족 후 약 1개월 후 활성화</span></div>
+    </div>
+    <div class="mcard-body full">
+      <!-- 조건 카드 2개 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+        <div style="background:#F5F0FF;border:1px solid #C4B5FD;border-radius:8px;padding:14px;">
+          <div style="font-size:12px;font-weight:800;color:#6D28D9;margin-bottom:6px;">✅ 활성화 조건 1</div>
+          <div style="font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">Brand Story 등록</div>
+          <div style="font-size:12px;color:#555;line-height:1.5;">상세 페이지 내 <strong>Brand Story 모듈</strong>이 1개 이상 게시된 상태여야 함</div>
+        </div>
+        <div style="background:#F5F0FF;border:1px solid #C4B5FD;border-radius:8px;padding:14px;">
+          <div style="font-size:12px;font-weight:800;color:#6D28D9;margin-bottom:6px;">✅ 활성화 조건 2</div>
+          <div style="font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">A+ 콘텐츠 5회 이상 승인</div>
+          <div style="font-size:12px;color:#555;line-height:1.5;">최근 <strong>12개월 내</strong> 일반 A+ 콘텐츠 승인 실적 5회 이상<br><span style="color:#8B5CF6;font-size:11px;">(과거 15회 → 2025년 기준 5회로 완화)</span></div>
+        </div>
+      </div>
+      <!-- 일반 A+ vs Premium A+ 비교 -->
+      <table class="dtable">
+        <tr><th>구분</th><th>일반 A+ (Basic)</th><th>⭐ Premium A+</th></tr>
+        <tr><td><strong>동영상</strong></td><td>❌ 불가</td><td>✅ Full Video 삽입 가능</td></tr>
+        <tr><td><strong>이미지 크기</strong></td><td>최대 970 × 600 px</td><td>최대 <strong>1464 × 600 px</strong> (더 큰 배너)</td></tr>
+        <tr><td><strong>인터랙티브</strong></td><td>❌ 정적 이미지만</td><td>✅ 핫스팟 · 캐러셀 슬라이드</td></tr>
+        <tr><td><strong>전환율 향상</strong></td><td>기본 제품 설명 보강</td><td><strong>시각·인터랙션 극대화</strong> → 구매 전환 강력</td></tr>
+        <tr><td><strong>이용 조건</strong></td><td>Brand Registry 등록</td><td>Brand Story + A+ 5회 승인 (12개월)</td></tr>
+      </table>
+      <div class="tip" style="margin-top:10px;"><strong>💡 경험담</strong>조건 충족 후 약 1개월 뒤 Premium A+ 탭이 활성화됨. Brand Story는 미리 등록해두고 일반 A+ 콘텐츠를 꾸준히 제출해 실적을 쌓는 것이 핵심.</div>
+    </div>
+  </div>
+
+  <!-- P1: Premium Full Image -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P1</div>
+      <div class="mcard-title"><h3>Premium Full Image</h3><p>1464 px 대형 배너를 연속 배치 — 끊김 없는 풀스크린 효과</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">1464 × 600 px</span><span class="blimit">반복 배치 가능</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (2장 연속)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <!-- Banner 1 -->
+          <div style="background:linear-gradient(135deg,#1a1a2e,#2d2d4e);aspect-ratio:1464/600;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;">
+            <div style="font-size:11px;color:rgba(255,153,0,.8);font-weight:700;">Premium Full Image · 1464 × 600 px</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);">라이프스타일 / 캠페인 KV · 섹션 1</div>
+          </div>
+          <!-- Banner 2 (연속) -->
+          <div style="background:linear-gradient(135deg,#2d2d4e,#1a1a2e);aspect-ratio:1464/600;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;">
+            <div style="font-size:11px;color:rgba(255,153,0,.8);font-weight:700;">Premium Full Image · 1464 × 600 px</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);">기능 소개 / 상세 비주얼 · 섹션 2</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">1464 × 600 px</strong> (일반 A+ 970px → 1464px로 확장)</div></div>
+        <div class="irow"><div class="ilbl">파일 형식</div><div class="ival">JPG / PNG · 최대 2MB</div></div>
+        <div class="irow"><div class="ilbl">활용법</div><div class="ival">같은 사이즈 배너를 여러 장 세로 연속 배치 → 대형 화보 효과</div></div>
+        <div class="tags"><span class="tag s">시즌 캠페인 KV</span><span class="tag s">브랜드 스토리텔링</span><span class="tag s">풀스크린 연출</span></div>
+        <div class="tip"><strong>💡 팁</strong>배너 경계선을 의도적으로 이어지는 구도로 디자인하면 스크롤 시 끊김 없는 몰입형 페이지 연출 가능. LG OLED TV 화질 어필에 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P2: Simple Image Carousel -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P2</div>
+      <div class="mcard-title"><h3>Simple Image Carousel</h3><p>여러 이미지를 좌우 스와이프 — 공간 효율 극대화</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">970 × 600 px · 2~5장</span><span class="blimit">반복 배치 가능</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="position:relative;background:linear-gradient(135deg,#1a1a2e,#FF9900 200%);aspect-ratio:970/600;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;">
+            <div style="font-size:10px;color:rgba(255,153,0,.9);font-weight:700;">슬라이드 2 / 4</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.6);">970 × 600 px · 좌우 스와이프</div>
+            <!-- Prev/Next buttons -->
+            <div style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.2);border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;">‹</div>
+            <div style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.2);border-radius:50%;width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;">›</div>
+          </div>
+          <!-- Dot indicators -->
+          <div style="display:flex;justify-content:center;gap:5px;margin-top:6px;">
+            <div style="width:6px;height:6px;border-radius:50%;background:#eee;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#FF9900;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#eee;"></div>
+            <div style="width:6px;height:6px;border-radius:50%;background:#eee;"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">970 × 600 px</strong> · 2~5장 (동일 사이즈 통일)</div></div>
+        <div class="irow"><div class="ilbl">인터랙션</div><div class="ival">좌우 화살표 클릭 또는 스와이프로 슬라이드 전환</div></div>
+        <div class="irow"><div class="ilbl">장점</div><div class="ival">여러 컷을 같은 영역에 압축 → 스크롤 없이 다양한 앵글·색상 노출</div></div>
+        <div class="tags"><span class="tag s">컬러 베리에이션</span><span class="tag s">각도별 샷</span><span class="tag s">사용 시나리오</span></div>
+        <div class="tip"><strong>💡 팁</strong>1번째 이미지는 제품 정면(히어로), 2~4번째는 라이프스타일·디테일·인포그래픽 순서 권장. 이미지 수는 3~4장이 완독률 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P3: Hotspots -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P3</div>
+      <div class="mcard-title"><h3>Hotspots</h3><p>이미지 위 아이콘 클릭 → 기능·성분 설명 팝업 (데스크톱 전용)</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">970 × 600 px</span><span class="blimit">최대 8개 핫스팟</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div style="background:linear-gradient(135deg,#1a1a2e,#2d2d4e);aspect-ratio:970/600;position:relative;display:flex;align-items:center;justify-content:center;">
+            <div style="font-size:10px;color:rgba(255,153,0,.8);">제품 이미지 · 970 × 600 px</div>
+            <!-- Hotspot 1 -->
+            <div style="position:absolute;top:25%;left:30%;">
+              <div style="width:18px;height:18px;background:#FF9900;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 4px rgba(255,153,0,.3);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;cursor:pointer;">+</div>
+              <div style="position:absolute;top:22px;left:-30px;background:#fff;border:1px solid #ddd;border-radius:5px;padding:4px 8px;font-size:7px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.15);color:#333;">α9 AI 프로세서 Gen7</div>
+            </div>
+            <!-- Hotspot 2 -->
+            <div style="position:absolute;top:55%;left:62%;">
+              <div style="width:18px;height:18px;background:#FF9900;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 4px rgba(255,153,0,.3);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;cursor:pointer;">+</div>
+            </div>
+            <!-- Hotspot 3 -->
+            <div style="position:absolute;top:40%;left:70%;">
+              <div style="width:18px;height:18px;background:#FF9900;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 4px rgba(255,153,0,.3);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:700;cursor:pointer;">+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">970 × 600 px</strong></div></div>
+        <div class="irow"><div class="ilbl">핫스팟 수</div><div class="ival">이미지당 최대 8개 포인트 설정</div></div>
+        <div class="irow"><div class="ilbl">동작</div><div class="ival">클릭 시 제목 + 설명 텍스트 팝업 표시</div></div>
+        <div class="irow"><div class="ilbl">지원 환경</div><div class="ival"><strong>데스크톱 전용</strong> — 모바일에서는 정적 이미지로 표시</div></div>
+        <div class="tags"><span class="tag s">기술 사양</span><span class="tag s">부위별 설명</span><span class="tag s">인터랙티브</span></div>
+        <div class="warn"><strong>⚠️ 주의</strong>모바일에서는 핫스팟 비활성화. 이미지만으로도 충분히 정보가 전달되도록 디자인해야 함. 핫스팟 포인트는 제품 부위 위에 정확히 배치.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P4: Full Video -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P4</div>
+      <div class="mcard-title"><h3>Full Video</h3><p>프리미엄 A+의 최강 무기 — 상세 페이지 내 영상 직접 재생</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">1920 × 1080 px · MP4 · 최대 5GB</span><span class="blimit">15초~3분</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div style="background:#000;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;position:relative;">
+            <!-- Video frame -->
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+              <div style="width:44px;height:44px;background:rgba(255,153,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;padding-left:3px;">▶</div>
+              <div style="font-size:9px;color:#aaa;">1920 × 1080 px · 최대 5GB · 15초~3분</div>
+            </div>
+            <!-- Thumbnail label -->
+            <div style="position:absolute;top:8px;left:8px;background:rgba(255,153,0,.85);color:#fff;font-size:7px;padding:2px 6px;border-radius:3px;font-weight:700;">썸네일 별도 필수</div>
+            <!-- Progress bar -->
+            <div style="position:absolute;bottom:8px;left:8px;right:8px;height:3px;background:rgba(255,255,255,.2);border-radius:2px;">
+              <div style="width:0%;height:100%;background:#FF9900;border-radius:2px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">해상도</div><div class="ival"><strong class="s">1920 × 1080 px</strong> (Full HD) · 16:9 비율</div></div>
+        <div class="irow"><div class="ilbl">용량/길이</div><div class="ival">최대 5GB · 15초~3분 · MP4 (H.264 코덱 권장)</div></div>
+        <div class="irow"><div class="ilbl">썸네일</div><div class="ival">별도 썸네일 이미지 필수 · 1920 × 1080 px · JPG/PNG</div></div>
+        <div class="irow"><div class="ilbl">재생 방식</div><div class="ival">클릭 시 페이지 내 인라인 재생 (새 탭 이동 없음)</div></div>
+        <div class="tags"><span class="tag s">제품 시연</span><span class="tag s">브랜드 필름</span><span class="tag s">설치 가이드</span><span class="tag s">비교 영상</span></div>
+        <div class="tip"><strong>💡 팁</strong>15~30초 하이라이트 영상이 완주율 최고. 첫 3초에 핵심 기능 등장 필수. 텍스트보다 훨씬 강력한 정보 전달 — 프리미엄 A+의 가장 큰 장점.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P5: Comparison Table (필수 권장) -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P5</div>
+      <div class="mcard-title"><h3>Comparison Table</h3><p>자사 제품 라인업 비교 — 클릭 시 PDP 이동 · 고객 이탈 방지</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">제품 이미지 각 135 × 135 px</span><span class="blimit">최대 6개 제품</span><span class="butil util-h">⭐ 강력 권장</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#FF9900;margin-bottom:8px;">📊 Compare with similar items</div>
+          <div style="overflow-x:auto;">
+            <table style="width:100%;border-collapse:collapse;font-size:8px;">
+              <tr style="background:#f9f0e0;">
+                <td style="padding:5px 6px;border:1px solid #eee;width:90px;"></td>
+                <td style="padding:5px 6px;border:1px solid #FF9900;text-align:center;background:#fff8ee;">
+                  <div style="width:28px;height:28px;background:#fce4dc;border-radius:3px;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div>
+                  <div style="font-weight:700;color:#FF9900;">현재 상품</div>
+                </td>
+                <td style="padding:5px 6px;border:1px solid #eee;text-align:center;">
+                  <div style="width:28px;height:28px;background:#f5f5f5;border-radius:3px;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div>
+                  <div style="color:#555;">다른 모델</div>
+                </td>
+                <td style="padding:5px 6px;border:1px solid #eee;text-align:center;">
+                  <div style="width:28px;height:28px;background:#f5f5f5;border-radius:3px;margin:0 auto 3px;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div>
+                  <div style="color:#555;">다른 모델</div>
+                </td>
+              </tr>
+              <tr><td style="padding:4px 6px;border:1px solid #eee;font-weight:700;">화면 크기</td><td style="padding:4px 6px;border:1px solid #FF9900;text-align:center;background:#fff8ee;">65"</td><td style="padding:4px 6px;border:1px solid #eee;text-align:center;">55"</td><td style="padding:4px 6px;border:1px solid #eee;text-align:center;">75"</td></tr>
+              <tr style="background:#fafafa;"><td style="padding:4px 6px;border:1px solid #eee;font-weight:700;">패널</td><td style="padding:4px 6px;border:1px solid #FF9900;text-align:center;background:#fff8ee;">OLED</td><td style="padding:4px 6px;border:1px solid #eee;text-align:center;">QNED</td><td style="padding:4px 6px;border:1px solid #eee;text-align:center;">OLED</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">제품 이미지</div><div class="ival">각 <strong class="s">135 × 135 px</strong> · 최대 6개 제품 비교</div></div>
+        <div class="irow"><div class="ilbl">비교 항목</div><div class="ival">최대 10개 스펙 행 · 텍스트 직접 입력</div></div>
+        <div class="irow"><div class="ilbl">링크</div><div class="ival">각 제품 클릭 시 해당 ASIN PDP로 이동</div></div>
+        <div class="irow"><div class="ilbl">역할</div><div class="ival">가격/스펙 비교로 이탈하려는 고객을 자사 라인업 내에서 순환</div></div>
+        <div class="tags"><span class="tag s">라인업 비교</span><span class="tag s">업셀링</span><span class="tag s">이탈 방지</span></div>
+        <div class="tip"><strong>💡 강력 권장</strong>경쟁사 제품이 아닌 <strong>자사 LG 모델끼리</strong> 비교 구성 → 가격 차이에 흔들리는 고객을 상위 모델로 자연스럽게 유도. 필수 모듈 3가지 중 하나.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P6: Navigation Carousel -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P6</div>
+      <div class="mcard-title"><h3>Navigation Carousel</h3><p>탭 클릭으로 섹션 전환 — 카테고리별 콘텐츠 구성</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">970 × 600 px · 2~5장</span><span class="blimit">반복 배치 가능</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Tab navigation -->
+          <div style="display:flex;gap:0;border-bottom:2px solid #FF9900;margin-bottom:6px;">
+            <div style="background:#FF9900;color:#fff;padding:5px 12px;font-size:8px;font-weight:700;border-radius:4px 4px 0 0;">화질</div>
+            <div style="background:#f5f5f5;color:#888;padding:5px 12px;font-size:8px;border-radius:4px 4px 0 0;border:1px solid #eee;border-bottom:none;">사운드</div>
+            <div style="background:#f5f5f5;color:#888;padding:5px 12px;font-size:8px;border-radius:4px 4px 0 0;border:1px solid #eee;border-bottom:none;">스마트 기능</div>
+            <div style="background:#f5f5f5;color:#888;padding:5px 12px;font-size:8px;border-radius:4px 4px 0 0;border:1px solid #eee;border-bottom:none;">디자인</div>
+          </div>
+          <!-- Content panel -->
+          <div style="background:linear-gradient(135deg,#1a1a2e,#FF9900 250%);aspect-ratio:970/600;border-radius:5px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;">
+            <div style="font-size:10px;color:rgba(255,153,0,.9);font-weight:700;">화질 섹션 콘텐츠</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);">970 × 600 px</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">970 × 600 px</strong> × 2~5장 (동일 사이즈 필수)</div></div>
+        <div class="irow"><div class="ilbl">인터랙션</div><div class="ival">탭 클릭으로 각 이미지 전환 · 좌우 슬라이드 아님</div></div>
+        <div class="irow"><div class="ilbl">Simple Carousel와 차이</div><div class="ival">탭 라벨(문자) 지정 가능 · 카테고리별 구성에 적합</div></div>
+        <div class="tags"><span class="tag s">기능 카테고리</span><span class="tag s">섹션 분리</span><span class="tag s">탭 네비게이션</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG TV 상세 페이지에서 '화질 / 사운드 / 스마트 기능 / 디자인' 4탭으로 구성하면 긴 스크롤 없이 원하는 정보로 즉시 이동 가능.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- P7: Q&A Module -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum amazon">P7</div>
+      <div class="mcard-title"><h3>Q&amp;A Module</h3><p>반품 불안 선제 해소 — 설치·AS·보증 자주 묻는 질문 답변</p></div>
+      <div class="mcard-badges"><span class="bsize amazon">이미지 없음 (텍스트 전용)</span><span class="blimit">최대 10개 Q&amp;A</span><span class="butil util-h">⭐ 강력 권장</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:12px;">
+          <div style="font-size:9px;font-weight:700;color:#FF9900;margin-bottom:8px;">❓ Frequently Asked Questions</div>
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="background:#f9f0e0;padding:6px 10px;font-size:8px;font-weight:700;color:#1a1a2e;display:flex;justify-content:space-between;align-items:center;">
+                Q. 설치 서비스가 포함되어 있나요?
+                <span style="color:#FF9900;font-size:10px;">▾</span>
+              </div>
+              <div style="padding:6px 10px;font-size:8px;color:#555;line-height:1.5;background:#fffdf7;">
+                A. 네, 구매 후 LG 공식 설치 기사가 방문하여 설치를 도와드립니다. 배송 후 2~3일 내 일정 조율 연락을 드립니다.
+              </div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="background:#f9f0e0;padding:6px 10px;font-size:8px;font-weight:700;color:#1a1a2e;display:flex;justify-content:space-between;align-items:center;">
+                Q. 보증 기간은 얼마나 되나요?
+                <span style="color:#aaa;font-size:10px;">▸</span>
+              </div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="background:#f9f0e0;padding:6px 10px;font-size:8px;font-weight:700;color:#1a1a2e;display:flex;justify-content:space-between;align-items:center;">
+                Q. 반품 정책은 어떻게 되나요?
+                <span style="color:#aaa;font-size:10px;">▸</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">형식</div><div class="ival">이미지 없음 · 질문(Q) + 답변(A) 텍스트 쌍으로 구성</div></div>
+        <div class="irow"><div class="ilbl">수량</div><div class="ival">최대 10개 Q&A 등록 가능</div></div>
+        <div class="irow"><div class="ilbl">인터랙션</div><div class="ival">아코디언 방식 — 클릭 시 답변 펼침/접기</div></div>
+        <div class="irow"><div class="ilbl">권장 내용</div><div class="ival">설치·보증·반품·호환성·AS 등 구매 전 주요 불안 요소</div></div>
+        <div class="tags"><span class="tag s">구매 불안 해소</span><span class="tag s">반품률 감소</span><span class="tag s">CS 부담 경감</span></div>
+        <div class="tip"><strong>💡 강력 권장</strong>Amazon 리뷰·Q&A 섹션에서 자주 등장하는 질문을 선제적으로 답변 → 구매 결정 장벽 제거. 설치/AS/보증 관련 Q&A가 전환율에 가장 큰 영향.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /amazon page -->
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- ② SHOPEE PAGE -->
+<!-- ════════════════════════════════════════════════ -->
+<div id="page-shopee" class="platform-page">
+
+  <div class="cover-strip shopee">
+    <div class="cover-main">
+      <div class="cover-badge">🛒 Shopee.com</div>
+      <h1>Shopee 모듈<br>이미지 가이드</h1>
+      <p>Visual & Text · Product & Category · Promotion · Advanced<br>모듈별 이미지 사이즈 및 제작 가이드</p>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="num">8</div><div class="lbl">Visual & Text</div></div>
+      <div class="cover-stat"><div class="num">6</div><div class="lbl">Product/Category</div></div>
+      <div class="cover-stat"><div class="num">9</div><div class="lbl">Promotion/Advanced</div></div>
+    </div>
+  </div>
+
+  <div class="spec-bar shopee">
+    <div class="spec-chip"><div class="lbl">최대 용량</div><div class="val">2 MB</div><div class="sub">이미지 per 파일</div></div>
+    <div class="spec-chip"><div class="lbl">비디오 용량</div><div class="val">30 MB</div><div class="sub">10~60초 · MP4</div></div>
+    <div class="spec-chip"><div class="lbl">파일 형식</div><div class="val">JPG/PNG/GIF</div><div class="sub">동적 GIF 허용</div></div>
+    <div class="spec-chip"><div class="lbl">최대 해상도</div><div class="val">2000 px</div><div class="sub">대부분 모듈</div></div>
+    <div class="spec-chip"><div class="lbl">배너 너비</div><div class="val">1200 px</div><div class="sub">단일/배너 계열</div></div>
+    <div class="spec-chip"><div class="lbl">색상 모드</div><div class="val">RGB</div><div class="sub">웹 표준</div></div>
+  </div>
+
+  <div class="sec-head shopee">🟠 VISUAL & TEXT <span class="sec-pill">8가지 모듈</span></div>
+
+  <!-- S01 Shop Cover -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S1</div>
+      <div class="mcard-title"><h3>Shop Cover Image</h3><p>스토어 대표 커버 — 테마 컬러 자동 적용</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1200 × 518 px</span><span class="blimit">1개</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1200/518;flex-direction:column;gap:5px;">
+            <div style="font-size:11px;color:#c9806e;font-weight:700;">Shop Cover Image</div>
+            <div style="font-size:10px;color:#d09080;">1200 × 518 px · MO/PC 동일</div>
+          </div>
+          <div style="padding:8px 10px;display:flex;align-items:center;gap:8px;border-top:1px solid #eee;">
+            <div style="width:32px;height:32px;background:#fce4dc;border-radius:50%;"></div>
+            <div><div style="height:7px;background:#eee;border-radius:3px;width:90px;margin-bottom:3px;"></div><div style="height:5px;background:#f5f5f5;border-radius:3px;width:55px;"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">1200 × 518 px</strong> (MO · PC 동일)</div></div>
+        <div class="irow"><div class="ilbl">특이사항</div><div class="ival">커버 교체 시 페이지 내비게이터·텍스트 테마 컬러도 함께 변경됨</div></div>
+        <div class="tags"><span class="tag s">브랜드 KV</span><span class="tag s">시즌 캠페인</span></div>
+        <div class="tip"><strong>💡 팁</strong>캠페인 기간마다 교체 권장. 브랜드 컬러가 페이지 전반에 반영되므로 LG 레드/화이트 톤 유지.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S02 Carousel -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S2</div>
+      <div class="mcard-title"><h3>Carousel</h3><p>자동 슬라이드 — 이미지 + 영상 혼합 가능</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">이미지 최대 2000×2000 / 영상 1280×1280</span><span class="blimit">최대 6개 모듈</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1/1;position:relative;">
+            <div style="font-size:10px;color:#c9806e;">슬라이드 1/3 · 비율 선택 후 업로드</div>
+            <div style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.6);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;">‹</div>
+            <div style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.6);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;font-size:12px;">›</div>
+          </div>
+          <div style="display:flex;justify-content:center;gap:4px;padding:7px;"><div style="width:6px;height:6px;border-radius:50%;background:#EE4D2D;"></div><div style="width:6px;height:6px;border-radius:50%;background:#ddd;"></div><div style="width:6px;height:6px;border-radius:50%;background:#ddd;"></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">최대 <strong class="s">2000 × 2000 px</strong> · 2MB · 비율 선택 후 업로드</div></div>
+        <div class="irow"><div class="ilbl">영상</div><div class="ival">최대 <strong class="s">1280 × 1280 px</strong> · 30MB · 10~60초 · MP4</div></div>
+        <div class="irow"><div class="ilbl">PC 사이즈</div><div class="ival">최대 2000px × 100~2200px (비율 고정)</div></div>
+        <div class="warn"><strong>⚠️ 주의</strong>업로드 전 Carousel Ratio(비율) 반드시 먼저 선택 — 이후 변경 불가.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S03 Single Image -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S3</div>
+      <div class="mcard-title"><h3>Single Image</h3><p>가장 범용적인 풀배너 — 높이 자유, 링크 설정 가능</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1200 × 100~4800 px</span><span class="blimit">최대 10개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1200/500;flex-direction:column;gap:6px;position:relative;">
+            <div style="font-size:11px;color:#c9806e;font-weight:700;">Single Image Banner</div>
+            <div style="font-size:10px;color:#d09080;">1200 × 가변 높이 (100~4800px)</div>
+            <div style="position:absolute;bottom:8px;right:8px;background:rgba(238,77,45,.8);color:#fff;font-size:9px;padding:2px 8px;border-radius:10px;">🔗 링크 연결</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">너비 <strong class="s">1200 px</strong> 고정 · 높이 100~4800 px 자유</div></div>
+        <div class="irow"><div class="ilbl">모드</div><div class="ival">MO / PC 동일 업로드</div></div>
+        <div class="irow"><div class="ilbl">링크</div><div class="ival">이미지 전체 영역에 1개 URL 연결 가능</div></div>
+        <div class="tags"><span class="tag s">캠페인 배너</span><span class="tag s">시즌 KV</span><span class="tag s">세로형 롱배너</span></div>
+        <div class="tip"><strong>💡 팁</strong>높이를 2400~4800px로 설정하면 스크롤형 롱배너로 활용 가능. A+ 대용으로 제품 스토리텔링에 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S04 Multiple Images -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S4</div>
+      <div class="mcard-title"><h3>Multiple Images</h3><p>2~4장 이미지 한 줄 나열 — 이미지별 개별 링크</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">최대 2000 × 2000 px</span><span class="blimit">최대 10개</span><span class="butil util-l">Utility: LOW</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (3장 예시)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;">
+            <div class="mock-grad-red mock-ratio" style="aspect-ratio:1/1;border-radius:5px;flex-direction:column;gap:3px;">
+              <div style="font-size:9px;color:#c9806e;">이미지 1</div>
+              <div style="font-size:8px;color:#d09080;opacity:.8;">링크 A</div>
+            </div>
+            <div class="mock-grad-red mock-ratio" style="aspect-ratio:1/1;border-radius:5px;flex-direction:column;gap:3px;">
+              <div style="font-size:9px;color:#c9806e;">이미지 2</div>
+              <div style="font-size:8px;color:#d09080;opacity:.8;">링크 B</div>
+            </div>
+            <div class="mock-grad-red mock-ratio" style="aspect-ratio:1/1;border-radius:5px;flex-direction:column;gap:3px;">
+              <div style="font-size:9px;color:#c9806e;">이미지 3</div>
+              <div style="font-size:8px;color:#d09080;opacity:.8;">링크 C</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">최대 <strong class="s">2000 × 2000 px</strong> · 2MB</div></div>
+        <div class="irow"><div class="ilbl">구성</div><div class="ival">2~4장 동일 비율로 한 줄 배치</div></div>
+        <div class="irow"><div class="ilbl">링크</div><div class="ival">이미지별 독립 URL 연결 가능</div></div>
+        <div class="tags"><span class="tag s">카테고리 분류</span><span class="tag s">제품군 소개</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG TV / 냉장고 / 세탁기 3분할로 주요 카테고리 입구 역할. 정사각형 비율(1:1) 통일 권장.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S05 Banner with Tag -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S5</div>
+      <div class="mcard-title"><h3>Banner with Tag</h3><p>이미지 위 제품 태그 삽입 — 클릭 시 PDP 이동</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1200 × 100~2200 px</span><span class="blimit">최대 10개</span><span class="butil util-l">Utility: LOW</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1200/600;position:relative;">
+            <div style="font-size:10px;color:#c9806e;">라이프스타일 이미지</div>
+            <!-- Tag dots -->
+            <div style="position:absolute;top:30%;left:35%;display:flex;flex-direction:column;align-items:center;gap:2px;">
+              <div style="width:14px;height:14px;background:#EE4D2D;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);"></div>
+              <div style="background:#fff;border:1px solid #ddd;border-radius:3px;padding:2px 5px;font-size:7px;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.15);">LG TV 65"</div>
+            </div>
+            <div style="position:absolute;top:55%;left:60%;display:flex;flex-direction:column;align-items:center;gap:2px;">
+              <div style="width:14px;height:14px;background:#EE4D2D;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);"></div>
+              <div style="background:#fff;border:1px solid #ddd;border-radius:3px;padding:2px 5px;font-size:7px;white-space:nowrap;box-shadow:0 1px 4px rgba(0,0,0,.15);">LG 냉장고</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">너비 <strong class="s">1200 px</strong> · 높이 100~2200 px</div></div>
+        <div class="irow"><div class="ilbl">태그</div><div class="ival">이미지 위 원하는 위치에 제품 태그 핀 삽입 · 클릭 시 PDP 이동</div></div>
+        <div class="tags"><span class="tag s">룩북</span><span class="tag s">인테리어 쇼핑</span><span class="tag s">라이프스타일</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG 거실 라이프스타일 이미지에 TV·냉장고·세탁기 태그 부착 — 인테리어 룩북 쇼핑 가이드로 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S06 Multiple Clickable Areas -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S6</div>
+      <div class="mcard-title"><h3>Multiple Clickable Areas</h3><p>이미지 위 구역 직접 그려 개별 링크 연결</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1200 × 100~4800 px</span><span class="blimit">최대 10개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1200/700;position:relative;">
+            <div style="font-size:10px;color:#c9806e;z-index:1;">배너 이미지</div>
+            <!-- Clickable zone overlays -->
+            <div style="position:absolute;top:15%;left:5%;width:38%;height:35%;border:2px dashed rgba(255,255,255,.8);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:8px;color:#fff;background:rgba(0,0,0,.4);padding:2px 5px;border-radius:3px;">영역 A → 링크</span>
+            </div>
+            <div style="position:absolute;top:15%;left:55%;width:38%;height:35%;border:2px dashed rgba(255,255,255,.8);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:8px;color:#fff;background:rgba(0,0,0,.4);padding:2px 5px;border-radius:3px;">영역 B → 링크</span>
+            </div>
+            <div style="position:absolute;top:60%;left:5%;width:87%;height:30%;border:2px dashed rgba(255,255,255,.8);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:8px;color:#fff;background:rgba(0,0,0,.4);padding:2px 5px;border-radius:3px;">영역 C → 링크</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">너비 <strong class="s">1200 px</strong> · 높이 100~4800 px</div></div>
+        <div class="irow"><div class="ilbl">클릭 구역</div><div class="ival">관리자 화면에서 영역 직접 드래그하여 그린 후 URL 연결</div></div>
+        <div class="irow"><div class="ilbl">활용</div><div class="ival">하나의 이미지에서 복수 카테고리/제품 동시 연결</div></div>
+        <div class="tags"><span class="tag s">멀티링크 배너</span><span class="tag s">그리드형 쇼핑</span></div>
+        <div class="tip"><strong>💡 팁</strong>Banner with Tag보다 자유도 높음. 디자인에 맞게 비규칙 구역 설정 가능 — 복잡한 룩북·카탈로그 이미지에 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S07 Video -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S7</div>
+      <div class="mcard-title"><h3>Video</h3><p>제품 영상 직접 업로드 또는 YouTube URL 연결</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1280 × 1280 px · MP4 · 30MB</span><span class="blimit">최대 3개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div style="aspect-ratio:1/1;background:#111;display:flex;align-items:center;justify-content:center;position:relative;border-radius:4px;margin:10px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+              <div style="width:40px;height:40px;background:rgba(238,77,45,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;padding-left:3px;">▶</div>
+              <div style="font-size:10px;color:#aaa;">1280 × 1280 px · 10~60초</div>
+            </div>
+            <div style="position:absolute;bottom:8px;left:8px;right:8px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;">
+              <div style="width:35%;height:100%;background:#EE4D2D;border-radius:2px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">사이즈</div><div class="ival"><strong class="s">1280 × 1280 px</strong> · 최대 30MB</div></div>
+        <div class="irow"><div class="ilbl">길이</div><div class="ival">10~60초 · MP4 포맷</div></div>
+        <div class="irow"><div class="ilbl">업로드 방식</div><div class="ival">직접 파일 업로드 또는 YouTube URL 입력</div></div>
+        <div class="tags"><span class="tag s">제품 시연</span><span class="tag s">브랜드 필름</span><span class="tag s">언박싱</span></div>
+        <div class="warn"><strong>⚠️ 주의</strong>썸네일 이미지를 반드시 별도 설정. 자동재생 시 무음으로 시작되므로 자막/텍스트 포함 권장.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S08 Text -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S8</div>
+      <div class="mcard-title"><h3>Text</h3><p>이미지 없이 텍스트만 — 공지·프로모션 안내</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">이미지 없음 (텍스트 전용)</span><span class="blimit">최대 10개</span><span class="butil util-l">Utility: LOW</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:16px;">
+          <div style="border-left:3px solid #EE4D2D;padding:10px 14px;background:#FFF0ED;border-radius:0 6px 6px 0;">
+            <div style="height:8px;background:#EE4D2D;border-radius:4px;width:70%;margin-bottom:8px;opacity:.5;"></div>
+            <div style="height:6px;background:#f0b3a3;border-radius:4px;width:90%;margin-bottom:5px;"></div>
+            <div style="height:6px;background:#f0b3a3;border-radius:4px;width:75%;margin-bottom:5px;"></div>
+            <div style="height:6px;background:#f0b3a3;border-radius:4px;width:55%;"></div>
+          </div>
+          <div style="margin-top:8px;font-size:9px;color:#aaa;text-align:center;">텍스트 에디터 직접 입력</div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">입력 방식</div><div class="ival">Shopee 내장 에디터에서 직접 텍스트 작성</div></div>
+        <div class="irow"><div class="ilbl">서식</div><div class="ival">굵기·색상·정렬·링크 지원 · HTML 미지원</div></div>
+        <div class="irow"><div class="ilbl">용도</div><div class="ival">프로모션 공지, 배송 안내, 스토어 소개 등</div></div>
+        <div class="tags"><span class="tag s">공지사항</span><span class="tag s">이벤트 안내</span></div>
+        <div class="tip"><strong>💡 팁</strong>이미지 모듈 사이에 배치해 섹션 구분 타이틀 역할로 활용. 짧고 임팩트 있는 문구 권장.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head shopee" style="background:#c73a1e;">🟠 PRODUCT & CATEGORY <span class="sec-pill">6가지 모듈</span></div>
+
+  <!-- S09 Category List -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S9</div>
+      <div class="mcard-title"><h3>Category List</h3><p>스토어 카테고리 입구 — Manual 모드에서 직접 이미지 제작</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Manual: 300 × 300 px / Auto: 자동</span><span class="blimit">최대 10개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (Manual · 6개)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:100%;aspect-ratio:1/1;background:#fce4dc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;">📺</div>
+              <div style="font-size:8px;color:#555;font-weight:600;">TV</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:100%;aspect-ratio:1/1;background:#fce4dc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;">❄️</div>
+              <div style="font-size:8px;color:#555;font-weight:600;">냉장고</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:100%;aspect-ratio:1/1;background:#fce4dc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;">🧺</div>
+              <div style="font-size:8px;color:#555;font-weight:600;">세탁기</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:100%;aspect-ratio:1/1;background:#fce4dc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;">🖥</div>
+              <div style="font-size:8px;color:#555;font-weight:600;">모니터</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:100%;aspect-ratio:1/1;background:#fce4dc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;">🔊</div>
+              <div style="font-size:8px;color:#555;font-weight:600;">오디오</div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:100%;aspect-ratio:1/1;background:#fce4dc;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:18px;">🧹</div>
+              <div style="font-size:8px;color:#555;font-weight:600;">청소기</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">Manual 모드: <strong class="s">300 × 300 px</strong> 정사각형 / Auto: 상품 이미지 자동</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">2~12개 · 레이아웃(열 수) 선택 가능</div></div>
+        <div class="irow"><div class="ilbl">모드</div><div class="ival">Auto(스토어 카테고리 연동) / Manual(직접 이미지·링크 설정)</div></div>
+        <div class="tags"><span class="tag s">스토어 입구</span><span class="tag s">카테고리 탐색</span></div>
+        <div class="tip"><strong>💡 팁</strong>Manual 모드: 카테고리 아이콘 이미지를 300×300px 정사각형으로 통일. LG 레드+흰 배경으로 제작하면 브랜드 일관성 유지.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S10 Product Highlights -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S10</div>
+      <div class="mcard-title"><h3>Product Highlights</h3><p>특정 제품 집중 조명 — Manual로 직접 지정 가능</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (상품 이미지 자동)</span><span class="blimit">최대 10개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (4제품)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#EE4D2D;margin-bottom:6px;">✦ Product Highlights</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">📺</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:3px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">❄️</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:3px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">🧺</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:3px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">🔊</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:3px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">상품 대표 이미지 자동 적용 (Auto 모드)</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">1~9개 · 헤더 이미지 선택 가능</div></div>
+        <div class="irow"><div class="ilbl">모드</div><div class="ival">Auto(베스트셀러 자동) / Manual(직접 제품 지정)</div></div>
+        <div class="tags"><span class="tag s">히어로 제품</span><span class="tag s">프리미엄 라인업</span></div>
+        <div class="tip"><strong>💡 팁</strong>신제품 출시 시 Manual로 해당 제품 상단 고정. 헤더 이미지(1200×300px 권장)로 섹션 타이틀 강조.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S11 Product - By Category -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S11</div>
+      <div class="mcard-title"><h3>Product — By Category</h3><p>탭 형식으로 카테고리별 제품 노출</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">헤더 1200 × 254~400 px</span><span class="blimit">최대 10개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Header banner -->
+          <div class="mock-grad-red" style="width:100%;height:36px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+            <div style="font-size:9px;color:#c9806e;">헤더 이미지 · 1200 × 254~400 px</div>
+          </div>
+          <!-- Category tabs -->
+          <div style="display:flex;gap:4px;margin-bottom:6px;">
+            <div style="background:#EE4D2D;color:#fff;padding:3px 8px;border-radius:3px;font-size:8px;font-weight:700;">TV</div>
+            <div style="background:#f5f5f5;color:#666;padding:3px 8px;border-radius:3px;font-size:8px;">냉장고</div>
+            <div style="background:#f5f5f5;color:#666;padding:3px 8px;border-radius:3px;font-size:8px;">세탁기</div>
+          </div>
+          <!-- Products -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div><div style="padding:3px;height:5px;background:#ddd;border-radius:2px;margin:3px;"></div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div><div style="padding:3px;height:5px;background:#ddd;border-radius:2px;margin:3px;"></div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div><div style="padding:3px;height:5px;background:#ddd;border-radius:2px;margin:3px;"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">헤더 이미지</div><div class="ival">1200 × <strong class="s">254~400 px</strong> (높이 선택)</div></div>
+        <div class="irow"><div class="ilbl">제품 이미지</div><div class="ival">상품 대표 이미지 자동 적용</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">카테고리당 최대 9개 제품</div></div>
+        <div class="tags"><span class="tag s">라인업 탐색</span><span class="tag s">멀티 카테고리</span></div>
+        <div class="tip"><strong>💡 팁</strong>Smart 모드: Shopee AI가 방문자 맞춤 제품 자동 노출. Manual 모드로 신제품·고마진 제품 우선 배치 가능.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S12 Top Products -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S12</div>
+      <div class="mcard-title"><h3>Top Products</h3><p>최다 판매 / 최저가 기준 자동 노출</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (상품 이미지 자동)</span><span class="blimit">최대 2개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#EE4D2D;margin-bottom:6px;">🏆 Top Products</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;">
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;left:4px;background:#EE4D2D;color:#fff;font-size:7px;font-weight:700;padding:1px 4px;border-radius:2px;">#1</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">📺</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;left:4px;background:#f5a623;color:#fff;font-size:7px;font-weight:700;padding:1px 4px;border-radius:2px;">#2</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">❄️</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;left:4px;background:#aaa;color:#fff;font-size:7px;font-weight:700;padding:1px 4px;border-radius:2px;">#3</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:14px;">🧺</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">상품 대표 이미지 자동 적용</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">3~9개 · 정렬 기준 선택</div></div>
+        <div class="irow"><div class="ilbl">정렬 기준</div><div class="ival">최다 판매 / 최저가 / 자동(Shopee 알고리즘)</div></div>
+        <div class="tags"><span class="tag s">베스트셀러</span><span class="tag s">신뢰도 강화</span></div>
+        <div class="tip"><strong>💡 팁</strong>판매량 기반 자동 랭킹 → 구매자 신뢰도 향상. 스토어 페이지 중단부에 배치 시 이탈률 감소 효과.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S13 New Products -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S13</div>
+      <div class="mcard-title"><h3>New Products</h3><p>최근 30일 신규 등록 제품 자동 노출</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (상품 이미지 자동)</span><span class="blimit">최대 1개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#EE4D2D;margin-bottom:6px;">🆕 New Arrivals</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5px;">
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;right:4px;background:#EE4D2D;color:#fff;font-size:6px;font-weight:700;padding:1px 3px;border-radius:2px;">NEW</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div>
+              <div style="padding:3px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;right:4px;background:#EE4D2D;color:#fff;font-size:6px;font-weight:700;padding:1px 3px;border-radius:2px;">NEW</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">❄️</div>
+              <div style="padding:3px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;right:4px;background:#EE4D2D;color:#fff;font-size:6px;font-weight:700;padding:1px 3px;border-radius:2px;">NEW</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">🔊</div>
+              <div style="padding:3px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;position:relative;">
+              <div style="position:absolute;top:4px;right:4px;background:#EE4D2D;color:#fff;font-size:6px;font-weight:700;padding:1px 3px;border-radius:2px;">NEW</div>
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">🧹</div>
+              <div style="padding:3px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#EE4D2D;border-radius:2px;width:50%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">최근 30일 내 등록 상품 자동 적용</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">2~9개</div></div>
+        <div class="irow"><div class="ilbl">갱신</div><div class="ival">신제품 등록 즉시 자동 반영</div></div>
+        <div class="tags"><span class="tag s">신제품 론칭</span><span class="tag s">자동 갱신</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG 신제품 출시 주기(분기별)에 맞춰 스토어 상단에 배치. 항상 최신 라인업이 자동 반영되어 관리 부담 최소.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S14 Recommended for You -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S14</div>
+      <div class="mcard-title"><h3>Recommended for You</h3><p>방문자 행동 기반 AI 개인화 추천</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (개인화 자동)</span><span class="blimit">최대 1개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#EE4D2D;margin-bottom:6px;">✨ Recommended for You</div>
+          <div style="display:flex;gap:5px;overflow:hidden;">
+            <div style="flex-shrink:0;border:1px solid #EE4D2D;border-radius:5px;overflow:hidden;width:60px;position:relative;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div>
+              <div style="padding:3px;"><div style="height:4px;background:#EE4D2D;border-radius:2px;width:80%;margin-bottom:2px;opacity:.5;"></div></div>
+            </div>
+            <div style="flex-shrink:0;border:1px solid #eee;border-radius:5px;overflow:hidden;width:60px;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">❄️</div>
+              <div style="padding:3px;"><div style="height:4px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div></div>
+            </div>
+            <div style="flex-shrink:0;border:1px solid #eee;border-radius:5px;overflow:hidden;width:60px;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">🔊</div>
+              <div style="padding:3px;"><div style="height:4px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div></div>
+            </div>
+            <div style="flex-shrink:0;border:1px solid #eee;border-radius:5px;overflow:hidden;width:60px;opacity:.5;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">🧹</div>
+            </div>
+          </div>
+          <div style="margin-top:5px;font-size:8px;color:#aaa;text-align:center;">← 방문자별 개인화 · 스와이프 →</div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">Shopee Smart AI 개인화 자동 적용</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">3~9개 · 가로 스크롤 형태</div></div>
+        <div class="irow"><div class="ilbl">알고리즘</div><div class="ival">방문 이력·클릭·구매 데이터 기반 맞춤 노출</div></div>
+        <div class="tags"><span class="tag s">개인화</span><span class="tag s">재방문 유도</span><span class="tag s">업셀링</span></div>
+        <div class="tip"><strong>💡 팁</strong>스토어 하단 배치 권장. 구매 후 재방문 고객에게 관련 제품 자동 노출 → 교차 판매(Cross-sell) 효과.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head shopee" style="background:#c73a1e;">🟠 PROMOTION & ADVANCED <span class="sec-pill">7가지 모듈</span></div>
+
+  <!-- S15 Voucher -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S15</div>
+      <div class="mcard-title"><h3>Voucher</h3><p>바우처·쿠폰 자동 레이아웃 — 직접 이미지 불필요</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (레이아웃 자동 생성)</span><span class="blimit">최대 1개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#EE4D2D;margin-bottom:6px;">🎟 Vouchers</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;">
+            <div style="border:2px dashed #EE4D2D;border-radius:6px;padding:6px 10px;display:flex;flex-direction:column;gap:2px;min-width:80px;">
+              <div style="font-size:8px;font-weight:700;color:#EE4D2D;">₩5,000 OFF</div>
+              <div style="font-size:7px;color:#888;">₩50,000 이상 구매 시</div>
+              <div style="background:#EE4D2D;color:#fff;font-size:7px;padding:2px 5px;border-radius:3px;text-align:center;margin-top:2px;">Claim</div>
+            </div>
+            <div style="border:2px dashed #EE4D2D;border-radius:6px;padding:6px 10px;display:flex;flex-direction:column;gap:2px;min-width:80px;">
+              <div style="font-size:8px;font-weight:700;color:#EE4D2D;">10% OFF</div>
+              <div style="font-size:7px;color:#888;">최대 ₩20,000 할인</div>
+              <div style="background:#EE4D2D;color:#fff;font-size:7px;padding:2px 5px;border-radius:3px;text-align:center;margin-top:2px;">Claim</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">별도 이미지 불필요 — Shopee 자동 생성</div></div>
+        <div class="irow"><div class="ilbl">레이아웃</div><div class="ival">쿠폰 개수·할인율에 따라 자동 조정</div></div>
+        <div class="irow"><div class="ilbl">연동</div><div class="ival">Shopee 마케팅 > 바우처 설정과 자동 연동</div></div>
+        <div class="tags"><span class="tag s">쿠폰</span><span class="tag s">할인</span><span class="tag s">전환율</span></div>
+        <div class="tip"><strong>💡 팁</strong>스토어 커버 바로 아래 배치 시 즉각적인 Claim 유도. 바우처 금액/조건을 명확히 설정하면 구매 전환율 상승.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S16 Flash Deals -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S16</div>
+      <div class="mcard-title"><h3>Flash Deals</h3><p>시간 제한 특가 — Flash Deal 자동 연동</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (Flash Deal 연동)</span><span class="blimit">최대 1개</span><span class="butil util-l">Utility: LOW</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="background:linear-gradient(90deg,#EE4D2D,#FF7250);padding:6px 10px;border-radius:5px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between;">
+            <div style="font-size:9px;font-weight:700;color:#fff;">⚡ Flash Deals</div>
+            <div style="background:rgba(0,0,0,.25);border-radius:3px;padding:2px 6px;font-size:8px;color:#fff;font-family:monospace;">02:34:17</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:5px;">
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">📺</div>
+              <div style="padding:3px;"><div style="font-size:7px;color:#EE4D2D;font-weight:700;">-30%</div><div style="height:4px;background:#ddd;border-radius:2px;width:80%;margin-top:2px;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">❄️</div>
+              <div style="padding:3px;"><div style="font-size:7px;color:#EE4D2D;font-weight:700;">-25%</div><div style="height:4px;background:#ddd;border-radius:2px;width:80%;margin-top:2px;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:12px;">🔊</div>
+              <div style="padding:3px;"><div style="font-size:7px;color:#EE4D2D;font-weight:700;">-40%</div><div style="height:4px;background:#ddd;border-radius:2px;width:80%;margin-top:2px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">Flash Deal 등록 상품 이미지 자동 적용</div></div>
+        <div class="irow"><div class="ilbl">카운트다운</div><div class="ival">남은 시간 자동 표시</div></div>
+        <div class="irow"><div class="ilbl">조건</div><div class="ival">Shopee 마케팅 > Flash Deals 설정 필요</div></div>
+        <div class="tags"><span class="tag s">긴급성</span><span class="tag s">FOMO 마케팅</span></div>
+        <div class="warn"><strong>⚠️ 주의</strong>Flash Deal 없으면 모듈 표시 안 됨. 빈 영역 방지를 위해 항상 예비 프로모션 준비 권장.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S17 Hot / Bundle / Add-on Deals -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S17</div>
+      <div class="mcard-title"><h3>Hot / Bundle / Add-on Deals</h3><p>묶음·추가 구매 프로모션 자동 연동</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Auto (프로모션 연동)</span><span class="blimit">각 1~5개</span><span class="butil util-l">Utility: LOW</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (Bundle Deal 예시)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#EE4D2D;margin-bottom:6px;">🎁 Bundle Deals</div>
+          <div style="border:1px solid #EE4D2D;border-radius:6px;padding:8px;display:flex;gap:6px;align-items:center;">
+            <div style="width:40px;height:40px;background:#fce4dc;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">📺</div>
+            <div style="font-size:9px;color:#555;">+</div>
+            <div style="width:40px;height:40px;background:#fce4dc;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🔊</div>
+            <div style="flex:1;">
+              <div style="font-size:8px;font-weight:700;color:#EE4D2D;">Bundle: 10% 추가 할인</div>
+              <div style="font-size:7px;color:#888;margin-top:2px;">TV + 사운드바 세트 구매</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">종류</div><div class="ival">Hot Deals · Bundle Deals · Add-on Deals 3종</div></div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">프로모션 설정 상품 이미지 자동 적용</div></div>
+        <div class="irow"><div class="ilbl">조건</div><div class="ival">Shopee 마케팅 > 각 딜 유형별 사전 설정 필요</div></div>
+        <div class="tags"><span class="tag s">묶음 구매</span><span class="tag s">AOV 증가</span><span class="tag s">업셀링</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG TV + 사운드바, 냉장고 + 정수기 등 연관 제품 번들 구성 → 평균 주문가액(AOV) 증대 효과.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S18 Brand Membership -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S18</div>
+      <div class="mcard-title"><h3>Brand Membership</h3><p>유일하게 이미지 직접 제작 필요한 Promotion 모듈</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1053 × 480 px</span><span class="blimit">최대 1개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1053/480;flex-direction:column;gap:6px;position:relative;">
+            <div style="font-size:11px;color:#c9806e;font-weight:700;">Brand Membership Banner</div>
+            <div style="font-size:10px;color:#d09080;">1053 × 480 px</div>
+            <div style="background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.5);border-radius:12px;padding:4px 12px;font-size:9px;color:#fff;">👑 Join LG Members</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">1053 × 480 px</strong> 고정 (Promotion 모듈 중 유일)</div></div>
+        <div class="irow"><div class="ilbl">용도</div><div class="ival">멤버십 가입 유도 · 혜택 안내 배너</div></div>
+        <div class="irow"><div class="ilbl">연동</div><div class="ival">Shopee Brands Membership Program 설정 필요</div></div>
+        <div class="tags"><span class="tag s">멤버십</span><span class="tag s">로열티</span><span class="tag s">재구매</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG 브랜드 컬러(레드+블랙)로 제작. "LG Members 전용 추가 할인" 등 혜택을 명확하게 배너에 표기.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S19 Interactive Tabs -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S19</div>
+      <div class="mcard-title"><h3>Interactive Tabs</h3><p>탭별 배너 이미지 + 제품 리스트 조합</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">Title Image: 1200 × 100~2200 px</span><span class="blimit">최대 3개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Tabs -->
+          <div style="display:flex;gap:0;margin-bottom:6px;border-bottom:2px solid #EE4D2D;">
+            <div style="background:#EE4D2D;color:#fff;padding:5px 12px;font-size:9px;font-weight:700;border-radius:4px 4px 0 0;">TV</div>
+            <div style="background:#f5f5f5;color:#888;padding:5px 12px;font-size:9px;border-radius:4px 4px 0 0;border:1px solid #eee;border-bottom:none;">냉장고</div>
+            <div style="background:#f5f5f5;color:#888;padding:5px 12px;font-size:9px;border-radius:4px 4px 0 0;border:1px solid #eee;border-bottom:none;">세탁기</div>
+          </div>
+          <!-- Title image banner -->
+          <div class="mock-grad-red" style="width:100%;height:32px;border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:6px;">
+            <div style="font-size:8px;color:#c9806e;">탭 Title 이미지 · 1200 × 100~2200 px</div>
+          </div>
+          <!-- Products under tab -->
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">Title 이미지</div><div class="ival">탭당 <strong class="s">1200 × 100~2200 px</strong> 배너 1장</div></div>
+        <div class="irow"><div class="ilbl">제품 이미지</div><div class="ival">탭별 상품 자동 또는 Manual 설정</div></div>
+        <div class="irow"><div class="ilbl">탭 수</div><div class="ival">모듈당 최대 3개 탭 설정 가능</div></div>
+        <div class="tags"><span class="tag s">카테고리 분류</span><span class="tag s">라인업 전시</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG TV / 냉장고 / 세탁기를 탭으로 나눠 한 모듈에서 전체 라인업 노출 최적. 각 탭 Title 이미지는 해당 카테고리 KV로 제작.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S20 Carousel and Category -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S20</div>
+      <div class="mcard-title"><h3>Carousel and Category</h3><p>슬라이드 배너 + 이미지당 최대 4개 제품 연결</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1200 × 100~2200 px · 2~4장</span><span class="blimit">최대 1개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Carousel banner -->
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1200/450;position:relative;border-radius:5px;margin-bottom:6px;">
+            <div style="font-size:10px;color:#c9806e;">슬라이드 배너 1/3 · 1200 × 100~2200px</div>
+            <div style="position:absolute;left:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.6);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;">‹</div>
+            <div style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.6);border-radius:50%;width:18px;height:18px;display:flex;align-items:center;justify-content:center;font-size:10px;">›</div>
+          </div>
+          <!-- Products linked to current slide -->
+          <div style="font-size:8px;color:#888;margin-bottom:4px;">▼ 현재 슬라이드 연결 제품 (최대 4개)</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:10px;">📺</div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:10px;">📺</div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:10px;">📺</div></div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;"><div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:10px;">📺</div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">너비 <strong class="s">1200 px</strong> · 높이 100~2200 px · 2~4장</div></div>
+        <div class="irow"><div class="ilbl">연결 제품</div><div class="ival">슬라이드당 최대 4개 제품 직접 연결</div></div>
+        <div class="irow"><div class="ilbl">슬라이드 수</div><div class="ival">2~4장 · 자동 슬라이드</div></div>
+        <div class="tags"><span class="tag s">캠페인 배너</span><span class="tag s">CTA 연결</span><span class="tag s">고전환</span></div>
+        <div class="tip"><strong>💡 팁</strong>TV 캠페인 배너 슬라이드에 해당 TV 모델 4종 직접 연결 → 배너 클릭 없이 바로 PDP 이동 가능. CTA 효율 극대화.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S21 Banner and Category -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum shopee">S21</div>
+      <div class="mcard-title"><h3>Banner and Category</h3><p>배너 이미지 아래 제품 그리드 즉시 노출</p></div>
+      <div class="mcard-badges"><span class="bsize shopee">1200 × 100~900 px · 2~6개</span><span class="blimit">최대 1개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Banner -->
+          <div class="mock-grad-red mock-ratio" style="aspect-ratio:1200/400;border-radius:5px;margin-bottom:6px;flex-direction:column;gap:4px;">
+            <div style="font-size:10px;color:#c9806e;font-weight:700;">배너 이미지 1200 × 100~900 px</div>
+            <div style="font-size:9px;color:#d09080;">배너당 2~4개 제품 연결</div>
+          </div>
+          <!-- Product grid below banner -->
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;">
+            <div style="border:1px solid #EE4D2D;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div>
+              <div style="padding:3px;"><div style="height:4px;background:#EE4D2D;border-radius:2px;width:80%;opacity:.4;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div>
+              <div style="padding:3px;"><div style="height:4px;background:#ddd;border-radius:2px;width:80%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div>
+              <div style="padding:3px;"><div style="height:4px;background:#ddd;border-radius:2px;width:80%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:4px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fce4dc;display:flex;align-items:center;justify-content:center;font-size:11px;">📺</div>
+              <div style="padding:3px;"><div style="height:4px;background:#ddd;border-radius:2px;width:80%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">너비 <strong class="s">1200 px</strong> · 높이 100~900 px · 2~6개 배너</div></div>
+        <div class="irow"><div class="ilbl">연결 제품</div><div class="ival">배너당 2~4개 제품 직접 연결 · 배너 아래 즉시 노출</div></div>
+        <div class="irow"><div class="ilbl">활용</div><div class="ival">카테고리 배너 + 해당 제품 바로 노출 구조</div></div>
+        <div class="tags"><span class="tag s">직접 연결</span><span class="tag s">고전환</span><span class="tag s">카탈로그</span></div>
+        <div class="tip"><strong>💡 팁</strong>배너 이미지 아래 제품 바로 노출 → 별도 탐색 없이 즉시 구매 가능. CTA 효율 극대화. LG 계절 캠페인(에어컨·히터 시즌)에 최적.</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /shopee page -->
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- ③ LAZADA PAGE -->
+<!-- ════════════════════════════════════════════════ -->
+<div id="page-lazada" class="platform-page">
+
+  <div class="cover-strip lazada">
+    <div class="cover-main">
+      <div class="cover-badge">🛍️ Lazada.com</div>
+      <h1>Lazada 모듈<br>이미지 가이드</h1>
+      <p>Store Profile · Header · Banner · Category · Advanced<br>MO/PC 분리 업로드 구조 완전 정리</p>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="num">4</div><div class="lbl">Profile/Header</div></div>
+      <div class="cover-stat"><div class="num">7</div><div class="lbl">Banner</div></div>
+      <div class="cover-stat"><div class="num">9</div><div class="lbl">Category/Advanced</div></div>
+    </div>
+  </div>
+
+  <div class="spec-bar lazada">
+    <div class="spec-chip"><div class="lbl">최대 용량</div><div class="val">1 MB</div><div class="sub">대부분 모듈</div></div>
+    <div class="spec-chip"><div class="lbl">로고 용량</div><div class="val">75 KB</div><div class="sub">스토어 커버 계열</div></div>
+    <div class="spec-chip"><div class="lbl">파일 형식</div><div class="val">JPG / PNG</div><div class="sub">GIF 미지원</div></div>
+    <div class="spec-chip"><div class="lbl">MO 기준 너비</div><div class="val">750 px</div><div class="sub">배너 계열</div></div>
+    <div class="spec-chip"><div class="lbl">PC 기준 너비</div><div class="val">1200 px</div><div class="sub">PC 전용 모듈</div></div>
+    <div class="spec-chip"><div class="lbl">MO/PC</div><div class="val">별도 업로드</div><div class="sub">사이즈 상이</div></div>
+  </div>
+
+  <div class="sec-head lazada">🔵 STORE PROFILE & HEADER <span class="sec-pill">필수 설정 4가지 — Mandatory</span></div>
+
+  <!-- L01~L04 Profile/Header (compact table) -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum lazada">L1</div>
+      <div class="mcard-title"><h3>Store Logo · Homepage Widget · Search Result Widget · Store Header Image</h3><p>스토어 진입 전/후 첫인상 — 모두 Mandatory</p></div>
+      <div class="mcard-badges"><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body full">
+      <table class="dtable">
+        <tr><th>모듈명</th><th>MO 사이즈</th><th>PC 사이즈</th><th>용량 제한</th><th>비고</th></tr>
+        <tr><td><strong>Store Logo</strong></td><td><strong>600 × 600 px</strong></td><td>동일</td><td>-</td><td>투명 배경 PNG 권장 · 원형 크롭 표시</td></tr>
+        <tr><td><strong>Homepage Official Store Widget</strong><br><small>Brand KV / Brand Image / Logo</small></td><td>Brand KV: <strong>600×600</strong><br>Brand Image: <strong>120×120</strong></td><td>Logo: <strong>700×350</strong></td><td><strong>75 KB</strong></td><td>용량 제한 매우 엄격 · JPG 압축 권장</td></tr>
+        <tr><td><strong>Search Result Store Recommend</strong></td><td>배너: <strong>750×490</strong><br>브랜드이미지: <strong>120×120</strong></td><td>-</td><td>배너 1MB / 이미지 75KB</td><td>검색 유입 고객 첫인상</td></tr>
+        <tr><td><strong>Store Header Image</strong></td><td><strong>750 × 478 px</strong></td><td><strong>1200 × 128 px</strong></td><td>-</td><td>MO/PC 비율 완전 상이 — 반드시 각각 제작</td></tr>
+      </table>
+      <div class="warn" style="margin-top:10px;"><strong>⚠️ Store Header 주의</strong>PC 헤더는 1200×128 (약 9.4:1 극도로 납작). MO(750×478, 약 16:10)와 완전히 다른 레이아웃 필요. 로고·슬로건만 넣는 심플 디자인이 PC에 적합.</div>
+    </div>
+  </div>
+
+  <div class="sec-head lazada" style="background:#0a0f52;">🔵 BANNER 모듈 <span class="sec-pill">7가지</span></div>
+
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum lazada">L5</div>
+      <div class="mcard-title"><h3>Single · Smart · Carousel · Three · Multiple · Four Banners A · 4 Images B</h3><p>Lazada 배너 모듈 7종 종합</p></div>
+    </div>
+    <div class="mcard-body full">
+      <table class="dtable">
+        <tr><th>모듈명</th><th>MO 사이즈</th><th>PC 사이즈</th><th>모듈 한도</th><th>Utility</th><th>특이사항</th></tr>
+        <tr><td><strong>Single Banner</strong></td><td>1200 × 50~2500 px</td><td>동일</td><td>32개</td><td><span class="butil util-h" style="padding:2px 7px;font-size:10px;">HIGH</span></td><td>가장 범용 · 높이 자유</td></tr>
+        <tr><td><strong>Smart Banner</strong></td><td>1200 × 50~2500 px</td><td>동일</td><td>2개</td><td><span class="butil util-h" style="padding:2px 7px;font-size:10px;">HIGH</span></td><td>세그먼트별 다른 배너 자동 노출</td></tr>
+        <tr><td><strong>Banner Carousel</strong></td><td>1200 × ? (50~2500 추정)</td><td>1920 × ?</td><td>3개</td><td><span class="butil util-h" style="padding:2px 7px;font-size:10px;">HIGH</span></td><td>자동 슬라이드 · 모듈당 최대 6장</td></tr>
+        <tr><td><strong>Three Banners</strong></td><td>600 × 300 px × 3장</td><td>동일</td><td>32개</td><td><span class="butil util-m" style="padding:2px 7px;font-size:10px;">MED</span></td><td>레이아웃 고정</td></tr>
+        <tr><td><strong>Multiple Banners</strong></td><td>600 × 300 px × 4장</td><td>동일</td><td>4개</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>스크롤 없이 4개 노출</td></tr>
+        <tr><td><strong>Four Banners A</strong></td><td>597×597 / 592×296 / 291×291</td><td>MO only</td><td>2개</td><td><span class="butil util-m" style="padding:2px 7px;font-size:10px;">MED</span></td><td>비율 다른 4개 조합</td></tr>
+        <tr><td><strong>4 Images Banner B</strong></td><td>PC only</td><td>600×300 / 291×291 / 597×597</td><td>2개</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>PC 전용 · 레이아웃 고정</td></tr>
+      </table>
+      <div class="note" style="margin-top:10px;"><strong>📌 Banner Carousel 높이 주의</strong>공식 높이 범위 명시 없음 (50~2500 추정). Lazada Seller Center에서 실제 허용 범위 확인 필요.</div>
+    </div>
+  </div>
+
+  <div class="sec-head lazada" style="background:#0a0f52;">🔵 CATEGORY & ADVANCED <span class="sec-pill">9가지 모듈</span></div>
+
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum lazada">L6</div>
+      <div class="mcard-title"><h3>Category 6종 · Advanced 8종 종합</h3></div>
+    </div>
+    <div class="mcard-body full">
+      <table class="dtable">
+        <tr><th>모듈명</th><th>이미지 사이즈</th><th>MO/PC</th><th>Utility</th><th>특이사항</th></tr>
+        <tr><td colspan="5" style="background:#eeeffe;font-weight:700;color:#0F146B;">Category 모듈</td></tr>
+        <tr><td><strong>Category List</strong></td><td><strong>202 × 202 px</strong></td><td>MO:2 / PC:1</td><td><span class="butil util-h" style="padding:2px 7px;font-size:10px;">HIGH</span></td><td>원형/정사각형 선택 · 최대 25개</td></tr>
+        <tr><td><strong>New Category Styles</strong></td><td><strong>318 × 318 px</strong></td><td>MO</td><td><span class="butil util-m" style="padding:2px 7px;font-size:10px;">MED</span></td><td>2~6개 카테고리 선택</td></tr>
+        <tr><td><strong>Image with Logo</strong></td><td>230 × 115 px</td><td>PC only</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>최대 4개</td></tr>
+        <tr><td><strong>Multiple Images</strong></td><td>600 × 300 px</td><td>PC only</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>최대 6개</td></tr>
+        <tr><td><strong>Category Tree</strong></td><td>600 × 300 px</td><td>PC only</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>좌측 텍스트 + 우측 이미지</td></tr>
+        <tr><td><strong>Smart Category Navigation</strong></td><td>Auto</td><td>MO</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>카테고리+썸네일 자동 생성</td></tr>
+        <tr><td colspan="5" style="background:#eeeffe;font-weight:700;color:#0F146B;">Advanced 모듈</td></tr>
+        <tr><td><strong>Banner with Product Label</strong></td><td><strong>750 × 500 px</strong></td><td>MO only</td><td><span class="butil util-m" style="padding:2px 7px;font-size:10px;">MED</span></td><td>제품 라벨 태그 → PDP 이동</td></tr>
+        <tr><td><strong>Product Collocation</strong></td><td><strong>654 × 690 px</strong></td><td>MO only</td><td><span class="butil util-m" style="padding:2px 7px;font-size:10px;">MED</span></td><td>탭별 배너+제품 3개 · 탭 3개</td></tr>
+        <tr><td><strong>Collapsible Panel</strong></td><td><strong>702 × 148 px</strong></td><td>MO only</td><td><span class="butil util-m" style="padding:2px 7px;font-size:10px;">MED</span></td><td>상단 배너+하단 제품 · 탭 6개</td></tr>
+        <tr><td><strong>Countdown / Voucher / Check-In / Promo Reminder</strong></td><td>Auto (이미지 없음)</td><td>양쪽</td><td><span class="butil util-l" style="padding:2px 7px;font-size:10px;">LOW</span></td><td>프로모션 자동 연동</td></tr>
+      </table>
+    </div>
+  </div>
+
+</div><!-- /lazada page -->
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- ④ INSTAGRAM PAGE -->
+<!-- ════════════════════════════════════════════════ -->
+<div id="page-ig" class="platform-page">
+
+  <div class="cover-strip ig">
+    <div class="cover-main">
+      <div class="cover-badge">📸 Instagram / Social</div>
+      <h1>Instagram 콘텐츠<br>이미지 가이드</h1>
+      <p>피드 · 스토리 · 릴스 · 프로필<br>비율별 권장 해상도 및 안전 영역 가이드</p>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="num">4</div><div class="lbl">피드 비율</div></div>
+      <div class="cover-stat"><div class="num">2</div><div class="lbl">스토리/릴스</div></div>
+      <div class="cover-stat"><div class="num">1</div><div class="lbl">프로필</div></div>
+    </div>
+  </div>
+
+  <div class="spec-bar ig">
+    <div class="spec-chip"><div class="lbl">파일 형식</div><div class="val">JPG · PNG</div><div class="sub">영상: MP4/MOV</div></div>
+    <div class="spec-chip"><div class="lbl">이미지 최대</div><div class="val">8 MB</div><div class="sub">JPG 기준</div></div>
+    <div class="spec-chip"><div class="lbl">영상 최대</div><div class="val">4 GB</div><div class="sub">릴스 기준</div></div>
+    <div class="spec-chip"><div class="lbl">기준 너비</div><div class="val">1080 px</div><div class="sub">모든 콘텐츠 공통</div></div>
+    <div class="spec-chip"><div class="lbl">색상 모드</div><div class="val">RGB / sRGB</div><div class="sub">웹 표준</div></div>
+    <div class="spec-chip"><div class="lbl">권장 DPI</div><div class="val">72 DPI</div><div class="sub">화면 최적화</div></div>
+  </div>
+
+  <div class="sec-head ig">📸 FEED 포스팅 <span class="sec-pill">4가지 비율 — 콘텐츠 유형별 선택</span></div>
+
+  <!-- Feed ratio grid -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ig">F1</div>
+      <div class="mcard-title"><h3>피드 (게시물) — 4가지 비율 비교</h3><p>Feed 게시물에 사용 가능한 모든 비율</p></div>
+    </div>
+    <div class="mcard-body full">
+      <div class="ig-ratio-grid">
+        <!-- 4:5 -->
+        <div class="ig-ratio-card">
+          <div class="ig-ratio-preview" style="aspect-ratio:4/5;">
+            <span>4:5<br>세로형</span>
+          </div>
+          <div class="ig-ratio-info">
+            <div class="type">피드 (게시물)</div>
+            <div class="ratio">4 : 5</div>
+            <div class="res">1080 × 1350 px</div>
+            <div class="note" style="color:#a0235e;font-weight:700;margin-top:4px;">★ 가장 추천 — 피드에서 가장 넓게 차지</div>
+          </div>
+        </div>
+        <!-- 3:4 -->
+        <div class="ig-ratio-card">
+          <div class="ig-ratio-preview" style="aspect-ratio:3/4;">
+            <span>3:4<br>Tall</span>
+          </div>
+          <div class="ig-ratio-info">
+            <div class="type">피드 (게시물)</div>
+            <div class="ratio">3 : 4</div>
+            <div class="res">1080 × 1440 px</div>
+            <div class="note" style="color:#666;margin-top:4px;">새로 추가된 Tall 포맷. 그리드 미리보기와 딱 맞음</div>
+          </div>
+        </div>
+        <!-- 1:1 -->
+        <div class="ig-ratio-card">
+          <div class="ig-ratio-preview" style="aspect-ratio:1/1;">
+            <span>1:1<br>정사각형</span>
+          </div>
+          <div class="ig-ratio-info">
+            <div class="type">피드 (게시물)</div>
+            <div class="ratio">1 : 1</div>
+            <div class="res">1080 × 1080 px</div>
+            <div class="note" style="color:#666;margin-top:4px;">정사각형. 피드 미리보기 시 일부 잘리는 현상 있음</div>
+          </div>
+        </div>
+        <!-- 16:9 -->
+        <div class="ig-ratio-card">
+          <div class="ig-ratio-preview" style="aspect-ratio:16/9;">
+            <span>16:9<br>가로형</span>
+          </div>
+          <div class="ig-ratio-info">
+            <div class="type">피드 (게시물)</div>
+            <div class="ratio">16:9 / 1.91:1</div>
+            <div class="res">1080×566 / 1080×608 px</div>
+            <div class="note" style="color:#666;margin-top:4px;">가로형. 피드 격자에서 가장 작게 보임</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="tip"><strong>💡 피드 비율 선택 기준</strong><strong>4:5(1080×1350)</strong>가 화면 점유율 최대 → 스크롤 중 가장 눈에 띔. 브랜드 캠페인·제품 소개에 1순위 권장. <strong>3:4</strong>는 그리드 레이아웃 미리보기가 완벽하게 맞아 스토어 피드 디자인에 적합.</div>
+        <div class="warn"><strong>⚠️ 1:1 비율 주의</strong>1:1(정사각형)은 지원되지만 피드 미리보기(그리드)에서 상하가 잘리는 현상 발생. 제품 전체가 보여야 하는 경우 4:5 권장.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head ig" style="background:#833ab4;">📸 STORY & REELS <span class="sec-pill">전체 화면 세로형</span></div>
+
+  <!-- Story/Reels -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ig">S1</div>
+      <div class="mcard-title"><h3>스토리 / 릴스 — 9:16 전체 화면 세로형</h3><p>가장 몰입감 높은 포맷 · 화면 전체를 덮음</p></div>
+      <div class="mcard-badges"><span class="bsize ig">1080 × 1920 px</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">안전 영역 (Safe Zone) 가이드</div>
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <div class="safe-zone-demo" style="width:100px;flex-shrink:0;">
+            <div class="safe-zone-top"><div class="safe-zone-label">UI 영역<br>(14%)</div></div>
+            <div class="safe-zone-mid">✅ 핵심 콘텐츠<br>안전 영역</div>
+            <div class="safe-zone-bottom"><div class="safe-zone-label">댓글창 UI<br>(20%)</div></div>
+          </div>
+          <div style="flex:1;">
+            <div class="irow"><div class="ilbl">전체 사이즈</div><div class="ival"><strong class="i">1080 × 1920 px</strong> (9:16)</div></div>
+            <div class="irow"><div class="ilbl">안전 영역</div><div class="ival">상단 14% · 하단 20% 제외<br>→ 실제 콘텐츠: 약 <strong class="i">1080 × 1267 px</strong></div></div>
+            <div class="irow"><div class="ilbl">적용 플랫폼</div><div class="ival">Instagram Stories · Reels · 릴스 썸네일(피드 미리보기)</div></div>
+            <div class="tip"><strong>💡 팁</strong>브랜드 로고·CTA 텍스트는 반드시 안전 영역 내 배치. 상단에 계정명/시간, 하단에 답글창 UI가 자동 삽입.</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">비율</div><div class="ival"><strong class="i">9 : 16</strong> (공식 권장 비율)</div></div>
+        <div class="irow"><div class="ilbl">릴스 썸네일</div><div class="ival">피드 미리보기 영역: <strong class="i">1080 × 1350 px (4:5)</strong></div></div>
+        <div class="irow"><div class="ilbl">영상 사양</div><div class="ival">MP4/MOV · H.264 · 최대 4GB · 30fps 권장</div></div>
+        <div class="tags"><span class="tag i">제품 시연 영상</span><span class="tag i">캠페인 스토리</span><span class="tag i">릴스 콘텐츠</span><span class="tag i">Behind the Scenes</span></div>
+        <div class="note"><strong>📌 릴스 썸네일</strong>릴스 영상은 9:16(1080×1920)으로 제작하지만, 피드 그리드에서 보이는 썸네일 영역은 4:5(1080×1350)로 크롭됨. 중앙 핵심 영역이 썸네일로 보이도록 설계 필요.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head ig" style="background:#833ab4;">📸 PROFILE & 기타</div>
+
+  <!-- Profile + Summary -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ig">P1</div>
+      <div class="mcard-title"><h3>프로필 사진 · 포스팅 권장 비율 총 정리</h3></div>
+    </div>
+    <div class="mcard-body full">
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:20px;align-items:start;">
+        <!-- Profile -->
+        <div>
+          <div style="text-align:center;margin-bottom:12px;">
+            <div style="width:80px;height:80px;border-radius:50%;background:var(--ig-grad);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:11px;color:white;font-weight:700;border:3px solid white;box-shadow:0 0 0 2px var(--ig);">프로필<br>사진</div>
+            <div style="font-size:11px;color:#333;margin-top:8px;font-weight:700;">프로필 사진</div>
+            <div style="font-size:11px;color:var(--ig);font-weight:900;">1 : 1</div>
+            <div style="font-size:10px;color:var(--muted);">320 × 320 px</div>
+            <div style="font-size:10px;color:#555;margin-top:4px;">원형으로 표시 · 중앙 배치 권장</div>
+          </div>
+          <div class="tip"><strong>💡 팁</strong>로고 주변 여백 충분히 확보. 원형 크롭을 고려해 정사각형 원본 제작.</div>
+        </div>
+        <!-- Summary table -->
+        <div>
+          <table class="dtable">
+            <tr><th>콘텐츠 유형</th><th>권장 비율</th><th>권장 해상도</th><th>비고</th></tr>
+            <tr><td>피드 (게시물)</td><td style="color:var(--ig);font-weight:700;">4:5 ★</td><td>1080 × 1350 px</td><td>세로형 · 가장 추천</td></tr>
+            <tr><td>피드 (게시물)</td><td>3:4</td><td>1080 × 1440 px</td><td>Tall 포맷 · 그리드 최적</td></tr>
+            <tr><td>피드 (게시물)</td><td>1:1</td><td>1080 × 1080 px</td><td>정사각형 · 피드 미리보기 잘림</td></tr>
+            <tr><td>피드 (게시물)</td><td>16:9 / 1.91:1</td><td>1080×566 / 1080×608</td><td>가로형</td></tr>
+            <tr><td>스토리 / 릴스</td><td style="color:var(--ig);font-weight:700;">9:16 ★</td><td>1080 × 1920 px</td><td>전체 화면 세로형</td></tr>
+            <tr><td>릴스 썸네일</td><td>4:5</td><td>1080 × 1350 px</td><td>피드 미리보기 영역</td></tr>
+            <tr><td>프로필 사진</td><td>1:1</td><td>320 × 320 px</td><td>원형 표시 · 중앙 배치 권장</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IG Image AI Training Guide -->
+  <div class="sec-head ig" style="background:#bc1888;">🤖 AI 이미지 생성 가이드 <span class="sec-pill">이미지 생성 모델 학습 및 프롬프트 참고용</span></div>
+
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ig">AI</div>
+      <div class="mcard-title"><h3>플랫폼별 이미지 생성 시 공통 적용 스펙 요약</h3><p>이미지 생성 모델 학습 및 자동화 파이프라인 참고용</p></div>
+    </div>
+    <div class="mcard-body full">
+      <table class="dtable">
+        <tr><th>플랫폼</th><th>콘텐츠 유형</th><th>생성 목표 해상도</th><th>종횡비</th><th>색상 모드</th><th>최대 용량</th></tr>
+        <tr><td rowspan="4"><strong>Amazon</strong></td><td>Basic Listing 메인 이미지</td><td>2000 × 2000 px</td><td>1:1</td><td>RGB</td><td>10 MB</td></tr>
+        <tr><td>A+ Image Header with Text</td><td>1940 × 1200 px (2× 소스)</td><td>970:600 (1.62:1)</td><td>RGB</td><td>2 MB</td></tr>
+        <tr><td>A+ Text Overlay / Header Banner</td><td>1940 × 600 px (2× 소스)</td><td>970:300 (3.23:1)</td><td>RGB</td><td>2 MB</td></tr>
+        <tr><td>A+ Premium Full Video 썸네일</td><td>1920 × 1080 px</td><td>16:9</td><td>RGB</td><td>2 MB</td></tr>
+        <tr><td rowspan="3"><strong>Shopee</strong></td><td>Shop Cover</td><td>1200 × 518 px</td><td>1200:518 (2.32:1)</td><td>RGB</td><td>2 MB</td></tr>
+        <tr><td>Single Image / Banner</td><td>1200 × 600~900 px</td><td>가변</td><td>RGB</td><td>2 MB</td></tr>
+        <tr><td>Carousel / Multiple Images</td><td>2000 × 2000 px</td><td>1:1</td><td>RGB</td><td>2 MB</td></tr>
+        <tr><td rowspan="3"><strong>Lazada</strong></td><td>Store Header MO</td><td>750 × 478 px</td><td>750:478 (1.57:1)</td><td>RGB</td><td>1 MB</td></tr>
+        <tr><td>Single / Smart Banner</td><td>1200 × 600~800 px</td><td>가변</td><td>RGB</td><td>1 MB</td></tr>
+        <tr><td>Homepage Widget (Brand KV)</td><td>600 × 600 px</td><td>1:1</td><td>RGB</td><td>75 KB</td></tr>
+        <tr><td rowspan="3"><strong>Instagram</strong></td><td>피드 (권장)</td><td>1080 × 1350 px</td><td>4:5</td><td>sRGB</td><td>8 MB</td></tr>
+        <tr><td>스토리 / 릴스</td><td>1080 × 1920 px</td><td>9:16</td><td>sRGB</td><td>8 MB</td></tr>
+        <tr><td>프로필 사진</td><td>320 × 320 px</td><td>1:1</td><td>sRGB</td><td>8 MB</td></tr>
+      </table>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+        <div class="tip"><strong>💡 이미지 생성 모델 학습 시 핵심 원칙</strong>① 플랫폼별 종횡비를 학습 데이터 레이블로 사용<br>② Amazon은 흰 배경(RGB 255,255,255) 필수<br>③ 텍스트 오버레이는 이미지에 굽지 않고 별도 레이어 처리<br>④ 모바일 표시 기준 최소 30pt 이상 텍스트 크기</div>
+        <div class="note"><strong>📌 자동화 파이프라인 적용 시 주의</strong>① Amazon A+ 이미지는 2× 소스로 생성 후 다운사이징<br>② Lazada는 MO/PC 별도 생성 필수<br>③ Instagram 릴스는 9:16 생성 + 4:5 썸네일 크롭 병행<br>④ 색상 모드: Amazon/Shopee/Lazada = RGB, Instagram = sRGB</div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /ig page -->
+
+
+<!-- ════════════════════════════════════════════════ -->
+<!-- ⑤ EBAY PAGE -->
+<!-- ════════════════════════════════════════════════ -->
+<div id="page-ebay" class="platform-page">
+
+  <div class="cover-strip ebay">
+    <div class="cover-main">
+      <div class="cover-badge">🛒 eBay.com</div>
+      <h1>eBay 스토어<br>이미지 가이드</h1>
+      <p>Store Setup · Listing Images · Promotions · Ads<br>모듈별 이미지 사이즈 및 제작 가이드</p>
+    </div>
+    <div class="cover-stats">
+      <div class="cover-stat"><div class="num">3</div><div class="lbl">Store Setup</div></div>
+      <div class="cover-stat"><div class="num">4</div><div class="lbl">Listing Images</div></div>
+      <div class="cover-stat"><div class="num">4</div><div class="lbl">Promotion/Ads</div></div>
+    </div>
+  </div>
+
+  <div class="spec-bar" style="background:#1a3ab8;">
+    <div class="spec-chip"><div class="lbl">최대 용량</div><div class="val">12 MB</div><div class="sub">이미지 per 파일</div></div>
+    <div class="spec-chip"><div class="lbl">권장 사이즈</div><div class="val">1600 px</div><div class="sub">메인 이미지 최적</div></div>
+    <div class="spec-chip"><div class="lbl">최소 사이즈</div><div class="val">500 px</div><div class="sub">단변 기준</div></div>
+    <div class="spec-chip"><div class="lbl">최대 해상도</div><div class="val">9000 px</div><div class="sub">단변 최대</div></div>
+    <div class="spec-chip"><div class="lbl">파일 형식</div><div class="val">JPG/PNG/GIF/WEBP</div><div class="sub">정적/동적</div></div>
+    <div class="spec-chip"><div class="lbl">색상 모드</div><div class="val">sRGB</div><div class="sub">웹 표준</div></div>
+  </div>
+
+  <div class="sec-head ebay">🔵 STORE SETUP <span class="sec-pill">스토어 기본 비주얼 3가지</span></div>
+
+  <!-- E1 Store Banner -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E1</div>
+      <div class="mcard-title"><h3>Store Banner (Header Image)</h3><p>스토어 최상단 대표 배너 — 브랜드 첫인상</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">1200 × 270 px</span><span class="blimit">1개</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <!-- Store banner -->
+          <div style="background:linear-gradient(135deg,#3665F3,#1a3ab8);aspect-ratio:1200/270;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5px;">
+            <div style="font-size:11px;color:rgba(255,255,255,.7);font-weight:700;">Store Banner · 1200 × 270 px</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.5);">MO: 1200 × 270 / PC: 1200 × 270</div>
+          </div>
+          <!-- Store nav bar below banner -->
+          <div style="padding:6px 12px;display:flex;align-items:center;gap:10px;border-bottom:1px solid #eee;background:#f8f9ff;">
+            <div style="width:28px;height:28px;background:#3665F3;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#fff;font-weight:700;flex-shrink:0;">LG</div>
+            <div><div style="height:6px;background:#333;border-radius:3px;width:70px;margin-bottom:2px;"></div><div style="height:5px;background:#aaa;border-radius:3px;width:45px;"></div></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">1200 × 270 px</strong> (MO/PC 동일)</div></div>
+        <div class="irow"><div class="ilbl">파일 형식</div><div class="ival">JPG / PNG · 최대 2MB</div></div>
+        <div class="irow"><div class="ilbl">표시 위치</div><div class="ival">스토어 홈 최상단 · 전체 너비 풀 배너</div></div>
+        <div class="tags"><span class="tag s">브랜드 KV</span><span class="tag s">시즌 캠페인</span><span class="tag s">LG 레드/화이트</span></div>
+        <div class="tip"><strong>💡 팁</strong>eBay 스토어 Banner는 세 가지 크기(Small/Medium/Large) 선택 가능. Large(1200×270px) 권장. 캠페인 기간마다 교체해 방문자 재방문 유도.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E2 Store Logo -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E2</div>
+      <div class="mcard-title"><h3>Store Logo</h3><p>스토어 프로필 아이콘 — 브랜드 식별자</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">300 × 300 px</span><span class="blimit">1개</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:16px;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+            <!-- Logo mockup -->
+            <div style="width:80px;height:80px;background:linear-gradient(135deg,#3665F3,#1a3ab8);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#fff;box-shadow:0 3px 12px rgba(54,101,243,.3);">LG</div>
+            <div style="font-size:9px;color:#888;text-align:center;">300 × 300 px<br>정사각형 · JPG/PNG</div>
+            <div style="font-size:8px;color:#aaa;">(스토어명·피드백·평가 옆에 표시)</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival"><strong class="s">300 × 300 px</strong> 정사각형</div></div>
+        <div class="irow"><div class="ilbl">파일 형식</div><div class="ival">JPG / PNG · 최대 2MB</div></div>
+        <div class="irow"><div class="ilbl">표시 위치</div><div class="ival">스토어 배너 옆 · 검색 결과 · 피드백 페이지</div></div>
+        <div class="tags"><span class="tag s">브랜드 로고</span><span class="tag s">신뢰도</span></div>
+        <div class="tip"><strong>💡 팁</strong>LG 공식 로고를 흰색 또는 투명 배경으로 제작. 원형으로 크롭되어 표시되므로 모서리 여백 최소 10% 확보.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E3 Store Category Banner -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E3</div>
+      <div class="mcard-title"><h3>Category Banner</h3><p>스토어 카테고리별 진입 배너</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">1200 × 300 px</span><span class="blimit">카테고리당 1개</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:8px;">
+          <!-- Category tabs -->
+          <div style="display:flex;gap:4px;margin-bottom:6px;padding:0 2px;">
+            <div style="background:#3665F3;color:#fff;padding:4px 10px;border-radius:3px;font-size:8px;font-weight:700;">TV</div>
+            <div style="background:#f0f0f0;color:#888;padding:4px 10px;border-radius:3px;font-size:8px;">냉장고</div>
+            <div style="background:#f0f0f0;color:#888;padding:4px 10px;border-radius:3px;font-size:8px;">세탁기</div>
+          </div>
+          <!-- Category banner -->
+          <div style="background:linear-gradient(90deg,#3665F3,#86B817);aspect-ratio:1200/300;border-radius:4px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;">
+            <div style="font-size:10px;color:rgba(255,255,255,.8);font-weight:700;">TV Category Banner · 1200 × 300 px</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지 사이즈</div><div class="ival">너비 <strong class="s">1200 px</strong> · 높이 300 px (권장)</div></div>
+        <div class="irow"><div class="ilbl">용도</div><div class="ival">카테고리 페이지 최상단 — 해당 카테고리 KV</div></div>
+        <div class="irow"><div class="ilbl">파일 형식</div><div class="ival">JPG / PNG · 최대 2MB</div></div>
+        <div class="tags"><span class="tag s">카테고리 KV</span><span class="tag s">라인업 소개</span></div>
+        <div class="tip"><strong>💡 팁</strong>TV / 냉장고 / 세탁기 각 카테고리마다 전용 배너 제작. 카테고리 대표 제품을 이미지 오른쪽에 배치하고 왼쪽은 카피로 구성.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head ebay" style="background:#1a3ab8;">🔵 LISTING IMAGES <span class="sec-pill">제품 상세 이미지 4가지</span></div>
+
+  <!-- E4 Main Image (Hero) -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E4</div>
+      <div class="mcard-title"><h3>Main Image (Hero Shot)</h3><p>검색·카트·구매 페이지 대표 이미지 — 흰 배경 필수</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">권장 1600 × 1600 px · 최소 500 px</span><span class="blimit">1개</span><span class="butil util-req">Mandatory</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div style="aspect-ratio:1/1;background:#fff;border:1px solid #f0f0f0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;position:relative;margin:10px;border-radius:4px;">
+            <div style="font-size:32px;">📺</div>
+            <div style="font-size:9px;color:#aaa;">Pure White Background</div>
+            <div style="position:absolute;bottom:6px;right:6px;background:#3665F3;color:#fff;font-size:7px;padding:2px 6px;border-radius:3px;">1600 × 1600 px</div>
+          </div>
+          <div style="padding:6px 10px;display:flex;gap:5px;">
+            <div style="width:28px;height:28px;background:#f5f5f5;border-radius:3px;border:1px solid #ddd;"></div>
+            <div style="width:28px;height:28px;background:#f5f5f5;border-radius:3px;border:1px solid #eee;"></div>
+            <div style="width:28px;height:28px;background:#f5f5f5;border-radius:3px;border:1px solid #eee;"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">권장 사이즈</div><div class="ival"><strong class="s">1600 × 1600 px</strong> (줌 기능 활성화)</div></div>
+        <div class="irow"><div class="ilbl">최소 사이즈</div><div class="ival">500 × 500 px · 최대 9000 × 9000 px</div></div>
+        <div class="irow"><div class="ilbl">배경색</div><div class="ival"><strong>순백색 (#FFFFFF) 필수</strong> — 텍스트·워터마크 금지</div></div>
+        <div class="irow"><div class="ilbl">제품 면적</div><div class="ival">이미지 면적의 최소 <strong>85%</strong> 이상 제품 차지</div></div>
+        <div class="tags"><span class="tag s">흰 배경</span><span class="tag s">정면 샷</span><span class="tag s">줌 활성화</span></div>
+        <div class="warn"><strong>⚠️ 주의</strong>배경이 흰색이 아닌 경우 검색 노출 억제 페널티 적용. 워터마크·테두리·텍스트 오버레이 모두 금지.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E5 Gallery Images -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E5</div>
+      <div class="mcard-title"><h3>Gallery Images (Additional Photos)</h3><p>라이프스타일·디테일·인포그래픽 — 최대 24장</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">권장 1600 × 1600 px</span><span class="blimit">최대 24장</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Main large image -->
+          <div style="aspect-ratio:1/1;background:#fce4dc;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:6px;">📺</div>
+          <!-- Thumbnail row -->
+          <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;">
+            <div style="aspect-ratio:1/1;background:#3665F3;border-radius:3px;border:2px solid #3665F3;display:flex;align-items:center;justify-content:center;font-size:9px;">📺</div>
+            <div style="aspect-ratio:1/1;background:#f0f0f0;border-radius:3px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;font-size:9px;">🏠</div>
+            <div style="aspect-ratio:1/1;background:#f0f0f0;border-radius:3px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;font-size:9px;">🔍</div>
+            <div style="aspect-ratio:1/1;background:#f0f0f0;border-radius:3px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;font-size:9px;">📊</div>
+            <div style="aspect-ratio:1/1;background:#f0f0f0;border-radius:3px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;font-size:9px;">📦</div>
+          </div>
+          <div style="font-size:8px;color:#aaa;text-align:center;margin-top:5px;">흰 배경 · 라이프스타일 · 디테일 · 인포그래픽 · 패키지</div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">사이즈</div><div class="ival">Main Image와 동일 · 권장 <strong class="s">1600 × 1600 px</strong></div></div>
+        <div class="irow"><div class="ilbl">수량</div><div class="ival">최대 <strong>24장</strong> · 첫 번째는 Main Image 자동 지정</div></div>
+        <div class="irow"><div class="ilbl">배경</div><div class="ival">2번째 이후: 라이프스타일·유색 배경 허용</div></div>
+        <div class="irow"><div class="ilbl">권장 구성</div><div class="ival">흰 배경 3~4장 + 라이프스타일 + 디테일 + 인포그래픽</div></div>
+        <div class="tags"><span class="tag s">라이프스타일</span><span class="tag s">디테일 샷</span><span class="tag s">스펙 인포그래픽</span><span class="tag s">패키지</span></div>
+        <div class="tip"><strong>💡 팁</strong>이미지 수가 많을수록 구매 전환율 상승. 1600px 이상 업로드 시 줌 기능 자동 활성화 → 제품 디테일 신뢰도 강화.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E6 Item Description Images -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E6</div>
+      <div class="mcard-title"><h3>Item Description Images</h3><p>상세 설명 본문 내 삽입 이미지 — 스펙·기능 상세 안내</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">최대 너비 1600 px</span><span class="blimit">제한 없음</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (셀러 템플릿)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Description template mockup -->
+          <div style="background:#3665F3;color:#fff;padding:8px 12px;border-radius:4px;margin-bottom:8px;font-size:9px;font-weight:700;">LG OLED TV 65" · 제품 소개</div>
+          <div style="background:#fce4dc;border-radius:4px;aspect-ratio:16/6;display:flex;align-items:center;justify-content:center;margin-bottom:6px;font-size:9px;color:#c9806e;">Key Visual / 기능 소개 이미지</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px;">
+            <div style="background:#eff3ff;border-radius:4px;padding:6px;font-size:8px;color:#3665F3;text-align:center;">스펙 인포그래픽</div>
+            <div style="background:#eff3ff;border-radius:4px;padding:6px;font-size:8px;color:#3665F3;text-align:center;">기능 비교표</div>
+          </div>
+          <div style="height:5px;background:#eee;border-radius:3px;width:80%;margin:0 auto;"></div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">최대 너비</div><div class="ival"><strong class="s">1600 px</strong> (더 넓으면 자동 리사이즈)</div></div>
+        <div class="irow"><div class="ilbl">높이</div><div class="ival">제한 없음 · 롱배너·인포그래픽 모두 가능</div></div>
+        <div class="irow"><div class="ilbl">파일 형식</div><div class="ival">JPG / PNG / GIF (동적) · WEBP</div></div>
+        <div class="irow"><div class="ilbl">입력 방식</div><div class="ival">eBay 셀러 허브 > 상품 등록 > Description 에디터</div></div>
+        <div class="tags"><span class="tag s">기능 설명</span><span class="tag s">스펙표</span><span class="tag s">비교 이미지</span><span class="tag s">A/S 안내</span></div>
+        <div class="tip"><strong>💡 팁</strong>외부 이미지 호스팅(HTTP) 사용 시 eBay 정책 위반 가능. 반드시 eBay 내장 이미지 업로더 또는 HTTPS 호스팅 사용.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E7 Video -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E7</div>
+      <div class="mcard-title"><h3>Listing Video</h3><p>제품 영상 — Listing Gallery 내 재생</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">1:1 또는 16:9 · 최대 150 MB</span><span class="blimit">1개/리스팅</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;">
+          <div style="aspect-ratio:1/1;background:#111;display:flex;align-items:center;justify-content:center;position:relative;margin:10px;border-radius:4px;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+              <div style="width:40px;height:40px;background:rgba(54,101,243,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;padding-left:3px;">▶</div>
+              <div style="font-size:9px;color:#aaa;">최대 150 MB · 최대 4분</div>
+            </div>
+            <div style="position:absolute;bottom:8px;left:8px;right:8px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;">
+              <div style="width:30%;height:100%;background:#3665F3;border-radius:2px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">비율</div><div class="ival">1:1 (정사각형) 또는 16:9 (와이드스크린)</div></div>
+        <div class="irow"><div class="ilbl">용량</div><div class="ival">최대 <strong class="s">150 MB</strong></div></div>
+        <div class="irow"><div class="ilbl">길이</div><div class="ival">최대 4분 (240초)</div></div>
+        <div class="irow"><div class="ilbl">형식</div><div class="ival">MP4 / MOV · H.264 코덱 권장</div></div>
+        <div class="tags"><span class="tag s">제품 시연</span><span class="tag s">언박싱</span><span class="tag s">브랜드 필름</span></div>
+        <div class="tip"><strong>💡 팁</strong>썸네일 이미지는 Gallery Main Image 자동 사용. 영상 첫 3초가 자동재생 → 제품 핵심 기능을 초반에 배치.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-head ebay" style="background:#1a3ab8;">🔵 PROMOTION & ADS <span class="sec-pill">프로모션·광고 4가지</span></div>
+
+  <!-- E8 Featured Items / Showcase -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E8</div>
+      <div class="mcard-title"><h3>Featured Items Showcase</h3><p>스토어 홈 상단 추천 제품 직접 지정</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">Auto (리스팅 메인 이미지)</span><span class="blimit">최대 4개</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="font-size:9px;font-weight:700;color:#3665F3;margin-bottom:6px;">★ Featured Items</div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+            <div style="border:1px solid #3665F3;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;border-bottom:1px solid #eee;">📺</div>
+              <div style="padding:4px;"><div style="height:5px;background:#3665F3;border-radius:2px;width:80%;margin-bottom:2px;opacity:.3;"></div><div style="height:5px;background:#E53238;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;border-bottom:1px solid #eee;">❄️</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#E53238;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;border-bottom:1px solid #eee;">🧺</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#E53238;border-radius:2px;width:50%;"></div></div>
+            </div>
+            <div style="border:1px solid #eee;border-radius:5px;overflow:hidden;">
+              <div style="aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;border-bottom:1px solid #eee;">🔊</div>
+              <div style="padding:4px;"><div style="height:5px;background:#ddd;border-radius:2px;width:80%;margin-bottom:2px;"></div><div style="height:5px;background:#E53238;border-radius:2px;width:50%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">리스팅 메인 이미지 자동 사용 (별도 제작 불필요)</div></div>
+        <div class="irow"><div class="ilbl">표시 수</div><div class="ival">최대 4개 · 스토어 홈 상단 배치</div></div>
+        <div class="irow"><div class="ilbl">설정</div><div class="ival">eBay Seller Hub > Store > Featured Items에서 직접 지정</div></div>
+        <div class="tags"><span class="tag s">히어로 제품</span><span class="tag s">신제품</span><span class="tag s">고마진</span></div>
+        <div class="tip"><strong>💡 팁</strong>신제품 출시 직후 Featured Items에 우선 배치 → 스토어 방문자 첫 노출 확보. 리스팅 이미지 품질이 직접 영향.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E9 Promoted Listings Standard -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E9</div>
+      <div class="mcard-title"><h3>Promoted Listings Standard (PLS)</h3><p>검색 결과 상단 광고 — 리스팅 이미지 자동 적용</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">Auto (리스팅 메인 이미지)</span><span class="blimit">제한 없음</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기 (검색 결과)</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Search result items -->
+          <div style="display:flex;flex-direction:column;gap:6px;">
+            <div style="display:flex;gap:8px;align-items:center;padding:6px;border:1px solid #3665F3;border-radius:5px;background:#eff3ff;position:relative;">
+              <div style="position:absolute;top:4px;right:4px;background:#3665F3;color:#fff;font-size:6px;padding:1px 4px;border-radius:2px;">SPONSORED</div>
+              <div style="width:40px;height:40px;background:#fff;border:1px solid #eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">📺</div>
+              <div><div style="height:5px;background:#333;border-radius:2px;width:90px;margin-bottom:3px;"></div><div style="height:5px;background:#E53238;border-radius:2px;width:55px;"></div></div>
+            </div>
+            <div style="display:flex;gap:8px;align-items:center;padding:6px;border:1px solid #eee;border-radius:5px;">
+              <div style="width:40px;height:40px;background:#f5f5f5;border:1px solid #eee;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;opacity:.5;">📺</div>
+              <div><div style="height:5px;background:#ddd;border-radius:2px;width:70px;margin-bottom:3px;"></div><div style="height:5px;background:#ddd;border-radius:2px;width:45px;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">리스팅 메인 이미지 자동 사용 (별도 소재 불필요)</div></div>
+        <div class="irow"><div class="ilbl">과금 방식</div><div class="ival">판매 수수료의 일정 % 추가 (판매 시에만 과금)</div></div>
+        <div class="irow"><div class="ilbl">노출 위치</div><div class="ival">검색 결과 최상단 · 관련 리스팅 하단 · 카테고리 페이지</div></div>
+        <div class="tags"><span class="tag s">검색 상단 노출</span><span class="tag s">CPC 무료</span><span class="tag s">PPA 과금</span></div>
+        <div class="tip"><strong>💡 팁</strong>메인 이미지 품질이 광고 성과 직결. 흰 배경 + 1600px 고해상도 이미지로 클릭률(CTR) 극대화.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E10 Promoted Listings Advanced -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E10</div>
+      <div class="mcard-title"><h3>Promoted Listings Advanced (PLA)</h3><p>CPC 입찰 광고 — 키워드 타겟팅 + 커스텀 배너 옵션</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">배너: 1200 × 628 px (옵션)</span><span class="blimit">캠페인별</span><span class="butil util-m">Utility: MED</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <!-- Ad banner -->
+          <div style="background:linear-gradient(135deg,#3665F3,#E53238);aspect-ratio:1200/628;border-radius:5px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;margin-bottom:8px;">
+            <div style="font-size:10px;color:#fff;font-weight:700;">Custom Banner · 1200 × 628 px</div>
+            <div style="font-size:8px;color:rgba(255,255,255,.7);">PLA 커스텀 배너 (옵션)</div>
+          </div>
+          <!-- Keyword targeting indicator -->
+          <div style="background:#eff3ff;border:1px solid #c5d0ff;border-radius:4px;padding:6px 8px;font-size:8px;color:#3665F3;">
+            🎯 키워드 타겟: "LG OLED TV" · "4K TV" · "Smart TV" 등 자동/수동 입찰
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">기본 이미지</div><div class="ival">리스팅 메인 이미지 자동 사용</div></div>
+        <div class="irow"><div class="ilbl">커스텀 배너</div><div class="ival"><strong class="s">1200 × 628 px</strong> · JPG/PNG (선택 옵션)</div></div>
+        <div class="irow"><div class="ilbl">과금 방식</div><div class="ival">CPC (클릭당 과금) · 키워드별 입찰</div></div>
+        <div class="irow"><div class="ilbl">타겟팅</div><div class="ival">키워드 자동/수동 · 카테고리 · 경쟁사 ASIN 유사</div></div>
+        <div class="tags"><span class="tag s">키워드 광고</span><span class="tag s">CPC</span><span class="tag s">상단 노출</span></div>
+        <div class="tip"><strong>💡 팁</strong>커스텀 배너 사용 시 LG 브랜드 KV 이미지 활용 → PLS 대비 브랜드 인지도 강화 효과. 신제품 출시 초기 인지도 확보에 최적.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- E11 Markdown / Sale Event -->
+  <div class="mcard">
+    <div class="mcard-head">
+      <div class="mnum ebay">E11</div>
+      <div class="mcard-title"><h3>Markdown / Sale Event</h3><p>기간 한정 가격 할인 — 리스팅에 세일 배지 자동 표시</p></div>
+      <div class="mcard-badges"><span class="bsize ebay">Auto (세일 배지 자동 생성)</span><span class="blimit">제한 없음</span><span class="butil util-h">Utility: HIGH</span></div>
+    </div>
+    <div class="mcard-body">
+      <div class="mockup">
+        <div class="mock-lbl">레이아웃 미리보기</div>
+        <div style="background:white;border:1px solid #eee;border-radius:8px;overflow:hidden;padding:10px;">
+          <div style="display:flex;gap:8px;align-items:flex-start;">
+            <div style="width:70px;height:70px;background:#fff;border:1px solid #eee;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:24px;position:relative;flex-shrink:0;">
+              📺
+              <div style="position:absolute;top:-2px;left:-2px;background:#E53238;color:#fff;font-size:6px;font-weight:700;padding:2px 4px;border-radius:2px;">SALE</div>
+            </div>
+            <div style="flex:1;">
+              <div style="height:5px;background:#333;border-radius:2px;width:90%;margin-bottom:5px;"></div>
+              <div style="display:flex;gap:6px;align-items:center;">
+                <div style="font-size:9px;color:#aaa;text-decoration:line-through;">₩1,200,000</div>
+                <div style="font-size:11px;font-weight:700;color:#E53238;">₩960,000</div>
+              </div>
+              <div style="background:#eff3ff;border-radius:3px;padding:3px 6px;margin-top:4px;font-size:7px;color:#3665F3;">20% OFF · 2026-04-30까지</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="irow"><div class="ilbl">이미지</div><div class="ival">별도 이미지 불필요 — SALE 배지 자동 생성</div></div>
+        <div class="irow"><div class="ilbl">배지</div><div class="ival">리스팅·검색 결과에 빨간 SALE 스티커 자동 표시</div></div>
+        <div class="irow"><div class="ilbl">설정</div><div class="ival">Seller Hub > Marketing > Markdown Sales</div></div>
+        <div class="irow"><div class="ilbl">기간</div><div class="ival">최소 24시간 · 최대 30일</div></div>
+        <div class="tags"><span class="tag s">기간 한정</span><span class="tag s">가격 할인</span><span class="tag s">세일 배지</span></div>
+        <div class="tip"><strong>💡 팁</strong>시즌 이벤트(블랙프라이데이·사이버먼데이)에 맞춰 Markdown 설정. 세일 배지가 검색 결과 CTR 대폭 상승시킴.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <strong>글로벌 콘텐츠 이미지 가이드라인 v1.1</strong> · Amazon · Shopee · Lazada · Instagram · eBay<br>
+  LG Electronics Marketing COE · 이미지 생성 모델 학습 및 콘텐츠 자동화 파이프라인 참고용 내부 문서<br>
+  각 플랫폼 정책 변경 시 공식 Seller Center / Help Center에서 최신 정보 확인 필요 · 2025–2026 기준
+</footer>
+
+<script>
+function show(platform, tabEl) {
+  document.querySelectorAll('.platform-page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('page-' + platform).classList.add('active');
+  tabEl.classList.add('active');
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

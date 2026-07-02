@@ -1,0 +1,5338 @@
+[
+ {
+  "code": "LT19CBBSIN",
+  "cat": "Fridge",
+  "sub": "Top Freezer",
+  "ico": "🧊",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/refrigerators/top-freezers/lt19cbbsin/",
+  "name": "LG Top Fridge, Smart Inverter, 509L",
+  "price": "3898.99",
+  "msrp": "",
+  "gallery": [],
+  "features": [],
+  "specs": {
+   "DIMENSIONS & WEIGHT - Product Dimension ": "780 x 1800 x 730",
+   "PERFORMANCE - Compressor Type": "Smart Inverter Compressor (BLDC)",
+   "FEATURES - Door-in-Door": "No",
+   "SMART TECHNOLOGY - ThinQ (Wi-Fi)": "No",
+   "MATERIAL & FINISH - Finish (Door)": "P/S3",
+   "Product Type": "Top Mount",
+   "Freezer Capacity (cu. ft)": "4.2",
+   "Refrigerator Capacity (cu. ft)": "13.4",
+   "Storage Volume Freezer (2Star) (L)": "10",
+   "Storage Volume Freezer (L)": "120",
+   "Storage Volume Refrigerator (L)": "379",
+   "Storage Volume Total (L)": "509",
+   "Depth without door (mm)": "599",
+   "Depth without handle (mm)": "700",
+   "Packing Weight (kg)": "87",
+   "Product Dimension (WxHxD, mm)": "780 x 1800 x 730",
+   "Product Weight (kg)": "78",
+   "Door Cooling+": "Yes",
+   "Deodorizer": "Yes",
+   "Door-in-Door": "No",
+   "LINEAR Cooling": "Yes",
+   "Freezer Light": "Top LED",
+   "Multi-Air Flow": "Yes",
+   "Shelf_Tempered Glass": "1",
+   "Water Only Dispenser": "No"
+  }
+ },
+ {
+  "code": "WTT1410OL1",
+  "cat": "Washer",
+  "sub": "Twin Tub",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/twin-tub/wtt1410ol1/",
+  "name": "14 kg Twin Tub Washing Machine",
+  "price": "1598.99",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-06.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-07.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-08.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-09.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-10.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-11.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-12.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-13.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/1044-14.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-06.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-07.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-08.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-09.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-10.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wtt1410ol1-dlg5nag/gallery/2010-11.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "Drain Selector": "Yes",
+   "Soak Timer (min)": "20",
+   "Spin Timer (min)": "5",
+   "Wash Timer (min)": "15",
+   "Spin Tub Capacity(kg)": "10",
+   "Wash Capacity(kg)": "14",
+   "Product Dimensions (WxHxD mm)": "905x1025x545",
+   "Weight (kg)": "32.0",
+   "360˚ Wheel": "No",
+   "Anti Vibration Rubber": "Yes",
+   "Auto Restart": "No",
+   "Buzzer": "No",
+   "Collar Scrubber": "No",
+   "Lint Filter": "Yes",
+   "Punch + 3": "Yes",
+   "Rat Away feature": "Yes",
+   "Roller Jet Pulsator": "Yes",
+   "Rust Free Plastic Base": "Yes",
+   "Spin Window": "Yes",
+   "Unidirectional Wheel": "No",
+   "Wash Window": "Yes",
+   "Water feed (Hot / Cold)": "Hot & Cold",
+   "Wind Jet Dry": "Yes",
+   "Main Color": "Light Gray",
+   "Gentle": "Yes"
+  }
+ },
+ {
+  "code": "WSN1508BMT",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wsn1508bmt/",
+  "name": "15 kg Washer with 8Kg Dryer  | Front Load washing Machine | 6 Motion DD | AI DD | Steam | TurboWash360 | Matte Black",
+  "price": "4999",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/basic/basic--450.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-12.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-13.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-14.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-15.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-16.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/gallery/DZ-17.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-07.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-08.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/washing-machines/wsn1508bmt/gallery/thumbnail/S-10.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-03-01-desktop.jpg",
+    "t": "A slimmer, stylish choice with substantial capacity",
+    "d": "Slimmer body, spacious drum"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-03-02-desktop.jpg",
+    "t": "Explore your new washer’s key features",
+    "d": "Slimmer body, spacious drum"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-03-03-desktop.jpg",
+    "t": "Ha Wm Nt Slim Led Gp1 03 ",
+    "d": "Slimmer body, spacious drum"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-03-04-desktop.jpg",
+    "t": "Fit your washer into your life",
+    "d": "Slimmer body, spacious drumImproves usability and space utilization"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 09 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-09-desktop.jpg",
+    "t": "Prioritize your health and tackle allergens",
+    "d": "A woman and a child are lying in bed smiling"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 10 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-10-desktop.jpg",
+    "t": "Wash and rinse away pet odors and stains",
+    "d": "A woman and a dog are lying in bed"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-01-desktop.jpg",
+    "t": "Link your washing machine and smartphone",
+    "d": "Use the LG ThinQ™ app to investigate your washing machine's energy usage and to check for any maintenance requirements"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-01-icon-off-desktop.png",
+    "t": "Stay connected from anywhere with LG ThinQ™",
+    "d": "*Results may vary depending on the environment."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-01-icon-on-desktop.png",
+    "t": "Stay connected from anywhere with LG ThinQ™",
+    "d": "Stay connected from anywhere with LG ThinQ™"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-02-desktop.jpg",
+    "t": "Link your washing machine and smartphone",
+    "d": "Use the LG ThinQ™ app to investigate your washing machine's energy usage and to check for any maintenance requirements"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-02-icon-off-desktop.png",
+    "t": "Stay connected from anywhere with LG ThinQ™",
+    "d": "Connect your washer to the LG ThinQ™ app to control the machine, select courses, and even start it while you're out and about with just the tap of a button."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-02-icon-on-desktop.png",
+    "t": "Link your washing machine and smartphone",
+    "d": "Connect your washer to the LG ThinQ™ app to control the machine, select courses, and even start it while you're out and about with just the tap of a button."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-03-desktop.jpg",
+    "t": "Voice assistant compatibility",
+    "d": "Connect your washing machine to a smart home device to take your life to a new level of convenience! Use a range of voice commands to instruct your machine from anywhere in your home."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-03-icon-off-desktop.png",
+    "t": "Link your washing machine and smartphone",
+    "d": "Connect your washer to the LG ThinQ™ app to control the machine, select courses, and even start it while you're out and about with just the tap of a button."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-12-03-icon-on-desktop.png",
+    "t": "Link your washing machine and smartphone",
+    "d": "Connect your washer to the LG ThinQ™ app to control the machine, select courses, and even start it while you're out and about with just the tap of a button."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-14-01-desktop.jpg",
+    "t": "User-friendly and compact design",
+    "d": "*LG SmartThinQ is now renamed as LG ThinQ."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-14-02-desktop.jpg",
+    "t": "User-friendly and compact design",
+    "d": "*Voice-enabled smart speaker device is not included."
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-14-03-desktop.jpg",
+    "t": "User-friendly and compact design",
+    "d": "User-friendly and compact design"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wsn1508bmt/feature/desktop/HA-WM-NT-Slim-LED-GP1-14-04-desktop.jpg",
+    "t": "Harmonious design suits anywhere",
+    "d": "What is the standard-size washing machine?"
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "15",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "650x950x645",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse+": "No",
+   "Rinse + Spin": "No",
+   "Softener Level": "No",
+   "Spin": "5 Levels",
+   "Steam": "No",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "Yes",
+   "TurboWash": "Yes",
+   "Wash": "Yes"
+  }
+ },
+ {
+  "code": "WFB0914XM",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfb0914xm/",
+  "name": "LG Front Load Washing Machines with AI DD",
+  "price": "2699",
+  "msrp": "",
+  "gallery": [],
+  "features": [],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "9",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 565",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Embossing Inner Drum": "Yes",
+   "6 Motion DD": "Yes",
+   "Add Item": "Yes",
+   "AI DD": "Yes",
+   "Auto Restart": "Yes",
+   "Centum System": "No",
+   "Drum Lifter": "Stainless Steel Slim Lifter",
+   "Drum Light": "No",
+   "Dual Dry": "No",
+   "End of Cycle Signal": "Yes",
+   "ezDispense": "No",
+   "TurboWash": "No",
+   "Foam detection system": "Yes",
+   "Inverter DirectDrive": "Yes",
+   "Leveling Legs": "Yes",
+   "LoadSense": "Yes",
+   "Stainless Steel Drum": "Yes",
+   "Steam": "Yes",
+   "Steam+": "No",
+   "TurboWash360˚": "No"
+  }
+ },
+ {
+  "code": "WTV11BND",
+  "cat": "Washer",
+  "sub": "Top Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/top-load/wtv11bnd/",
+  "name": "11Kg Washer | Top Load | Smart Inverter",
+  "price": "2099",
+  "msrp": "",
+  "gallery": [],
+  "features": [],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "11.5",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "590 x 965 x 610",
+   "FEATURES - Steam": "No",
+   "Wi-Fi": "No",
+   "Add Item": "No",
+   "Air Dry": "No",
+   "Aqua Reserve": "No",
+   "Child Lock": "No",
+   "Cold Wash": "No",
+   "Deep Fill": "No",
+   "Extra Rinse": "No",
+   "Hot Wash": "No",
+   "Pre Wash": "No",
+   "Process On/Off": "Yes",
+   "Remote Start": "No",
+   "Rinse": "No",
+   "Rinse + Spin": "Yes",
+   "Soak": "No",
+   "Spin": "No",
+   "Spin Only": "Yes",
+   "Stain Care": "No",
+   "Steam": "No",
+   "Strong Wave": "No",
+   "Temp.": "Cold / Warm / Hot",
+   "Time Delay": "No"
+  }
+ },
+ {
+  "code": "WTV24HHP",
+  "cat": "Washer",
+  "sub": "Top Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/top-load/wtv24hhp/",
+  "name": "24Kg Washer | Top Load | ThinQ | AI DD",
+  "price": "5599.01",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "Wm Vplus 27 Lcd H900 01 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-01-01-Desktop.jpg",
+    "t": "Smart and Advanced Laundry",
+    "d": "Laundry thoroughly cleaned in less than 40 minutes with TurboWash3D™"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 01 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-01-02-Desktop.jpg",
+    "t": "Smart and Advanced Laundry",
+    "d": "Personalized laundry options created based on your washing patterns"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 01 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-01-03-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 01 0",
+    "d": "Personalized laundry options created based on your washing patterns"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 01 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-01-04-Desktop.jpg",
+    "t": "Intelligent Care for Greater Fabric Protection",
+    "d": "Personalized laundry options created based on your washing patterns"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 02 D",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-02-Desktop-NT.jpg",
+    "t": "Wm Vplus 27 Lcd H900 02 D",
+    "d": ""
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 02 D",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-02-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 02 D",
+    "d": ""
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 03 D",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-03-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 03 D",
+    "d": "Icons of laundry behavior applied according to the type of fabric"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 07 D",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-07-Desktop.jpg",
+    "t": "Quiet Operation",
+    "d": "Dampers and a sensor absorb vibrations during washing, enabling a quieter wash."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 09 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-09-01-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 09 0",
+    "d": "The water jet aids quick and effective rinsing."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 09 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-09-02-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 09 0",
+    "d": ""
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 09 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-09-03-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 09 0",
+    "d": "The water jet aids quick and effective rinsing."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 12 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-12-01-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 12 0",
+    "d": "Agitating motion : A normal washing motion"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 12 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-12-02-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 12 0",
+    "d": "Agitating motion : A normal washing motion"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 12 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-12-03-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 12 0",
+    "d": "Rotating motion : Antangles the fabric and washes it clean"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 12 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-12-04-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 12 0",
+    "d": "Rotating motion : Antangles the fabric and washes it clean"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 12 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-12-05-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 12 0",
+    "d": "Wave force : Powerful waterfall from top to bottom for deep washing"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 12 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-12-06-Desktop.jpg",
+    "t": "Wm Vplus 27 Lcd H900 12 0",
+    "d": "Compressing motion : A high speed spin motion"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 14 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-14-01-Desktop.jpg",
+    "t": "Simple Control with Voice Assistant",
+    "d": "The LG ThinQ™ app allows you to easily connect with your washer in a way you never could before. Start your washer with just the tap of a button."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 14 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-14-02-Desktop.jpg",
+    "t": "Connect and Control from Anywhere",
+    "d": "The LG ThinQ™ app allows you to easily connect with your washer in a way you never could before. Start your washer with just the tap of a button."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 14 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-14-03-Desktop.jpg",
+    "t": "Connect and Control from Anywhere",
+    "d": "The LG ThinQ™ app allows you to easily connect with your washer in a way you never could before. Start your washer with just the tap of a button."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 14 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-14-03-greyicon-Desktop.png",
+    "t": "Simple Control with Voice Assistant",
+    "d": "Tell your washer exactly what you need, when you need it. Say, “What cycle is the washer?” and the AI speaker will listen and check the cycle to let you know."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 14 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-14-03-redicon-Desktop.png",
+    "t": "Simple Control with Voice Assistant",
+    "d": "Tell your washer exactly what you need, when you need it. Say, “What cycle is the washer?” and the AI speaker will listen and check the cycle to let you know."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 16 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-16-01-Desktop.jpg",
+    "t": "Efficient Product Maintenance",
+    "d": "The LG ThinQ™ app continuously monitors your washer. Whether it’s everyday maintenance or something else, the app allows you to easily monitor energy usage. you can also get smart notifications and download the course you like."
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 16 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-16-02-Desktop.jpg",
+    "t": "Wide Lint Filter",
+    "d": "Wide Lint Filter"
+   },
+   {
+    "a": "Wm Vplus 27 Lcd H900 16 0",
+    "p": "/images/washing-machines/wtv24hhp/features/WM-Vplus-27-LCD-H900-16-03-Desktop.jpg",
+    "t": "Larger Filter Keeps the Drum Clean",
+    "d": "Larger Filter Keeps the Drum Clean"
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "24",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "690 x 1070 x 730",
+   "FEATURES - Steam": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "No",
+   "Air Dry": "No",
+   "Aqua Reserve": "No",
+   "Child Lock": "Yes",
+   "Cold Wash": "No",
+   "Deep Fill": "No",
+   "Extra Rinse": "No",
+   "Hot Wash": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse": "5 Times",
+   "Rinse + Spin": "Yes",
+   "Soak": "Yes",
+   "Spin": "5 Levels",
+   "Spin Only": "Yes",
+   "Stain Care": "No",
+   "Steam": "Yes",
+   "Strong Wave": "No",
+   "Temp.": "Cold / Warm / Hot",
+   "Time Delay": "Yes",
+   "Tub Clean": "Yes"
+  }
+ },
+ {
+  "code": "RH81T2SP7RM",
+  "cat": "Dryer",
+  "sub": "Heat Pump",
+  "ico": "🌀",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/dryers/rh81t2sp7rm/",
+  "name": "8Kg Dryer | Heat Pump Dryer | Sensor Dry",
+  "price": "2699",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "Dryer Vestel Odm Dryer Wh",
+    "p": "/images/wm/features/dryer-vestel-odm-dryer-white-01-intro-d.jpg",
+    "t": "LG Heat Pump Dryer for Sustainable Care",
+    "d": "*Product images are for illustrative purpose only and may differ from actual product."
+   },
+   {
+    "a": "Dryer Vestel Odm Dryer Wh",
+    "p": "/images/wm/features/dryer-vestel-odm-dryer-white-02-2-1-heater-dryer-d.jpg",
+    "t": "Enjoy the Gentle Dry with Heat Pump",
+    "d": "Heat Pump Enjoy the Gentle Dry with Heat PumpDries laundry at low temperatures, gentle on clothes."
+   },
+   {
+    "a": "Dryer Vestel Odm Dryer Wh",
+    "p": "/images/wm/features/dryer-vestel-odm-dryer-white-02-2-2-heatpump-dryer-d.jpg",
+    "t": "Dryer Vestel Odm Dryer Wh",
+    "d": "*It may vary depending on the texture of the clothes."
+   },
+   {
+    "a": "Dryer Vestel Odm Dryer Wh",
+    "p": "/images/wm/features/dryer-vestel-odm-dryer-white-05-2-1-washer-and-dryer-d.jpg",
+    "t": "Visible and Elegant Design",
+    "d": "*The results may vary depending on your actual environmental condition."
+   },
+   {
+    "a": "Dryer Vestel Odm Dryer Wh",
+    "p": "/images/wm/features/dryer-vestel-odm-dryer-white-05-2-2-door-d.jpg",
+    "t": "Washer and Dryer",
+    "d": "*Product images are for illustrative purpose only and may differ from actual product."
+   },
+   {
+    "a": "Dryer Vestel Odm Dryer Wh",
+    "p": "/images/wm/features/dryer-vestel-odm-dryer-white-05-2-3-control-panel-d.jpg",
+    "t": "Washer and Dryer",
+    "d": "*Product images are for illustrative purpose only and may differ from actual product."
+   }
+  ],
+  "specs": {
+   "MATERIAL & FINISH - Body Color": "Stone Silver",
+   "CAPACITY - Max Dry Capacity (kg)": "8.0",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 610",
+   "FEATURES - DUAL Inverter HeatPump": "No",
+   "FEATURES - Auto Cleaning Condenser": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "No",
+   "Wi-Fi": "No",
+   "Anti Crease": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "Condenser Care": "No",
+   "Delay End": "No",
+   "Drum Care": "No",
+   "Drum Light": "No",
+   "Dry Level": "3 Levels",
+   "Favourite": "No",
+   "Less Time": "No",
+   "More Time": "No",
+   "Rack Dry": "No",
+   "Remote Start": "No",
+   "Steam": "No",
+   "Time Dry": "Yes",
+   "Bar Code": "8806087994452",
+   "Max Dry Capacity (kg)": "8.0",
+   "Delay Timer": "1-23 hours"
+  }
+ },
+ {
+  "code": "A9LSLIM",
+  "cat": "Vacuum",
+  "sub": "Cordless",
+  "ico": "🧹",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/vacuum-cleaners/a9lslim/",
+  "name": "LG CordZero™ A9 Air Vacuum Cleaner ",
+  "price": "849",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 450",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/450.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-09.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-11.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-12.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-13.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-14.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/DZ-15.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-01.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-02.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-03.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-04.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-05.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-06.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-07.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-08.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/gallery/MZ-09.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-01-intro-d.jpg",
+    "t": "Vac Codezero A9 Air 2024 ",
+    "d": "LG CordZero™ A9 Air key visual image"
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-03-2-lightweight-yet-powerful-d.jpg",
+    "t": "Tough on dust, easy on the wrists",
+    "d": "At just 1.1kg*, this vacuum cleaner delivers powerful1) suction in a convenient, lightweight design."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-04-2-dual-turbo-cyclone-d.jpg",
+    "t": "Vac Codezero A9 Air 2024 ",
+    "d": ""
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-05-2-slim-design-d.jpg",
+    "t": "Sleek and compact design",
+    "d": "Space-saving design makes it easy to use and convenient to store away, helping keep your space clean and tidy."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-06-2-crevice-tips-and-tools-d.jpg",
+    "t": "Convenient, versatile cleaning",
+    "d": "The dual built-in crevice tip is designed for those hard-to-reach places. There are also extra tools for multi-use."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-06-3-crevice-tips-and-tools-d.jpg",
+    "t": "Keep dust locked away",
+    "d": "5-step filtration system keeps dust locked up tight"
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-07-2-5-step-filtration-system-d.jpg",
+    "t": "Keep dust locked away",
+    "d": "5-step filtration system keeps dust locked up tight"
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-09-2-convenience-d.jpg",
+    "t": "Smooth and simple battery changes",
+    "d": "Monitor power usage through user-friendly LED notifications and then change the battery2) at the touch of a button."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-10-1-design-1-d.jpg",
+    "t": "Compact design fits variable space",
+    "d": "*One(1) battery included as standard."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-10-2-design-2-d.jpg",
+    "t": "Compact design fits variable space",
+    "d": "*One(1) battery included as standard."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-10-3-design-3-d.jpg",
+    "t": "Compact design fits variable space",
+    "d": "*Product images are for illustrative purpose only and may differ from actual product."
+   },
+   {
+    "a": "Vac Codezero A9 Air 2024 ",
+    "p": "/images/vacuum-cleaners/a9lslim-bcbgnag/feature/vac-codezero-a9-air-2024-10-4-design-4-d.jpg",
+    "t": "Space-saving stand",
+    "d": "Disclaimer 1)Lightweight, yet powerful"
+   }
+  ],
+  "specs": {
+   "DIMENSIONS & WEIGHTS (CLEANER) - Product": "251 x 1026 x 242",
+   "Bar Code": "8806096421024",
+   "Cleaning Brush": "Yes",
+   "Combination Tool": "Yes",
+   "Crevice Tool": "Yes",
+   "Batteries Included (Qty)": "1 (Single)",
+   "Battery Type": "Lithium-ion",
+   "Charging Time per battery (minutes)": "240",
+   "Max Run Time per battery (minutes) (Norm": "30",
+   "Max Run Time (min/battery) (Power Mode)": "20",
+   "Max Run Time (min/battery) (Power Mode +": "15",
+   "Max Run Time per battery (minutes) (Turb": "6",
+   "Product Dimensions (WxHxD mm)": "251 x 1026 x 242",
+   "Weight (kg)": "1.97",
+   "Battery Status Indicator": "Yes",
+   "Convert to Handheld": "Yes",
+   "Dual PowerPack": "No",
+   "Kompressor Technology": "No",
+   "Smart Inverter Motor": "Yes",
+   "Type": "Cordless Stick + Handheld (2in1)",
+   "Bedding Nozzle": "No",
+   "Mop Nozzle": "No",
+   "Pet Nozzle": "No",
+   "Slim Hard Floor Nozzle": "Yes",
+   "Universal(Multi-Surface) Nozzle": "No"
+  }
+ },
+ {
+  "code": "WK1310BST",
+  "cat": "Washer",
+  "sub": "WashTower",
+  "ico": "🏢",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/washtower/wk1310bst/",
+  "name": "13/10kg LG WashTower™ with Centre Control™, Black Steel color, Arabic Control panel Only",
+  "price": "7999",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-06.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-07.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-08.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-09.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-10.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1044x1334-11.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-06.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-07.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-08.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-09.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-10.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1100x730-11.jpg"
+   },
+   {
+    "a": "Gallery 1600",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1600x1062-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1600x1062-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wk1310bst_apbgnag_emsj_sa_en_c/gallery/1600x1062-03.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {}
+ },
+ {
+  "code": "RH10V9PV2W",
+  "cat": "Dryer",
+  "sub": "Heat Pump",
+  "ico": "🌀",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/dryers/rh10v9pv2w/",
+  "name": "10Kg DUAL Inverter Dryer | sensor dry | Allergy care | Drum care ",
+  "price": "3898.99",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-1.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-10.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-11.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-12.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-13.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-14.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-2.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-3.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-4.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-5.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-6.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-7.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-8.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/MZ-9.jpg"
+   },
+   {
+    "a": "Gallery 1",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-1.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-10.jpg"
+   },
+   {
+    "a": "Gallery 11",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-11.jpg"
+   },
+   {
+    "a": "Gallery 12",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-12.jpg"
+   },
+   {
+    "a": "Gallery 13",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-13.jpg"
+   },
+   {
+    "a": "Gallery 14",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-14.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-2.jpg"
+   },
+   {
+    "a": "Gallery 3",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-3.jpg"
+   },
+   {
+    "a": "Gallery 4",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-4.jpg"
+   },
+   {
+    "a": "Gallery 5",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-5.jpg"
+   },
+   {
+    "a": "Gallery 6",
+    "p": "/images/dryers/rh10v9pv2w_aptgnag_emgf_sa_en_c/gallery/S-6.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "D09 01_Dryer Na Vivace V9",
+    "p": "/images/dryers/rh90v9pv8w_aptgnag_emgf_sa_en_c/features/D09-01_Dryer-NA-Vivace-V900-VC2-HP-VCM-07-1-Conventional-D.jpg",
+    "t": "Clothes Come Out Looking Like the Day You Bought Them",
+    "d": "LG DUAL Inverter Heat Pump™ Dryer"
+   },
+   {
+    "a": "D09 02_Dryer Na Vivace V9",
+    "p": "/images/dryers/rh90v9pv8w_aptgnag_emgf_sa_en_c/features/D09-02_Dryer-NA-Vivace-V900-VC2-HP-VCM-07-2-Inverter-HP-D.jpg",
+    "t": "Smart Control, Smart Life",
+    "d": "*It may vary depending on the texture of the clothes."
+   },
+   {
+    "a": "D11 01_Dryer Na Vivace V9",
+    "p": "/images/dryers/rh90v9pv8w_aptgnag_emgf_sa_en_c/features/D11-01_Dryer-NA-Vivace-V900-VC2-HP-VCM-08-1-Remote-Control-D.jpg",
+    "t": "Control from Anywhere",
+    "d": "With various drying cycles, you can properly dry your clothes and look great then ready to go."
+   },
+   {
+    "a": "D11 02_Dryer Na Vivace V9",
+    "p": "/images/dryers/rh90v9pv8w_aptgnag_emgf_sa_en_c/features/D11-02_Dryer-NA-Vivace-V900-VC2-HP-VCM-08-2-Various-Cycle-D.jpg",
+    "t": "Drying Cycles That Fit Your Lifestyle",
+    "d": "With various drying cycles, you can properly dry your clothes and look great then ready to go."
+   },
+   {
+    "a": "D11 03_Dryer Na Vivace V9",
+    "p": "/images/dryers/rh90v9pv8w_aptgnag_emgf_sa_en_c/features/D11-03_Dryer-NA-Vivace-V900-VC2-HP-VCM-08-3-Smart-Pairing-D.jpg",
+    "t": "Pairing for More Intelligence",
+    "d": "It doesn’t require the venting outlets and gives an even more durable and elegant look."
+   }
+  ],
+  "specs": {
+   "MATERIAL & FINISH - Body Color": "Platinum",
+   "CAPACITY - Max Dry Capacity (kg)": "10",
+   "FEATURES - DUAL Inverter HeatPump": "Yes",
+   "Allergy Care (dryer)": "Yes",
+   "Bedding Refresh": "Yes",
+   "Cotton": "Yes",
+   "Easy Care": "Yes",
+   "Quick Dry": "Yes",
+   "Sportswear": "Yes",
+   "Towels": "Yes",
+   "Wool": "Yes",
+   "Wi-Fi": "Yes (Wi-Fi)",
+   "Child Lock": "Yes",
+   "Condenser Care": "Yes",
+   "Delay End": "3-19 hrs",
+   "Max Dry Capacity (kg)": "10",
+   "Delay Timer": "Yes",
+   "Display Type": "LED",
+   "DUAL Inverter HeatPump": "Yes",
+   "Type": "Dryer",
+   "Body Color": "Platinum"
+  }
+ },
+ {
+  "code": "WFV1214BST1",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfv1214bst1/",
+  "name": "12 kg Front load | Bigger capacity in same size | Tempered Glass Door ",
+  "price": "3649",
+  "msrp": "",
+  "gallery": [],
+  "features": [],
+  "specs": {
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 610",
+   "FEATURES - Steam": "Steam+",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Max Dry Capacity (kg)": "12",
+   "Display Type": "Touch LED",
+   "Product Dimensions (WxHxD mm)": "600 x 850 x 610",
+   "6 Motion DD": "Yes",
+   "AI DD": "Yes",
+   "Inverter DirectDrive": "Yes",
+   "Stainless Steel Drum": "Full Stainless",
+   "Steam": "Steam+",
+   "Type": "Front Loader Washer",
+   "Body Color": "Black Steel",
+   "Smart Diagnosis": "Yes",
+   "ThinQ(Wi-Fi)": "Yes",
+   "Add Item": "Yes",
+   "TurboWash": "Yes"
+  }
+ },
+ {
+  "code": "65QNED93A6A",
+  "cat": "TV",
+  "sub": "QNED evo",
+  "ico": "📺",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/tv-soundbars/qned/65qned93a6a/",
+  "name": "65 inch LG QNED evo AI QNED93 4K 144Hz VRR Smart TV AI Magic remote webOS25 2025 ",
+  "price": "4999",
+  "msrp": "14499",
+  "gallery": [
+   {
+    "a": "Front",
+    "p": "/2025_ms_lg-com/tv/qned-evo/qned85/gp1/gallery/50-qned85-a/gallery/qned-qned85-2025-50-gallery-17-lg-galley-plus-free.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/2025_ms_lg-com/tv/qned-evo/qned85/gp1/gallery/50-qned85-a/thumbnail/qned-qned85-2025-50-thumbnail-18-lg-galley-plus-free.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/2025_ms_lg-com/tv/qned-evo/qned85/gp1/gallery/50-qned85-a/zoom/qned-qned85-2025-50-zoom-17-lg-galley-plus-free..jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Qned Qned92 2025 00 Featu",
+    "p": "/2025_ms_lg-com/tv/qned-evo/qned92/gp1/features/desktop/qned-qned92-2025-00-feature-award-hifi-d.jpg",
+    "t": "Trusted Reviews(QNED93A, 65”)",
+    "d": "What Hi-Fi?(QNED93/92, 65”)"
+   },
+   {
+    "a": "Qned Qned92 2025 00 Featu",
+    "p": "/2025_ms_lg-com/tv/qned-evo/qned92/gp1/features/desktop/qned-qned92-2025-00-feature-award-toms-guide-d.jpg",
+    "t": "What Hi-Fi?(QNED93/92, 65”)",
+    "d": "“The LG QNED92 is a solid gaming QLED TV…” (07/2025)"
+   },
+   {
+    "a": "Qned Qned92 2025 00 Featu",
+    "p": "/2025_ms_lg-com/tv/qned-evo/qned92/gp1/features/desktop/qned-qned92-2025-00-feature-award-tursted-reviews-d.jpg",
+    "t": "Trusted Reviews(QNED93A, 65”)",
+    "d": "What Hi-Fi?(QNED93/92, 65”)"
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-google-photo-d.jpg",
+    "t": "Easily access Google Photos and showcase your memories",
+    "d": "A wall-mounted LG TV with a cellphone in the foreground. The process of setting up Google Photos on the LG TV is shown."
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-information-board-d.jpg",
+    "t": "Easily access Google Photos and showcase your memories",
+    "d": "In einem Gaming-Raum zu Hause ist ein riesiger LG TV an der Wand montiert. Auf dem Bildschirm befinden sich Kunstwerke aus Assassin's Creed Shadows."
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-intro-free-d.jpg",
+    "t": "AI Concierge",
+    "d": "Have your screen transform into a living canvas, featuring 100 pieces of art, immersive scenery, and ambient videos. Regular library updates will keep your space enriched, even when you're not watching TV."
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-music-lounge-free-d.jpg",
+    "t": "Personalize your space in countless ways",
+    "d": "Customize your home gallery with your choice of music, visuals and more. Choose what you want to display on your TV depending on your current preferences."
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-smart-sensor-aod-free-d.jpg",
+    "t": "Smart settings adapt to changes in your environment",
+    "d": "Your TV's built-in sensors detect light and adjust screen brightness accordingly to ensure optimized viewing in any lighting."
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-smart-sensor-brightness-free-d.jpg",
+    "t": "AI Brightness Control",
+    "d": "Motion detection lets your TV respond intelligently, switching modes depending on whether or not you're nearby."
+   },
+   {
+    "a": "Tv 2025 Feature Gallery P",
+    "p": "/2025_ms_lg-com/tv/xf/gallery-plus/common/features/desktop/tv-2025-feature-gallery-plus-smart-sensor-motion-d.jpg",
+    "t": "Motion Sensor",
+    "d": "Motion detection lets your TV respond intelligently, switching modes depending on whether or not you're nearby."
+   },
+   {
+    "a": "Qned Qned92 2025 00 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-00-feature-award-d-1.jpg",
+    "t": "Trusted Reviews(QNED93A, 65”)",
+    "d": "What Hi-Fi?(QNED93/92, 65”)"
+   },
+   {
+    "a": "Qned Qned92 2025 00 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-00-feature-award-d-2.jpg",
+    "t": "Tom’s Guide",
+    "d": "“The LG QNED92 is a solid gaming QLED TV…” (07/2025)"
+   },
+   {
+    "a": "Qned Qned92 2025 00 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-00-feature-award-d-3.jpg",
+    "t": "Tom’s Guide",
+    "d": "“The LG QNED92 is a solid gaming QLED TV…” (07/2025)"
+   },
+   {
+    "a": "Qned Qned92 2025 01 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-01-feature-kv-d.jpg",
+    "t": "Every Color Redefined, New Experience Begins",
+    "d": "“webOS 24 continues to deliver a sleek, fast and easy-to-use smart experience that is also fresh and uncluttered.”"
+   },
+   {
+    "a": "Qned Qned92 2025 02 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-02-feature-certification-d.jpg",
+    "t": "Certified 100% Color Volume with LG QNED evo",
+    "d": "Intertrek certification for 100% Color Volume to DCI-P3."
+   },
+   {
+    "a": "Qned Qned92 2025 02 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-02-feature-dynamic-qned-color-pro-d.jpg",
+    "t": "With LG’s new and unique wide color gamut technology, see lifelike and vivid color on your screen.",
+    "d": "Intertrek certification for 100% Color Volume to DCI-P3."
+   },
+   {
+    "a": "Qned Qned92 2025 03 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-03-feature-miniled-d.jpg",
+    "t": "MiniLED with Precision Dimming Technology",
+    "d": "*Specifications may vary by inches, models and region."
+   },
+   {
+    "a": "Qned Qned92 2025 04 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-04-feature-ai-processor-d.jpg",
+    "t": "AI Picture Pro brings every frame to life",
+    "d": "*Compared to the same year entry level Smart TV alpha 7 AI Processor Gen8 based on internal spec comparison."
+   },
+   {
+    "a": "Qned Qned92 2025 05 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-05-feature-ai-picture-pro-d.jpg",
+    "t": "AI Super Upscaling and Dynamic Tone Mapping Pro analyze each frame's elements to enhance resolution, brightness, depth, and clarity.",
+    "d": "AI Super Upscaling and Dynamic Tone Mapping Pro analyze each frame's elements to enhance resolution, brightness, depth, and clarity."
+   },
+   {
+    "a": "Qned Qned92 2025 06 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-06-feature-ai-magic-remote-d-01.jpg",
+    "t": "Qned Qned92 2025 06 Featu",
+    "d": ""
+   },
+   {
+    "a": "Qned Qned92 2025 07 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-07-feature-ai-voice-id-d-03.jpg",
+    "t": "Qned Qned92 2025 07 Featu",
+    "d": "*Some features may require an internet connection."
+   },
+   {
+    "a": "Qned Qned92 2025 08 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-08-feature-ai-search-d.jpg",
+    "t": "AI Voice ID",
+    "d": "LG AI Voice ID recognizes each user's unique voice signature and offers personalized recommendations the moment you speak."
+   },
+   {
+    "a": "Qned Qned92 2025 09 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-09-feature-ai-chatbot-d.jpg",
+    "t": "AI Search",
+    "d": "Interact with the AI Chatbot through your AI Magic Remote and address all concerns from configuring settings to troubleshooting. AI can understand user intent and will provide immediate solutions."
+   },
+   {
+    "a": "Qned Qned92 2025 10 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-10-feature-ai-concierge-d-01.jpg",
+    "t": "AI Chatbot",
+    "d": "One short press on the AI button on your remote opens up your AI Concierge which provides customized keywords and recommendations based on your search and watching history."
+   },
+   {
+    "a": "Qned Qned92 2025 11 Featu",
+    "p": "/images/tv/features/qned93/qned-qned92-2025-11-feature-ai-picture-wizard-d.jpg",
+    "t": "AI Concierge",
+    "d": "One short press on the AI button on your remote opens up your AI Concierge which provides customized keywords and recommendations based on your search and watching history."
+   }
+  ],
+  "specs": {
+   "PICTURE (DISPLAY) - Display Type": "4K QNED MiniLED",
+   "PICTURE (DISPLAY) - Refresh Rate": "120Hz Native (VRR 144Hz)",
+   "PICTURE (DISPLAY) - Wide Color Gamut": "Dynamic QNED Color Pro",
+   "PICTURE (PROCESSING) - Picture Processor": "α8 AI Processor 4K Gen2",
+   "PICTURE (PROCESSING) - HDR (High Dynamic": "Dolby Vision / HDR10 / HLG",
+   "GAMING - FreeSync Compatible (AMD)": "Yes",
+   "AUDIO - Dolby Atmos": "Yes",
+   "DIMENSIONS AND WEIGHTS - TV Dimensions w": "1445 x 830 x 58.5",
+   "DIMENSIONS AND WEIGHTS - TV Weight witho": "18.6",
+   "Gray Scale": "Yes",
+   "High Contrast": "Yes",
+   "Invert Colors": "Yes",
+   "Power Cable": "Yes (Detachable)",
+   "Remote": "Magic Remote MR25",
+   "AI Sound": "α8 AI Sound Pro (Virtual 9.1.2 Up-mix)",
+   "AI Acoustic Tuning": "Yes",
+   "Audio Codec": "AC4, AC3(Dolby Digital), EAC3, HE-AAC, AAC, MP2, MP3, PCM, WMA, apt-X (Refer to manual)",
+   "Audio Output": "40W",
+   "Bluetooth Surround Ready": "Yes (2 Way Playback)",
+   "Clear Voice Pro": "Yes (Auto Volume Leveling)",
+   "Dolby Atmos": "Yes",
+   "LG Sound Sync": "Yes",
+   "Simultaneous Audio Output": "Yes",
+   "Sound Mode Share": "Yes",
+   "Speaker Direction": "Down Firing"
+  }
+ },
+ {
+  "code": "WTR22HHP",
+  "cat": "Washer",
+  "sub": "Top Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/top-load/wtr22hhp/",
+  "name": "22 Kg Top Load washing Machine | TurboWash3D™| AI DD | Steam | 6 Motion DD | Turbo Drum | ThinQ™ | Platinum Black Color",
+  "price": "4099",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "03 2 Ai",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-03-2-ai-dd-d.jpg",
+    "t": "03 2 Ai",
+    "d": ""
+   },
+   {
+    "a": "05 2 Turbowash3D",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-05-2-turbowash3d-d.jpg",
+    "t": "A powerful yet gentle clean in just 30 min2)",
+    "d": "Compressing motion A high speed spin motion"
+   },
+   {
+    "a": "07 2 Easy Unload",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-07-2-easy-unload-d.jpg",
+    "t": "07 2 Easy Unload",
+    "d": ""
+   },
+   {
+    "a": "09 1 Steam",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-09-1-steam-d.jpg",
+    "t": "Steam away stains, allergens, and bacteria",
+    "d": "Wear your clothes with confidence knowing that stains and allergens are removed3) with steam."
+   },
+   {
+    "a": "10 1 Tub Clean",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-10-1-tub-clean-d.jpg",
+    "t": "Steam away stains, allergens, and bacteria",
+    "d": "Thoroughly cleans and dries the tub, door and gaskets with the press of a button."
+   },
+   {
+    "a": "12 2 Inverter",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-12-2-Inverter-direct-drive-motor-d.jpg",
+    "t": "12 2 Inverter",
+    "d": ""
+   },
+   {
+    "a": "13 2 1 Thinq",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-13-2-1-thinq-d.jpg",
+    "t": "Control your laundry anytime, anywhere",
+    "d": "The ThinQ™ app allows out to connect with your washer like never before. Start your load with just the tap of a button."
+   },
+   {
+    "a": "13 2 2 Thinq",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-13-2-2-thinq-d.jpg",
+    "t": "Control your laundry anytime, anywhere",
+    "d": "Tell your smart speaker or AI assistant what you need and let your washer take care of the rest."
+   },
+   {
+    "a": "13 2 3 Thinq",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-13-2-3-thinq-d.jpg",
+    "t": "Easy maintenance and monitoring",
+    "d": "Tell your smart speaker or AI assistant what you need and let your washer take care of the rest."
+   },
+   {
+    "a": "14 1 Design",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-14-1-design-d.jpg",
+    "t": "Hands-free laundry with Voice Assistant",
+    "d": "Tell your smart speaker or AI assistant what you need and let your washer take care of the rest."
+   },
+   {
+    "a": "14 2 Design",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-14-2-design-d.jpg",
+    "t": "A sleek and modern design",
+    "d": "*Support for smart home devices that are compatible may vary by country and your individual smart home setup."
+   },
+   {
+    "a": "14 3 Design",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-14-3-design-d.jpg",
+    "t": "A sleek and modern design",
+    "d": "A sleek and modern design"
+   },
+   {
+    "a": "14 4 Design",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-14-4-design-d.jpg",
+    "t": "intuitive digital dial control",
+    "d": "*The product images in the image and video are for illustrative purposes only and might differ from the real product."
+   },
+   {
+    "a": "14 5 Design",
+    "p": "/images/wm/top-loading-washing-machine-tx-2024-feature-14-5-design-d.jpg",
+    "t": "Soft closing door",
+    "d": "*The product images in the image and video are for illustrative purposes only and might differ from the real product."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "WS2112BST",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/ws2112bst/",
+  "name": "21 kg Washer with 12 Kg Dryer | Front Load | with AI DD™ | ThinQ™",
+  "price": "7599",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 1",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D1.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D10.jpg"
+   },
+   {
+    "a": "Gallery 11",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D11.jpg"
+   },
+   {
+    "a": "Gallery 12",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D12.jpg"
+   },
+   {
+    "a": "Gallery 15",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D15.jpg"
+   },
+   {
+    "a": "Gallery 16",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D16.jpg"
+   },
+   {
+    "a": "Gallery 17",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D17.jpg"
+   },
+   {
+    "a": "Gallery 18",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D18.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D2.jpg"
+   },
+   {
+    "a": "Gallery 3",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D3.jpg"
+   },
+   {
+    "a": "Gallery 4",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D4.jpg"
+   },
+   {
+    "a": "Gallery 5",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D5.jpg"
+   },
+   {
+    "a": "Gallery 6",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D6.jpg"
+   },
+   {
+    "a": "Gallery 8",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D8.jpg"
+   },
+   {
+    "a": "Gallery 9",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/D9.jpg"
+   },
+   {
+    "a": "Gallery 1",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ1.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ10.jpg"
+   },
+   {
+    "a": "Gallery 11",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ11.jpg"
+   },
+   {
+    "a": "Gallery 12",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ12.jpg"
+   },
+   {
+    "a": "Gallery 15",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ15.jpg"
+   },
+   {
+    "a": "Gallery 16",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ16.jpg"
+   },
+   {
+    "a": "Gallery 17",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ17.jpg"
+   },
+   {
+    "a": "Gallery 18",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ18.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ2.jpg"
+   },
+   {
+    "a": "Gallery 3",
+    "p": "/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ3.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "21",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Child Lock": "Yes",
+   "Remote Start": "Yes",
+   "Steam": "Yes",
+   "ThinQ(Wi-Fi)": "Yes",
+   "Max Dry Capacity (kg)": "12",
+   "Max Wash Capacity(kg)": "21",
+   "Delay Timer": "Yes",
+   "Display Type": "LED",
+   "AI DD": "Yes",
+   "Type": "Washer and Dyer",
+   "Body Color": "Stone Silver",
+   "Allergy Care (washer)": "Yes",
+   "Cotton +": "Yes",
+   "Delicates": "Yes",
+   "Downloaded Cycle": "Yes",
+   "Easy Care": "Yes",
+   "Mixed Fabric": "Yes",
+   "Wool (Hand/Wool)": "Yes"
+  }
+ },
+ {
+  "code": "WTT1108OW1",
+  "cat": "Washer",
+  "sub": "Twin Tub",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/twin-tub/wtt1108ow1/",
+  "name": "10.5 kg Twin Tub Washing Machine",
+  "price": "1399",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/450_BASIC.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/DZ-06.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/MZ-01.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/MZ-02.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/MZ-03.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/MZ-04.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/MZ-05.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/MZ-06.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/S-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/S-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/S-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/S-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/S-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/gallery/S-06.jpg"
+   },
+   {
+    "a": "Gallery 14",
+    "p": "/images/washing-machines/wtt1108ow_dbw5nag_emgf_sa_en_c/gallery/D-14.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Saso_D",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/features/SASO_D.jpg",
+    "t": "Rat Away Technology",
+    "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model."
+   },
+   {
+    "a": "Saso_M",
+    "p": "/images/washing-machines/wtt1108ow1-dbw5nag/features/SASO_M.jpg",
+    "t": "Rat Away Technology",
+    "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model."
+   }
+  ],
+  "specs": {
+   "Drain Selector": "Yes",
+   "Soak Timer (min)": "20",
+   "Spin Timer (min)": "5",
+   "Wash Timer (min)": "15",
+   "Spin Tub Capacity(kg)": "8",
+   "Wash Capacity(kg)": "10.5",
+   "Product Dimensions (WxHxD mm)": "905x1025x545",
+   "Weight (kg)": "32.0",
+   "360˚ Wheel": "No",
+   "Anti Vibration Rubber": "Yes",
+   "Auto Restart": "No",
+   "Buzzer": "No",
+   "Collar Scrubber": "No",
+   "Lint Filter": "Yes",
+   "Punch + 3": "Yes",
+   "Rat Away feature": "Yes",
+   "Roller Jet Pulsator": "Yes",
+   "Rust Free Plastic Base": "Yes",
+   "Spin Window": "No",
+   "Unidirectional Wheel": "No",
+   "Wash Window": "No",
+   "Water feed (Hot / Cold)": "Hot & Cold",
+   "Wind Jet Dry": "No",
+   "Main Color": "White",
+   "Gentle": "Yes"
+  }
+ },
+ {
+  "code": "WFN1510WHT",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfn1510wht/",
+  "name": "Front Load Washer 15 kg Steam – LG WFN1510WHT",
+  "price": "3999",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/1044-13.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/2010-13.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/350-13.jpg"
+   },
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/450_BASIC.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-09.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-11.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/DZ-12.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-01.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-02.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-03.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-04.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-05.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-06.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-07.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-08.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wfn1510wht-agwgnag/gallery/MZ-09.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-01-desktop.jpg",
+    "t": "Features to love",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-02-desktop.jpg",
+    "t": "Features to love",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-03-desktop.jpg",
+    "t": "Ha Wm Nt Slim Led Gp1 03 ",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-04-desktop.jpg",
+    "t": "Fit your washer into your life",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 09 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-09-desktop.jpg",
+    "t": "Reduce allergens in fabrics with the Allergy Care™ Cycle with Steam",
+    "d": "A woman and a child are lying in bed smiling"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-01-desktop.jpg",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-desktop.jpg",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-icon-off-desktop.png",
+    "t": "Smart Control, Smart Life with LG ThinQ®",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-icon-on-desktop.png",
+    "t": "Smart Control, Smart Life with LG ThinQ®",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-desktop.jpg",
+    "t": "Monitor from afar",
+    "d": "Check the status of the washer, download new cycles, or monitor energy usage with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-icon-off-desktop.png",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-01-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Connect with a smart speaker for hands-free voice control. Ask 'how much time is left on the washer' and the smart speaker will let you know.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-02-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Space-saving design*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-03-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Space-saving design*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-04-desktop.jpg",
+    "t": "Designed to complement any space",
+    "d": "*When comparing the dimensions of new LG WXLS-1014 (W650 x H950 x D660) against predecessor LG WXL10-14 (W650 x H940 x D770)."
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "15",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "650x645x950",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse+": "No",
+   "Rinse + Spin": "No",
+   "Softener Level": "No",
+   "Spin": "5 Levels",
+   "Steam": "Yes",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "Yes",
+   "TurboWash": "Yes",
+   "Wash": "Yes"
+  }
+ },
+ {
+  "code": "S95TR",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "🔈",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/tv-soundbars/soundbars/s95tr/",
+  "name": "9.1.5 channel LG Home Cinema Soundbar with Surround Sound and Rear Speakers S95TR",
+  "price": "2599",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Front",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-05.jpg"
+   },
+   {
+    "a": "Gallery 95",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-07.jpg"
+   },
+   {
+    "a": "Gallery 95",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-08.jpg"
+   },
+   {
+    "a": "Gallery 95",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-09.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-10.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-11.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-06.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-07.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-08.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-09.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-10.jpg"
+   },
+   {
+    "a": "Thumbnail",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-thumbnail-11.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-zoom-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-zoom-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-zoom-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/av/s95tr/av-soundbar-s95tr-gallery-zoom-04.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "05 1 Rear Speakers",
+    "p": "/s95tr/gp1/features/desktop/soundbar-s95tr-2024-feature-05-1-rear-speakers.jpg",
+    "t": "Rear speakers embrace wireless freedom",
+    "d": "You only need to connect the power cable in order to install the rear speakers. The rear speakers connect wirelessly to the main soundbar.."
+   },
+   {
+    "a": "05 2 Rear Speakers",
+    "p": "/s95tr/gp1/features/desktop/soundbar-s95tr-2024-feature-05-2-rear-speakers.jpg",
+    "t": "Rich surround sound from wireless rear speakers",
+    "d": "Fill your space with crystal-clear, multidimensional sound from the 6-channel speaker featuring 2 up-firing channels and Dolby Atmos. With wider transmission range and stable reception, adding these speakers unlocks a whole new level of immersive audio."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "RH18U8JVCW",
+  "cat": "Dryer",
+  "sub": "Heat Pump",
+  "ico": "🌀",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/dryers/rh18u8jvcw/",
+  "name": "18Kg Dryer | DUAL Inverter Heat Pump | ThinQ",
+  "price": "5549",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "Viewlabel_Rh18U8Jvcw D",
+    "p": "/images/wm/features/rh18u8jvcw-ablgnag-emsj-sa_en-c/ViewLabel_RH18U8JVCW-D.jpg",
+    "t": "TWIN Care",
+    "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model."
+   }
+  ],
+  "specs": {
+   "MATERIAL & FINISH - Body Color": "Black Steel",
+   "CAPACITY - Max Dry Capacity (kg)": "18.0",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "770x990x820",
+   "FEATURES - DUAL Inverter HeatPump": "Yes",
+   "FEATURES - Auto Cleaning Condenser": "Yes",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Anti Crease": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "Condenser Care": "Yes",
+   "Delay End": "Yes",
+   "Drum Care": "Yes",
+   "Drum Light": "Yes",
+   "Dry Level": "5 Levels",
+   "Favourite": "No",
+   "Less Time": "Yes",
+   "More Time": "Yes",
+   "Rack Dry": "No",
+   "Remote Start": "Yes",
+   "Steam": "No",
+   "Time Dry": "Yes",
+   "Bar Code": "8806096109670",
+   "Max Dry Capacity (kg)": "18.0",
+   "Delay Timer": "3-19 hours"
+  }
+ },
+ {
+  "code": "WSV0906XM",
+  "cat": "Washer",
+  "sub": "Combo",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load-combo/wsv0906xm/",
+  "name": "9 kg Washer with 6 kg Dryer | Front Load | with AI DD™",
+  "price": "3399",
+  "msrp": "6349",
+  "gallery": [
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_1.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_10.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_11.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_12.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_13.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_14.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_2.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_3.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_4.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_5.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_6.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_7.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_8.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1044_9.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_1.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_10.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_11.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_12.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_13.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_14.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_2.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_3.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_4.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_5.jpg"
+   },
+   {
+    "a": "Gallery 1100",
+    "p": "/images/washing-machines/wsv0906xm_assgnag_emgf_sa_en_c/gallery/1100_6.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "9",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 620",
+   "FEATURES - Steam": "Steam",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "6 Motion DD": "Yes",
+   "AI DD": "Yes",
+   "Inverter DirectDrive": "Yes",
+   "Stainless Steel Drum": "Full Stainless",
+   "Steam": "Steam",
+   "Type": "Front Loader Washer and Dryer",
+   "Body Color": "Stainless Silver",
+   "Smart Diagnosis": "Yes",
+   "ThinQ(Wi-Fi)": "Yes",
+   "Add Item": "Yes",
+   "TurboWash": "No",
+   "Max Dry Capacity (kg)": "6",
+   "Max Wash Capacity(kg)": "9",
+   "Display Type": "Touch LED",
+   "Product Dimensions (WxHxD mm)": "600 x 850 x 620"
+  }
+ },
+ {
+  "code": "WFR1114WH",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfr1114wh/",
+  "name": "11 kg Washer, Front Load washing Machine, White color",
+  "price": "3399",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/basic.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m01.jpg"
+   },
+   {
+    "a": "Gallery 02",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m02.jpg"
+   },
+   {
+    "a": "Gallery 03",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m03.jpg"
+   },
+   {
+    "a": "Gallery 04",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m04.jpg"
+   },
+   {
+    "a": "Gallery 05",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m05.jpg"
+   },
+   {
+    "a": "Gallery 06",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m07.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m08.jpg"
+   },
+   {
+    "a": "Gallery 09",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m09.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m10.jpg"
+   },
+   {
+    "a": "Gallery 11",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m11.jpg"
+   },
+   {
+    "a": "Gallery 12",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m12.jpg"
+   },
+   {
+    "a": "Gallery 13",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m13.jpg"
+   },
+   {
+    "a": "Gallery 14",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m14.jpg"
+   },
+   {
+    "a": "Gallery 15",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m15.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large01.jpg"
+   },
+   {
+    "a": "Gallery 02",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large02.jpg"
+   },
+   {
+    "a": "Gallery 03",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large03.jpg"
+   },
+   {
+    "a": "Gallery 04",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large04.jpg"
+   },
+   {
+    "a": "Gallery 05",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large05.jpg"
+   },
+   {
+    "a": "Gallery 06",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large07.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large08.jpg"
+   },
+   {
+    "a": "Gallery 09",
+    "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large09.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Wfr1114Wh Saso D",
+    "p": "/images/wm/features/WFR1114WH-saso-d.jpg",
+    "t": "SUMMARY",
+    "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model."
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "11",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 565",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse+": "Yes",
+   "Rinse + Spin": "No",
+   "Softener Level": "No",
+   "Spin": "1400/1200/1000/800/400/No Spin",
+   "Steam": "No",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "No",
+   "TurboWash": "No",
+   "Wash": "No"
+  }
+ },
+ {
+  "code": "A9K-SOLO",
+  "cat": "Vacuum",
+  "sub": "Cordless",
+  "ico": "🧹",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/vacuum-cleaners/a9k-solo/",
+  "name": " LG CordZero™ A9Kompressor Vaccum Cleaner",
+  "price": "1299.01",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 01",
+    "p": "/images/vacuum-cleaners/a9k-core_biggnag_emsj_sa_en_c/gallery/D01.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/01_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Cradle_Front_Dual.jpg"
+   },
+   {
+    "a": "Gallery 02",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/02_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Cradle_LeftSide_Dual.jpg"
+   },
+   {
+    "a": "Gallery 03",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/03_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Cradle_RightSide_Dual.jpg"
+   },
+   {
+    "a": "Gallery 04",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/04_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Cradle_Side_Dual.jpg"
+   },
+   {
+    "a": "Gallery 05",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/05_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Front1_Dual.jpg"
+   },
+   {
+    "a": "Gallery 06",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/06_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Front2_Dual.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/07_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_RightSide1_Dual.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/08_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_Side1_Dual.jpg"
+   },
+   {
+    "a": "Gallery 09",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/09_A9K_FantasySilver_S92SNLNNSS_A9K-SOLO_TK_LED_ON.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-06.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-07.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-08.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-09.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-10.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-11.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-12.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-13.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-14.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/vacuum-cleaners/a9k-solo-bfsgnag/hr-images/gallery/1044-15.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "A9K Core Vc Cordzero A9 K",
+    "p": "/images/vc/features/A9K-CORE-VC-CordZero-A9-Komp-FantasySilver-01-Powerful-Suction-For-D.jpg",
+    "t": "A9K Core Vc Cordzero A9 K",
+    "d": ""
+   },
+   {
+    "a": "A9K Core Vc Cordzero A9 K",
+    "p": "/images/vc/features/A9K-CORE-VC-CordZero-A9-Komp-FantasySilver-06-Control-Features-With-D.jpg",
+    "t": "Control Features With a Single Touch of Your Thumb",
+    "d": "On, Off and power levels including ‘Turbo’ mode are easy to select with the touch of a thumb."
+   },
+   {
+    "a": "Vc Cordzero A9 Komp Fanta",
+    "p": "/images/vc/features/a9k-solo/VC-CordZero-A9-Komp-FantasySilver-05-2-Easily-Store-And-D.jpg",
+    "t": "Charging and Storage Options",
+    "d": "The charging stand has three storage options: self-standing, compact, traditional wall mount."
+   },
+   {
+    "a": "Vc Cordzero A9 Komp Fanta",
+    "p": "/images/vc/features/a9k-solo/VC-CordZero-A9-Komp-FantasySilver-05-3-Easily-Store-And-D.jpg",
+    "t": "Easily Store and Charge Anywhere. No Drills Required.",
+    "d": "The charging stand has three storage options: self-standing, compact, traditional wall mount."
+   }
+  ],
+  "specs": {
+   "DIMENSIONS & WEIGHTS (CLEANER) - Product": "260 x 1120 x 270",
+   "Bar Code": "8806096999721",
+   "Cleaning Brush": "No",
+   "Combination Tool": "Yes",
+   "Crevice Tool": "Yes",
+   "Batteries Included (Qty)": "1 (Single)",
+   "Battery Type": "Lithium-ion",
+   "Charging Time per battery (minutes)": "240",
+   "Max Run Time per battery (minutes) (Norm": "40",
+   "Max Run Time (min/battery) (Power Mode)": "30",
+   "Max Run Time (min/battery) (Power Mode +": "20",
+   "Max Run Time per battery (minutes) (Turb": "6",
+   "Product Dimensions (WxHxD mm)": "260 x 1120 x 270",
+   "Weight (kg)": "2.9",
+   "Battery Status Indicator": "Yes",
+   "Convert to Handheld": "Yes",
+   "Dual PowerPack": "No",
+   "Kompressor Technology": "Yes",
+   "Smart Inverter Motor": "Yes",
+   "Type": "Cordless Stick + Handheld (2in1)",
+   "Bedding Nozzle": "No",
+   "Mop Nozzle": "No",
+   "Pet Nozzle": "No",
+   "Slim Hard Floor Nozzle": "No",
+   "Universal(Multi-Surface) Nozzle": "No"
+  }
+ },
+ {
+  "code": "LS19GBBDI",
+  "cat": "Fridge",
+  "sub": "Side-by-Side",
+  "ico": "🧊",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/refrigerators/side-by-side/ls19gbbdi/",
+  "name": "17.9 Cu.Ft | Side By Side | Smart Inverter Compressor",
+  "price": "3499",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-1.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-2.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-3.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-4.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-5.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-6.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-7.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-8.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/MZ-9.jpg"
+   },
+   {
+    "a": "Gallery 1",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-1.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-2.jpg"
+   },
+   {
+    "a": "Gallery 3",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-3.jpg"
+   },
+   {
+    "a": "Gallery 4",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-4.jpg"
+   },
+   {
+    "a": "Gallery 5",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-5.jpg"
+   },
+   {
+    "a": "Gallery 6",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-6.jpg"
+   },
+   {
+    "a": "Gallery 7",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-7.jpg"
+   },
+   {
+    "a": "Gallery 8",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-8.jpg"
+   },
+   {
+    "a": "Gallery 9",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/S-9.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large01.jpg"
+   },
+   {
+    "a": "Gallery 02",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large02.jpg"
+   },
+   {
+    "a": "Gallery 03",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large03.jpg"
+   },
+   {
+    "a": "Gallery 04",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large04.jpg"
+   },
+   {
+    "a": "Gallery 05",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large05.jpg"
+   },
+   {
+    "a": "Gallery 06",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/refrigerators/ls19gbbdi_ahsgngh_emgf_sa_en_c/gallery/large07.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {}
+ },
+ {
+  "code": "WFR1114MB",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfr1114mb/",
+  "name": "11 kg Washer, Front Load washing Machine, Middle Black color",
+  "price": "3459",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/basic.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m01.jpg"
+   },
+   {
+    "a": "Gallery 02",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m02.jpg"
+   },
+   {
+    "a": "Gallery 03",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m03.jpg"
+   },
+   {
+    "a": "Gallery 04",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m04.jpg"
+   },
+   {
+    "a": "Gallery 05",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m05.jpg"
+   },
+   {
+    "a": "Gallery 06",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m07.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m08.jpg"
+   },
+   {
+    "a": "Gallery 09",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m09.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m10.jpg"
+   },
+   {
+    "a": "Gallery 11",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m11.jpg"
+   },
+   {
+    "a": "Gallery 12",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m12.jpg"
+   },
+   {
+    "a": "Gallery 13",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m13.jpg"
+   },
+   {
+    "a": "Gallery 14",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m14.jpg"
+   },
+   {
+    "a": "Gallery 15",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large-m15.jpg"
+   },
+   {
+    "a": "Gallery 01",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large01.jpg"
+   },
+   {
+    "a": "Gallery 02",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large02.jpg"
+   },
+   {
+    "a": "Gallery 03",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large03.jpg"
+   },
+   {
+    "a": "Gallery 04",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large04.jpg"
+   },
+   {
+    "a": "Gallery 05",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large05.jpg"
+   },
+   {
+    "a": "Gallery 06",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large07.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large08.jpg"
+   },
+   {
+    "a": "Gallery 09",
+    "p": "/images/washing-machines/wfr1114mb-ambgnag/gallery/large09.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Wfr1114Mb Saso D",
+    "p": "/images/wm/features/WFR1114MB-saso-d.jpg",
+    "t": "SUMMARY",
+    "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model."
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "11",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 565",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse+": "Yes",
+   "Rinse + Spin": "No",
+   "Softener Level": "No",
+   "Spin": "1400/1200/1000/800/400/No Spin",
+   "Steam": "No",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "No",
+   "TurboWash": "No",
+   "Wash": "No"
+  }
+ },
+ {
+  "code": "S20A",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "🔈",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/speakers/soundbars/s20a/",
+  "name": "LG Soundbar S20A",
+  "price": "299",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 450",
+    "p": "/speakers/soundbars/s20a/gallery/450-b.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-06.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-07.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-08.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-09.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-10.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-11.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-12.jpg"
+   },
+   {
+    "a": "Gallery 20",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-desktop-13.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-09.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s20a/gallery/soundbar-s20a-2025-gallery-mobilezoom-11.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/s20a/feature/desktop/soundbar-s20a-2025-feature-desktop-05.jpg",
+    "t": "TV and soundbar synchronize for flawless audio",
+    "d": "Violin concert is being played on LG TV on the wall. Virtual sound effect is coming out from LG TV and LG Soundbar S20A simultaneously, showing how WOW Orchestra is created."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-01.jpg",
+    "t": "Balanced sound in a compact form",
+    "d": "LG Soundbar S20A is placed on a wooden TV console, below a TV and between its TV stands. On the TV a red car with smoke is shown."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-02.jpg",
+    "t": "Balanced sound in a compact form",
+    "d": "LG Soundbar S20A is placed on a wooden TV console, below a TV and between its TV stands. On the TV a red car with smoke is shown."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-03.jpg",
+    "t": "Built-in sub woofers in a compact design",
+    "d": "Equipped with woofers, it delivers powerful and immersive sound in a compact design. Improved acoustic package, featuring double tweeters and passive radiator, creates clear and balanced sound."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-04.jpg",
+    "t": "Soundbar S20A 2025 Featur",
+    "d": ""
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-05.jpg",
+    "t": "TV and soundbar synchronize for flawless audio",
+    "d": "Violin concert is being played on LG TV on the wall. Virtual sound effect is coming out from LG TV and LG Soundbar S20A simultaneously, showing how WOW Orchestra is created."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-06.jpg",
+    "t": "Compact yet sleek look",
+    "d": "S20A soundbar is placed on a wooden TV console. Above it a TV is partially shown with a band's concert scene on it."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-07.jpg",
+    "t": "Control your soundbar through LG ThinQ app on the smartphone",
+    "d": "S20A soundbar is placed on a wooden TV console. Above it a TV is partially shown with a band's concert scene on it."
+   },
+   {
+    "a": "Soundbar S20A 2025 Featur",
+    "p": "/speakers/soundbars/s20a/features/soundbar-s20a-2025-feature-desktop-08.jpg",
+    "t": "Control your soundbar through LG ThinQ app on the smartphone",
+    "d": "Control your soundbar using your phone. Connect to device, adjust volume, and change sound mode on ThinQ app for your convenience."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "DFC435FW",
+  "cat": "Dish",
+  "sub": "Dishwasher",
+  "ico": "🍽️",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/dishwashers/dfc435fw/",
+  "name": "14 Places Dishwasher |TrueStream™ | QuadWash™ | EasyRack™ Plus | Inverter Direct Drive | SmartThinQ™",
+  "price": "3299.01",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 01",
+    "p": "/images/dishwashers/dfb325hs_aas5nag_emgf_sa_en_c/gallery/Desk01.jpg"
+   },
+   {
+    "a": "Basic",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/Basic-450.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-1.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-11.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-12.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-13.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-14.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-15.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-2.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-3.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-4.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-5.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-6.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-7.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-8.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/DZ-9.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-1.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-10.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-11.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-12.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-13.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-14.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-15.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/dishwashers/dfc435fw-abw5nag/gallery/MZ-2.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "Tub Material": "STS",
+   "Colors": "White",
+   "Status Indicators": "No",
+   "Time Remaining Indicator": "LED",
+   "Total Place Settings": "14",
+   "Display Type": "LED",
+   "Installation Type": "Free Standing",
+   "Panel Type": "Front Control",
+   "Auto": "Yes",
+   "Cancel": "Yes",
+   "Control Lock": "Yes",
+   "Delay Start": "Yes",
+   "Delicate": "Yes",
+   "Download Cycle": "Yes",
+   "Dual Zone": "Yes",
+   "Eco": "Yes",
+   "Energy Saver": "Yes",
+   "Express": "Yes",
+   "Extra Dry": "Yes",
+   "Half Load": "Yes",
+   "Heavy": "No",
+   "High Temp.": "Yes",
+   "Intensive": "Yes",
+   "Machine Clean": "Machine Clean(Steam)",
+   "Normal": "No"
+  }
+ },
+ {
+  "code": "S65TR",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "🔈",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/tv-soundbars/soundbars/s65tr/",
+  "name": "LG Soundbar with 5.1 Channel Surround Sound",
+  "price": "999.01",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "05 1 Rear Speakers",
+    "p": "/s65tr/gp1/features/desktop/soundbar-s65tr-2024-feature-05-1-rear-speakers.jpg",
+    "t": "Rich surround sound from wireless rear speakers",
+    "d": "AI Sound Pro categorizes different sounds into effects, music, and voices, and then applies the ideal settings to create the optimal audio experience."
+   },
+   {
+    "a": "Soundbar S65Tr 2024 Featu",
+    "p": "/s65tr/gp1/features/desktop/soundbar-s65tr-2024-featurer-05-rear-speakers.jpg",
+    "t": "Rear speakers embrace wireless freedom",
+    "d": "Enhance your soundbar performance with 2.0-channel speakers that require only a single power cable for connection. Experience fuller, more dimensional audio with minimal setup."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "WFN1310BST",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfn1310bst/",
+  "name": "13 kg  Front Load washing Machine | ThinQ(Wi-Fi) | Essense Graphite color",
+  "price": "3949",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wfn1310bst-aeggnag/gallery1/Basic-450.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-01-desktop.jpg",
+    "t": "Features to love",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-02-desktop.jpg",
+    "t": "Features to love",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-03-desktop.jpg",
+    "t": "Ha Wm Nt Slim Led Gp1 03 ",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-04-desktop.jpg",
+    "t": "Fit your washer into your life",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 09 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-09-desktop.jpg",
+    "t": "Reduce allergens in fabrics with the Allergy Care™ Cycle with Steam",
+    "d": "A woman and a child are lying in bed smiling"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-01-desktop.jpg",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-desktop.jpg",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-icon-off-desktop.png",
+    "t": "Smart Control, Smart Life with LG ThinQ®",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-icon-on-desktop.png",
+    "t": "Smart Control, Smart Life with LG ThinQ®",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-desktop.jpg",
+    "t": "Monitor from afar",
+    "d": "Check the status of the washer, download new cycles, or monitor energy usage with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-icon-off-desktop.png",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-01-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Connect with a smart speaker for hands-free voice control. Ask 'how much time is left on the washer' and the smart speaker will let you know.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-02-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Space-saving design*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-03-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Space-saving design*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-04-desktop.jpg",
+    "t": "Designed to complement any space",
+    "d": "*When comparing the dimensions of new LG WXLS-1014 (W650 x H950 x D660) against predecessor LG WXL10-14 (W650 x H940 x D770)."
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "13.0",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "650x950x645",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse+": "No",
+   "Rinse + Spin": "No",
+   "Softener Level": "No",
+   "Spin": "5 Levels",
+   "Steam": "Yes",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "Yes",
+   "TurboWash": "Yes",
+   "Wash": "Yes"
+  }
+ },
+ {
+  "code": "WFN1310WHT",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfn1310wht/",
+  "name": "13 kg  Front Load washing Machine | ThinQ(Wi-Fi) | Essence White color",
+  "price": "4099",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/washing-machines/wfn1310wht-agwgnag/gallery1/Basic-450.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-01-desktop.jpg",
+    "t": "Features to love",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-02-desktop.jpg",
+    "t": "Features to love",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-03-desktop.jpg",
+    "t": "Ha Wm Nt Slim Led Gp1 03 ",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 03 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-03-04-desktop.jpg",
+    "t": "Fit your washer into your life",
+    "d": "660mm incl. door, 645mm excl. door"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 09 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-09-desktop.jpg",
+    "t": "Reduce allergens in fabrics with the Allergy Care™ Cycle with Steam",
+    "d": "A woman and a child are lying in bed smiling"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-01-desktop.jpg",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-desktop.jpg",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-icon-off-desktop.png",
+    "t": "Smart Control, Smart Life with LG ThinQ®",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-icon-on-desktop.png",
+    "t": "Smart Control, Smart Life with LG ThinQ®",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-desktop.jpg",
+    "t": "Monitor from afar",
+    "d": "Check the status of the washer, download new cycles, or monitor energy usage with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 12 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-icon-off-desktop.png",
+    "t": "Control and adjust from your phone",
+    "d": "Start your washer via your smart phone with the LG ThinQ® app.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-01-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Connect with a smart speaker for hands-free voice control. Ask 'how much time is left on the washer' and the smart speaker will let you know.*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-02-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Space-saving design*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-03-desktop.jpg",
+    "t": "Space-saving design*",
+    "d": "Space-saving design*"
+   },
+   {
+    "a": "Ha Wm Nt Slim Led Gp1 14 ",
+    "p": "/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-04-desktop.jpg",
+    "t": "Designed to complement any space",
+    "d": "*When comparing the dimensions of new LG WXLS-1014 (W650 x H950 x D660) against predecessor LG WXL10-14 (W650 x H940 x D770)."
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "13.0",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "650x950x645",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "Yes",
+   "Beep On/Off": "Yes",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "Yes",
+   "Rinse+": "No",
+   "Rinse + Spin": "No",
+   "Softener Level": "No",
+   "Spin": "5 Levels",
+   "Steam": "Yes",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "Yes",
+   "TurboWash": "Yes",
+   "Wash": "Yes"
+  }
+ },
+ {
+  "code": "LS25CBBDIK",
+  "cat": "Fridge",
+  "sub": "Side-by-Side",
+  "ico": "🧊",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/refrigerators/side-by-side/ls25cbbdik/",
+  "name": "23.2 Cu.Ft, Side By Side Refrigerator, PCM  Color, Smart Diagnosis, Smart Inverter Compressor",
+  "price": "4699",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/Basic.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-09.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-11.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-12.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/dz-13.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-01.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-02.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-03.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-04.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-05.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-06.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-07.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-08.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-09.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-10.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/refrigerators/ls25cbbdik-adsgngh/gallery/mz-11.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "DIMENSIONS & WEIGHT - Product Dimension ": "913 x 1790 x 735",
+   "PERFORMANCE - Compressor Type": "Smart Inverter Compressor (BLDC)",
+   "FEATURES - InstaView": "No",
+   "FEATURES - Door-in-Door": "No",
+   "SMART TECHNOLOGY - ThinQ (Wi-Fi)": "No",
+   "MATERIAL & FINISH - Finish (Door)": "Dark Graphite Steel",
+   "Product Type": "Side by Side",
+   "Freezer Capacity (cu. ft)": "7.2",
+   "Refrigerator Capacity (cu. ft)": "14.9",
+   "Storage Volume Freezer (2Star) (L)": "30",
+   "Storage Volume Freezer (L)": "206",
+   "Storage Volume Refrigerator (L)": "422",
+   "Storage Volume Total (L)": "658",
+   "Depth without door (mm)": "620",
+   "Depth without handle (mm)": "735",
+   "Packing Weight (kg)": "111",
+   "Product Dimension (WxHxD, mm)": "913 x 1790 x 735",
+   "Product Weight (kg)": "101",
+   "Door Cooling+": "No",
+   "Deodorizer": "Yes",
+   "Door-in-Door": "No",
+   "InstaView": "No",
+   "LINEAR Cooling": "Yes",
+   "Freezer Light": "Top LED",
+   "Multi-Air Flow": "No"
+  }
+ },
+ {
+  "code": "WF0712MB",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wf0712mb/",
+  "name": "7 kg Washer  Front Load washing Machine,steam, inverter direct drive, ",
+  "price": "1999",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-01-1-main-d.jpg",
+    "t": "Designed to fit harmoniously",
+    "d": "It's showing the interior cut of the washing machine"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-02-1-key-benefit-summary-d.jpg",
+    "t": "Designed to fit harmoniously",
+    "d": "6 Motion DDTailored to fabric type"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-02-2-key-benefit-summary-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": "6 Motion DDTailored to fabric type"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-02-3-key-benefit-summary-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": "Allergy CareSteam away dust mites"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-02-4-key-benefit-summary-d.jpg",
+    "t": "Made to fit seamlessly even into tight spaces",
+    "d": "Allergy CareSteam away dust mites"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-03-removable-top-cover-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": ""
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-04-2-sleek-design-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": ""
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-05-2-6-motion-dd-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": ""
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-06-2-steam-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": ""
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-07-tub-clean-d.jpg",
+    "t": "Clean from the inside",
+    "d": "The washing machine motor is swirling with water"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-08-1-inverter-dd-motor-d.jpg",
+    "t": "A decade of peace of mind",
+    "d": "Maintain a clean washer and hygienic laundry"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-10-1-1-design-d.jpg",
+    "t": "A decade of peace of mind",
+    "d": "It has a washing machine motor and logo on a black rippling background"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-10-1-2-design-d.jpg",
+    "t": "Upgrade your laundry experience with the washer's elegant and simple design",
+    "d": "*The 10-year warranty is on the Direct Drive motor only."
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-10-1-3-design-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": ""
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-10-1-4-design-d.jpg",
+    "t": "Wm Frontloader Vb F Thinq",
+    "d": ""
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-10-1-5-design-d.jpg",
+    "t": "SUMMARY",
+    "d": "SUMMARY"
+   },
+   {
+    "a": "Wm Frontloader Vb F Thinq",
+    "p": "/images/wm/features/wf0_front-load/features/wm-frontloader-vb-f-thinq-essence-white-10-1-6-design-d.jpg",
+    "t": "SUMMARY",
+    "d": "SUMMARY"
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "7.0",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "600x850x440",
+   "FEATURES - Steam": "Yes",
+   "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "No",
+   "Wi-Fi": "No",
+   "Add Item": "No",
+   "Beep On/Off": "No",
+   "Child Lock": "Yes",
+   "ColdWash": "No",
+   "Delay End": "Yes",
+   "Detergent Level": "No",
+   "Drum Light": "No",
+   "ezDispense Nozzle Clean": "No",
+   "Pre Wash": "Yes",
+   "Remote Start": "No",
+   "Rinse+": "Yes",
+   "Rinse + Spin": "Yes",
+   "Softener Level": "No",
+   "Spin": "1200/1000/800/600/400/No Spin",
+   "Steam": "No",
+   "Temp.": "Cold/20/30/40/60/95℃",
+   "Tub Clean": "Yes",
+   "TurboWash": "No",
+   "Wash": "Yes"
+  }
+ },
+ {
+  "code": "XG2TBK",
+  "cat": "Audio",
+  "sub": "Portable Speaker",
+  "ico": "🔊",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/speakers/portable-speakers/xg2tbk/",
+  "name": "Portable Bluetooth speaker LG XBOOM Go XG2TBK Military Grade & 10-Hour Battery",
+  "price": "299",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Front",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-06.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-07.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-08.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-09.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-10.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/bluetooth-speakers/xg2tbk/av-xboomgo-xg2t-gallery-11.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Av Xboomgo Xg2T 01 Kv Des",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-01-KV-Desktop-v1.jpg",
+    "t": "Boost your everyday adventures",
+    "d": "Tag along and go. Immerse yourself in powerful sound with our compact speaker."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 04 Low So",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-04-low-sound-Desktop.jpg",
+    "t": "Booming bass even at whisper-soft volumes",
+    "d": "Low-sound Enhancement Algorithm"
+   },
+   {
+    "a": "Av Xboomgo Xg2T 05 1 1 St",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-05-1-1-string-Desktop.jpg",
+    "t": "Lace-up your music. Spice up your life.",
+    "d": "Soundwaves muestra el algoritmo de mejora de sonidos graves de LG XBOOM Go XG2T."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 05 1 2 St",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-05-1-2-string-Desktop.jpg",
+    "t": "Lace-up your music. Spice up your life.",
+    "d": "Lace-up your music. Spice up your life."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 05 1 3 St",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-05-1-3-string-Desktop.jpg",
+    "t": "Av Xboomgo Xg2T 05 1 3 St",
+    "d": ""
+   },
+   {
+    "a": "Av Xboomgo Xg2T 05 1 4 St",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-05-1-4-string-Desktop.jpg",
+    "t": "Av Xboomgo Xg2T 05 1 4 St",
+    "d": ""
+   },
+   {
+    "a": "Av Xboomgo Xg2T 05 1 5 St",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-05-1-5-string-Desktop.jpg",
+    "t": "Play over the long haul",
+    "d": "Play over the long haul"
+   },
+   {
+    "a": "Av Xboomgo Xg2T 06 Lifest",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-06-lifestyle-Desktop.jpg",
+    "t": "Mighty in mini",
+    "d": "Sound Boost Mighty in miniEnjoy your music with an extra kick using Sound Boost. Customise the sound EQ for a personalised audio experience."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 08 Milita",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-08-military-standard-Desktop.jpg",
+    "t": "Military-grade toughness, rugged everywhere",
+    "d": "LG XBOOM Go XG2 standing on the rock to show Military Standards."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 09 1 6 St",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-09-1-6-string-Desktop.jpg",
+    "t": "Play over the long haul",
+    "d": "*Actual battery life varies depending on network connectivity and lighting usage."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 09 Ip67 D",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-09-IP67-Desktop.jpg",
+    "t": "Don’t sweat the water and dust",
+    "d": "LG XBOOM Go XG2 standing on the rock to show Military Standards."
+   },
+   {
+    "a": "Av Xboomgo Xg2T 10 Batter",
+    "p": "/images/bluetooth-speakers/features/AV-Xboomgo-XG2T-10-battery-Desktop.jpg",
+    "t": "Play over the long haul",
+    "d": "*Actual battery life varies depending on network connectivity and lighting usage."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "27US550-W",
+  "cat": "Monitor",
+  "sub": "UHD Monitor",
+  "ico": "🖥️",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/monitors/uhd-4k-5k/27us550-w/",
+  "name": "27\" 4K UHD UltraFine™ IPS monitor",
+  "price": "1099",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "Ultrafine 27Us500 02 1 Hd",
+    "p": "/images/mn/32br55u-b/feature/27us550/ultrafine-27us500-02-1-hdr-10-dci-p3-90-d.jpg",
+    "t": "Feature",
+    "d": "Tilt, height, swivel and pivot adjustment"
+   },
+   {
+    "a": "Ultrafine 27Us500 03 1 Uh",
+    "p": "/images/mn/32br55u-b/feature/27us550/ultrafine-27us500-03-1-uhd-4k-d.jpg",
+    "t": "Clarity with 8.29 million pixels",
+    "d": "UHD 4K Clarity with 8.29 million pixelsEnjoy vivid and accurate color expression, thanks to UHD 4K."
+   },
+   {
+    "a": "01 1 Ultrafine",
+    "p": "/images/mn/32br55u-b/feature/27us550/ultrafine-uhd-4k-5k-27us550-2024-feature-01-1-ultrafine-display-logo-d.png",
+    "t": "Details mastered",
+    "d": "Details mastered"
+   },
+   {
+    "a": "01 2 Ultrafine",
+    "p": "/images/mn/32br55u-b/feature/27us550/ultrafine-uhd-4k-5k-27us550-2024-feature-01-2-ultrafine-display-d.jpg",
+    "t": "Details mastered",
+    "d": "En el escritorio, hay un monitor ultrafino que muestra trabajos de Photoshop. Junto al monitor, hay una lámpara de escritorio, un mouse, papel y lápices de colores."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "WTV17HHD",
+  "cat": "Washer",
+  "sub": "Top Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/top-load/wtv17hhd/",
+  "name": "17Kg Washer | Top Load | ThinQ | AI DD",
+  "price": "3749",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-012.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-09.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-11.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1044/WM-Vplus-LED-AI-DD-MobileZoom-13.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-06.jpg"
+   },
+   {
+    "a": "Gallery 07",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-07.jpg"
+   },
+   {
+    "a": "Gallery 08",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-08.jpg"
+   },
+   {
+    "a": "Gallery 09",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-09.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-10.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-11.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/washing-machines/wtv17hhd/gallery/1100/WM-Vplus-LED-AI-DD-Gallery-12.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Wm Vplus Led Ai Dd 01 1 A",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-01-1-AI-DD-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 01 1 A",
+    "d": ""
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 02 Smo",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-02-Smooth-Operation-D.jpg",
+    "t": "Powerful & Fast 3D Wash",
+    "d": "*Tested by Intertek. Placed 3kg of different types of clothes (such as shirts, shorts, etc) with 5-hole swatches into T13H7EHDSTP and ran 'Normal' cycle. Placed same clothes into the same model and ran 'AI Wash' cycle. After completion, fabric damage was compared by counting threads on 5 hole swatches. The results may be different depending on the clothes and environment."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 03 1 T",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-03-1-TurboWash-3D-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 03 1 T",
+    "d": ""
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 04 1 1",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-04-1-1-Power-Motion-D.jpg",
+    "t": "Power Motion",
+    "d": "The water jet aids quick and effective rinsing."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 04 1 2",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-04-1-2-TurboDrum-D.jpg",
+    "t": "Power Motion",
+    "d": "The water jet aids quick and effective rinsing."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 04 1 3",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-04-1-3-Jet-Spray-D.jpg",
+    "t": "TurboDrum™",
+    "d": "The water jet aids quick and effective rinsing."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 05 2 1",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-05-2-1-6Motion-Agitating-D.jpg",
+    "t": "An Optimal Way to Wash",
+    "d": "6 kinds of movement make various multiple direction waves."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 05 2 2",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-05-2-2-6Motion-Swing-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 05 2 2",
+    "d": "6 kinds of movement make various multiple direction waves."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 05 2 3",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-05-2-3-6Motion-Rotating-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 05 2 3",
+    "d": "6 kinds of movement make various multiple direction waves."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 05 2 4",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-05-2-4-6Motion-Rubbing-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 05 2 4",
+    "d": "6 kinds of movement make various multiple direction waves."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 05 2 5",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-05-2-5-6Motion-Power-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 05 2 5",
+    "d": "Rubbing motion : Rotates left and right to rub fabric against the surface of the drum"
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 05 2 6",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-05-2-6-6Motion-Compressing-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 05 2 6",
+    "d": "Power motion : Enhances washing performance with the stronger and faster movement of the Pulsator"
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 06 1 C",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-06-1-Capacity-D.jpg",
+    "t": "Wm Vplus Led Ai Dd 06 1 C",
+    "d": ""
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 07 1 A",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-07-1-Allergy-Care-D.jpg",
+    "t": "Same Size on the Outside, Bigger Capacity in the Inside",
+    "d": "Do more laundry in one load with a washer that maximizes its interior space for a larger tub."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 08 1 L",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-08-1-Lint-Filter-D.jpg",
+    "t": "Steam Away, Allergens and Bacteria",
+    "d": "Wear your clothes with confidence knowing that, allergens and bacteria are reduced with steam."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 09 1 S",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-09-1-Scent-D.jpg",
+    "t": "A Larger Lint Filter Keeps the Tub and Your Clothes Cleaner",
+    "d": "A larger lint filter keeps your laundry and drum cleaner as dust and dirt comes off your clothes."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 10 2 1",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-10-2-1-Voice-Control-D.jpg",
+    "t": "Simple Control with Voice Assistant",
+    "d": "The LG ThinQ™ app allows you to easily connect with your washer in a way you never could before. Start your washer with just the tap of a button."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 10 2 2",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-10-2-2-Remote-Control-D.jpg",
+    "t": "Connect and Control from Anywhere",
+    "d": "The LG ThinQ™ app allows you to easily connect with your washer in a way you never could before. Start your washer with just the tap of a button."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 10 2 3",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-10-2-3-Monitoring-D.jpg",
+    "t": "Connect and Control from Anywhere",
+    "d": "The LG ThinQ™ app allows you to easily connect with your washer in a way you never could before. Start your washer with just the tap of a button."
+   },
+   {
+    "a": "Wm Vplus Led Ai Dd 11 1 I",
+    "p": "/images/washing-machines/wtv17hhd/feature/WM-Vplus-LED-AI-DD-11-1-Inverter-DD-D.jpg",
+    "t": "Efficient Product Maintenance",
+    "d": "The Inverter Direct Drive Motor is reliable, quiet, and comes with a 10-year warranty."
+   }
+  ],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "17",
+   "DIMENSIONS & WEIGHTS - Product Dimension": "632 x 1040 x 670",
+   "FEATURES - Steam": "Yes",
+   "Wi-Fi": "Yes",
+   "Add Item": "No",
+   "Air Dry": "No",
+   "Aqua Reserve": "No",
+   "Child Lock": "No",
+   "Cold Wash": "No",
+   "Deep Fill": "No",
+   "Extra Rinse": "No",
+   "Hot Wash": "No",
+   "Pre Wash": "No",
+   "Remote Start": "Yes",
+   "Rinse": "5 Times",
+   "Rinse + Spin": "No",
+   "Soak": "Yes",
+   "Spin": "5 Levels",
+   "Spin Only": "No",
+   "Stain Care": "No",
+   "Steam": "Yes",
+   "Strong Wave": "No",
+   "Temp.": "Cold / Warm / Hot",
+   "Time Delay": "No",
+   "Tub Clean": "No"
+  }
+ },
+ {
+  "code": "32GS95UV-B",
+  "cat": "Monitor",
+  "sub": "Gaming Monitor",
+  "ico": "🖥️",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/monitors/gaming/32gs95uv-b/",
+  "name": "LG 32'' UltraGear™ Dual-Mode OLED gaming monitor, 2024",
+  "price": "5499",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-01-2010.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-02-2010.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-03-2010.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-04-2010.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-05-2010.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-06-2010.jpg"
+   },
+   {
+    "a": "Gallery 32",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-07-2010.jpg"
+   },
+   {
+    "a": "Gallery 32",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-08-2010.jpg"
+   },
+   {
+    "a": "Gallery 32",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-09-2010.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-10-2010.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-11-2010.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-12-2010.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-13-2010.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-14-2010.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/images/monitors/32gs95uv-b/ultragear-32gs95uv-b-gallery-15-2010.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "Display - Size [Inch]": "31.5",
+   "Display - Resolution": "3840 x 2160",
+   "Display - Panel Type": "OLED",
+   "Display - Aspect Ratio": "16:09",
+   "Display - Color Gamut (Typ.)": "DCI-P3 98.5% (CIE1976)",
+   "Display - Brightness (Typ.) [cd/m²]": "275cd/m²",
+   "Display - Refresh Rate (Max.) [Hz]": "240",
+   "Display - Response Time": "0.03ms (GtG)",
+   "Mechanical - Display Position Adjustment": "Tilt/Height/Swivel/Pivot",
+   "Adapter": "YES",
+   "Calibration Report (Paper)": "YES",
+   "Display Port": "YES",
+   "HDMI": "Yes (2ea)",
+   "HDMI (Color/Length)": "Black / 1.8m",
+   "Others (Accessory)": "YES",
+   "Power Cord": "YES",
+   "USB A to B": "YES",
+   "DisplayPort": "YES(1ea)",
+   "DP Version": "1.4 (DSC)",
+   "Headphone out": "4-pole (Sound+Mic)",
+   "USB Downstream Port": "YES (2ea/ver3.0)",
+   "USB Upstream Port": "Yes(1ea/ver3.0)",
+   "Dimension in Shiping (W x H x D) [mm]": "973x183x544mm",
+   "Dimension without Stand (W x H x D) [mm]": "714.1x411.8x65.0mm",
+   "Dimension with Stand (W x H x D) [mm]": "714.1 x 620.9 x 249.8 (UP) / 714.1 x 510.9 x 249.8 (DOWN)"
+  }
+ },
+ {
+  "code": "S45TR",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "🔈",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/speakers/soundbars/s45tr/",
+  "name": "LG Soundbar for TV 4.1 channel S45TR",
+  "price": "699",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 2010",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-06.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-07.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-08.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-09.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/speakers/soundbars/s45tr/gallery/2010-10.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/speakers/soundbars/s45tr/gallery/350-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/speakers/soundbars/s45tr/gallery/350-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/speakers/soundbars/s45tr/gallery/350-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/speakers/soundbars/s45tr/gallery/350-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/speakers/soundbars/s45tr/gallery/350-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/speakers/soundbars/s45tr/gallery/350-06.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/speakers/soundbars/s45tr/gallery/350-07.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/speakers/soundbars/s45tr/gallery/350-08.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/speakers/soundbars/s45tr/gallery/350-09.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/speakers/soundbars/s45tr/gallery/350-10.jpg"
+   },
+   {
+    "a": "Gallery 350",
+    "p": "/speakers/soundbars/s45tr/gallery/350-11.jpg"
+   },
+   {
+    "a": "Front",
+    "p": "/speakers/soundbars/s45tr/gallery/av-soundbar-s45tr-gallery-11-v2.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s45tr/gallery/av-soundbar-s45tr-gallery-zoom-11-v2.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s45tr/gallery/av-soundbar-s45tr-gallery-zoom-mobile-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/speakers/soundbars/s45tr/gallery/av-soundbar-s45tr-gallery-zoom-mobile-02.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "05 1 Rear Speakers",
+    "p": "/s45tr/gp1/features/desktop/soundbar-s45tr-2024-feature-05-1-rear-speakers.jpg",
+    "t": "Rich surround sound from wireless rear speakers",
+    "d": "AI Sound Pro categorizes different sounds into effects, music, and voices, and then applies the ideal settings to create the optimal audio experience."
+   },
+   {
+    "a": "Soundbar S45Tr 2024 Featu",
+    "p": "/s45tr/gp1/features/desktop/soundbar-s45tr-2024-featurer-05-rear-speakers.jpg",
+    "t": "Rear speakers embrace wireless freedom",
+    "d": "Enhance your soundbar performance with 2.0-channel speakers that require only a single power cable for connection. Experience fuller, more dimensional audio with minimal setup."
+   },
+   {
+    "a": "Av Soundbar S45Tr 01 Kv D",
+    "p": "/speakers/soundbars/s45tr/features/av-soundbar-s45tr-01-kv-d-1.jpg",
+    "t": "The ideal sound companion for your LG TV",
+    "d": "LG Soundbar against a black backdrop highlighted by a spotlight."
+   },
+   {
+    "a": "Av Soundbar S45Tr 03 Perf",
+    "p": "/speakers/soundbars/s45tr/features/av-soundbar-s45tr-03-perfect-match-d.jpg",
+    "t": "LG Soundbars complete the LG TV experience",
+    "d": "LG Remote is pointing towards a LG TV with LG Soundbar underneath. LG TV is showing the WOW Interface menu on the screen."
+   },
+   {
+    "a": "Av Soundbar S45Tr 04 Surr",
+    "p": "/speakers/soundbars/s45tr/features/av-soundbar-s45tr-04-surround-sound-d.jpg",
+    "t": "Feel the impact of an audio panorama",
+    "d": "Elevate your LG TV with 400W 4.1ch surround sound, a subwoofer, and rear speakers."
+   },
+   {
+    "a": "Av Soundbar S45Tr 06 Ai S",
+    "p": "/speakers/soundbars/s45tr/features/av-soundbar-s45tr-06-ai-sound-pro-d-1.jpg",
+    "t": "Sound senses how you like to listen",
+    "d": "LG Soundbar against a black backdrop highlighted by a spotlight."
+   },
+   {
+    "a": "Av Soundbar S45Tr 07 Recy",
+    "p": "/speakers/soundbars/s45tr/features/av-soundbar-s45tr-07-recycled-inside-d.jpg",
+    "t": "Clear sound for a clean planet",
+    "d": "Recycled Inside Internal parts made with recycled plasticLG Soundbars use recycled plastic use on top and bottom parts. Proof we&#39;re taking a more eco-minded approach to soundbar production."
+   },
+   {
+    "a": "Av Soundbar S45Tr 08 Recy",
+    "p": "/speakers/soundbars/s45tr/features/av-soundbar-s45tr-08-recycled-outside-d.jpg",
+    "t": "Jersey fabric made with plastic bottles",
+    "d": "All LG Soundbars are thoughtfully designed with careful consideration to ensure a high percentage of reclaimed materials. The Global Recycled Standard certifies that the polyester jersey fabric is made from plastic bottles."
+   }
+  ],
+  "specs": {
+   "General - Number of Channels": "4.1",
+   "General - Output Power": "400 W",
+   "Dimension (WxHxD) - Main": "720 x 63 x 87 mm",
+   "Dimension (WxHxD) - Rear Speaker": "100.0 x 176.5 x 120.0 mm",
+   "Dimension (WxHxD) - Subwoofer": "171 x 320 x 252 mm",
+   "HDMI Cable": "Yes",
+   "Remote Control": "Yes",
+   "Warranty Card": "Yes",
+   "AAC": "Yes",
+   "Dolby Digital": "Yes",
+   "DTS Digital Surround": "Yes",
+   "Bluetooth Codec - SBC/AAC": "Yes",
+   "Bluetooth Version": "5.3",
+   "HDMI Out": "1",
+   "Optical": "1",
+   "USB": "1",
+   "Wireless Rear Ready": "Yes",
+   "Remote App - iOS/Android OS": "Yes",
+   "Soundbar Mode Control": "Yes",
+   "TV Sound Mode Share": "Yes",
+   "WOW Interface": "Yes",
+   "Main": "720 x 63 x 87 mm",
+   "Rear Speaker": "100.0 x 176.5 x 120.0 mm",
+   "Subwoofer": "171 x 320 x 252 mm",
+   "Number of Channels": "4.1"
+  }
+ },
+ {
+  "code": "S80TR",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "🔈",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/tv-soundbars/soundbars/s80tr/",
+  "name": "LG Soundbar for TV with Dolby Atmos 5.1.3 channel S80TR",
+  "price": "1899",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-01.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-02.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-03.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-04.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-05.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-06.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-07.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-08.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-09.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-10.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/av-soundbar-s80tr-gallery-zoom-mobile-11.jpg"
+   },
+   {
+    "a": "Gallery 1",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz1.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz10.jpg"
+   },
+   {
+    "a": "Gallery 11",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz11.jpg"
+   },
+   {
+    "a": "Gallery 12",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz12.jpg"
+   },
+   {
+    "a": "Gallery 2",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz2.jpg"
+   },
+   {
+    "a": "Gallery 3",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz3.jpg"
+   },
+   {
+    "a": "Gallery 4",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz4.jpg"
+   },
+   {
+    "a": "Gallery 5",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz5.jpg"
+   },
+   {
+    "a": "Gallery 6",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz6.jpg"
+   },
+   {
+    "a": "Gallery 7",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz7.jpg"
+   },
+   {
+    "a": "Gallery 8",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz8.jpg"
+   },
+   {
+    "a": "Gallery 9",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/dz9.jpg"
+   },
+   {
+    "a": "Gallery 1",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/s1.jpg"
+   },
+   {
+    "a": "Gallery 10",
+    "p": "/images/audio-video/s80tr-dsauelk/gallery/s10.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Av Soundbar S80Tr 01 Kv D",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-01-kv-d.jpg",
+    "t": "Elevating your LG TV experience with top-notch soundbar",
+    "d": "LG Soundbar on a grey surface against a grey backdrop in angled aerial perspective."
+   },
+   {
+    "a": "Av Soundbar S80Tr 03 Cent",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-03-center-up-firing-channel-d.jpg",
+    "t": "Feel the realism of an audio panorama",
+    "d": "The Center Up-firing Channel creates more lifelike sound, making voices clearer and on-screen action perfectly synced with the audio — no delays or stutters."
+   },
+   {
+    "a": "Av Soundbar S80Tr 04 Trip",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-04-triple-level-spatial-sound-d.jpg",
+    "t": "Av Soundbar S80Tr 04 Trip",
+    "d": ""
+   },
+   {
+    "a": "Av Soundbar S80Tr 07 Perf",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-07-perfect-match-d-3.jpg",
+    "t": "Duets with your LG TV's sound",
+    "d": "A close up of an LG Soundbar below a LG TV. A connectivity symbol is in between LG Soundbar and a LG TV, showing WOWCAST's wireless operation."
+   },
+   {
+    "a": "Av Soundbar S80Tr 10 Ai S",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-10-ai-sound-pro-d.jpg",
+    "t": "Av Soundbar S80Tr 10 Ai S",
+    "d": ""
+   },
+   {
+    "a": "Av Soundbar S80Tr 11 Inte",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-11-intense-gaming-d-1.jpg",
+    "t": "Works in harmony with your favorites",
+    "d": "Free up ports on your TV and connect consoles to your LG Soundbar without compromising graphics performance. VRR/ALLM support ensures tear-free, low input lag gaming."
+   },
+   {
+    "a": "Av Soundbar S80Tr 12 Hd S",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-12-hd-streaming-d.jpg",
+    "t": "Streams in stunning HD",
+    "d": "HD Streaming Streams in stunning HDStream from your favorite platforms without compression through lossless HD support for Spotify Connect, TIDAL Connect, and Google Cast."
+   },
+   {
+    "a": "Av Soundbar S80Tr 13 Comp",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-13-compatibility-d.jpg",
+    "t": "Use the platform of your choice",
+    "d": "Compatibility Use the platform of your choiceLG Soundbars now have the compatibility to work with more AI services. You can easily control the LG Soundbar with the platform of your choosing."
+   },
+   {
+    "a": "Av Soundbar S80Tr 14 Recy",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-14-recycled-inside-d.jpg",
+    "t": "Clear sound for a clean planet",
+    "d": "Recycled Inside Internal parts made with recycled plasticLG Soundbars use recycled plastic use on top and bottom parts. Proof we&#39;re taking a more eco-minded approach to soundbar production."
+   },
+   {
+    "a": "Av Soundbar S80Tr 15 Recy",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-15-recycled-outside-d.jpg",
+    "t": "Jersey fabric made with plastic bottles",
+    "d": "All LG Soundbars are thoughtfully designed with careful consideration to ensure a high percentage of reclaimed materials. The Global Recycled Standard certifies that the polyester jersey fabric is made from plastic bottles."
+   },
+   {
+    "a": "Av Soundbar S80Tr 16 Pulp",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-16-pulp-packaging-d.jpg",
+    "t": "Packaging made with recycled pulp",
+    "d": "LG Soundbar packaging is against a beige background with illustrated trees. Energy Star logo SGS Eco Product logo"
+   },
+   {
+    "a": "Av Soundbar S80Tr 17 Dolb",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-17-dolby-atmos-d.jpg",
+    "t": "Movie night sounds like the theater with Dolby Atmos",
+    "d": "Triple Level Spatial Sound adds a virtual layer to create a sound dome around you of richer sound."
+   },
+   {
+    "a": "Av Soundbar S80Tr 18 One ",
+    "p": "/images/audio-video/s80tr-dsauelk/feature/av-soundbar-s80tr-18-one-experience-d.jpg",
+    "t": "LG Soundbars complete the LG TV experience",
+    "d": "The words 'ONE EXPERIENCE' in a green and yellow gradient pattern."
+   },
+   {
+    "a": "06 1 Rear Speakers",
+    "p": "/s80tr/gp1/features/desktop/soundbar-s80tr-2024-feature-06-1-rear-speakers.jpg",
+    "t": "Rich surround sound from wireless rear speakers",
+    "d": "Install the Rear Speakers anywhere in your space without worrying about wires, providing seamless integration for immersive sound."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "S90TR",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "🔈",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/speakers/soundbars/s90tr/",
+  "name": "LG Soundbar for TV with Dolby Atmos 7.1.3 channel S90TR",
+  "price": "2199",
+  "msrp": "",
+  "gallery": [],
+  "features": [
+   {
+    "a": "06 1 Rear Speakers",
+    "p": "/s90tr/gp1/features/desktop/soundbar-s90tr-2024-feature-06-1-rear-speakers.jpg",
+    "t": "Rich surround sound from wireless rear speakers",
+    "d": "Enjoy richer, clearer sound with fully wireless 2.0-channel speakers with no connecting cables required. Keep your space clean and clutter-free, while filling it with immersive audio."
+   },
+   {
+    "a": "Av Soundbar S90Tr 01 Kv D",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-01-kv-d.jpg",
+    "t": "Av Soundbar S90Tr 01 Kv D",
+    "d": ""
+   },
+   {
+    "a": "Av Soundbar S90Tr 03 Cent",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-03-center-up-firing-channel-d.jpg",
+    "t": "Feel the realism of an audio panorama",
+    "d": "The Center Up-firing Channel creates more lifelike sound, making voices clearer and on-screen action perfectly synced with the audio — no delays or stutters."
+   },
+   {
+    "a": "Av Soundbar S90Tr 04 Trip",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-04-triple-level-spatial-sound-d.jpg",
+    "t": "Av Soundbar S90Tr 04 Trip",
+    "d": ""
+   },
+   {
+    "a": "Av Soundbar S90Tr 07 Perf",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-07-perfect-match-d-2.jpg",
+    "t": "Duets with your LG TV's sound",
+    "d": "A close up of an LG Soundbar below a LG TV. A connectivity symbol is in between LG Soundbar and a LG TV, showing WOWCAST's wireless operation."
+   },
+   {
+    "a": "Av Soundbar S90Tr 09 Mult",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-09-multi-channel-audio-experience-d.jpg",
+    "t": "Av Soundbar S90Tr 09 Mult",
+    "d": "A warm gray area for design purpose."
+   },
+   {
+    "a": "Av Soundbar S90Tr 10 Ai S",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-10-ai-sound-pro-d.jpg",
+    "t": "Av Soundbar S90Tr 10 Ai S",
+    "d": ""
+   },
+   {
+    "a": "Av Soundbar S90Tr 11 Inte",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-11-intense-gaming-d-1.jpg",
+    "t": "Av Soundbar S90Tr 11 Inte",
+    "d": "A warm gray area for design purpose."
+   },
+   {
+    "a": "Av Soundbar S90Tr 14 Recy",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-14-recycled-inside-d.jpg",
+    "t": "Clear sound for a clean planet",
+    "d": "LG Soundbars use recycled plastic use on top and bottom parts. Proof we're taking a more eco-minded approach to soundbar production."
+   },
+   {
+    "a": "Av Soundbar S90Tr 15 Recy",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-15-recycled-outside-d.jpg",
+    "t": "Jersey fabric made with plastic bottles",
+    "d": "All LG Soundbars are thoughtfully designed with careful consideration to ensure a high percentage of reclaimed materials. The Global Recycled Standard certifies that the polyester jersey fabric is made from plastic bottles."
+   },
+   {
+    "a": "Av Soundbar S90Tr 16 Pulp",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-16-pulp-packaging-d.jpg",
+    "t": "Packaging made with recycled pulp",
+    "d": "LG Soundbar packaging is against a beige background with illustrated trees. Energy Star logo SGS Eco Product logo"
+   },
+   {
+    "a": "Av Soundbar S90Tr 17 Dolb",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-17-dolby-atmos-d.jpg",
+    "t": "LG Soundbars complete the LG TV experience",
+    "d": "Triple Level Spatial Sound adds a virtual layer to create a sound dome around you of richer sound."
+   },
+   {
+    "a": "Av Soundbar S90Tr 18 One ",
+    "p": "/speakers/soundbars/s90tr/features/av-soundbar-s90tr-18-one-experience-d.jpg",
+    "t": "LG Soundbars complete the LG TV experience",
+    "d": "The words 'ONE EXPERIENCE' in a green and yellow gradient pattern."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "LT19HBHSIN",
+  "cat": "Fridge",
+  "sub": "Top Freezer",
+  "ico": "🧊",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/refrigerators/top-freezers/lt19hbhsin/",
+  "name": "LG Large Top Fridge, Smart Inverter, 506L",
+  "price": "3898.99",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 01",
+    "p": "/images/refrigerators/lt19hbhsin/gallery/medium01.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "DIMENSIONS & WEIGHT - Product Dimension ": "780 x 1800 x 730",
+   "PERFORMANCE - Compressor Type": "Smart Inverter Compressor (BLDC)",
+   "FEATURES - Door-in-Door": "No",
+   "SMART TECHNOLOGY - ThinQ (Wi-Fi)": "Yes",
+   "MATERIAL & FINISH - Finish (Door)": "P/S3",
+   "Product Type": "Top Mount",
+   "Finish (Door)": "P/S3",
+   "Door Cooling+": "Yes",
+   "Deodorizer": "No",
+   "Door-in-Door": "No",
+   "LINEAR Cooling": "Yes",
+   "Water Only Dispenser": "No",
+   "Automatic Ice Maker": "No",
+   "Ice Maker_Manual(Movable)": "Yes",
+   "Compressor Type": "Smart Inverter Compressor (BLDC)",
+   "Smart Diagnosis": "Yes",
+   "ThinQ (Wi-Fi)": "Yes",
+   "Refrigerator Light": "Top LED",
+   "Egg tray/Egg basket": "Yes",
+   "Fresh 0 Zone": "Yes",
+   "Hygiene Fresh": "No",
+   "Shelf_Tempered Glass": "2",
+   "Vegetable Box": "Yes (1)",
+   "Freezer Light": "Top LED",
+   "Multi-Air Flow": "Yes"
+  }
+ },
+ {
+  "code": "LSEL6333D",
+  "cat": "Cooking",
+  "sub": "Electric Cooker",
+  "ico": "🍳",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/cooking-appliances/electric-cookers/lsel6333d/",
+  "name": "6.3 ft Oven | ThinQ | Air Fry | EasyClean",
+  "price": "5199",
+  "msrp": "",
+  "gallery": [],
+  "features": [],
+  "specs": {}
+ },
+ {
+  "code": "STAGE301",
+  "cat": "Audio",
+  "sub": "Speaker",
+  "ico": "🔊",
+  "dv": "MS",
+  "url": "https://www.lg.com/sa_en/speakers/xboom/stage301/",
+  "name": "LG xboom Stage 301 | Bluetooth Speaker | xboom Signature Sound by will.i.am for Parties and Performances",
+  "price": "799",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-06.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-07.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-08.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-09.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-10.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-11.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-12.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-13.jpg"
+   },
+   {
+    "a": "Gallery 1044",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/1044-14.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-01.jpg"
+   },
+   {
+    "a": "Angled",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-02.jpg"
+   },
+   {
+    "a": "Side",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-03.jpg"
+   },
+   {
+    "a": "Rear",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-04.jpg"
+   },
+   {
+    "a": "Top",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-05.jpg"
+   },
+   {
+    "a": "Detail",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-06.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-07.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-08.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-09.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-10.jpg"
+   },
+   {
+    "a": "Gallery 2010",
+    "p": "/images/home-theaters/stage301-asauebk/gallery/2010-11.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-00-1.jpg",
+    "t": "Tech Radar",
+    "d": "The sound signature of LG's new speakers is warm, fun and expressive"
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-01.jpg",
+    "t": "xboom signature sound tuned by will.i.am",
+    "d": "Introducing new xboom Stage 301, created in collaboration with will.i.am. Experience sound crafted by the expert, embodied in a unique style."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-02.jpg",
+    "t": "Xboom Stage301 2025 Featu",
+    "d": ""
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-03.jpg",
+    "t": "Xboom Stage301 2025 Featu",
+    "d": ""
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-04.jpg",
+    "t": "Unique sound UI crafted by will.i.am",
+    "d": "will.i.am is working in studio looking at a screen placed below a mic."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-05.jpg",
+    "t": "Xboom Stage301 2025 Featu",
+    "d": ""
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-06.jpg",
+    "t": "Stage ready anywhere",
+    "d": "A convenient handle designed for portability. Hand carry your music to all kinds of venue."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-07.jpg",
+    "t": "New xboom Stage 301, carry party vibe everywhere",
+    "d": "A convenient handle designed for portability. Hand carry your music to all kinds of venue."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-08.jpg",
+    "t": "AI sound for every genre",
+    "d": "will.i.am in white outfit and white cap is holding xboom Stage 301 with his both arms to his face."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-09.jpg",
+    "t": "Xboom Stage301 2025 Featu",
+    "d": ""
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-10.jpg",
+    "t": "Xboom Stage301 2025 Featu",
+    "d": ""
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-11.jpg",
+    "t": "Karaoke & DJ mix sets for extra excitement",
+    "d": "Party all day with 12 hrs of playtime and a spare battery. Simply swap the replaceable battery whenever needed to keep the fun going for 24 hrs."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-12.jpg",
+    "t": "Replaceable battery for endless party",
+    "d": "Rated IPX4 to withstand water. Safe to take it to any event that involves splash."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-13.jpg",
+    "t": "IPX4 water-resistant",
+    "d": "Rated IPX4 to withstand water. Safe to take it to any event that involves splash."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-14.jpg",
+    "t": "Connect multiple speakers and amplify the vibe with Auracast™",
+    "d": "Rated IPX4 to withstand water. Safe to take it to any event that involves splash."
+   },
+   {
+    "a": "Xboom Stage301 2025 Featu",
+    "p": "/images/xboom/xboom-stage301-2025-feature-desktop-15.jpg",
+    "t": "Connect multiple speakers and amplify the vibe with Auracast™",
+    "d": "Create a party link to pair devices and share it through Auracast™. Access instantly by simply pressing a dedicated button. Dive into immersive sound, amplified by connecting different speakers."
+   }
+  ],
+  "specs": {}
+ },
+ {
+  "code": "LM344VBNLF",
+  "cat": "Fridge",
+  "sub": "Multi-Door",
+  "ico": "🧊",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/refrigerators/multi-doors/lm344vbnlf/",
+  "name": "27.3 cu.ft | inverter linear | ThinQ",
+  "price": "10699",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Basic",
+    "p": "/images/refrigerators/lm344vbnlf-aevgngh/basic_450_image_new.jpg"
+   }
+  ],
+  "features": [
+   {
+    "a": "Hygienefresh_D",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/HygieneFRESH_D.jpg",
+    "t": "Fast & Even Cooling",
+    "d": "Fast & Even Cooling"
+   },
+   {
+    "a": "Hygienefresh_M",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/HygieneFRESH_M.jpg",
+    "t": "Fast & Even Cooling",
+    "d": "Fast & Even Cooling"
+   },
+   {
+    "a": "Inverter Linear Compresso",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/Inverter-Linear-Compressor_D.jpg",
+    "t": "Inverter Linear Compresso",
+    "d": ""
+   },
+   {
+    "a": "Inverter Linear Compresso",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/Inverter-Linear-Compressor_M.jpg",
+    "t": "99.999% Fresh Air",
+    "d": "99.999% Fresh Air"
+   },
+   {
+    "a": "Linear Cooling_D",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/LINEAR-Cooling_D.jpg",
+    "t": "Linear Cooling_D",
+    "d": ""
+   },
+   {
+    "a": "Linear Cooling_M",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/LINEAR-Cooling_M.jpg",
+    "t": "Knock Twice & See Inside",
+    "d": "*Compared to LG conventional Side by Side InstaView™ ThinQ™(GSX971NEAE)."
+   },
+   {
+    "a": "Multi Air Flow_D",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/Multi-Air-Flow_D.jpg",
+    "t": "Even Cooling in Any Time",
+    "d": "*Compared to the refrigerator with LG conventional Smart Inverter Compressor. Based on UL test comparing temperature fluctuation in time between LGE model B606S and B607S, according to LG internal test method."
+   },
+   {
+    "a": "Multi Air Flow_M",
+    "p": "/images/refrigerators/lm334bbslf-apygngh/features/Multi-Air-Flow_M.jpg",
+    "t": "Even Cooling in Any Time",
+    "d": "*Compared to the refrigerator with LG conventional Smart Inverter Compressor. Based on UL test comparing temperature fluctuation in time between LGE model B606S and B607S, according to LG internal test method."
+   }
+  ],
+  "specs": {
+   "DIMENSIONS & WEIGHT - Product Dimension ": "914 x 1787 x 918",
+   "PERFORMANCE - Compressor Type": "Inverter Linear Compressor",
+   "FEATURES - InstaView": "Yes",
+   "SMART TECHNOLOGY - ThinQ (Wi-Fi)": "Yes",
+   "MATERIAL & FINISH - Finish (Door)": "Essence Black Steel",
+   "Product Type": "Multi Door",
+   "Freezer Capacity (cu. ft)": "8.1",
+   "Refrigerator Capacity (cu. ft)": "18.0",
+   "Storage Volume Freezer (2Star) (L)": "33",
+   "Storage Volume Freezer (L)": "231",
+   "Storage Volume Refrigerator (L)": "511",
+   "Storage Volume Total (L)": "775",
+   "Depth without door (mm)": "873",
+   "Depth without handle (mm)": "918",
+   "Packing Weight (kg)": "168",
+   "Product Dimension (WxHxD, mm)": "914 x 1787 x 918",
+   "Product Weight (kg)": "157",
+   "Door Cooling+": "Yes",
+   "Deodorizer": "Yes",
+   "Door-in-Door": "InstaView Door-in-Door",
+   "InstaView": "Yes",
+   "LINEAR Cooling": "Yes",
+   "Freezer Light": "Top LED",
+   "Multi-Air Flow": "Yes",
+   "Shelf_Tempered Glass": "No"
+  }
+ },
+ {
+  "code": "WF2111BST",
+  "cat": "Washer",
+  "sub": "Front Load",
+  "ico": "🧺",
+  "dv": "HA",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wf2111bst/",
+  "name": "21Kg Front load | Steam™ | 6 Motion DD Motor | ThinQ™ ",
+  "price": "7499",
+  "msrp": "",
+  "gallery": [
+   {
+    "a": "Gallery 18",
+    "p": "/images/washing-machines/wf2111bst_ablgnag_emsj_sa_en_c/gallery/D-18.jpg"
+   },
+   {
+    "a": "Zoom",
+    "p": "/images/washing-machines/wf2111bst_ablgnag_emsj_sa_en_c/gallery/DZ-18.jpg"
+   },
+   {
+    "a": "Mobile Zoom",
+    "p": "/images/washing-machines/wf2111bst_ablgnag_emsj_sa_en_c/gallery/MZ-18.jpg"
+   },
+   {
+    "a": "Gallery 18",
+    "p": "/images/washing-machines/wf2111bst_ablgnag_emsj_sa_en_c/gallery/S-18.jpg"
+   }
+  ],
+  "features": [],
+  "specs": {
+   "CAPACITY - Max Wash Capacity(kg)": "21",
+   "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+   "Wi-Fi": "Yes",
+   "Child Lock": "Yes",
+   "Remote Start": "Yes",
+   "Steam": "Yes",
+   "ThinQ(Wi-Fi)": "Yes",
+   "Max Dry Capacity (kg)": "12",
+   "Max Wash Capacity(kg)": "21",
+   "Delay Timer": "Yes",
+   "Display Type": "LED",
+   "AI DD": "Yes",
+   "Type": "Washer",
+   "Body Color": "Black Steam",
+   "Allergy Care (washer)": "Yes",
+   "Cotton +": "Yes",
+   "Delicates": "Yes",
+   "Downloaded Cycle": "Yes",
+   "Easy Care": "Yes",
+   "Mixed Fabric": "Yes",
+   "Wool (Hand/Wool)": "Yes"
+  }
+ }
+]

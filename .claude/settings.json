@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sleep *)",
+      "Bash(sed -n *)",
+      "Bash(awk *)",
+      "Bash(wc -l *)",
+      "Bash(wc -c *)",
+      "Bash(wc *)",
+      "Bash(tr *)",
+      "Bash(fold *)",
+      "Bash(sort *)",
+      "Bash(curl -s -o /dev/null *)",
+      "Bash(curl -s -o /dev/null -w *)",
+      "Bash(where *)",
+      "Bash(ls -la *)",
+      "Bash(ls -t *)",
+      "Bash(ls -lh *)"
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "code": "S65TR",
+  "name": "LG Soundbar with 5.1 Channel Surround Sound",
+  "price": 999.01,
+  "msrp": 1799.0,
+  "url": "https://www.lg.com/sa_en/tv-soundbars/soundbars/s65tr/",
+  "cat": "Audio",
+  "sub": "Soundbar",
+  "ico": "soundbar",
+  "dv": "MS",
+  "gallery": [
+    {
+      "a": "LG Soundbar S65TR - view 1",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-01.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Angled view of LG Soundbar S65TR, subwoofer, and Rear Speakers",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-02.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Front view of LG Soundbar S65TR",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-03.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Top view of LG Soundbar S65TR",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-04.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Top angled view of the center of LG Soundbar S65TR",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-05.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Front view of LG Soundbar S65TR's side corner",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-06.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Angled view of LG Soundbar S65TR's back",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-07.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Angled view of subwoofer",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-08.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Back view of subwoofer",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-09.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Angled view of Rear Speakers",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-10.jpg",
+      "w": 2010,
+      "h": 1334
+    },
+    {
+      "a": "Back view of Rear Speakers",
+      "p": "/images/audio-video/s65tr_asauelk/S65TR-DZ-11.jpg",
+      "w": 2010,
+      "h": 1334
+    }
+  ],
+  "features": [
+    {
+      "p": "/images/av/s65tr/av-soundbar-s65tr-01-kv-desktop.jpg",
+      "t": "The ideal sound companion for your LG TV",
+      "d": "Complete the LG TV experience with the soundbar that beautifully complements its design and sonic performance.",
+      "w": 1600,
+      "h": 1125
+    },
+    {
+      "p": "/images/av/s65tr/av-soundbar-s65tr-03-perfect-match-d-01-v6.jpg",
+      "t": "WOW Interface",
+      "d": "Access WOW Interface through your LG TV for clear and simple soundbar control, like changing sound modes, profiles, and accessing other handy features, even while you watch.",
+      "w": 1600,
+      "h": 806
+    },
+    {
+      "p": "/images/av/s65tr/av-soundbar-s65tr-04-surround-sound-d-01-v5.jpg",
+      "t": "5.1ch Surround Sound",
+      "d": "Become part of the scene with 600W 5.1ch surround sound, a subwoofer, and rear speakers.",
+      "w": 1920,
+      "h": 1300
+    },
+    {
+      "p": "/s65tr/gp1/features/desktop/soundbar-s65tr-2024-featurer-05-rear-speakers.jpg",
+      "t": "2ch Rear Speakers",
+      "d": "You only need one power cable and one speaker connection cable to install the rear speakers. The rear speakers connect wirelessly to the main soundbar.",
+      "w": 732,
+      "h": 457
+    },
+    {
+      "p": "/images/av/s65tr/av-soundbar-s65tr-06-ai-sound-pro-d-v6-new.jpg",
+      "t": "AI Sound Pro",
+      "d": "AI Sound Pro categorizes different sounds into effects, music, and voices, and then applies the ideal settings to create the optimal audio experience.",
+      "w": 1600,
+      "h": 1195
+    },
+    {
+      "p": "/images/av/s65tr/av-soundbar-s65tr-07-recycled-inside-desktop.jpg",
+      "t": "Recycled Inside",
+      "d": "LG Soundbars use recycled plastic on top and bottom parts. Proof we're taking a more eco-minded approach to soundbar production.",
+      "w": 1600,
+      "h": 680
+    },
+    {
+      "p": "/images/av/s65tr/av-soundbar-s65tr-08-recycled-outside-desktop.jpg",
+      "t": "Jersey fabric made with plastic bottles",
+      "d": "All LG Soundbars are thoughtfully designed with careful consideration to ensure a high percentage of reclaimed materials. The Global Recycled Standard certifies that the polyester jersey fabric is made from plastic bottles.",
+      "w": 1600,
+      "h": 680
+    }
+  ],
+  "specs": {
+    "Total Output": "600W",
+    "Channels": "5.1ch",
+    "Subwoofer": "Wireless",
+    "Rear Speakers": "2ch Wireless",
+    "Audio Technology": "AI Sound Pro, Dolby Digital, DTS Digital Surround",
+    "Sound Mode": "AI Sound Pro, Standard, Bass Blast, Movie, Music, Clear Voice, Sports",
+    "WOW Interface": "Supported",
+    "Connectivity": "Optical, HDMI ARC, Bluetooth"
+  }
+}

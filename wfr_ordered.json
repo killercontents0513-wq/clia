@@ -1,0 +1,793 @@
+{
+ "code": "WFR1114WH",
+ "name": "11 kg Washer, Front Load washing Machine, White color",
+ "price": "3399",
+ "msrp": "",
+ "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfr1114wh/",
+ "gallery": [
+  {
+   "a": "Basic",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/basic.jpg",
+   "w": 450,
+   "h": 450,
+   "pos": 4518,
+   "file": "basic.jpg"
+  },
+  {
+   "a": "View 01",
+   "p": "/images/washing-machines/wfv1114wht_abwgnag_emgf_sa_en_c/gallery/DM_01.jpg",
+   "w": 1100,
+   "h": 730,
+   "pos": 5015,
+   "file": "DM_01.jpg"
+  },
+  {
+   "a": "View 01",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large01.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 5181,
+   "file": "large01.jpg"
+  },
+  {
+   "a": "View 02",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large02.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 185682,
+   "file": "large02.jpg"
+  },
+  {
+   "a": "View 03",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large03.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 186178,
+   "file": "large03.jpg"
+  },
+  {
+   "a": "View 04",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large04.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 186677,
+   "file": "large04.jpg"
+  },
+  {
+   "a": "View 05",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large05.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 187168,
+   "file": "large05.jpg"
+  },
+  {
+   "a": "View 06",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large06.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 187673,
+   "file": "large06.jpg"
+  },
+  {
+   "a": "View 07",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large07.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 188173,
+   "file": "large07.jpg"
+  },
+  {
+   "a": "View 08",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large08.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 188678,
+   "file": "large08.jpg"
+  },
+  {
+   "a": "View 09",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large09.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 189183,
+   "file": "large09.jpg"
+  },
+  {
+   "a": "View 10",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large10.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 189678,
+   "file": "large10.jpg"
+  },
+  {
+   "a": "View 11",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large11.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 190178,
+   "file": "large11.jpg"
+  },
+  {
+   "a": "View 12",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large12.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 190674,
+   "file": "large12.jpg"
+  },
+  {
+   "a": "View 13",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large13.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 191176,
+   "file": "large13.jpg"
+  },
+  {
+   "a": "View 14",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large14.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 191667,
+   "file": "large14.jpg"
+  },
+  {
+   "a": "View 15",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large15.jpg",
+   "w": 2010,
+   "h": 1334,
+   "pos": 192158,
+   "file": "large15.jpg"
+  },
+  {
+   "a": "View 01",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small01.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 194133,
+   "file": "small01.jpg"
+  },
+  {
+   "a": "View 02",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small02.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 194631,
+   "file": "small02.jpg"
+  },
+  {
+   "a": "View 03",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small03.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 195061,
+   "file": "small03.jpg"
+  },
+  {
+   "a": "View 04",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small04.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 195494,
+   "file": "small04.jpg"
+  },
+  {
+   "a": "View 05",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small05.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 195919,
+   "file": "small05.jpg"
+  },
+  {
+   "a": "View 06",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small06.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 196358,
+   "file": "small06.jpg"
+  },
+  {
+   "a": "View 07",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small07.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 196792,
+   "file": "small07.jpg"
+  },
+  {
+   "a": "View 08",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small08.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 197231,
+   "file": "small08.jpg"
+  },
+  {
+   "a": "View 09",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small09.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 197670,
+   "file": "small09.jpg"
+  },
+  {
+   "a": "View 10",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small10.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 198099,
+   "file": "small10.jpg"
+  },
+  {
+   "a": "View 11",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small11.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 198533,
+   "file": "small11.jpg"
+  },
+  {
+   "a": "View 12",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small12.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 198963,
+   "file": "small12.jpg"
+  },
+  {
+   "a": "View 13",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small13.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 199399,
+   "file": "small13.jpg"
+  },
+  {
+   "a": "View 14",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small14.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 199824,
+   "file": "small14.jpg"
+  },
+  {
+   "a": "View 15",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/small15.jpg",
+   "w": 350,
+   "h": 350,
+   "pos": 200249,
+   "file": "small15.jpg"
+  },
+  {
+   "a": "View 01",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m01.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 210071,
+   "file": "large-m01.jpg"
+  },
+  {
+   "a": "View 02",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m02.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 210972,
+   "file": "large-m02.jpg"
+  },
+  {
+   "a": "View 03",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m03.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 211737,
+   "file": "large-m03.jpg"
+  },
+  {
+   "a": "View 04",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m04.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 212508,
+   "file": "large-m04.jpg"
+  },
+  {
+   "a": "View 05",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m05.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 213263,
+   "file": "large-m05.jpg"
+  },
+  {
+   "a": "View 06",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m06.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 214046,
+   "file": "large-m06.jpg"
+  },
+  {
+   "a": "View 07",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m07.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 214819,
+   "file": "large-m07.jpg"
+  },
+  {
+   "a": "View 08",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m08.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 215602,
+   "file": "large-m08.jpg"
+  },
+  {
+   "a": "View 09",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m09.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 216385,
+   "file": "large-m09.jpg"
+  },
+  {
+   "a": "View 10",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m10.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 217148,
+   "file": "large-m10.jpg"
+  },
+  {
+   "a": "View 11",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m11.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 217922,
+   "file": "large-m11.jpg"
+  },
+  {
+   "a": "View 12",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m12.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 218688,
+   "file": "large-m12.jpg"
+  },
+  {
+   "a": "View 13",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m13.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 219466,
+   "file": "large-m13.jpg"
+  },
+  {
+   "a": "View 14",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m14.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 220222,
+   "file": "large-m14.jpg"
+  },
+  {
+   "a": "View 15",
+   "p": "/images/washing-machines/wfr1114wh-abwgnag/gallery/large-m15.jpg",
+   "w": 1044,
+   "h": 1334,
+   "pos": 220978,
+   "file": "large-m15.jpg"
+  }
+ ],
+ "features": [
+  {
+   "a": "Steam Plus",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-2-Steam-Plus-Desktop.jpg",
+   "t": "Steam Plus",
+   "d": "",
+   "w": 1600,
+   "h": 810,
+   "pos": 37184,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-07-2-Steam-Plus-Desktop.jpg"
+  },
+  {
+   "a": "Steam Plus",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-1-Steam-Plus-Desktop.jpg",
+   "t": "Steam Plus",
+   "d": "",
+   "w": 1600,
+   "h": 460,
+   "pos": 37679,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-07-1-Steam-Plus-Desktop.jpg"
+  },
+  {
+   "a": "ThinQ",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-12-1-ThinQ-Desktop.jpg",
+   "t": "ThinQ",
+   "d": "",
+   "w": 1600,
+   "h": 1350,
+   "pos": 38174,
+   "file": "WM-Vivace-V700-VC3-White-12-1-ThinQ-Desktop.jpg"
+  },
+  {
+   "a": "Vivace Intro",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-01-1-Vivace-Intro-Mobile.jpg",
+   "t": "Vivace Intro",
+   "d": "",
+   "w": 768,
+   "h": 780,
+   "pos": 232846,
+   "file": "WM-Vivace-V700-VC3-White-01-1-Vivace-Intro-Mobile.jpg"
+  },
+  {
+   "a": "Vivace Intro",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-01-1-Vivace-Intro-Desktop.jpg",
+   "t": "Vivace Intro",
+   "d": "",
+   "w": 1600,
+   "h": 1100,
+   "pos": 233018,
+   "file": "WM-Vivace-V700-VC3-White-01-1-Vivace-Intro-Desktop.jpg"
+  },
+  {
+   "a": "Vivace Intro",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-01-2-Vivace-Intro-Mobile.jpg",
+   "t": "Intelligent Care with 18% More Fabric Protection",
+   "d": "Intelligent Care with 18% More Fabric Protection",
+   "w": 768,
+   "h": 170,
+   "pos": 234498,
+   "file": "WM-Vivace-V700-VC3-White-01-2-Vivace-Intro-Mobile.jpg"
+  },
+  {
+   "a": "Vivace Intro",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-01-2-Vivace-Intro-Desktop.jpg",
+   "t": "Intelligent Care with 18% More Fabric Protection",
+   "d": "Intelligent Care with 18% More Fabric Protection",
+   "w": 1600,
+   "h": 270,
+   "pos": 234670,
+   "file": "WM-Vivace-V700-VC3-White-01-2-Vivace-Intro-Desktop.jpg"
+  },
+  {
+   "a": "AI DD Info",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-03-AIDD-info-Mobile.jpg",
+   "t": "Intelligent Care with 18% More Fabric Protection",
+   "d": "*Tested by Intertek on March 2019. Cotton cycle with 2kg of underwear compared to LG Conventional Cotton cycle(F4V9RWP2W vs. FC1450S2W). The results may be different depending on the clothes and environment. *AI DD is available in 3 cycles.(Cotton, Mixed Fabric, Easy Care).",
+   "w": 768,
+   "h": 600,
+   "pos": 239220,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-03-AIDD-info-Mobile.jpg"
+  },
+  {
+   "a": "AI DD Info",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-03-AIDD-info-Desktop.jpg",
+   "t": "Intelligent Care with 18% More Fabric Protection",
+   "d": "*Tested by Intertek on March 2019. Cotton cycle with 2kg of underwear compared to LG Conventional Cotton cycle(F4V9RWP2W vs. FC1450S2W). The results may be different depending on the clothes and environment. *AI DD is available in 3 cycles.(Cotton, Mixed Fabric, Easy Care).",
+   "w": 1600,
+   "h": 800,
+   "pos": 239392,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-03-AIDD-info-Desktop.jpg"
+  },
+  {
+   "a": "TurboWash",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-04-TurboWash-Mobile.jpg",
+   "t": "What is AI DD™?",
+   "d": "What is AI DD™?",
+   "w": 768,
+   "h": 965,
+   "pos": 241170,
+   "file": "WM-Vivace-V700-VC3-White-04-TurboWash-Mobile.jpg"
+  },
+  {
+   "a": "TurboWash",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-04-TurboWash-Desktop.jpg",
+   "t": "What is AI DD™?",
+   "d": "What is AI DD™?",
+   "w": 1600,
+   "h": 1400,
+   "pos": 241337,
+   "file": "WM-Vivace-V700-VC3-White-04-TurboWash-Desktop.jpg"
+  },
+  {
+   "a": "Steam Plus",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-1-Steam-Plus-Mobile.jpg",
+   "t": "Less Time, More Life",
+   "d": "Steam™ Less Wrinkles, More HygienicLG Steam™ technology eliminates 99.9% of allergens, such as dust mites that can cause allergy or respiratory issues with 30% less wrinkles.",
+   "w": 768,
+   "h": 600,
+   "pos": 243092,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-07-1-Steam-Plus-Mobile.jpg"
+  },
+  {
+   "a": "Steam Plus",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-2-Steam-Plus-Mobile.jpg",
+   "t": "Less Wrinkles, More Hygienic",
+   "d": "Steam™ Less Wrinkles, More HygienicLG Steam™ technology eliminates 99.9% of allergens, such as dust mites that can cause allergy or respiratory issues with 30% less wrinkles.",
+   "w": 768,
+   "h": 389,
+   "pos": 245564,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-07-2-Steam-Plus-Mobile.jpg"
+  },
+  {
+   "a": "Steam Plus Info",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-08-Steam-Plus-info-Mobile.jpg",
+   "t": "30% Less Wrinkles",
+   "d": "*Allergy Care cycle certified by BAF (British Allergy Foundation) reduces 99.9% house dust mite allergen. *Tested by Intertek on December 2018, based on AATCC standard. Cotton cycle with 'Wrinkle Care' option (3 mixed shirts) compared to Cotton cycle without option. The results may be different depending on the clothes and environment. *Wrinkle Care is available as an option in 6 cycles.",
+   "w": 768,
+   "h": 700,
+   "pos": 249081,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-08-Steam-Plus-info-Mobile.jpg"
+  },
+  {
+   "a": "Steam Plus Info",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-08-Steam-Plus-info-Desktop.jpg",
+   "t": "30% Less Wrinkles",
+   "d": "*Allergy Care cycle certified by BAF (British Allergy Foundation) reduces 99.9% house dust mite allergen. *Tested by Intertek on December 2018, based on AATCC standard. Cotton cycle with 'Wrinkle Care' option (3 mixed shirts) compared to Cotton cycle without option. The results may be different depending on the clothes and environment. *Wrinkle Care is available as an option in 6 cycles.",
+   "w": 1600,
+   "h": 500,
+   "pos": 249259,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-08-Steam-Plus-info-Desktop.jpg"
+  },
+  {
+   "a": "Steam Plus Info",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-09-Steam-Plus-info-Mobile.jpg",
+   "t": "30% Less Wrinkles",
+   "d": "30% Less Wrinkles",
+   "w": 768,
+   "h": 600,
+   "pos": 251009,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-09-Steam-Plus-info-Mobile.jpg"
+  },
+  {
+   "a": "Steam Plus Info",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-09-Steam-Plus-info-Desktop.jpg",
+   "t": "30% Less Wrinkles",
+   "d": "30% Less Wrinkles",
+   "w": 1600,
+   "h": 500,
+   "pos": 251187,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-09-Steam-Plus-info-Desktop.jpg"
+  },
+  {
+   "a": "Durability",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-09-1-Druability-Mobile.jpg",
+   "t": "Bigger Capacity in the Same Space",
+   "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+   "w": 768,
+   "h": 1550,
+   "pos": 255235,
+   "file": "WM-Vivace-V700-VC3-White-09-1-Druability-Mobile.jpg"
+  },
+  {
+   "a": "Durability",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-09-1-Druability-Desktop.jpg",
+   "t": "Bigger Capacity in the Same Space",
+   "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+   "w": 1600,
+   "h": 1220,
+   "pos": 255405,
+   "file": "WM-Vivace-V700-VC3-White-09-1-Druability-Desktop.jpg"
+  },
+  {
+   "a": "Design",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-10-Design-Mobile.jpg",
+   "t": "More Durable and Hygienic",
+   "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+   "w": 768,
+   "h": 460,
+   "pos": 258085,
+   "file": "WM-Vivace-V700-VC3-White-10-Design-Mobile.jpg"
+  },
+  {
+   "a": "Design",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-10-Design-Desktop.jpg",
+   "t": "More Durable and Hygienic",
+   "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+   "w": 1600,
+   "h": 600,
+   "pos": 258249,
+   "file": "WM-Vivace-V700-VC3-White-10-Design-Desktop.jpg"
+  },
+  {
+   "a": "Compatibility",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-11-1-Compatibility-Mobile.jpg",
+   "t": "More Visible and Elegant",
+   "d": "*Tested by Intertek on July 2013. Bactericidal effect for P.aeruginosa of stainless steel against initial amount in 12 days.",
+   "w": 768,
+   "h": 2020,
+   "pos": 259977,
+   "file": "WM-Vivace-V700-VC3-White-11-1-Compatibility-Mobile.jpg"
+  },
+  {
+   "a": "Compatibility",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-11-1-Compatibility-Desktop.jpg",
+   "t": "More Visible and Elegant",
+   "d": "*TWINWash™ mini may not be available in all country or in all local retailers.",
+   "w": 1600,
+   "h": 1300,
+   "pos": 260150,
+   "file": "WM-Vivace-V700-VC3-White-11-1-Compatibility-Desktop.jpg"
+  },
+  {
+   "a": "ThinQ",
+   "p": "/images/wm/features/WM-Vivace-V700-VC3-White-12-1-ThinQ-Mobile.jpg",
+   "t": "Available with TWINWash™ Mini",
+   "d": "*TWINWash™ mini may not be available in all country or in all local retailers.",
+   "w": 768,
+   "h": 1280,
+   "pos": 262404,
+   "file": "WM-Vivace-V700-VC3-White-12-1-ThinQ-Mobile.jpg"
+  },
+  {
+   "a": "Wfr1114Wh Saso M",
+   "p": "/images/wm/features/WFR1114WH-saso-m.jpg",
+   "t": "SUMMARY",
+   "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model.",
+   "w": 720,
+   "h": 860,
+   "pos": 266512,
+   "file": "WFR1114WH-saso-m.jpg"
+  },
+  {
+   "a": "Wfr1114Wh Saso D",
+   "p": "/images/wm/features/WFR1114WH-saso-d.jpg",
+   "t": "SUMMARY",
+   "d": "Design, features and specifications subject to change without notice. Screen images simulated and/or dramatized. Some features in videos may not be available on all models. Please refer to the TECHNICAL SPECIFICATIONS tab for a complete list of features by model. Details shown on product images may vary by region, country or model.",
+   "w": 1600,
+   "h": 900,
+   "pos": 266629,
+   "file": "WFR1114WH-saso-d.jpg"
+  },
+  {
+   "a": "Durability",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-11-1-Druability-Desktop_t6.jpg",
+   "t": "Durability",
+   "d": "",
+   "w": 1600,
+   "h": 1220,
+   "pos": 1140333,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-11-1-Druability-Desktop_t6.jpg"
+  },
+  {
+   "a": "Durability",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-11-1-Druability-Mobile_t6.jpg",
+   "t": "Durability",
+   "d": "",
+   "w": 768,
+   "h": 1550,
+   "pos": 1140468,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-11-1-Druability-Mobile_t6.jpg"
+  },
+  {
+   "a": "Smart ThinQ",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-14-1-SmartThinQ-Desktop.jpg",
+   "t": "Smart ThinQ",
+   "d": "",
+   "w": 1600,
+   "h": 1350,
+   "pos": 1175021,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-14-1-SmartThinQ-Desktop.jpg"
+  },
+  {
+   "a": "Smart ThinQ",
+   "p": "/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-14-1-SmartThinQ-Mobile.jpg",
+   "t": "Smart ThinQ",
+   "d": "",
+   "w": 768,
+   "h": 1280,
+   "pos": 1175153,
+   "file": "WD-Vivace-V900-VC2-BlackSteel-14-1-SmartThinQ-Mobile.jpg"
+  }
+ ],
+ "specs": {
+  "CAPACITY - Max Wash Capacity(kg)": "11",
+  "DIMENSIONS & WEIGHTS - Product Dimension": "600 x 850 x 565",
+  "FEATURES - Steam": "Yes",
+  "ADDITIONAL OPTIONS - Wrinkle Care": "No",
+  "SMART TECHNOLOGY - ThinQ(Wi-Fi)": "Yes",
+  "Wi-Fi": "Yes",
+  "Add Item": "Yes",
+  "Beep On/Off": "Yes",
+  "Child Lock": "Yes",
+  "ColdWash": "No",
+  "Delay End": "Yes",
+  "Detergent Level": "No",
+  "Drum Light": "No",
+  "ezDispense Nozzle Clean": "No",
+  "Pre Wash": "Yes",
+  "Remote Start": "Yes",
+  "Rinse+": "Yes",
+  "Rinse + Spin": "No",
+  "Softener Level": "No",
+  "Spin": "1400/1200/1000/800/400/No Spin",
+  "Steam": "No",
+  "Temp.": "Cold/20/30/40/60/95℃",
+  "Tub Clean": "No",
+  "TurboWash": "No",
+  "Wash": "No",
+  "Wrinkle Care": "No",
+  "Bar Code": "8806084791887",
+  "Max Wash Capacity(kg)": "11",
+  "Delay Timer": "3-19 hours",
+  "Display Type": "Dial + Touch LED",
+  "Door Lock Indication": "Yes",
+  "Box Dimensions (WxHxD mm)": "660 x 890 x 660",
+  "Product Depth from back cover to door (D": "620",
+  "Product Depth with door open 90˚ (D'' mm": "1100",
+  "Product Dimensions (WxHxD mm)": "600 x 850 x 565",
+  "Weight include packing (kg)": "71.0",
+  "Weight (kg)": "67.0",
+  "Embossing Inner Drum": "Yes",
+  "6 Motion DD": "Yes",
+  "AI DD": "Yes",
+  "Auto Restart": "Yes",
+  "Centum System": "No",
+  "Drum Lifter": "Stainless Steel Slim Lifter",
+  "End of Cycle Signal": "Yes",
+  "ezDispense": "No",
+  "Foam detection system": "Yes",
+  "Inverter DirectDrive": "Yes",
+  "Leveling Legs": "Yes",
+  "LoadSense": "Yes",
+  "Stainless Steel Drum": "Yes",
+  "Steam+": "No",
+  "TurboWash360˚": "No",
+  "Type": "Front Load Washer",
+  "Vibration Sensor": "Yes",
+  "Water feed (Hot / Cold)": "Cold Only",
+  "Water Level": "Auto",
+  "Body Color": "White",
+  "Door Type": "Black Tinted Tempered Glass Cover",
+  "LG TWINWash Compatible": "No",
+  "Baby Steam Care": "No",
+  "AI Wash": "Yes",
+  "Allergy Care (washer)": "Yes",
+  "Auto Wash": "No",
+  "Baby Care": "No",
+  "Baby Wear": "No",
+  "Cold Wash": "No",
+  "Color Care": "No",
+  "Cotton": "Yes",
+  "Cotton +": "Yes",
+  "Dark Wash": "No",
+  "Delicates": "Yes",
+  "Downloaded Cycle": "Yes",
+  "Drain + Spin": "No",
+  "Duvet": "Yes",
+  "Easy Care": "Yes",
+  "Eco 40-60": "No",
+  "Gentle Care": "No",
+  "Hygiene": "No",
+  "Intensive 60": "No",
+  "Mixed Fabric": "Yes",
+  "Outdoor": "No",
+  "Quick 30": "No",
+  "Quick Wash": "No",
+  "Refresh": "No",
+  "Rinse+Spin": "No",
+  "Silent Wash": "No",
+  "Skin Care": "No",
+  "Speed 14": "Yes",
+  "Speed Wash+Dry": "No",
+  "Sportswear(Activewear)": "Yes",
+  "Stain Care": "No",
+  "Steam Refresh": "No",
+  "TurboWash 39": "No",
+  "TurboWash 49": "No",
+  "TurboWash 59": "Yes",
+  "Wash+Dry": "No",
+  "Wool (Hand/Wool)": "Yes",
+  "Download Cycle": "Yes",
+  "Energy Monitoring": "Yes",
+  "Remote Start and Cycle Monitor": "Yes",
+  "Smart Diagnosis": "Yes",
+  "ThinQ(Wi-Fi)": "Yes",
+  "Tub Clean Coach": "Yes",
+  "Smart Pairing": "Yes"
+ }
+}

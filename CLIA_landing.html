@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CLIA — Content Library Integration Agent</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;overflow:hidden;}
+body{
+  font-family:-apple-system,'Segoe UI','Helvetica Neue',Arial,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  background:radial-gradient(ellipse at top left,#1a0014 0%,#0a0008 50%,#000 100%);
+  color:#fff;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+}
+/* Subtle grid background */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:
+    linear-gradient(rgba(165,0,52,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(165,0,52,.04) 1px,transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;z-index:0;
+}
+/* Animated glow orbs */
+body::after{
+  content:'';position:fixed;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(165,0,52,.15) 0%,transparent 70%);
+  top:-200px;right:-200px;
+  filter:blur(40px);
+  pointer-events:none;z-index:0;
+  animation:floatOrb 20s ease-in-out infinite;
+}
+@keyframes floatOrb{
+  0%,100%{transform:translate(0,0);}
+  50%{transform:translate(-100px,150px);}
+}
+.topbar{
+  position:relative;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 36px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.brand{display:flex;align-items:center;gap:14px;}
+.brand-mark{
+  width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,#A50034,#6B0022);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:13px;
+  box-shadow:0 0 24px rgba(165,0,52,.5);
+}
+.brand-text{font-size:13px;font-weight:600;letter-spacing:.5px;color:#aaa;}
+.brand-text b{color:#fff;}
+.topbar-meta{font-size:11px;color:#777;display:flex;gap:16px;align-items:center;}
+.topbar-meta .live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#22C55E;margin-right:5px;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+main{
+  position:relative;z-index:5;
+  flex:1;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:24px;
+  gap:32px;
+}
+.hero{
+  text-align:center;
+  animation:heroFadeIn 1.2s cubic-bezier(.2,.7,.3,1) both;
+}
+@keyframes heroFadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.eyebrow{
+  display:inline-block;
+  padding:5px 14px;
+  background:rgba(165,0,52,.15);
+  border:1px solid rgba(165,0,52,.4);
+  border-radius:20px;
+  font-size:11px;font-weight:600;letter-spacing:1.5px;
+  color:#FF6B8A;
+  margin-bottom:18px;
+}
+.hero-title{
+  font-size:88px;font-weight:900;letter-spacing:8px;
+  background:linear-gradient(135deg,#fff 0%,#ccc 50%,#FF6B8A 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  line-height:1;margin-bottom:8px;
+}
+.hero-sub{
+  font-size:14px;color:#999;letter-spacing:6px;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hero-tagline{
+  font-size:22px;font-weight:300;color:#ddd;
+  max-width:640px;line-height:1.5;
+}
+.hero-tagline b{color:#fff;font-weight:600;}
+/* Flow diagram */
+.flow{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:36px;
+  max-width:1100px;width:100%;
+  padding:24px 36px;
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;
+  backdrop-filter:blur(20px);
+  animation:heroFadeIn 1.5s .3s cubic-bezier(.2,.7,.3,1) both;
+}
+.flow-source{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.flow-source-card{
+  width:140px;padding:18px 14px;
+  background:linear-gradient(135deg,#1F1B2E,#2a2542);
+  border:1px solid rgba(110,64,201,.5);
+  border-radius:10px;
+  text-align:center;
+  position:relative;
+  box-shadow:0 0 30px rgba(110,64,201,.25);
+}
+.flow-source-card .ic{font-size:32px;margin-bottom:6px;}
+.flow-source-card .nm{font-size:13px;font-weight:700;color:#fff;}
+.flow-source-card .sub{font-size:9px;color:#A2DFFF;margin-top:3px;letter-spacing:1px;}
+.flow-source-label{font-size:10px;color:#888;letter-spacing:1px;text-transform:uppercase;}
+.flow-arrows{
+  position:relative;
+  height:170px;
+  display:flex;align-items:center;justify-content:center;
+}
+.flow-arrows svg{width:100%;height:100%;}
+.flow-arrows .data-dot{
+  fill:#FF6B8A;
+  animation:flowDot 2.5s linear infinite;
+}
+@keyframes flowDot{
+  0%{opacity:0;}
+  10%{opacity:1;}
+  90%{opacity:1;}
+  100%{opacity:0;}
+}
+.flow-targets{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+.flow-target{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:11px;
+  color:#ddd;
+  display:flex;align-items:center;gap:8px;
+  transition:all .2s;
+}
+.flow-target:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);}
+.flow-target .tg-ic{font-size:14px;}
+.flow-target .tg-nm{font-weight:600;}
+.flow-target .tg-fmt{font-size:9px;color:#888;margin-left:auto;letter-spacing:.5px;}
+/* Stats grid */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  max-width:1100px;width:100%;
+  animation:heroFadeIn 1.5s .6s cubic-bezier(.2,.7,.3,1) both;
+}
+.stat{
+  background:rgba(255,255,255,.025);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  padding:18px 20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.stat::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,transparent 50%,rgba(165,0,52,.08));
+  pointer-events:none;
+}
+.stat-num{
+  font-size:38px;font-weight:900;letter-spacing:-1px;
+  background:linear-gradient(135deg,#FF6B8A,#fff);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.stat-label{
+  font-size:11px;color:#aaa;
+  text-transform:uppercase;letter-spacing:1.5px;
+  margin-top:4px;
+}
+.stat-sub{font-size:9px;color:#666;margin-top:3px;}
+/* CTA */
+.cta-row{
+  display:flex;gap:14px;align-items:center;
+  animation:heroFadeIn 1.5s .9s cubic-bezier(.2,.7,.3,1) both;
+}
+.cta{
+  padding:16px 36px;
+  background:linear-gradient(135deg,#A50034,#D9004A);
+  color:#fff;font-size:15px;font-weight:700;letter-spacing:.5px;
+  border:none;border-radius:50px;
+  cursor:pointer;
+  display:inline-flex;align-items:center;gap:10px;
+  box-shadow:0 0 40px rgba(165,0,52,.5),0 4px 20px rgba(0,0,0,.4);
+  transition:all .25s;
+  text-decoration:none;
+}
+.cta:hover{transform:translateY(-2px);box-shadow:0 0 60px rgba(165,0,52,.7),0 8px 30px rgba(0,0,0,.5);}
+.cta .play-ic{
+  width:24px;height:24px;border-radius:50%;
+  background:#fff;color:#A50034;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:900;
+}
+.cta-secondary{
+  padding:16px 28px;
+  background:transparent;color:#bbb;
+  font-size:13px;font-weight:600;
+  border:1px solid rgba(255,255,255,.15);border-radius:50px;
+  cursor:pointer;
+  transition:all .2s;
+  text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+}
+.cta-secondary:hover{background:rgba(255,255,255,.05);color:#fff;border-color:rgba(255,255,255,.3);}
+/* Channel logo strip */
+.channel-strip{
+  display:flex;align-items:center;justify-content:center;
+  gap:8px;flex-wrap:wrap;
+  max-width:900px;
+  animation:heroFadeIn 1.5s 1.2s cubic-bezier(.2,.7,.3,1) both;
+}
+.ch-pill{
+  font-size:10px;color:#888;
+  padding:4px 10px;border-radius:12px;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.06);
+  white-space:nowrap;
+}
+.ch-pill.live{
+  color:#FF6B8A;border-color:rgba(255,107,138,.4);background:rgba(165,0,52,.1);
+}
+footer{
+  position:relative;z-index:10;
+  padding:14px 36px;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:10px;color:#666;
+  letter-spacing:1px;
+}
+footer .legal{display:flex;gap:18px;}
+/* Responsive */
+@media(max-width:1100px){
+  .hero-title{font-size:64px;letter-spacing:5px;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .flow{grid-template-columns:1fr;gap:20px;}
+  .flow-arrows{display:none;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <div class="brand-mark">LG</div>
+    <div class="brand-text">LG Electronics &nbsp;·&nbsp; <b>Global 3P Content Infrastructure</b></div>
+  </div>
+  <div class="topbar-meta">
+    <span><span class="live-dot"></span>Live Demo Ready</span>
+    <span>v6.20</span>
+    <span>2026.04.28</span>
+  </div>
+</div>
+
+<main>
+
+  <div class="hero">
+    <div class="eyebrow">CONTENT LIBRARY INTEGRATION AGENT</div>
+    <div class="hero-title">CLIA</div>
+    <div class="hero-sub">Single Source · Global Reach</div>
+    <div class="hero-tagline">한 번 쓰고, <b>전 세계 30+ 마켓플레이스</b> 어디든 보낸다.<br>
+    AI 가 작성하고, 사람이 한 곳에서만 검수하면, <b>모든 채널·모든 언어</b>로 자동 변환됩니다.</div>
+  </div>
+
+  <div class="flow">
+    <div class="flow-source">
+      <div class="flow-source-label">SINGLE SOURCE</div>
+      <div class="flow-source-card">
+        <div class="ic">📝</div>
+        <div class="nm">Markdown</div>
+        <div class="sub">PRODUCT.md</div>
+      </div>
+    </div>
+
+    <div class="flow-arrows">
+      <svg viewBox="0 0 300 170" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#6E40C9" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#FF6B8A" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#FF6B8A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path d="M 0 85 Q 150 20 300 30" stroke="url(#lg)" stroke-width="1.2" fill="none"/>
+        <path d="M 0 85 Q 150 60 300 65" stroke="url(#lg)" stroke-width="1.2" fill="none"/>
+        <path d="M 0 85 Q 150 85 300 85" stroke="url(#lg)" stroke-width="1.2" fill="none"/>
+        <path d="M 0 85 Q 150 110 300 105" stroke="url(#lg)" stroke-width="1.2" fill="none"/>
+        <path d="M 0 85 Q 150 150 300 140" stroke="url(#lg)" stroke-width="1.2" fill="none"/>
+        <circle class="data-dot" r="3" cx="0" cy="85"><animateMotion dur="2.5s" repeatCount="indefinite" path="M 0 0 Q 150 -65 300 -55"/></circle>
+        <circle class="data-dot" r="3" cx="0" cy="85" style="animation-delay:.5s"><animateMotion dur="2.5s" begin=".5s" repeatCount="indefinite" path="M 0 0 Q 150 -25 300 -20"/></circle>
+        <circle class="data-dot" r="3" cx="0" cy="85" style="animation-delay:1s"><animateMotion dur="2.5s" begin="1s" repeatCount="indefinite" path="M 0 0 Q 150 0 300 0"/></circle>
+        <circle class="data-dot" r="3" cx="0" cy="85" style="animation-delay:1.5s"><animateMotion dur="2.5s" begin="1.5s" repeatCount="indefinite" path="M 0 0 Q 150 25 300 20"/></circle>
+        <circle class="data-dot" r="3" cx="0" cy="85" style="animation-delay:2s"><animateMotion dur="2.5s" begin="2s" repeatCount="indefinite" path="M 0 0 Q 150 65 300 55"/></circle>
+      </svg>
+    </div>
+
+    <div class="flow-targets">
+      <div class="flow-target"><span class="tg-ic">🛒</span><span class="tg-nm">Amazon (US/EU/JP/SA)</span><span class="tg-fmt">Limited HTML</span></div>
+      <div class="flow-target"><span class="tg-ic">🤝</span><span class="tg-nm">Mercado Libre</span><span class="tg-fmt">Plain Text</span></div>
+      <div class="flow-target"><span class="tg-ic">📦</span><span class="tg-nm">eBay (UK/DE/IT)</span><span class="tg-fmt">Full HTML</span></div>
+      <div class="flow-target"><span class="tg-ic">🛍️</span><span class="tg-nm">Shopee · Lazada</span><span class="tg-fmt">Image-first</span></div>
+      <div class="flow-target"><span class="tg-ic">🏠</span><span class="tg-nm">LG.com Official</span><span class="tg-fmt">Schema.org</span></div>
+      <div class="flow-target"><span class="tg-ic">📸</span><span class="tg-nm">IG · FB · Shorts · TikTok</span><span class="tg-fmt">Caption</span></div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Marketplaces</div>
+      <div class="stat-sub">전 세계 5개 권역</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">18+</div>
+      <div class="stat-label">Languages</div>
+      <div class="stat-sub">RTL 포함</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1,000+</div>
+      <div class="stat-label">SKUs</div>
+      <div class="stat-sub">LG 글로벌 카탈로그</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">540K</div>
+      <div class="stat-label">Content Variants</div>
+      <div class="stat-sub">자동 생성 가능</div>
+    </div>
+  </div>
+
+  <div class="cta-row">
+    <a href="LG_AI_Content_Hub_v6_20.html" class="cta">
+      <span class="play-ic">▶</span>
+      시연 시작
+    </a>
+    <a href="#" class="cta-secondary" onclick="document.getElementById('infoModal').style.display='flex';return false;">
+      📋 보고 자료
+    </a>
+  </div>
+
+  <div class="channel-strip">
+    <span class="ch-pill live">✓ LG.com</span>
+    <span class="ch-pill live">✓ Amazon.sa</span>
+    <span class="ch-pill live">✓ eBay.de</span>
+    <span class="ch-pill live">✓ Mercado Libre MX</span>
+    <span class="ch-pill live">✓ Shopee</span>
+    <span class="ch-pill live">✓ Lazada</span>
+    <span class="ch-pill live">✓ IG · FB · Shorts</span>
+    <span class="ch-pill">Amazon US/EU/JP</span>
+    <span class="ch-pill">Coupang</span>
+    <span class="ch-pill">Rakuten</span>
+    <span class="ch-pill">Tmall · JD</span>
+    <span class="ch-pill">Allegro · Otto</span>
+    <span class="ch-pill">Trendyol</span>
+    <span class="ch-pill">Noon · Jumia</span>
+    <span class="ch-pill">TikTok Shop</span>
+    <span class="ch-pill">+ 더 많은 채널</span>
+  </div>
+
+</main>
+
+<footer>
+  <span>© 2026 LG Electronics &nbsp;·&nbsp; Internal Demo</span>
+  <div class="legal">
+    <span>Powered by Claude Code</span>
+    <span>Single HTML · Zero Dependencies · Offline Ready</span>
+  </div>
+</footer>
+
+<!-- Info Modal -->
+<div id="infoModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:100;align-items:center;justify-content:center;backdrop-filter:blur(8px);" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#1a0014;border:1px solid rgba(255,107,138,.3);border-radius:16px;max-width:680px;width:90%;padding:32px;color:#ddd;font-size:13px;line-height:1.7;max-height:85vh;overflow-y:auto;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+      <h2 style="font-size:20px;color:#fff;">📋 시연 가이드 — 4분 코스</h2>
+      <button onclick="document.getElementById('infoModal').style.display='none'" style="background:none;border:none;color:#999;font-size:24px;cursor:pointer;">×</button>
+    </div>
+    <ol style="padding-left:24px;">
+      <li style="margin-bottom:14px;"><b style="color:#FF6B8A;">SCENE 1 (1분) — 같은 내용, 5가지 얼굴.</b><br>제품 진입 → <code style="background:rgba(255,255,255,.08);padding:2px 6px;border-radius:3px;">📝 MD Source</code> → 우측 5개 탭 차례 클릭. "왼쪽 한 곳, 오른쪽 5개 채널"</li>
+      <li style="margin-bottom:14px;"><b style="color:#FF6B8A;">SCENE 2 (30초) — 한 줄 수정의 위력.</b><br>가격 줄 수정 → 5개 출력 동시 갱신. "이게 5개 마켓 따로 수정하던 일"</li>
+      <li style="margin-bottom:14px;"><b style="color:#FF6B8A;">SCENE 3 (1분 30초) — Mercado Libre 에 실제 paste.</b><br>📄 Plain Text 복사 → ML Vendedores 화면에 붙여넣기. "HTML 안 깨지고 구조 살아있음"</li>
+      <li style="margin-bottom:14px;"><b style="color:#FF6B8A;">SCENE 4 (1분) — 같은 원본, 다른 채널.</b><br>🛒 Amazon Limited HTML → Amazon Seller Central 에 붙여넣기. 같은 원본이 채널별로 다르게 변환됨.</li>
+      <li style="margin-bottom:14px;"><b style="color:#FF6B8A;">SCENE 5 (1분) — 다국어 확장.</b><br>Markdown 전체 복사 → ChatGPT/DeepL 에 "독일어로 번역, 구조 보존" → 결과를 다시 CLIA 에 paste → 즉시 독일어 5개 채널 생성</li>
+    </ol>
+    <div style="background:rgba(165,0,52,.1);border:1px solid rgba(255,107,138,.3);border-radius:8px;padding:14px;margin-top:18px;color:#fff;">
+      <b style="color:#FF6B8A;">🎤 클로징 한 줄:</b><br>
+      "Markdown 은 작성 포맷이 아니라 — <b>LG 컨텐츠를 자산화하는 표준 인터페이스</b>입니다. 미래에 등장할 어떤 채널·언어에도 그대로 흘려보낼 수 있습니다."
+    </div>
+  </div>
+</div>
+
+<script>
+// Keyboard shortcut: Press Enter or Space to start demo
+document.addEventListener('keydown',e=>{
+  if(e.key==='Enter'||e.key===' '){location.href='LG_AI_Content_Hub_v6_20.html';}
+  if(e.key==='Escape'){document.getElementById('infoModal').style.display='none';}
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+{
+  "id": "WFN1310WHT",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/wfn1310wht/",
+  "h1": "13 kg Front Load Washing Machine | ThinQ (Wi-Fi) | Essence White",
+  "curPrice": "4,099",
+  "origPrice": "6,249",
+  "memberPrice": "3,935.04",
+  "gallery": [
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-01.jpg","a":"Front view of LG 13kg Front Load Washing Machine in Essence White (WFN1310WHT)","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-02.jpg","a":"Front view with door open","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-03.jpg","a":"Stainless steel drum close-up","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-04.jpg","a":"Left detergent tray open","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-05.jpg","a":"LED display and dial controls","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-06.jpg","a":"Left side view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-07.jpg","a":"Left side perspective","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-08.jpg","a":"Top view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-09.jpg","a":"Right side view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-10.jpg","a":"Front perspective view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-11.jpg","a":"Side profile","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-12.jpg","a":"Back view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/wfn1310wht-agwgnag/gallery1/DZ-13.jpg","a":"SASO energy label","w":1600,"h":1062}
+  ],
+  "modules": [
+    {
+      "eye":"Standard depth",
+      "head":"Fit your washer into your life",
+      "body":"We've fit an XL capacity drum within an LG standard depth footprint of 660mm. Reclaim some space in your home without compromising the size of your wash.",
+      "disc":"*Save up to 125mm of space compared to previous LG conventional front loader washing machines of 770mm depth.",
+      "imgs":[{"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-04-desktop(thumbnail).jpg","a":"Slim-depth washer fits neatly into modern laundry spaces","w":1600,"h":720}]
+    },
+    {
+      "eye":"XL Capacity",
+      "head":"Fit more of the good stuff in",
+      "body":"Get back valuable time to do more of the things you love. With an impressive 13kg XL drum, get large loads done in one. Perfect for big loads and washing bulky items like duvets and bedding at home.",
+      "disc":"",
+      "imgs":[{"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-05-desktop(thumbnail).jpg","a":"13kg XL drum handles family-sized loads and bulky bedding","w":1600,"h":720}]
+    },
+    {
+      "eye":"AI DD®",
+      "head":"Intelligent Fabric Care with AI DD®",
+      "body":"LG front load washers with AI Direct Drive technology weigh the load and assess fabric softness, then automatically select the optimal wash motion for thorough cleaning and outstanding clothing care.",
+      "disc":"*Tested by Intertek on June 2023. AI Wash cycle compared to Cotton cycle. Results may vary depending on the clothes and environment.",
+      "imgs":[{"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-06-desktop(thumbnail).jpg","a":"AI DD senses fabric weight and softness, auto-selecting optimal wash motion","w":1600,"h":720}]
+    },
+    {
+      "eye":"TurboWash™ 360°",
+      "head":"Get fresh laundry in just 39 minutes",
+      "body":"TurboWash™ 360° sprays water in four directions to ensure a deep, thorough clean in a short time — so you can get back to what matters faster.",
+      "disc":"*Tested by Intertek on May 2023. TurboWash39 cycle with 3kg of IEC load. Results may vary depending on the environment.",
+      "imgs":[{"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-07-desktop(thumbnail).jpg","a":"TurboWash 360° — deep clean in 39 minutes","w":1600,"h":720}]
+    },
+    {
+      "eye":"Smooth operation",
+      "head":"Limit noise and vibrations",
+      "body":"Packed with Inverter DirectDrive technology, a vibration sensor and enhanced weight balance for quiet, stable operation — even during high-speed spin cycles.",
+      "disc":"",
+      "imgs":[{"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-08-desktop(thumbnail).jpg","a":"Quiet and vibration-free wash cycles","w":1600,"h":720}]
+    },
+    {
+      "eye":"Allergy Care™ with Steam",
+      "head":"Reduce allergens in fabrics with the Allergy Care™ Cycle with Steam",
+      "body":"Select the Allergy Care™ Cycle with Steam to help reduce common household allergens including house dust mites, cat, dog and pollen allergens, plus some household bacteria and fungi.",
+      "disc":"*Allergy Care cycle tested by US Intertek reduces Live Dust Mites, Allergens (Dust Mite, Cat, Dog, Pollen), Bacteria, and Fungi. Results may vary.",
+      "imgs":[{"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-09-desktop.jpg","a":"Allergy Care with Steam protects sensitive skin and keeps fabrics hygienic","w":1600,"h":720}]
+    },
+    {
+      "eye":"LG ThinQ®",
+      "head":"Smart control, smart life with LG ThinQ®",
+      "body":"Start, monitor and control your washer from anywhere via the LG ThinQ® app. Download new cycles, track energy usage, and enjoy hands-free voice control through compatible smart speakers.",
+      "disc":"*LG ThinQ® app available on compatible Android or iOS devices. Wi-Fi connection and product registration required.",
+      "imgs":[
+        {"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-01-desktop.jpg","a":"Remote start and control via LG ThinQ app","w":1600,"h":700},
+        {"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-02-desktop.jpg","a":"Monitor cycle status and energy use from anywhere","w":1600,"h":700},
+        {"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-12-03-desktop.jpg","a":"Hands-free voice control via smart speaker","w":1600,"h":700}
+      ]
+    },
+    {
+      "eye":"Design",
+      "head":"Space-saving design to complement any space",
+      "body":"Slim standard-depth footprint, premium Essence White glossy finish, stainless steel drum and black tinted tempered glass door — designed to elevate any laundry space.",
+      "disc":"",
+      "imgs":[
+        {"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-01-desktop.jpg","a":"Slim-depth front-loader design","w":586,"h":842},
+        {"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-03-desktop.jpg","a":"Stainless Steel Drum interior","w":464,"h":409},
+        {"p":"/images/washing-machines/wfn1510bst-aeggnag/features/HA-WM-NT-Slim-LED-GP1-14-04-desktop.jpg","a":"Durable tempered glass door","w":830,"h":409}
+      ]
+    },
+    {
+      "eye":"Energy Rating",
+      "head":"SASO-Certified Efficiency",
+      "body":"Certified by SASO (Saudi Standards, Metrology and Quality Organization) for energy and water performance in the Kingdom of Saudi Arabia.",
+      "disc":"",
+      "imgs":[{"p":"/images/washing-machines/wfn1310wht-agwgnag/saso-d1.jpg","a":"SASO energy label for WFN1310WHT","w":1600,"h":960}]
+    }
+  ],
+  "specs": [
+    {"k":"Type","v":"Front Load Washer"},
+    {"k":"Max Wash Capacity (kg)","v":"13.0"},
+    {"k":"Body Color","v":"Essence White (Glossy)"},
+    {"k":"Door Type","v":"Black Tinted Tempered Glass Cover"},
+    {"k":"Product Dimensions (WxHxD, mm)","v":"650 x 950 x 645"},
+    {"k":"Box Dimensions (WxHxD, mm)","v":"710 x 1020 x 670"},
+    {"k":"Weight (kg)","v":"71.0"},
+    {"k":"Weight Incl. Packing (kg)","v":"77.0"},
+    {"k":"Door Depth (open 90°, mm)","v":"1145"},
+    {"k":"6 Motion DD","v":"Yes"},
+    {"k":"AI DD","v":"Yes"},
+    {"k":"AI Wash","v":"Yes"},
+    {"k":"Inverter DirectDrive","v":"Yes"},
+    {"k":"Stainless Steel Drum","v":"Yes"},
+    {"k":"Drum Lifter","v":"Stainless Steel Slim Lifter"},
+    {"k":"Embossing Inner Drum","v":"Yes"},
+    {"k":"Steam","v":"Yes"},
+    {"k":"TurboWash","v":"Yes"},
+    {"k":"TurboWash 360°","v":"Yes"},
+    {"k":"TurboWash 39","v":"Yes"},
+    {"k":"Allergy Care (Washer)","v":"Yes"},
+    {"k":"Baby Care","v":"Yes"},
+    {"k":"Pet Care Wash","v":"Yes"},
+    {"k":"Cold Wash","v":"Yes"},
+    {"k":"Quick Wash","v":"Yes"},
+    {"k":"Silent Wash","v":"Yes"},
+    {"k":"Tub Clean","v":"Yes"},
+    {"k":"Eco 40-60","v":"Yes"},
+    {"k":"Vibration Sensor","v":"Yes"},
+    {"k":"Foam Detection System","v":"Yes"},
+    {"k":"LoadSense","v":"Yes"},
+    {"k":"Auto Restart","v":"Yes"},
+    {"k":"Child Lock","v":"Yes"},
+    {"k":"Delay Timer","v":"3-19 hours"},
+    {"k":"Spin Levels","v":"5"},
+    {"k":"Display Type","v":"Dial + Full Touch Buttons & LED Display"},
+    {"k":"Wi-Fi","v":"Yes"},
+    {"k":"ThinQ (Wi-Fi)","v":"Yes"},
+    {"k":"Smart Diagnosis","v":"Yes"},
+    {"k":"Remote Start","v":"Yes"},
+    {"k":"Download Cycle","v":"Yes"},
+    {"k":"Smart Pairing","v":"Yes"},
+    {"k":"Bar Code","v":"8806096449646"},
+    {"k":"Warranty","v":"10-Year Inverter DirectDrive Motor Warranty"}
+  ]
+}

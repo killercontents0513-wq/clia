@@ -1,0 +1,110 @@
+{
+  "id": "WS2112BST",
+  "url": "https://www.lg.com/sa_en/washing-machines/front-load/ws2112bst/",
+  "h1": "LG 21kg Washer + 12kg Dryer Combo (Front Load) — AI Inverter Direct Drive™, TurboWash3D™, Steam, 6 Motion DD, LG ThinQ® Wi-Fi — Stone Silver (WS2112BST)",
+  "curPrice": "7,599",
+  "origPrice": "16,999",
+  "memberPrice": "7,295.04",
+  "gallery": [
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ1.jpg","a":"Front view of LG WS2112BST 21kg washer + 12kg dryer combo in Stone Silver","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ2.jpg","a":"45 degree angled view of the washer-dryer combo","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ3.jpg","a":"Side profile view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ5.jpg","a":"Door open revealing the XL 21 kg stainless-steel drum","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ4.jpg","a":"Close-up of the tempered-glass door","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ6.jpg","a":"LED control panel close-up","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ10.jpg","a":"Detergent tray pulled out","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ11.jpg","a":"Left side view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ12.jpg","a":"Right side view","w":1600,"h":1062},
+    {"p":"/images/washing-machines/ws2112bst_ablgnag_emsj_sa_en_c/gallery/DZ18.jpg","a":"Back view showing water and power connections","w":1600,"h":1062}
+  ],
+  "modules": [
+    {
+      "eye":"Intelligent Care with AI DD®",
+      "head":"14.5% more fabric protection, every load",
+      "body":"AI Inverter Direct Drive™ senses load weight and fabric softness, then auto-selects the optimal wash motion from LG's 6 Motion DD patterns. Result: maximum cleansing performance while extending the life of your clothes.",
+      "disc":"*14.5% vs. LG Normal cycle. Based on LG internal testing.",
+      "imgs":[{"p":"/images/wm/features/WD-Vivace-V400-C4R-VCM-01-1-Vivace-Intro-Desktop.jpg","a":"AI DD intelligent fabric care","w":1600,"h":900}]
+    },
+    {
+      "eye":"Washer and Dryer in One",
+      "head":"One machine, two complete cycles",
+      "body":"A full-size 21 kg front-load washer and a built-in 12 kg dryer in a single 700 × 990 × 770 mm cabinet — wash, dry and fold in one place, no transfer, no second appliance to buy or service.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/features/WD-Vivace-V400-C4R-VCM-03-All-in-One-Desktop.jpg","a":"Integrated washer + dryer combo","w":1600,"h":900}]
+    },
+    {
+      "eye":"Get It All Done in Less Time",
+      "head":"Big family loads, smaller laundry day",
+      "body":"The XL 21 kg wash drum swallows a king-size duvet, curtains, or a full week of family laundry in one go — then the 12 kg dryer finishes them without you ever moving a thing.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/WD-TopGun2-07-D.jpg","a":"Large loads handled in fewer cycles","w":1600,"h":900}]
+    },
+    {
+      "eye":"TurboWash3D™",
+      "head":"Laundry at the speed of life",
+      "body":"TurboWash3D™ combines multi-directional spray with LG's proven Direct Drive motion to rinse a full load in record time — so you spend less time doing laundry and more time living.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/features/Feature_09_TurboWash_D.jpg","a":"TurboWash3D fast wash technology","w":1600,"h":900}]
+    },
+    {
+      "eye":"Steam — More Hygienic",
+      "head":"Reduce allergens and bacteria, gently",
+      "body":"True Steam penetrates deep into fabrics to help reduce common household allergens and bacteria and relax wrinkles — ideal for bedding, towels, baby clothes and sensitive skin.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/features/WD-Vivace-V900-VC2-BlackSteel-07-2-Steam-Plus-Desktop.jpg","a":"Steam cycle for hygienic, allergen-reduced laundry","w":1600,"h":810}]
+    },
+    {
+      "eye":"Add Item",
+      "head":"Forgot a sock? Just add it.",
+      "body":"The Add Item function safely pauses the cycle so you can toss in that missed shirt or sock without starting over — a small feature that saves a lot of frustration.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/features/Feature_07_Add_Item_D.jpg","a":"Add Item mid-cycle","w":1600,"h":900}]
+    },
+    {
+      "eye":"Less Vibration, Less Noise",
+      "head":"Quieter operation, day or night",
+      "body":"LG's Inverter Direct Drive motor with vibration sensor keeps the washer/dryer whisper-quiet even on high-speed spin — perfect for open-plan living and late-night loads. Backed by a 10-year motor warranty.",
+      "disc":"*10-year Inverter Direct Drive motor warranty. Terms apply.",
+      "imgs":[{"p":"/images/wm/WD-TopGun2-18-D.jpg","a":"Low vibration, low noise operation","w":1600,"h":900}]
+    },
+    {
+      "eye":"Smart Diagnosis™",
+      "head":"Troubleshoot in seconds",
+      "body":"Smart Diagnosis™ quickly identifies most minor issues through the LG ThinQ® app before they become bigger problems — hold your phone to the washer, the app tells you what's happening, right away.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/features/Smart-Diagnosis.jpg","a":"Smart Diagnosis on LG ThinQ app","w":1600,"h":900}]
+    },
+    {
+      "eye":"LG ThinQ® Smart Appliance",
+      "head":"Start, monitor and control — from anywhere",
+      "body":"Launch cycles remotely, download new wash programs, monitor energy use and run Smart Diagnosis™ via the LG ThinQ® app. Hands-free voice control works with Amazon Alexa and Google Assistant.",
+      "disc":"",
+      "imgs":[{"p":"/images/wm/features/WD-Vivace-V400-C4R-VCM-08-1-ThinQ-Desktop.jpg","a":"LG ThinQ smart appliance","w":1600,"h":900}]
+    }
+  ],
+  "specs": [
+    {"k":"Type","v":"Front Load Washer + Dryer Combo"},
+    {"k":"Max Wash Capacity","v":"21 kg"},
+    {"k":"Max Dry Capacity","v":"12 kg"},
+    {"k":"Product Dimensions (W × H × D, mm)","v":"700 × 990 × 770"},
+    {"k":"Body Colour","v":"Stone Silver"},
+    {"k":"Door","v":"Tempered Glass"},
+    {"k":"Display","v":"LED"},
+    {"k":"Motor","v":"AI Inverter Direct Drive™ (10-year warranty)"},
+    {"k":"Main Technology","v":"TurboWash3D™"},
+    {"k":"AI DD™","v":"Yes"},
+    {"k":"6 Motion DD","v":"Yes"},
+    {"k":"Steam","v":"Yes"},
+    {"k":"TurboWash3D™","v":"Yes"},
+    {"k":"Add Item","v":"Yes"},
+    {"k":"Allergy Care (Washer)","v":"Yes"},
+    {"k":"Delicates Cycle","v":"Yes"},
+    {"k":"Easy Care Cycle","v":"Yes"},
+    {"k":"Child Lock","v":"Yes"},
+    {"k":"Remote Start","v":"Yes"},
+    {"k":"LG ThinQ® (Wi-Fi)","v":"Yes"},
+    {"k":"Smart Diagnosis™","v":"Yes"},
+    {"k":"Voice Assistants","v":"Amazon Alexa, Google Assistant"},
+    {"k":"Model","v":"WS2112BST"}
+  ]
+}
