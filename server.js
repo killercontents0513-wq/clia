@@ -68,7 +68,8 @@ function catFromUrl(url) {
 // D-NN = Desktop lower-quality variant; skip in favour of DZ-NN (\/D-\d matches /D-01 but not /DZ-01)
 const GAL_SKIP = /thumbnail|mobilezoom|basic-large|basic_large|-logo-|_logo[_\s]|_logo$|-kv-|award|gnb|banner|icon|\/MZ-\d|\/TH-\d|\/S-\d+\.|\/Basic\.|\/D-\d|\/DZ-\d+V\b|energy-star|minicard|contentcard|promo|angi[-_]logo|\/lg_a|credit|sling/i;
 
-function extractGallery(html, nm, modelId) {
+function extractGallery(html, nm, modelId, localeCdn) {
+  const CDN_L = localeCdn || CDN;  // locale-specific CDN (e.g. de) or default sa_en
   const seen = new Set();
   const imgs = [];
 
@@ -119,7 +120,7 @@ function extractGallery(html, nm, modelId) {
   // ── Tier 1: DZ (Detail Zoom) — highest quality, gallery\d* covers gallery, gallery1, gallery2 …
   // Relative path (old SA CDN prefix style)
   for (const m of html.matchAll(/\/images\/[^"'\s?\\]+\/gallery\d*\/DZ-(\d+)\.jpg/gi)) {
-    addImg(CDN + m[0], parseInt(m[1]));
+    addImg(CDN_L + m[0], parseInt(m[1]));
   }
   // Absolute /content/dam/… path (any locale)
   for (const m of html.matchAll(new RegExp(LC + String.raw`[^"'\s?\\]+\/gallery\d*\/DZ-(\d+)\.jpg`, 'gi'))) {
@@ -591,7 +592,8 @@ app.post('/api/crawl-product', async (req, res) => {
     }
 
     const cat  = catFromUrl(url);
-    const gal  = extractGallery(html, nm, id);
+    const localeCdn = `https://www.lg.com/content/dam/channel/wcms/${locale || 'sa_en'}`;
+    const gal  = extractGallery(html, nm, id, localeCdn);
     const feat = extractFeatures(html, id, locale);
     const sp   = extractSpecs(html);
 
