@@ -5123,7 +5123,7 @@ const CRWL = {
 function crwlImgDims(url){
   return new Promise(resolve=>{
     const img=new Image();let done=false;
-    const t=setTimeout(()=>{if(!done){done=true;resolve({w:0,h:0,ok:false});}}];
+    const t=setTimeout(()=>{if(!done){done=true;resolve({w:0,h:0,ok:false});}},8000);
     img.onload=()=>{if(done)return;done=true;clearTimeout(t);resolve({w:img.naturalWidth,h:img.naturalHeight,ok:true});};
     img.onerror=()=>{if(done)return;done=true;clearTimeout(t);resolve({w:0,h:0,ok:false});};
     img.src=url;
@@ -5727,9 +5727,10 @@ window.addEventListener('load',()=>{
             <div class="ebb-input-row">
               <input type="url" class="ebb-url-input" id="ebbUrlInput" placeholder="https://www.lg.com/sa_en/..." onkeydown="if(event.key==='Enter')ebbCrawlProduct()">
               <button class="ebb-analyze-btn" id="ebbAnalyzeBtn" onclick="ebbCrawlProduct()">Crawl</button>
+              <button class="ebb-analyze-btn" id="ebbAiCrawlBtn" onclick="ebbCrawlProductAI()" style="background:#7C3AED;" title="외부 AI 크롤러 API — server.js 없이도 동작">✨ AI 크롤러</button>
             </div>
             <div class="ebb-server-warn" id="ebbServerWarn" style="display:none">
-              ⚠️ <strong>서버 미연결</strong> — <code style="background:#f0f0f0;padding:1px 6px;border-radius:3px">start_hub.bat</code> 더블클릭 또는 터미널에서 <code style="background:#f0f0f0;padding:1px 6px;border-radius:3px">node server.js</code> 실행 후 <a href="javascript:ebbCheckServer(true)" style="color:#E65100;font-weight:700">재연결</a>
+              ⚠️ <strong>서버 미연결</strong> — <code style="background:#f0f0f0;padding:1px 6px;border-radius:3px">start_hub.bat</code> 더블클릭 또는 터미널에서 <code style="background:#f0f0f0;padding:1px 6px;border-radius:3px">node server.js</code> 실행 후 <a href="javascript:ebbCheckServer(true)" style="color:#E65100;font-weight:700">재연결</a> (또는 옆의 <strong>✨ AI 크롤러</strong> 버튼은 서버 없이 바로 사용 가능)
             </div>
             <div class="ebb-status" id="ebbStatus"></div>
           </div>
@@ -5738,7 +5739,9 @@ window.addEventListener('load',()=>{
               💡 LG.com URL을 입력하고 <strong>Crawl</strong>을 클릭하면<br>
               갤러리·피처·스펙을 전부 크롤링하여<br>
               제품 리스트에 추가합니다.<br>
-              이후 <strong>Crawling 탭</strong>에서 선택·편집 가능합니다.
+              이후 <strong>Crawling 탭</strong>에서 선택·편집 가능합니다.<br>
+              <strong>✨ AI 크롤러</strong>는 외부 AI 크롤러 API를 사용해 이미지·텍스트를<br>
+              자동 매칭합니다 (server.js 불필요, 신규 URL은 1~10분 소요).
             </div>
             <div id="ebbCrawlResult" style="display:none;background:#fff;border:1px solid #D0CBC1;border-radius:12px;padding:14px;margin-top:4px;">
               <div style="font-size:11px;font-weight:700;color:#7E7C77;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">✅ 크롤 완료</div>
@@ -6090,6 +6093,180 @@ async function ebbCrawlProduct() {
     }
   } finally {
     btn.disabled = false; btn.textContent = 'Crawl';
+  }
+}
+
+// ── AI 크롤러 (외부 CLIA Crawler API) — server.js 불필요, 브라우저에서 직접 호출 ──
+const EBB_AI_CRAWLER_BASE = 'https://has-med-finance-century.trycloudflare.com';
+
+function ebbAiImgDims(url) {
+  return new Promise(resolve => {
+    if (!url) { resolve({ w: 0, h: 0 }); return; }
+    const img = new Image();
+    img.onload  = () => resolve({ w: img.naturalWidth || 0, h: img.naturalHeight || 0 });
+    img.onerror = () => resolve({ w: 0, h: 0 });
+    img.src = url;
+  });
+}
+
+function ebbAiGuessCategory(url, title) {
+  const t = (String(url) + ' ' + String(title)).toLowerCase();
+  if (/oled|qned|nanocell|tv-soundbar|\/tv\b/.test(t)) return 'TV';
+  if (/soundbar|speaker|xboom|earbuds/.test(t)) return 'Audio';
+  if (/washtower|washer|washing/.test(t)) return 'Washer';
+  if (/dryer/.test(t)) return 'Dryer';
+  if (/fridge|refrigerator|freezer/.test(t)) return 'Fridge';
+  if (/dishwasher/.test(t)) return 'Dishwasher';
+  if (/monitor/.test(t)) return 'Monitor';
+  return 'Other';
+}
+
+// ── Make 탭: 외부 AI 크롤러 API로 크롤 → P 배열 추가 ──
+async function ebbCrawlProductAI() {
+  const url = document.getElementById('ebbUrlInput').value.trim();
+  if (!url) return;
+  const btn = document.getElementById('ebbAiCrawlBtn');
+  const origLabel = btn.textContent;
+  btn.disabled = true; btn.textContent = 'AI 크롤링...';
+  document.getElementById('ebbServerWarn').style.display = 'none';
+  document.getElementById('ebbCrawlResult').style.display = 'none';
+  ebbSetStatus('<span class="spinner"></span> AI 크롤러 요청 중...', '');
+  try {
+    const r = await fetch(EBB_AI_CRAWLER_BASE + '/api/v1/crawl', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url })
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    let job = await r.json();
+    const jobId = job.job_id;
+    if (!jobId) throw new Error('job_id 응답 없음');
+
+    // 완료될 때까지 폴링 (2.5초 간격, 최대 10분)
+    // 주의: 캐시된 URL은 POST 응답에 status:"completed"가 바로 오지만 result는
+    // 없다 — 반드시 /api/v1/jobs/{job_id} GET을 통해 result를 받아와야 한다.
+    let attempts = 0;
+    while (true) {
+      const jr = await fetch(EBB_AI_CRAWLER_BASE + '/api/v1/jobs/' + jobId);
+      if (!jr.ok) throw new Error('HTTP ' + jr.status);
+      job = await jr.json();
+      if (job.status === 'completed') break;
+      if (job.status === 'failed') throw new Error(job.error || 'AI 크롤 실패');
+      if (++attempts > 240) throw new Error('시간 초과 (10분) — 다시 시도해주세요.');
+      const pct = job.progress_percent != null ? ` (${job.progress_percent}%)` : '';
+      ebbSetStatus(`<span class="spinner"></span> AI 크롤링 중${pct}... ${job.log_message || ''}`, '');
+      await new Promise(s => setTimeout(s, 2500));
+    }
+
+    const result = job.result || {};
+    const sections = Array.isArray(result.sections) ? result.sections : [];
+    const title = result.product_title || '';
+
+    let pid = title;
+    try {
+      const urlParts = new URL(url).pathname.split('/').filter(Boolean);
+      if (urlParts.length) pid = urlParts[urlParts.length - 1];
+    } catch (_) {}
+    pid = String(pid || 'PRODUCT').toUpperCase();
+
+    // Disclaimer 섹션 분리, 이미지 있는 섹션은 피처 후보, 이미지 없는 섹션은 불릿 포인트로
+    const disc = [];
+    const bul = [];
+    const featSrc = [];
+    sections.forEach(sec => {
+      if (String(sec.order).toLowerCase().includes('disclaimer')) {
+        if (sec.text) disc.push(sec.text);
+        return;
+      }
+      if (sec.media && sec.media.length) {
+        featSrc.push(sec);
+      } else if (sec.text) {
+        const headline = String(sec.text).split('\n').map(l => l.trim()).filter(Boolean)[0];
+        if (headline) bul.push(headline);
+      }
+    });
+
+    ebbSetStatus('<span class="spinner"></span> 이미지 정보 확인 중...', '');
+
+    // 이미지 실제 크기(w/h) 조회 — Amazon A+ 템플릿 매칭에 필요
+    const urlSet = new Set();
+    featSrc.forEach(sec => sec.media.forEach(m => {
+      const u = m.pc_url || m.unified_url || m.mobile_url;
+      if (u) urlSet.add(u);
+    }));
+    const dimsMap = {};
+    await Promise.all([...urlSet].map(async u => { dimsMap[u] = await ebbAiImgDims(u); }));
+
+    const feat = featSrc.map(sec => {
+      const lines = String(sec.text || '').split('\n').map(l => l.trim()).filter(Boolean);
+      const t = lines[0] || title;
+      const d = lines.slice(1).join(' ').trim();
+      const imgs = sec.media.map(m => {
+        const u = m.pc_url || m.unified_url || m.mobile_url;
+        const dim = dimsMap[u] || { w: 0, h: 0 };
+        return { p: u, a: t, w: dim.w, h: dim.h };
+      }).filter(im => im.p);
+      const primary = imgs[0] || { p: '', w: 0, h: 0 };
+      const f = { a: t, p: primary.p, t, d, w: primary.w, h: primary.h };
+      if (imgs.length > 1) f.imgs = imgs;
+      return f;
+    }).filter(f => f.p || f.t);
+
+    // 갤러리 = 모든 피처 이미지를 중복 제거하여 모은 것
+    const gal = [];
+    const seenGal = new Set();
+    feat.forEach(f => {
+      const imgs = f.imgs || (f.p ? [{ p: f.p, a: f.a, w: f.w, h: f.h }] : []);
+      imgs.forEach(im => {
+        if (im.p && !seenGal.has(im.p)) { seenGal.add(im.p); gal.push({ a: im.a, p: im.p, w: im.w, h: im.h }); }
+      });
+    });
+
+    const cat = ebbAiGuessCategory(url, title);
+    const geo = (document.getElementById('countrySel') || {}).value || '';
+
+    const prod = {
+      id: pid, nm: title || pid, cat, sub: '', dv: 'MS',
+      pr: '', op: '', url,
+      gal, feat, sp: {},
+      bul, tags: [], faq: [], promo: [], disc,
+      kw: '', crawled: true, geo
+    };
+
+    if (typeof P === 'undefined' || !Array.isArray(P)) {
+      ebbSetStatus('✕ 제품 데이터 배열을 찾을 수 없습니다.', 'error');
+      return;
+    }
+    const existIdx = P.findIndex(x => x.id === prod.id);
+    if (existIdx !== -1) {
+      Object.assign(P[existIdx], prod);
+      const [updated] = P.splice(existIdx, 1);
+      P.unshift(updated);
+    } else {
+      P.unshift(prod);
+    }
+    EBB.currentPid = prod.id;
+    EBB.crawledData = null;
+
+    if (typeof cliaSaveProduct === 'function') cliaSaveProduct(prod);
+    if (typeof renderList === 'function') renderList();
+    ebbInitLibrary();
+    ebbAmzInitLibrary();
+
+    document.getElementById('ebbCrawlResultName').textContent = prod.nm;
+    document.getElementById('ebbCrawlResultMeta').textContent =
+      `${prod.cat} · 갤러리 ${gal.length}장 · 피처 ${feat.length}개 · ✨ AI 크롤러`;
+    document.getElementById('ebbCrawlResult').style.display = 'block';
+
+    ebbSetStatus(`✅ "${prod.nm}" AI 크롤 완료 — 리스트 최상단(Ready) 추가됨`, 'ok');
+  } catch (e) {
+    const msg = e.message || String(e);
+    if (/fetch|Network|Failed/i.test(msg)) {
+      ebbSetStatus('✕ AI 크롤러 서비스에 연결할 수 없습니다. URL을 확인해주세요.', 'error');
+    } else {
+      ebbSetStatus('✕ AI 크롤러 오류: ' + msg, 'error');
+    }
+  } finally {
+    btn.disabled = false; btn.textContent = origLabel;
   }
 }
 
