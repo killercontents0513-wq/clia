@@ -5873,10 +5873,10 @@ function ebbFromLibrary(pid) {
   ebbSetStatus('⏳ CLIA 데이터로 eBay HTML 생성 중...', '');
   document.getElementById('ebbServerWarn').style.display = 'none';
   setTimeout(() => {
-    const html = ebbBuildFromProduct(p);
+    const html = p.ebayHtml || ebbBuildFromProduct(p);
     EBB.generatedHTML = html;
     ebbShowPreview(html);
-    ebbSetStatus(`✓ eBay HTML 생성 완료 — ${html.length.toLocaleString()} chars`, 'ok');
+    ebbSetStatus(`✓ eBay HTML 생성 완료${p.ebayHtml ? ' (AI 크롤러 · LG 디자인 적용)' : ''} — ${html.length.toLocaleString()} chars`, 'ok');
     document.getElementById('ebbUrlInput').value = p.url || '';
     // Show "add to list" button
     const bar = document.getElementById('ebbAddToListBar');
@@ -6158,6 +6158,12 @@ async function ebbCrawlProductAI() {
       await new Promise(s => setTimeout(s, 2500));
     }
 
+    // LG.com 디자인이 적용된 완성 eBay HTML — 병렬로 미리 요청 (실패해도 무시,
+    // ebbFromLibrary()가 없으면 ebbBuildFromProduct()로 자동 폴백)
+    const ebayHtmlPromise = fetch(EBB_AI_CRAWLER_BASE + '/api/v1/jobs/' + jobId + '/ebay-html')
+      .then(res => res.ok ? res.text() : '')
+      .catch(() => '');
+
     const result = job.result || {};
     const sections = Array.isArray(result.sections) ? result.sections : [];
     const title = result.product_title || '';
@@ -6224,6 +6230,7 @@ async function ebbCrawlProductAI() {
 
     const cat = ebbAiGuessCategory(url, title);
     const geo = (document.getElementById('countrySel') || {}).value || '';
+    const ebayHtml = await ebayHtmlPromise;
 
     const prod = {
       id: pid, nm: title || pid, cat, sub: '', dv: 'MS',
@@ -6232,6 +6239,7 @@ async function ebbCrawlProductAI() {
       bul, tags: [], faq: [], promo: [], disc,
       kw: '', crawled: true, geo
     };
+    if (ebayHtml) prod.ebayHtml = ebayHtml;
 
     if (typeof P === 'undefined' || !Array.isArray(P)) {
       ebbSetStatus('✕ 제품 데이터 배열을 찾을 수 없습니다.', 'error');
@@ -6255,7 +6263,7 @@ async function ebbCrawlProductAI() {
 
     document.getElementById('ebbCrawlResultName').textContent = prod.nm;
     document.getElementById('ebbCrawlResultMeta').textContent =
-      `${prod.cat} · 갤러리 ${gal.length}장 · 피처 ${feat.length}개 · ✨ AI 크롤러`;
+      `${prod.cat} · 갤러리 ${gal.length}장 · 피처 ${feat.length}개 · ✨ AI 크롤러` + (ebayHtml ? ' · LG 디자인 HTML 포함' : '');
     document.getElementById('ebbCrawlResult').style.display = 'block';
 
     ebbSetStatus(`✅ "${prod.nm}" AI 크롤 완료 — 리스트 최상단(Ready) 추가됨`, 'ok');
