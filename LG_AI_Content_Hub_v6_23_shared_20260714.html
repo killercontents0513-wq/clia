@@ -5741,7 +5741,7 @@ window.addEventListener('load',()=>{
               제품 리스트에 추가합니다.<br>
               이후 <strong>Crawling 탭</strong>에서 선택·편집 가능합니다.<br>
               <strong>✨ AI 크롤러</strong>는 외부 AI 크롤러 API를 사용해 이미지·텍스트를<br>
-              자동 매칭합니다 (server.js 불필요, 신규 URL은 1~10분 소요).
+              자동 매칭합니다 (server.js 불필요, 신규 URL은 10~15분 소요).
             </div>
             <div id="ebbCrawlResult" style="display:none;background:#fff;border:1px solid #D0CBC1;border-radius:12px;padding:14px;margin-top:4px;">
               <div style="font-size:11px;font-weight:700;color:#7E7C77;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;">✅ 크롤 완료</div>
@@ -6141,7 +6141,8 @@ async function ebbCrawlProductAI() {
     const jobId = job.job_id;
     if (!jobId) throw new Error('job_id 응답 없음');
 
-    // 완료될 때까지 폴링 (2.5초 간격, 최대 10분)
+    // 완료될 때까지 폴링 (2.5초 간격, 최대 20분 — 신규 URL은 AI 비전 분석 +
+    // 시각 QA 검수 루프 포함 10~15분 소요될 수 있음, 여유를 두고 20분으로 설정)
     // 주의: 캐시된 URL은 POST 응답에 status:"completed"가 바로 오지만 result는
     // 없다 — 반드시 /api/v1/jobs/{job_id} GET을 통해 result를 받아와야 한다.
     let attempts = 0;
@@ -6151,7 +6152,7 @@ async function ebbCrawlProductAI() {
       job = await jr.json();
       if (job.status === 'completed') break;
       if (job.status === 'failed') throw new Error(job.error || 'AI 크롤 실패');
-      if (++attempts > 240) throw new Error('시간 초과 (10분) — 다시 시도해주세요.');
+      if (++attempts > 480) throw new Error('20분 대기 후에도 완료되지 않았습니다 — 서버는 계속 처리 중이니 잠시 후 같은 URL로 다시 시도하면 캐시로 즉시 받아옵니다.');
       const pct = job.progress_percent != null ? ` (${job.progress_percent}%)` : '';
       ebbSetStatus(`<span class="spinner"></span> AI 크롤링 중${pct}... ${job.log_message || ''}`, '');
       await new Promise(s => setTimeout(s, 2500));
