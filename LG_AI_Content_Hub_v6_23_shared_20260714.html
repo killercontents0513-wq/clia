@@ -5792,7 +5792,7 @@ window.addEventListener('load',()=>{
 // ═══════════════════════════════════════════
 // EBAY LIVE BUILDER (v6.22)
 // ═══════════════════════════════════════════
-const EBB = { generatedHTML: '', amzHTML: '', editMode: false, apiBase: location.hostname === 'localhost' ? 'http://localhost:3001' : location.origin, currentPid: null, crawledData: null, previewTab: 'ebay' };
+const EBB = { generatedHTML: '', amzHTML: '', editMode: false, apiBase: (location.hostname === 'localhost' || location.protocol === 'file:') ? 'http://localhost:3001' : location.origin, currentPid: null, crawledData: null, previewTab: 'ebay' };
 
 function openMakeWithUrl(pid) {
   const p = (typeof P !== 'undefined') ? P.find(x => x.id === pid) : null;
